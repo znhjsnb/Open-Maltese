@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-046362e4e552",
+  "dataset_version": "malti-phase2-2026-11-03-9bd45df5c731",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 8188,
-    "unenriched_count": 15857,
-    "showcase_count": 8188,
+    "enriched_count": 9188,
+    "unenriched_count": 14857,
+    "showcase_count": 9188,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1707,14 +1707,21 @@
     },
     {
       "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "ħaruf ta' alla",
+      "exact_key": "mqar",
       "analysis_pos": [
-        "name"
+        "adv"
       ],
       "senses": [
         {
-          "pos": "name",
-          "en_definition": "Lamb of God",
+          "pos": "adv",
+          "en_definition": "even",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "adv",
+          "en_definition": "at least",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -1854,30 +1861,30 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "ġermanju",
+      "exact_key": "inaljenabbli",
       "analysis_pos": [
-        "noun"
+        "adj"
       ],
       "senses": [
         {
-          "pos": "noun",
-          "en_definition": "The chemical element germanium.",
-          "zh_definition": "化学元素锗。",
-          "mt_definition": "Element kimiku magħruf bħala ġermanju.",
+          "pos": "adj",
+          "en_definition": "That cannot be taken away from its holder or transferred to someone else, especially a right.",
+          "zh_definition": "不能从持有人那里剥夺或转让给他人的，尤用于权利。",
+          "mt_definition": "Li ma jistax jittieħed minn min għandu jew jiġi trasferit lil ħaddieħor, speċjalment dritt.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "noun",
-          "en_definition": "germanium (chemical element)",
-          "zh_definition": "锗，一种化学元素。",
+          "pos": "adj",
+          "en_definition": "unalienable, not alienable",
+          "zh_definition": "不可剥夺的；不可转让的",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-ġermanju",
-        "prefix": "il-",
-        "rule": "moon_consonant",
+        "form": "l-inaljenabbli",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -1885,31 +1892,31 @@
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-kampjun ta' ġermanju tqiegħed f'kontenitur bit-tikketta tiegħu.",
-          "en": "The germanium sample was placed in a container with its label.",
-          "zh": "锗样品被放进了带有相应标签的容器中。",
+          "mt": "Id-dikjarazzjoni tiddeskrivi l-libertà bħala dritt inaljenabbli ta' kull persuna.",
+          "en": "The declaration describes freedom as an inalienable right of every person.",
+          "zh": "该宣言将自由描述为每个人不可剥夺的权利。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Lara: X'hemm f'dan il-kontenitur? Pawlu: Hemm kampjun ta' ġermanju; ara t-tikketta.",
-          "en": "Lara: What's in this container? Pawlu: There's a sample of germanium; look at the label.",
-          "zh": "拉拉：这个容器里有什么？保罗：里面有一份锗样品，看看标签。",
+          "mt": "Lara: Xi jfisser dritt inaljenabbli? David: Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
+          "en": "Lara: What does an inalienable right mean? David: A right that cannot be taken away from you or transferred to someone else.",
+          "zh": "劳拉：不可剥夺的权利是什么意思？戴维：就是不能从你这里夺走，也不能转让给别人的权利。",
           "messages": [
             {
-              "speaker": "Lara (学生)",
-              "mt_spoken": "X'hemm f'dan il-kontenitur?",
-              "mt_standard": "X'hemm f'dan il-kontenitur?",
-              "zh": "这个容器里有什么？",
-              "en": "What's in this container?"
+              "speaker": "Lara (同学)",
+              "mt_spoken": "Xi jfisser dritt inaljenabbli?",
+              "mt_standard": "Xi jfisser dritt inaljenabbli?",
+              "zh": "不可剥夺的权利是什么意思？",
+              "en": "What does an inalienable right mean?"
             },
             {
-              "speaker": "Pawlu (教师)",
-              "mt_spoken": "Hemm kampjun ta' ġermanju; ara t-tikketta.",
-              "mt_standard": "Hemm kampjun ta' ġermanju; ara t-tikketta.",
-              "zh": "里面有一份锗样品，看看标签。",
-              "en": "There's a sample of germanium; look at the label."
+              "speaker": "David (同学)",
+              "mt_spoken": "Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
+              "mt_standard": "Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
+              "zh": "就是不能从你这里夺走，也不能转让给别人的权利。",
+              "en": "A right that cannot be taken away from you or transferred to someone else."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1918,7 +1925,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 ġermanju 写在实验室样品瓶标签上，与中文“锗”和英文 germanium 一起记忆。"
+      "cognitive_memory_aid": "想象写着“权利”的卡片始终属于本人，不能被夺走或转给别人；用这个画面记住 inaljenabbli 的权利含义。"
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
@@ -2000,6 +2007,88 @@
       },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
+      "exact_key": "għażżiela",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A gazelle, or a cicada; the intended animal is identified from the context.",
+          "zh_definition": "可指瞪羚，也可指蝉；需要根据草地、树木、鸣声等语境判断具体所指。",
+          "mt_definition": "Annimal li jista' jkun gazzella jew insett li jgħanni fis-siġar, skont il-kuntest.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "gazelle",
+          "zh_definition": "瞪羚，一种身形轻巧的羚羊。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "cicada",
+          "zh_definition": "蝉，会发出明显鸣声的昆虫。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-għażżiela",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Fir-ritratt tidher għażżiela tiġri fil-mergħa ħdejn annimali oħra.",
+          "en": "The photograph shows a gazelle running in the meadow near other animals.",
+          "zh": "照片中，一只瞪羚正在其他动物附近的草地上奔跑。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Anna: Tisma' dak il-ħoss fis-siġra? Mark: Iva, hemm għażżiela fuq il-fergħa. Anna: Mela hawn qed nitkellmu dwar l-insett.",
+          "en": "Anna: Can you hear that sound in the tree? Mark: Yes, there is a cicada on the branch. Anna: So here we are talking about the insect.",
+          "zh": "Anna：你听见树上的声音了吗？Mark：听见了，树枝上有一只蝉。Anna：所以这里说的是那种昆虫。",
+          "messages": [
+            {
+              "speaker": "Anna (朋友)",
+              "mt_spoken": "Tisma' dak il-ħoss fis-siġra?",
+              "mt_standard": "Tisma' dak il-ħoss fis-siġra?",
+              "zh": "你听见树上的声音了吗？",
+              "en": "Can you hear that sound in the tree?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva, hemm għażżiela fuq il-fergħa.",
+              "mt_standard": "Iva, hemm għażżiela fuq il-fergħa.",
+              "zh": "听见了，树枝上有一只蝉。",
+              "en": "Yes, there is a cicada on the branch."
+            },
+            {
+              "speaker": "Anna (朋友)",
+              "mt_spoken": "Mela hawn qed nitkellmu dwar l-insett.",
+              "mt_standard": "Mela hawn qed nitkellmu dwar l-insett.",
+              "zh": "所以这里说的是那种昆虫。",
+              "en": "So here we are talking about the insect."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "给这个词画两张语境卡：草地上奔跑的是瞪羚，树枝上鸣叫的是蝉；靠场景区分两个义项。"
     },
     {
       "stratum": "tier_2/semitic/enriched",
@@ -2152,74 +2241,6 @@
       "cognitive_memory_aid": "画两幅并排的小图：一幅湖面，一幅甜瓜田，都标上 bħajra；读句子时用水岸或种瓜的语境判断词义。"
     },
     {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "ġimġma",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "The skull: the bony structure of the head that surrounds and protects the brain.",
-          "zh_definition": "头部的骨性结构，包围并保护脑部，即头骨或颅骨。",
-          "mt_definition": "L-istruttura tal-għadam tar-ras li ddawwar u tipproteġi l-moħħ.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "skull",
-          "zh_definition": "头骨；颅骨。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-ġimġma",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Fil-lezzjoni tal-bijoloġija, l-għalliema użat mudell biex turi kif il-ġimġma tipproteġi l-moħħ.",
-          "en": "In the biology lesson, the teacher used a model to show how the skull protects the brain.",
-          "zh": "生物课上，老师用模型展示头骨如何保护脑部。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: Dan il-mudell juri l-ġimġma? Rita: Iva, u hawn tista' tara fejn ikun il-moħħ.",
-          "en": "Lara: Does this model show the skull? Rita: Yes, and here you can see where the brain sits.",
-          "zh": "拉拉：这个模型展示的是头骨吗？丽塔：是的，这里可以看到脑部所在的位置。",
-          "messages": [
-            {
-              "speaker": "Lara (学生)",
-              "mt_spoken": "Dan il-mudell juri l-ġimġma?",
-              "mt_standard": "Dan il-mudell juri l-ġimġma?",
-              "zh": "这个模型展示的是头骨吗？",
-              "en": "Does this model show the skull?"
-            },
-            {
-              "speaker": "Rita (老师)",
-              "mt_spoken": "Iva, u hawn tista' tara fejn ikun il-moħħ.",
-              "mt_standard": "Iva, u hawn tista' tara fejn ikun il-moħħ.",
-              "zh": "是的，这里可以看到脑部所在的位置。",
-              "en": "Yes, and here you can see where the brain sits."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 ġimġma 想成脑部外面的“骨头保护盔”：记住它指头骨，里面装着的是脑。"
-    },
-    {
       "stratum": "tier_2/semitic/unenriched",
       "exact_key": "lejlet il-milied",
       "analysis_pos": [
@@ -2291,6 +2312,74 @@
       "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/enriched",
+      "exact_key": "ħġim",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "The act of eating food very quickly and greedily.",
+          "zh_definition": "急切而快速地吞吃食物的行为。",
+          "mt_definition": "L-att li tiekol l-ikel bil-għaġla u bir-regħba.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "wolfing down of food",
+          "zh_definition": "狼吞虎咽地吃东西；急吞食物的行为",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-ħġim",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Fl-istorja, il-ħġim tal-ikel juri kemm il-vjaġġatur kien bil-ġuħ.",
+          "en": "In the story, the wolfing down of food shows how hungry the traveller was.",
+          "zh": "故事中，旅人狼吞虎咽地吃东西，表现出他当时有多饿。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Anna: Dan il-ħġim kollu! Għandek daqshekk ġuħ? Ġużeppi: Iva, ma kilt xejn minn filgħodu.",
+          "en": "Anna: You're wolfing everything down! Are you that hungry? Ġużeppi: Yes, I haven't eaten anything since this morning.",
+          "zh": "Anna：你吃得这么狼吞虎咽！有那么饿吗？Ġużeppi：有啊，我从早上到现在什么都没吃。",
+          "messages": [
+            {
+              "speaker": "Anna (朋友)",
+              "mt_spoken": "Dan il-ħġim kollu! Għandek daqshekk ġuħ?",
+              "mt_standard": "Dan il-ħġim kollu! Għandek daqshekk ġuħ?",
+              "zh": "你吃得这么狼吞虎咽！有那么饿吗？",
+              "en": "You're wolfing everything down! Are you that hungry?"
+            },
+            {
+              "speaker": "Ġużeppi (朋友)",
+              "mt_spoken": "Iva, ma kilt xejn minn filgħodu.",
+              "mt_standard": "Iva, ma kilt xejn minn filgħodu.",
+              "zh": "有啊，我从早上到现在什么都没吃。",
+              "en": "Yes, I haven't eaten anything since this morning."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象饿了一天的人飞快吞饭：ħġim记“狼吞虎咽这个行为”；与ħġejma的“一小口食物”对照记忆。"
     },
     {
       "stratum": "tier_2/unspecified/enriched",
@@ -2437,108 +2526,6 @@
       "cognitive_memory_aid": "把四十九倒着拆成“九和四十”：先说 disgħa，再用 u 连接 erbgħin；个位在前，十位在后。"
     },
     {
-      "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "buzzun",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A container or holder used to hold ice.",
-          "zh_definition": "用来盛放冰的容器或器具。",
-          "mt_definition": "Kontenitur jew reċipjent li jintuża biex iżomm is-silġ.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "an ice holder",
-          "zh_definition": "盛冰容器；用来放冰的器具。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-buzzun",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Qabel il-wasla tal-mistednin, il-persunal poġġa buzzun mimli silġ fuq il-mejda tax-xorb.",
-          "en": "Before the guests arrived, the staff placed an ice holder full of ice on the drinks table.",
-          "zh": "宾客到来之前，工作人员在饮品桌上放了一个装满冰的盛冰容器。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Mark: Fejn inpoġġi s-silġ? Sara: Fil-buzzun, ħdejn it-tazzi. Mark: Sewwa, nimlieh issa.",
-          "en": "Mark: Where should I put the ice? Sara: In the ice holder, next to the glasses. Mark: All right, I'll fill it now.",
-          "zh": "Mark：冰放在哪里？Sara：放在杯子旁边的盛冰容器里。Mark：好，我现在把它装满。",
-          "messages": [
-            {
-              "speaker": "Mark (聚会帮手)",
-              "mt_spoken": "Fejn inpoġġi s-silġ?",
-              "mt_standard": "Fejn inpoġġi s-silġ?",
-              "zh": "冰放在哪里？",
-              "en": "Where should I put the ice?"
-            },
-            {
-              "speaker": "Sara (聚会主人)",
-              "mt_spoken": "Fil-buzzun, ħdejn it-tazzi.",
-              "mt_standard": "Fil-buzzun, ħdejn it-tazzi.",
-              "zh": "放在杯子旁边的盛冰容器里。",
-              "en": "In the ice holder, next to the glasses."
-            },
-            {
-              "speaker": "Mark (聚会帮手)",
-              "mt_spoken": "Sewwa, nimlieh issa.",
-              "mt_standard": "Sewwa, nimlieh issa.",
-              "zh": "好，我现在把它装满。",
-              "en": "All right, I'll fill it now."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象聚会桌上杯子旁边专门装冰的容器，把 buzzun 标签贴在容器上，与表示冰的 silġ 配对记忆。"
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "ħġim",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "wolfing down of food",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-ħġim",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/unspecified/unenriched",
       "exact_key": "tgħajjar",
       "analysis_pos": [
@@ -2582,6 +2569,25 @@
         {
           "pos": "VERB",
           "en_definition": "to be sung",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "tnaġġar",
+      "analysis_pos": [
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to be trimmed (used especially of stone)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
