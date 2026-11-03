@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-225935052f39",
+  "dataset_version": "malti-phase2-2026-11-03-9407951df7a3",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 12793,
-    "unenriched_count": 11252,
-    "showcase_count": 12793,
+    "enriched_count": 13793,
+    "unenriched_count": 10252,
+    "showcase_count": 13793,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1403,33 +1403,6 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "tajpist",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "typist",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-tajpist",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
       "exact_key": "xer",
       "analysis_pos": [
         "noun"
@@ -1452,6 +1425,25 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "ttrippja",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to trip, to trip out (through overload, a short circuit)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2006,28 +1998,20 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "temperamentali",
+      "exact_key": "żvita",
       "analysis_pos": [
-        "adj"
+        "verb"
       ],
       "senses": [
         {
-          "pos": "adj",
-          "en_definition": "temperamental",
+          "pos": "verb",
+          "en_definition": "to unscrew",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "it-temperamentali",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2256,47 +2240,6 @@
     },
     {
       "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "tamar",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "date, dates (fruit)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "date shell",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "fruit",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-tamar",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
       "exact_key": "wiżagħ",
       "analysis_pos": [
         "noun"
@@ -2319,6 +2262,25 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "zerafa",
+      "analysis_pos": [
+        "name"
+      ],
+      "senses": [
+        {
+          "pos": "name",
+          "en_definition": "a surname",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2389,6 +2351,74 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "想象饿了一天的人飞快吞饭：ħġim记“狼吞虎咽这个行为”；与ħġejma的“一小口食物”对照记忆。"
+    },
+    {
+      "stratum": "tier_2/unspecified/enriched",
+      "exact_key": "tgħajjar",
+      "analysis_pos": [
+        "VERB",
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To insult someone, call them offensive names, or engage in insulting speech.",
+          "zh_definition": "用言语侮辱别人、以难听的称呼骂人，或进行辱骂。",
+          "mt_definition": "Tinsulta lil xi ħadd, issejjaħlu b'ismijiet offensivi, jew toqgħod tgħid kliem ta' tgħajjir.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to insult",
+          "zh_definition": "侮辱；以言语冒犯别人。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to call sb. names",
+          "zh_definition": "用难听或侮辱性的称呼骂某人。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ma għandekx tgħajjar lil ħaddieħor b'ismijiet offensivi waqt diskussjoni.",
+          "en": "You should not call other people offensive names during a discussion.",
+          "zh": "讨论时，你不应该用侮辱性的称呼骂别人。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Tista' tgħid li ma taqbilx mingħajr ma tgħajjar lil ħadd. Ben: Għandek raġun; se nispjega għaliex ma naqbilx.",
+          "en": "Maja: You can say you disagree without insulting anyone. Ben: You're right; I'll explain why I disagree.",
+          "zh": "玛雅：你可以表达不同意见，不必辱骂任何人。本：你说得对，我会解释自己为什么不同意。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Tista' tgħid li ma taqbilx mingħajr ma tgħajjar lil ħadd.",
+              "mt_standard": "Tista' tgħid li ma taqbilx mingħajr ma tgħajjar lil ħadd.",
+              "zh": "你可以表达不同意见，不必辱骂任何人。",
+              "en": "You can say you disagree without insulting anyone."
+            },
+            {
+              "speaker": "Ben (朋友)",
+              "mt_spoken": "Għandek raġun; se nispjega għaliex ma naqbilx.",
+              "mt_standard": "Għandek raġun; se nispjega għaliex ma naqbilx.",
+              "zh": "你说得对，我会解释自己为什么不同意。",
+              "en": "You're right; I'll explain why I disagree."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把“侮辱别人、用难听称呼骂人、不断辱骂”连成同一幅言语冲突的画面。"
     },
     {
       "stratum": "tier_2/unspecified/enriched",
@@ -2467,119 +2497,6 @@
       "cognitive_memory_aid": "把 ċaqċiq 配上脚踩干树枝的“咔嚓”声，再想象柴火连续“噼啪”；用一个声音和一串声音分别记住两个义项。"
     },
     {
-      "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "kixxef",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To cause someone to disclose information.",
-          "zh_definition": "使某人透露或披露信息。",
-          "mt_definition": "Iġiegħel lil xi ħadd jiżvela informazzjoni.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to cause to disclose",
-          "zh_definition": "使人透露；促使某人披露信息。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-intervistatur kixxef lix-xhud permezz ta' mistoqsijiet preċiżi, u x-xhud żvela dak li kien jaf.",
-          "en": "The interviewer caused the witness to disclose information through precise questions, and the witness revealed what he knew.",
-          "zh": "访谈者通过准确的提问促使证人披露信息，证人随后说出了自己知道的情况。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: Kif irnexxielek issir taf id-dettalji? Mark: Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
-          "en": "Lara: How did you manage to find out the details? Mark: Pawlu got the interviewee to disclose them with one question, and he told us everything.",
-          "zh": "拉拉：你是怎么弄清那些细节的？马克：保罗问了一个问题，就让受访者开了口，对方把一切都告诉了我们。",
-          "messages": [
-            {
-              "speaker": "Lara (同事)",
-              "mt_spoken": "Kif irnexxielek issir taf id-dettalji?",
-              "mt_standard": "Kif irnexxielek issir taf id-dettalji?",
-              "zh": "你是怎么弄清那些细节的？",
-              "en": "How did you manage to find out the details?"
-            },
-            {
-              "speaker": "Mark (同事)",
-              "mt_spoken": "Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
-              "mt_standard": "Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
-              "zh": "保罗问了一个问题，就让受访者开了口，对方把一切都告诉了我们。",
-              "en": "Pawlu got the interviewee to disclose them with one question, and he told us everything."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "记住“提问者让知情者开口”的两人画面：kixxef 的重点是促使别人披露。"
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "tgħajjar",
-      "analysis_pos": [
-        "VERB",
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to insult",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to call sb. names",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to indulge in the act of insulting",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "tgħanna",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to be sung",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/unspecified/unenriched",
       "exact_key": "tnaġġar",
       "analysis_pos": [
@@ -2595,6 +2512,74 @@
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "żakkir",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "walking ostentatiously",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "swaggering",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "iż-żakkir",
+        "prefix": "iż-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "tnaqniq",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "croaking",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "squawking",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tnaqniq",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
