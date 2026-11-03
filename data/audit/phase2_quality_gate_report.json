@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-583633330a5d",
+  "dataset_version": "malti-phase2-2026-11-03-ddea009da90f",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 5188,
-    "unenriched_count": 18857,
-    "showcase_count": 5188,
+    "enriched_count": 6188,
+    "unenriched_count": 17857,
+    "showcase_count": 6188,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -279,41 +279,6 @@
       "cognitive_memory_aid": "用固定搭配 nara t-televixin 记住“看电视”；把遥控器、屏幕和节目连成一个生活场景，同时留意词尾拼写是 xin。"
     },
     {
-      "stratum": "tier_1/english/unenriched",
-      "exact_key": "żu",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "zoo",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "zoo",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iż-żu",
-        "prefix": "iż-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_1/other_or_hybrid/enriched",
       "exact_key": "sovjetiku",
       "analysis_pos": [
@@ -551,76 +516,6 @@
       "cognitive_memory_aid": "想象手指轻轻划过天鹅绒表面，把 bellus 和柔软舒服的触感一起记住。"
     },
     {
-      "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "żibeġ",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "beads",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "beads",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iż-żibeġ",
-        "prefix": "iż-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "xufier",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "chauffeur",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "chauffeur",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ix-xufier",
-        "prefix": "ix-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_1/romance_sicilian_italian/enriched",
       "exact_key": "bram",
       "analysis_pos": [
@@ -848,110 +743,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "想象地图上房屋密集、有人生活的一片区域，用 abitat 给它贴标签，再用“区域边缘”和“区域外面”两个场景巩固记忆。"
-    },
-    {
-      "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "żmerald",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "emerald",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "emerald (gemstone)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-iżmerald",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "żviluppa",
-      "analysis_pos": [
-        "VERB",
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "develop",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "expand",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to develop",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "zzika",
-      "analysis_pos": [
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to irritate",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to goad sb.",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to nag; to goad",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
     },
     {
       "stratum": "tier_1/semitic/enriched",
@@ -1184,135 +975,6 @@
       "cognitive_memory_aid": "先用打哈欠的画面记住ngħas的困意和睡眠义，再另画一个指向太阳穴的箭头，分别记忆同形的身体部位义。"
     },
     {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "żahar",
-      "analysis_pos": [
-        "VERB",
-        "NOUN",
-        "noun",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to blossom",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "bloom",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "blossom",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iż-żahar",
-        "prefix": "iż-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "xini",
-      "analysis_pos": [
-        "NOUN",
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "hatred",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "galley",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "sailing ship",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ix-xini",
-        "prefix": "ix-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "żieni",
-      "analysis_pos": [
-        "ADJ",
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "ADJ",
-          "en_definition": "lewd",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "ADJ",
-          "en_definition": "lustful",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "lewd, promiscuous, adulterous; (especially religion) given to or constituting sexual sin",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iż-żieni",
-        "prefix": "iż-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_1/unspecified/enriched",
       "exact_key": "ħabbeż",
       "analysis_pos": [
@@ -1533,314 +1195,7 @@
       "cognitive_memory_aid": "先用“听见一阵鼓声”记住名词用法，再把“洗脑”单独做成义项卡，按上下文区分。"
     },
     {
-      "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "ziek",
-      "analysis_pos": [
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to make insulting remarks",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to insult",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "zappap",
-      "analysis_pos": [
-        "VERB",
-        "NOUN",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to limp",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to make unsteady progress",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "sth. causing limping",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iz-zappap",
-        "prefix": "iz-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "żluqi",
-      "analysis_pos": [
-        "ADJ",
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "ADJ",
-          "en_definition": "slippery",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "slippery",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-iżluqi",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/english/enriched",
-      "exact_key": "blaff",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "An attempt to deceive someone by pretending to have more strength, confidence, or ability than one actually has.",
-          "zh_definition": "通过装作比实际更强大、更有把握或更有能力来唬住别人的举动。",
-          "mt_definition": "Tentattiv biex tqarraq b'xi ħadd billi tippretendi li għandek aktar saħħa, kunfidenza jew ħila milli għandek tassew.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "bluff",
-          "zh_definition": "虚张声势；用来唬人的姿态或举动。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-blaff",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Fl-analiżi tal-logħba, il-kummentatur spjega li l-mossa kienet blaff biex tħawwad lill-avversarju.",
-          "en": "In the analysis of the game, the commentator explained that the move was a bluff intended to confuse the opponent.",
-          "zh": "在比赛分析中，评论员解释说，这一步是在虚张声势，目的是迷惑对手。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Sara: Qal li għandu l-aħjar karti. David: Naħseb li dan blaff. Sara: Mela nistennew u naraw.",
-          "en": "Sara: He said he has the best cards. David: I think that's a bluff. Sara: Then let's wait and see.",
-          "zh": "萨拉：他说自己手里的牌最好。戴维：我觉得他是在唬人。萨拉：那就等着看吧。",
-          "messages": [
-            {
-              "speaker": "Sara (牌友)",
-              "mt_spoken": "Qal li għandu l-aħjar karti.",
-              "mt_standard": "Qal li għandu l-aħjar karti.",
-              "zh": "他说自己手里的牌最好。",
-              "en": "He said he has the best cards."
-            },
-            {
-              "speaker": "David (牌友)",
-              "mt_spoken": "Naħseb li dan blaff.",
-              "mt_standard": "Naħseb li dan blaff.",
-              "zh": "我觉得他是在唬人。",
-              "en": "I think that's a bluff."
-            },
-            {
-              "speaker": "Sara (牌友)",
-              "mt_spoken": "Mela nistennew u naraw.",
-              "mt_standard": "Mela nistennew u naraw.",
-              "zh": "那就等着看吧。",
-              "en": "Then let's wait and see."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象手里牌很弱却摆出稳赢表情的人，用这幅画面记住虚张声势的含义。"
-    },
-    {
-      "stratum": "tier_2/english/enriched",
-      "exact_key": "żlokkja",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To release a lock or fastening so that something can be opened or moved.",
-          "zh_definition": "解除锁或扣件的固定，使某物能够打开或移动。",
-          "mt_definition": "Jiftaħ serratura jew iħoll qafla biex xi ħaġa tkun tista' tinfetaħ jew tiċċaqlaq.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to unlock, unfasten",
-          "zh_definition": "开锁；解开或松开扣件，使原本锁住或固定的东西可以打开。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Qabel il-wasla tal-viżitaturi, il-gwardjan żlokkja l-bieb prinċipali.",
-          "en": "Before the visitors arrived, the caretaker unlocked the main door.",
-          "zh": "访客到达前，管理员打开了大门的锁。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Anna: Il-bieb għadu msakkar? Luqa: Le, missieri żlokkja l-bieb ftit ilu. Anna: Tajjeb, nista' nidħol.",
-          "en": "Anna: Is the door still locked? Luqa: No, my father unlocked it a little while ago. Anna: Good, I can go in.",
-          "zh": "Anna：门还锁着吗？Luqa：没有，我爸爸刚才已经开锁了。Anna：好，那我可以进去了。",
-          "messages": [
-            {
-              "speaker": "Anna (来访朋友)",
-              "mt_spoken": "Il-bieb għadu msakkar?",
-              "mt_standard": "Il-bieb għadu msakkar?",
-              "zh": "门还锁着吗？",
-              "en": "Is the door still locked?"
-            },
-            {
-              "speaker": "Luqa (屋主的儿子)",
-              "mt_spoken": "Le, missieri żlokkja l-bieb ftit ilu.",
-              "mt_standard": "Le, missieri żlokkja l-bieb ftit ilu.",
-              "zh": "没有，我爸爸刚才已经开锁了。",
-              "en": "No, my father unlocked it a little while ago."
-            },
-            {
-              "speaker": "Anna (来访朋友)",
-              "mt_spoken": "Tajjeb, nista' nidħol.",
-              "mt_standard": "Tajjeb, nista' nidħol.",
-              "zh": "好，那我可以进去了。",
-              "en": "Good, I can go in."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象钥匙转动后门锁咔嗒打开，再联想到扣件松开；共同点是解除固定、允许打开。"
-    },
-    {
-      "stratum": "tier_2/english/enriched",
-      "exact_key": "approwċja",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To initiate contact with someone in order to discuss a matter, seek help or propose cooperation.",
-          "zh_definition": "为了商谈事情、寻求帮助或提出合作而主动与某人接触。",
-          "mt_definition": "Jagħmel kuntatt ma' xi ħadd biex jiddiskuti xi ħaġa, jitlob għajnuna jew jipproponi kooperazzjoni.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to make approaches",
-          "zh_definition": "主动接洽；向某人展开接触，以便商谈、提出请求或寻求合作。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-koordinatur approwċja lil kumpanija lokali biex jiddiskuti l-possibbiltà ta' kooperazzjoni.",
-          "en": "The coordinator approached a local company to discuss the possibility of cooperation.",
-          "zh": "协调员主动接洽了一家本地公司，商讨合作的可能性。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Xi ħadd diġà tkellem mal-klijent il-ġdid? Mark: Iva, Pawlu approwċja lill-klijent ilbieraħ biex joffrilu s-servizzi tagħna.",
-          "en": "Maja: Has anyone spoken to the new client yet? Mark: Yes, Pawlu approached the client yesterday to offer him our services.",
-          "zh": "玛雅：有人已经和那位新客户谈过了吗？马克：有，保罗昨天主动联系了客户，向他介绍我们的服务。",
-          "messages": [
-            {
-              "speaker": "Maja (同事)",
-              "mt_spoken": "Xi ħadd diġà tkellem mal-klijent il-ġdid?",
-              "mt_standard": "Xi ħadd diġà tkellem mal-klijent il-ġdid?",
-              "zh": "有人已经和那位新客户谈过了吗？",
-              "en": "Has anyone spoken to the new client yet?"
-            },
-            {
-              "speaker": "Mark (同事)",
-              "mt_spoken": "Iva, Pawlu approwċja lill-klijent ilbieraħ biex joffrilu s-servizzi tagħna.",
-              "mt_standard": "Iva, Pawlu approwċja lill-klijent ilbieraħ biex joffrilu s-servizzi tagħna.",
-              "zh": "有，保罗昨天主动联系了客户，向他介绍我们的服务。",
-              "en": "Yes, Pawlu approached the client yesterday to offer him our services."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象自己主动走向客户并开口谈合作：用这个场景记住它表示主动接洽的动作。"
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
       "exact_key": "blakk",
       "analysis_pos": [
         "noun"
@@ -1848,8 +1203,15 @@
       "senses": [
         {
           "pos": "noun",
+          "en_definition": "A preparation applied to shoes to polish them and improve their appearance.",
+          "zh_definition": "涂在鞋面上，用于擦亮鞋子、改善外观的鞋油或擦鞋膏。",
+          "mt_definition": "Sustanza li tintuża biex tillostra ż-żraben u ttejjeb id-dehra tagħhom.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
           "en_definition": "blacking, shoe polish",
-          "zh_definition": null,
+          "zh_definition": "鞋油；用于擦亮鞋子的膏剂。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1863,11 +1225,45 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Qabel iċ-ċerimonja, l-impjegat illostra ż-żraben bil-blakk u mbagħad għaddielhom ċarruta nadifa.",
+          "en": "Before the ceremony, the employee polished his shoes with shoe polish and then wiped them with a clean cloth.",
+          "zh": "典礼前，这名员工用鞋油擦亮鞋子，随后用干净的布擦拭。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Karl: Fejn qiegħed il-blakk? Irrid nillostra ż-żraben. Rita: Fil-kexxun ħdejn il-bieb, maġenb ix-xkupilja.",
+          "en": "Karl: Where's the shoe polish? I want to polish my shoes. Rita: In the drawer by the door, next to the brush.",
+          "zh": "卡尔：鞋油在哪儿？我想擦鞋。丽塔：在门边的抽屉里，刷子旁边。",
+          "messages": [
+            {
+              "speaker": "Karl (家人)",
+              "mt_spoken": "Fejn qiegħed il-blakk? Irrid nillostra ż-żraben.",
+              "mt_standard": "Fejn qiegħed il-blakk? Irrid nillostra ż-żraben.",
+              "zh": "鞋油在哪儿？我想擦鞋。",
+              "en": "Where's the shoe polish? I want to polish my shoes."
+            },
+            {
+              "speaker": "Rita (家人)",
+              "mt_spoken": "Fil-kexxun ħdejn il-bieb, maġenb ix-xkupilja.",
+              "mt_standard": "Fil-kexxun ħdejn il-bieb, maġenb ix-xkupilja.",
+              "zh": "在门边的抽屉里，刷子旁边。",
+              "en": "In the drawer by the door, next to the brush."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 blakk 与鞋刷、鞋油罐和擦亮的皮鞋一起记，牢牢记住它是擦鞋用品。"
     },
     {
-      "stratum": "tier_2/english/unenriched",
+      "stratum": "tier_2/english/enriched",
       "exact_key": "bbajndja",
       "analysis_pos": [
         "verb"
@@ -1875,7 +1271,154 @@
       "senses": [
         {
           "pos": "verb",
+          "en_definition": "To fasten a book's pages together and attach them to a cover.",
+          "zh_definition": "把书页固定在一起并配上封面，装订成册。",
+          "mt_definition": "Għaqqad il-paġni ta' ktieb u waħħalhom ma' qoxra.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "verb",
           "en_definition": "to bind (a book)",
+          "zh_definition": "装订书籍；将书页装订成册。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-legatur bbajndja l-volum b'qoxra iebsa qabel ma ntbagħat lill-librerija.",
+          "en": "The bookbinder bound the volume in a hard cover before it was sent to the library.",
+          "zh": "装订师将该卷书精装成册后，书才被送往图书馆。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Marta: It-teżi tiegħek lesta biex tissottomettiha? Pawlu: Iva, il-legatur bbajndja t-teżi lbieraħ, u se niġborha llum.",
+          "en": "Marta: Is your thesis ready to submit? Pawlu: Yes, the bookbinder bound it yesterday, and I'm picking it up today.",
+          "zh": "玛尔塔：你的论文准备好提交了吗？保罗：准备好了，装订师昨天把论文装订好了，我今天去取。",
+          "messages": [
+            {
+              "speaker": "Marta (同学)",
+              "mt_spoken": "It-teżi tiegħek lesta biex tissottomettiha?",
+              "mt_standard": "It-teżi tiegħek lesta biex tissottomettiha?",
+              "zh": "你的论文准备好提交了吗？",
+              "en": "Is your thesis ready to submit?"
+            },
+            {
+              "speaker": "Pawlu (准备提交论文的学生)",
+              "mt_spoken": "Iva, il-legatur bbajndja t-teżi lbieraħ, u se niġborha llum.",
+              "mt_standard": "Iva, il-legatur bbajndja t-teżi lbieraħ, u se niġborha llum.",
+              "zh": "准备好了，装订师昨天把论文装订好了，我今天去取。",
+              "en": "Yes, the bookbinder bound it yesterday, and I'm picking it up today."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象一叠散页经过固定、加封面，变成一本完整的书；把 bbajndja 和“散页变成册”的动作连在一起，再用书籍与论文两个例子复习。"
+    },
+    {
+      "stratum": "tier_2/english/enriched",
+      "exact_key": "bbriġġja",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To connect two sides of a gap, valley, or waterway by means of a bridge.",
+          "zh_definition": "通过架设桥梁，把间隔、山谷或水道的两侧连接起来。",
+          "mt_definition": "Tgħaqqad żewġ naħat ta' vojt, wied jew passaġġ tal-ilma permezz ta' pont.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to bridge (to connect with a bridge)",
+          "zh_definition": "架桥；用桥把两侧连接起来。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kuntrattur bbriġġja l-wied biex jgħaqqad iż-żewġ irħula.",
+          "en": "The contractor bridged the valley to connect the two villages.",
+          "zh": "承包商在山谷上架桥，把两个村庄连接起来。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Kif għaqqdu ż-żewġ naħat tal-wied? Toni: Il-kuntrattur bbriġġja l-wied, u issa nistgħu naqsmu bil-mixi.",
+          "en": "Maja: How did they connect the two sides of the valley? Toni: The contractor bridged the valley, and now we can cross on foot.",
+          "zh": "玛雅：他们是怎么把山谷两侧连起来的？托尼：承包商在山谷上架了桥，现在我们可以步行过去了。",
+          "messages": [
+            {
+              "speaker": "Maja (居民)",
+              "mt_spoken": "Kif għaqqdu ż-żewġ naħat tal-wied?",
+              "mt_standard": "Kif għaqqdu ż-żewġ naħat tal-wied?",
+              "zh": "他们是怎么把山谷两侧连起来的？",
+              "en": "How did they connect the two sides of the valley?"
+            },
+            {
+              "speaker": "Toni (邻居)",
+              "mt_spoken": "Il-kuntrattur bbriġġja l-wied, u issa nistgħu naqsmu bil-mixi.",
+              "mt_standard": "Il-kuntrattur bbriġġja l-wied, u issa nistgħu naqsmu bil-mixi.",
+              "zh": "承包商在山谷上架了桥，现在我们可以步行过去了。",
+              "en": "The contractor bridged the valley, and now we can cross on foot."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象山谷两边原本不通，中间架起一座桥；把这个动作与“架桥连接”一起记。"
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "disċarġ",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "discharge",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "id-disċarġ",
+        "prefix": "id-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "ddikanta",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to decant",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -1887,14 +1430,14 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "bbriġġja",
+      "exact_key": "ttajpja",
       "analysis_pos": [
         "verb"
       ],
       "senses": [
         {
           "pos": "verb",
-          "en_definition": "to bridge (to connect with a bridge)",
+          "en_definition": "to type",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -1906,209 +1449,6 @@
     },
     {
       "stratum": "tier_2/other_or_hybrid/enriched",
-      "exact_key": "abatija",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A religious house where a community of monks or nuns lives.",
-          "zh_definition": "供修士或修女组成的宗教团体共同生活的修道院。",
-          "mt_definition": "Dar reliġjuża fejn tgħix komunità ta' patrijiet jew sorijiet.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "abbey; nunnery",
-          "zh_definition": "修道院；女修道院。",
-          "mt_definition": "Monasteru jew kunvent tas-sorijiet.",
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "orphanage",
-          "zh_definition": "收容、照料孤儿的机构；孤儿院。",
-          "mt_definition": "Dar fejn jgħixu u jingħataw kura tfal orfni.",
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-abatija",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-istudenti żaru l-abatija biex jitgħallmu dwar il-ħajja tal-komunità reliġjuża.",
-          "en": "The students visited the abbey to learn about the life of the religious community.",
-          "zh": "学生们参观了修道院，以了解宗教团体的生活。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Trid iżżur l-abatija għada? Pawlu: Iva, nixtieq nara l-ġnien tagħha.",
-          "en": "Maja: Do you want to visit the abbey tomorrow? Pawlu: Yes, I'd like to see its garden.",
-          "zh": "Maja：你明天想去参观修道院吗？Pawlu：想，我想看看那里的花园。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Trid iżżur l-abatija għada?",
-              "mt_standard": "Trid iżżur l-abatija għada?",
-              "zh": "你明天想去参观修道院吗？",
-              "en": "Do you want to visit the abbey tomorrow?"
-            },
-            {
-              "speaker": "Pawlu (朋友)",
-              "mt_spoken": "Iva, nixtieq nara l-ġnien tagħha.",
-              "mt_standard": "Iva, nixtieq nara l-ġnien tagħha.",
-              "zh": "想，我想看看那里的花园。",
-              "en": "Yes, I'd like to see its garden."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用两张场景卡记忆：宗教团体共同生活的院落对应“修道院”，照料孤儿的机构对应“孤儿院”；阅读时靠上下文选择词义。"
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/enriched",
-      "exact_key": "abela",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "A surname used as a person's family name, written Abela with an initial capital.",
-          "zh_definition": "用作个人家族姓氏的名称，写作 Abela，首字母大写。",
-          "mt_definition": "Kunjom li jinkiteb Abela, bl-ewwel ittra kbira.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "name",
-          "en_definition": "a surname from Spanish",
-          "zh_definition": "源自西班牙语的姓氏，中文可音译为“阿贝拉”。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Is-Sur Abela ressaq it-talba tiegħu bil-miktub.",
-          "en": "Mr Abela submitted his request in writing.",
-          "zh": "阿贝拉先生以书面形式提交了申请。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Rita: X'kunjom għandek? Mark: Abela. Tridni niktbu għalik?",
-          "en": "Rita: What's your surname? Mark: Abela. Would you like me to write it down for you?",
-          "zh": "丽塔：你姓什么？马克：阿贝拉。需要我帮你写下来吗？",
-          "messages": [
-            {
-              "speaker": "Rita (接待员)",
-              "mt_spoken": "X'kunjom għandek?",
-              "mt_standard": "X'kunjom għandek?",
-              "zh": "你姓什么？",
-              "en": "What's your surname?"
-            },
-            {
-              "speaker": "Mark (访客)",
-              "mt_spoken": "Abela. Tridni niktbu għalik?",
-              "mt_standard": "Abela. Tridni niktbu għalik?",
-              "zh": "阿贝拉。需要我帮你写下来吗？",
-              "en": "Abela. Would you like me to write it down for you?"
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 Abela 写在姓名卡的“姓氏”栏，联想“阿贝拉先生”，同时记住实际姓名首字母大写。"
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/enriched",
-      "exact_key": "aruka",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "The plant Eruca sativa, known as rocket or arugula, whose leaves are used as food.",
-          "zh_definition": "芝麻菜，学名 Eruca sativa，其叶可作食材，英语称 rocket 或 arugula。",
-          "mt_definition": "Il-pjanta Eruca sativa, li l-weraq tagħha jintuża bħala ikel, pereżempju fl-insalati.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "rocket, arugula, Eruca sativa",
-          "zh_definition": "芝麻菜（Eruca sativa），英语亦称 rocket 或 arugula",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-aruka",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Ir-riċetta titlob li l-weraq tal-aruka jinħasel qabel ma jiżdied mal-insalata.",
-          "en": "The recipe calls for the arugula leaves to be washed before they are added to the salad.",
-          "zh": "食谱要求先洗净芝麻菜叶，再将其加入沙拉。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Nina: Inżid ftit aruka mal-insalata? Luqa: Iva, imma aħsel il-weraq l-ewwel.",
-          "en": "Nina: Shall I add some arugula to the salad? Luqa: Yes, but wash the leaves first.",
-          "zh": "妮娜：要不要往沙拉里加点芝麻菜？卢卡：好，不过先把叶子洗一洗。",
-          "messages": [
-            {
-              "speaker": "Nina (朋友)",
-              "mt_spoken": "Inżid ftit aruka mal-insalata?",
-              "mt_standard": "Inżid ftit aruka mal-insalata?",
-              "zh": "要不要往沙拉里加点芝麻菜？",
-              "en": "Shall I add some arugula to the salad?"
-            },
-            {
-              "speaker": "Luqa (朋友)",
-              "mt_spoken": "Iva, imma aħsel il-weraq l-ewwel.",
-              "mt_standard": "Iva, imma aħsel il-weraq l-ewwel.",
-              "zh": "好，不过先把叶子洗一洗。",
-              "en": "Yes, but wash the leaves first."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象做沙拉时拿起一把芝麻菜，边放进碗里边念 aruka，让词音与食材画面相连。"
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/unenriched",
       "exact_key": "avultun",
       "analysis_pos": [
         "noun"
@@ -2116,8 +1456,15 @@
       "senses": [
         {
           "pos": "noun",
+          "en_definition": "A large bird of prey that feeds mainly on dead animals.",
+          "zh_definition": "主要以动物尸体为食的大型猛禽，即兀鹫。",
+          "mt_definition": "Għasfur tal-priża kbir li jiekol l-aktar annimali mejta.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
           "en_definition": "vulture",
-          "zh_definition": null,
+          "zh_definition": "兀鹫；主要以动物尸体为食的大型猛禽。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -2131,8 +1478,170 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-ritratt juri avultun bil-ġwienaħ miftuħa fuq blata.",
+          "en": "The photograph shows a vulture with its wings spread on a rock.",
+          "zh": "照片中，一只兀鹫站在岩石上，展开双翅。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Sara: X'inhu dak l-għasfur kbir? Mark: Dak avultun. Ħares lejn il-ġwienaħ tiegħu!",
+          "en": "Sara: What is that big bird? Mark: That's a vulture. Look at its wings!",
+          "zh": "萨拉：那只大鸟是什么？马克：那是兀鹫。看看它的翅膀！",
+          "messages": [
+            {
+              "speaker": "萨拉 (游客)",
+              "mt_spoken": "X'inhu dak l-għasfur kbir?",
+              "mt_standard": "X'inhu dak l-għasfur kbir?",
+              "zh": "那只大鸟是什么？",
+              "en": "What is that big bird?"
+            },
+            {
+              "speaker": "马克 (导游)",
+              "mt_spoken": "Dak avultun. Ħares lejn il-ġwienaħ tiegħu!",
+              "mt_standard": "Dak avultun. Ħares lejn il-ġwienaħ tiegħu!",
+              "zh": "那是兀鹫。看看它的翅膀！",
+              "en": "That's a vulture. Look at its wings!"
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "看到 avultun，就想象天空中一只展开大翅膀的兀鹫；用这幅画面把词形和鸟名牢牢连在一起。"
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/enriched",
+      "exact_key": "burkina faso",
+      "analysis_pos": [
+        "name"
+      ],
+      "senses": [
+        {
+          "pos": "name",
+          "en_definition": "Burkina Faso, a country in West Africa formerly called Upper Volta.",
+          "zh_definition": "布基纳法索，位于西非的国家，旧称上沃尔特。",
+          "mt_definition": "Pajjiż fl-Afrika tal-Punent li qabel kien jissejjaħ Upper Volta.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "name",
+          "en_definition": "Burkina Faso (a country in West Africa, formerly Upper Volta; official name: Burkina Faso)",
+          "zh_definition": "布基纳法索，位于西非的国家，旧称上沃尔特；正式国名为布基纳法索。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-rapport tal-ġeografija jiddeskrivi l-Burkina Faso bħala pajjiż fl-Afrika tal-Punent.",
+          "en": "The geography report describes Burkina Faso as a country in West Africa.",
+          "zh": "这份地理报告将布基纳法索介绍为一个位于西非的国家。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Sara: Fejn jinsab il-Burkina Faso? Adam: Fl-Afrika tal-Punent. Ejja nsibuh fuq il-mappa.",
+          "en": "Sara: Where is Burkina Faso? Adam: In West Africa. Let's find it on the map.",
+          "zh": "萨拉：布基纳法索在哪里？亚当：在西非。我们在地图上找找它吧。",
+          "messages": [
+            {
+              "speaker": "Sara (同学)",
+              "mt_spoken": "Fejn jinsab il-Burkina Faso?",
+              "mt_standard": "Fejn jinsab il-Burkina Faso?",
+              "zh": "布基纳法索在哪里？",
+              "en": "Where is Burkina Faso?"
+            },
+            {
+              "speaker": "Adam (同学)",
+              "mt_spoken": "Fl-Afrika tal-Punent. Ejja nsibuh fuq il-mappa.",
+              "mt_standard": "Fl-Afrika tal-Punent. Ejja nsibuh fuq il-mappa.",
+              "zh": "在西非。我们在地图上找找它吧。",
+              "en": "In West Africa. Let's find it on the map."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 Burkina Faso 分成两个书写单元，对应中文“布基纳／法索”，再在词卡旁标注“西非”。"
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/enriched",
+      "exact_key": "anisi",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "Anise, the plant Pimpinella anisum, or its aromatic seeds used to flavour food.",
+          "zh_definition": "茴芹，又称洋茴香，学名为 Pimpinella anisum；也可指其用于食物调味的芳香种子。",
+          "mt_definition": "Il-pjanta Pimpinella anisum, jew iż-żrieragħ aromatiċi tagħha li jintużaw biex jagħtu togħma lill-ikel.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "anise, Pimpinella anisum",
+          "zh_definition": "茴芹；洋茴香，学名为 Pimpinella anisum",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-anisi",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Din ir-riċetta tuża ż-żrieragħ tal-anisi biex tagħti togħma lill-gallettini.",
+          "en": "This recipe uses anise seeds to flavour the biscuits.",
+          "zh": "这个食谱使用茴芹籽给饼干增添风味。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: X'poġġejt f'dawn il-gallettini? Rita: Ftit anisi; jogħġbok it-togħma?",
+          "en": "Maja: What did you put in these biscuits? Rita: A little anise; do you like the flavour?",
+          "zh": "玛雅：你在这些饼干里放了什么？丽塔：一点洋茴香，你喜欢这个味道吗？",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "X'poġġejt f'dawn il-gallettini?",
+              "mt_standard": "X'poġġejt f'dawn il-gallettini?",
+              "zh": "你在这些饼干里放了什么？",
+              "en": "What did you put in these biscuits?"
+            },
+            {
+              "speaker": "Rita (烘焙者)",
+              "mt_spoken": "Ftit anisi; jogħġbok it-togħma?",
+              "mt_standard": "Ftit anisi; jogħġbok it-togħma?",
+              "zh": "一点洋茴香，你喜欢这个味道吗？",
+              "en": "A little anise; do you like the flavour?"
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象把一小撮茴芹籽加入饼干面团，闻到香气时联想 anisi，记住它是洋茴香。"
     },
     {
       "stratum": "tier_2/other_or_hybrid/unenriched",
@@ -2171,14 +1680,41 @@
     },
     {
       "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "burkina faso",
+      "exact_key": "vroma",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "disaster, fiasco, failure",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-vroma",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/unenriched",
+      "exact_key": "ħaruf ta' alla",
       "analysis_pos": [
         "name"
       ],
       "senses": [
         {
           "pos": "name",
-          "en_definition": "Burkina Faso (a country in West Africa, formerly Upper Volta; official name: Burkina Faso)",
+          "en_definition": "Lamb of God",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -2264,6 +1800,74 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
+      "exact_key": "ankoraġġ",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A place where a boat or ship can lie at anchor, or the act of securing it with an anchor.",
+          "zh_definition": "船只可以下锚停泊的水域，或用锚固定船只的停泊行为。",
+          "mt_definition": "Post fejn dgħajsa jew vapur jista' jieqaf bl-ankra, jew l-att li jinżamm f'postu permezz ta' ankra.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "anchorage",
+          "zh_definition": "锚地；抛锚停泊",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-ankoraġġ",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kaptan għażel post ta' ankoraġġ protett mir-riħ.",
+          "en": "The captain chose an anchorage sheltered from the wind.",
+          "zh": "船长选择了一处避风的锚地。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Nistgħu nieqfu hawn bid-dgħajsa? Mark: Iva, dan ankoraġġ sigur.",
+          "en": "Maja: Can we stop here with the boat? Mark: Yes, this is a safe anchorage.",
+          "zh": "玛雅：我们可以把船停在这里吗？马克：可以，这是一处安全的锚地。",
+          "messages": [
+            {
+              "speaker": "Maja (乘客)",
+              "mt_spoken": "Nistgħu nieqfu hawn bid-dgħajsa?",
+              "mt_standard": "Nistgħu nieqfu hawn bid-dgħajsa?",
+              "zh": "我们可以把船停在这里吗？",
+              "en": "Can we stop here with the boat?"
+            },
+            {
+              "speaker": "Mark (船长)",
+              "mt_spoken": "Iva, dan ankoraġġ sigur.",
+              "mt_standard": "Iva, dan ankoraġġ sigur.",
+              "zh": "可以，这是一处安全的锚地。",
+              "en": "Yes, this is a safe anchorage."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 ankoraġġ 想成海图上标出的下锚位置：船到这里放下锚，便进入抛锚停泊状态。"
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/enriched",
       "exact_key": "aborta",
       "analysis_pos": [
         "verb"
@@ -2321,88 +1925,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "把 aborta 放在“妊娠提前结束”的情境卡上；遇到 spontanjament 时联想自然发生，避免仅凭这个动词判断是否人为。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "atomista",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A person who supports atomism, the view that matter consists of atoms.",
-          "zh_definition": "支持原子论的人，即认为物质由原子构成的人。",
-          "mt_definition": "Persuna li tħaddan l-atomiżmu, il-fehma li l-materja hija magħmula minn atomi.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "atomist",
-          "zh_definition": "原子论者；持原子论观点的人。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-atomista",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-awtur jippreżenta lill-filosfu bħala atomista li jqis il-materja bħala magħmula minn atomi.",
-          "en": "The author presents the philosopher as an atomist who regards matter as composed of atoms.",
-          "zh": "作者将这位哲学家介绍为原子论者，认为物质由原子构成。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Sara: X'inhu atomista? Pawlu: Xi ħadd li jemmen li l-materja hija magħmula minn atomi. Sara: Mela l-kelma tirreferi għal persuna? Pawlu: Iva, għal persuna li tħaddan dik il-fehma.",
-          "en": "Sara: What is an atomist? Pawlu: Someone who believes that matter is made of atoms. Sara: So the word refers to a person? Pawlu: Yes, a person who holds that view.",
-          "zh": "Sara：什么是原子论者？Pawlu：就是认为物质由原子构成的人。Sara：所以这个词指的是人？Pawlu：对，指持这种观点的人。",
-          "messages": [
-            {
-              "speaker": "Sara (学生)",
-              "mt_spoken": "X'inhu atomista?",
-              "mt_standard": "X'inhu atomista?",
-              "zh": "什么是原子论者？",
-              "en": "What is an atomist?"
-            },
-            {
-              "speaker": "Pawlu (老师)",
-              "mt_spoken": "Xi ħadd li jemmen li l-materja hija magħmula minn atomi.",
-              "mt_standard": "Xi ħadd li jemmen li l-materja hija magħmula minn atomi.",
-              "zh": "就是认为物质由原子构成的人。",
-              "en": "Someone who believes that matter is made of atoms."
-            },
-            {
-              "speaker": "Sara (学生)",
-              "mt_spoken": "Mela l-kelma tirreferi għal persuna?",
-              "mt_standard": "Mela l-kelma tirreferi għal persuna?",
-              "zh": "所以这个词指的是人？",
-              "en": "So the word refers to a person?"
-            },
-            {
-              "speaker": "Pawlu (老师)",
-              "mt_spoken": "Iva, għal persuna li tħaddan dik il-fehma.",
-              "mt_standard": "Iva, għal persuna li tħaddan dik il-fehma.",
-              "zh": "对，指持这种观点的人。",
-              "en": "Yes, a person who holds that view."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象一位指着原子示意图讲解观点的人，把 atomista 与“原子论者”整词配对，记住它指持某种观点的人。"
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
@@ -2476,6 +1998,81 @@
       "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
+      "exact_key": "bħajra",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A body of water surrounded by land; in another sense, a field where melons are grown.",
+          "zh_definition": "被陆地环绕的水域，即湖泊；另一义指种植甜瓜的田地。",
+          "mt_definition": "Medda ta' ilma mdawra bl-art; f'tifsira oħra, għalqa fejn jitkabbar il-bettieħ.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "lake",
+          "zh_definition": "湖；湖泊。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "melon field",
+          "zh_definition": "甜瓜田；种植甜瓜的田地。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bħajra",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-mappa turi bħajra żgħira mdawra bis-siġar.",
+          "en": "The map shows a small lake surrounded by trees.",
+          "zh": "地图上标示着一个四周环绕树木的小湖。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Fejn ħawwelt il-bettieħ? Pawlu: Fil-bħajra ħdejn id-dar.",
+          "en": "Maja: Where did you plant the melons? Pawlu: In the melon field next to the house.",
+          "zh": "玛雅：你把甜瓜种在哪里了？保罗：在屋子旁边的甜瓜田里。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Fejn ħawwelt il-bettieħ?",
+              "mt_standard": "Fejn ħawwelt il-bettieħ?",
+              "zh": "你把甜瓜种在哪里了？",
+              "en": "Where did you plant the melons?"
+            },
+            {
+              "speaker": "Pawlu (种植者)",
+              "mt_spoken": "Fil-bħajra ħdejn id-dar.",
+              "mt_standard": "Fil-bħajra ħdejn id-dar.",
+              "zh": "在屋子旁边的甜瓜田里。",
+              "en": "In the melon field next to the house."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "画两幅并排的小图：一幅湖面，一幅甜瓜田，都标上 bħajra；读句子时用水岸或种瓜的语境判断词义。"
     },
     {
       "stratum": "tier_2/semitic/enriched",
@@ -2605,66 +2202,6 @@
       "cognitive_memory_aid": "把这个词放进“母亲抱着宝宝喂奶”的画面中记忆；搭配 lit-tarbija，整组联想为“给宝宝哺乳”。"
     },
     {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "buttiġieġ",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "A surname with an occupational origin, used as a person's family name.",
-          "zh_definition": "一个源自职业称谓的姓氏，用作个人的家族姓；中文可音译为“布蒂吉耶奇”。",
-          "mt_definition": "Kunjom li oriġina minn isem ta' xogħol u li jintuża bħala l-isem tal-familja ta' persuna.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "name",
-          "en_definition": "a surname originating as an occupation",
-          "zh_definition": "一个源自职业称谓的姓氏，中文可音译为“布蒂吉耶奇”。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Is-Sur Buttiġieġ għandu jiffirma l-formola u jikteb id-data.",
-          "en": "Mr Buttiġieġ must sign the form and write the date.",
-          "zh": "布蒂吉耶奇先生须在表格上签名并填写日期。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: Kif jinkiteb il-kunjom tiegħek? Pawlu: Buttiġieġ, b'żewġ t.",
-          "en": "Lara: How do you spell your surname? Pawlu: Buttiġieġ, with two t's.",
-          "zh": "拉拉：你的姓怎么拼？保罗：Buttiġieġ，有两个 t。",
-          "messages": [
-            {
-              "speaker": "Lara (接待员)",
-              "mt_spoken": "Kif jinkiteb il-kunjom tiegħek?",
-              "mt_standard": "Kif jinkiteb il-kunjom tiegħek?",
-              "zh": "你的姓怎么拼？",
-              "en": "How do you spell your surname?"
-            },
-            {
-              "speaker": "Pawlu (访客)",
-              "mt_spoken": "Buttiġieġ, b'żewġ t.",
-              "mt_standard": "Buttiġieġ, b'żewġ t.",
-              "zh": "Buttiġieġ，有两个 t。",
-              "en": "Buttiġieġ, with two t's."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 Buttiġieġ 放进签到表的姓氏栏来记；书写时留意大写 B、双写 tt 和两个带点的 ġ。"
-    },
-    {
       "stratum": "tier_2/semitic/unenriched",
       "exact_key": "lejlet il-milied",
       "analysis_pos": [
@@ -2739,6 +2276,81 @@
     },
     {
       "stratum": "tier_2/unspecified/enriched",
+      "exact_key": "buzzun",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A container or holder used to hold ice.",
+          "zh_definition": "用来盛放冰的容器或器具。",
+          "mt_definition": "Kontenitur jew reċipjent li jintuża biex iżomm is-silġ.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "an ice holder",
+          "zh_definition": "盛冰容器；用来放冰的器具。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-buzzun",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Qabel il-wasla tal-mistednin, il-persunal poġġa buzzun mimli silġ fuq il-mejda tax-xorb.",
+          "en": "Before the guests arrived, the staff placed an ice holder full of ice on the drinks table.",
+          "zh": "宾客到来之前，工作人员在饮品桌上放了一个装满冰的盛冰容器。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Fejn inpoġġi s-silġ? Sara: Fil-buzzun, ħdejn it-tazzi. Mark: Sewwa, nimlieh issa.",
+          "en": "Mark: Where should I put the ice? Sara: In the ice holder, next to the glasses. Mark: All right, I'll fill it now.",
+          "zh": "Mark：冰放在哪里？Sara：放在杯子旁边的盛冰容器里。Mark：好，我现在把它装满。",
+          "messages": [
+            {
+              "speaker": "Mark (聚会帮手)",
+              "mt_spoken": "Fejn inpoġġi s-silġ?",
+              "mt_standard": "Fejn inpoġġi s-silġ?",
+              "zh": "冰放在哪里？",
+              "en": "Where should I put the ice?"
+            },
+            {
+              "speaker": "Sara (聚会主人)",
+              "mt_spoken": "Fil-buzzun, ħdejn it-tazzi.",
+              "mt_standard": "Fil-buzzun, ħdejn it-tazzi.",
+              "zh": "放在杯子旁边的盛冰容器里。",
+              "en": "In the ice holder, next to the glasses."
+            },
+            {
+              "speaker": "Mark (聚会帮手)",
+              "mt_spoken": "Sewwa, nimlieh issa.",
+              "mt_standard": "Sewwa, nimlieh issa.",
+              "zh": "好，我现在把它装满。",
+              "en": "All right, I'll fill it now."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象聚会桌上杯子旁边专门装冰的容器，把 buzzun 标签贴在容器上，与表示冰的 silġ 配对记忆。"
+    },
+    {
+      "stratum": "tier_2/unspecified/enriched",
       "exact_key": "għandu",
       "analysis_pos": [
         "adv"
@@ -2806,30 +2418,30 @@
     },
     {
       "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "nofsi",
+      "exact_key": "bexxiex",
       "analysis_pos": [
-        "adj"
+        "NOUN"
       ],
       "senses": [
         {
-          "pos": "adj",
-          "en_definition": "Situated in the middle or toward the central line of something.",
-          "zh_definition": "位于某物中间，或靠近其中央线的。",
-          "mt_definition": "Li jinsab fin-nofs jew lejn il-linja ċentrali ta' xi ħaġa.",
+          "pos": "noun",
+          "en_definition": "A person who sprinkles water, for example over plants or the ground.",
+          "zh_definition": "把水洒在植物、地面等处的人。",
+          "mt_definition": "Persuna li tbexxex l-ilma, pereżempju fuq il-pjanti jew mal-art.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "adj",
-          "en_definition": "middle, medial",
-          "zh_definition": "中间的，居中的；在解剖等位置描述中指靠近中线的、内侧的。",
+          "pos": "NOUN",
+          "en_definition": "sb. who sprinkles water",
+          "zh_definition": "洒水的人。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "in-nofsi",
-        "prefix": "in-",
-        "rule": "sun_assimilation",
+        "form": "il-bexxiex",
+        "prefix": "il-",
+        "rule": "moon_consonant",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -2837,38 +2449,31 @@
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Fid-dijagramma, il-pjan nofsi jaqsam il-ġisem f'nofs tal-lemin u nofs tax-xellug.",
-          "en": "In the diagram, the median plane divides the body into a right half and a left half.",
-          "zh": "图中，正中面将身体分成右半部和左半部。",
+          "mt": "Il-bexxiex xerred ftit ilma mal-art qabel bdew ix-xogħlijiet, biex inaqqas it-trab.",
+          "en": "The person sprinkling water scattered a little water over the ground before work began, to reduce the dust.",
+          "zh": "开工前，洒水的人往地面洒了些水，以减少扬尘。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Sara: Xi jfisser nofsi hawn? Luka: Ifisser li jinsab fin-nofs. Ħares lejn il-punt nofsi ta' din il-linja. Sara: Issa fhimt fejn hu.",
-          "en": "Sara: What does nofsi mean here? Luka: It means that it is in the middle. Look at the middle point of this line. Sara: Now I understand where it is.",
-          "zh": "萨拉：这里的 nofsi 是什么意思？卢卡：意思是位于中间。看这条线的中间点。萨拉：现在我明白它在哪里了。",
+          "mt": "Maja: Min hu dak il-bexxiex ħdejn il-fjuri? Pawlu: Hu ħija; qed ibexxex ftit ilma fuqhom.",
+          "en": "Maja: Who is that person sprinkling water beside the flowers? Pawlu: He is my brother; he is sprinkling a little water over them.",
+          "zh": "玛雅：花旁边那个洒水的人是谁？保罗：他是我哥哥，正在往花上洒一点水。",
           "messages": [
             {
-              "speaker": "Sara (学生)",
-              "mt_spoken": "Xi jfisser nofsi hawn?",
-              "mt_standard": "Xi jfisser nofsi hawn?",
-              "zh": "这里的 nofsi 是什么意思？",
-              "en": "What does nofsi mean here?"
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Min hu dak il-bexxiex ħdejn il-fjuri?",
+              "mt_standard": "Min hu dak il-bexxiex ħdejn il-fjuri?",
+              "zh": "花旁边那个洒水的人是谁？",
+              "en": "Who is that person sprinkling water beside the flowers?"
             },
             {
-              "speaker": "Luka (同学)",
-              "mt_spoken": "Ifisser li jinsab fin-nofs. Ħares lejn il-punt nofsi ta' din il-linja.",
-              "mt_standard": "Ifisser li jinsab fin-nofs. Ħares lejn il-punt nofsi ta' din il-linja.",
-              "zh": "意思是位于中间。看这条线的中间点。",
-              "en": "It means that it is in the middle. Look at the middle point of this line."
-            },
-            {
-              "speaker": "Sara (学生)",
-              "mt_spoken": "Issa fhimt fejn hu.",
-              "mt_standard": "Issa fhimt fejn hu.",
-              "zh": "现在我明白它在哪里了。",
-              "en": "Now I understand where it is."
+              "speaker": "Pawlu (朋友)",
+              "mt_spoken": "Hu ħija; qed ibexxex ftit ilma fuqhom.",
+              "mt_standard": "Hu ħija; qed ibexxex ftit ilma fuqhom.",
+              "zh": "他是我哥哥，正在往花上洒一点水。",
+              "en": "He is my brother; he is sprinkling a little water over them."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -2877,67 +2482,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "在纸上画一条线并标出正中央，把 nofsi 写在中央标记旁，记住它描述中间或靠近中线的位置。"
-    },
-    {
-      "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "alla jagħtih il-ġenna",
-      "analysis_pos": [
-        "phrase"
-      ],
-      "senses": [
-        {
-          "pos": "phrase",
-          "en_definition": "A prayer for a deceased man, asking God to grant him heaven or rest his soul.",
-          "zh_definition": "悼念已故男性时使用的祈愿语，意为“愿主赐他天堂”或“愿他安息”。",
-          "mt_definition": "Talba għal raġel li miet, biex Alla jagħtih il-ġenna u r-ruħ tiegħu tistrieħ fis-sliem.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "phrase",
-          "en_definition": "God rest his soul; God grant him heaven",
-          "zh_definition": "愿他的灵魂安息；愿上帝赐他天堂，用于悼念已故男性。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Niftakru b'rispett f'Pawlu, Alla jagħtih il-ġenna, u fil-ħidma tiegħu għall-komunità.",
-          "en": "We respectfully remember Pawlu, may God rest his soul, and his work for the community.",
-          "zh": "我们怀着敬意缅怀保罗，愿他安息，也铭记他为社区所做的工作。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Sara: Min għallmek tagħmel il-ħobż? Mark: In-nannu, Alla jagħtih il-ġenna. Kien jagħmlu kull nhar ta' Ħadd.",
-          "en": "Sara: Who taught you to make bread? Mark: My grandfather, may God rest his soul. He used to make it every Sunday.",
-          "zh": "萨拉：谁教你做面包的？马克：我祖父，愿他安息。他以前每个星期日都会做。",
-          "messages": [
-            {
-              "speaker": "Sara (朋友)",
-              "mt_spoken": "Min għallmek tagħmel il-ħobż?",
-              "mt_standard": "Min għallmek tagħmel il-ħobż?",
-              "zh": "谁教你做面包的？",
-              "en": "Who taught you to make bread?"
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "In-nannu, Alla jagħtih il-ġenna. Kien jagħmlu kull nhar ta' Ħadd.",
-              "mt_standard": "In-nannu, Alla jagħtih il-ġenna. Kien jagħmlu kull nhar ta' Ħadd.",
-              "zh": "我祖父，愿他安息。他以前每个星期日都会做。",
-              "en": "My grandfather, may God rest his soul. He used to make it every Sunday."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用“提到已故祖父，轻声补一句愿他安息”的场景记整句；这里祈愿的对象是男性。"
+      "cognitive_memory_aid": "想象一个人提着水桶轻轻洒水，把 bexxiex 与“洒水的人”这一完整画面配对记忆。"
     },
     {
       "stratum": "tier_2/unspecified/unenriched",
