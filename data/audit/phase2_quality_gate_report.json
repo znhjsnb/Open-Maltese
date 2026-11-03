@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-42aed377f717",
+  "dataset_version": "malti-phase2-2026-11-03-046362e4e552",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 7188,
-    "unenriched_count": 16857,
-    "showcase_count": 7188,
+    "enriched_count": 8188,
+    "unenriched_count": 15857,
+    "showcase_count": 8188,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1786,54 +1786,62 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "ddeċentra",
+      "exact_key": "faxxatura",
       "analysis_pos": [
-        "verb"
+        "noun"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "To distribute authority, activities, or services among several centres instead of keeping them in one central place.",
-          "zh_definition": "把权力、活动或服务从单一中心分散到多个地方或单位。",
-          "mt_definition": "Iqassam is-setgħat, l-attivitajiet jew is-servizzi bejn diversi ċentri minflok iżommhom f'ċentru wieħed.",
+          "pos": "noun",
+          "en_definition": "The act of wrapping an injured part of the body with a bandage.",
+          "zh_definition": "用绷带缠裹身体受伤部位的动作或过程。",
+          "mt_definition": "L-att li tgeżwer parti midruba tal-ġisem b'faxxa.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "verb",
-          "en_definition": "to decentralize",
-          "zh_definition": "使分散；将权力、职能或服务从中心下放或分布到多个单位。",
+          "pos": "noun",
+          "en_definition": "bandaging",
+          "zh_definition": "包扎；用绷带缠裹受伤部位的过程。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "il-faxxatura",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-gvern ddeċentra s-servizzi billi fetaħ uffiċċji reġjonali biex iċ-ċittadini jinqdew eqreb ta' darhom.",
-          "en": "The government decentralized services by opening regional offices so that citizens could access them closer to home.",
-          "zh": "政府通过设立地区办事处分散服务，让居民能在离家较近的地方办理事务。",
+          "mt": "Waqt il-lezzjoni, l-għalliem wera l-faxxatura ta' id midruba permezz ta' mudell.",
+          "en": "During the lesson, the teacher demonstrated the bandaging of an injured hand using a model.",
+          "zh": "课堂上，老师用模型演示了受伤手部的包扎过程。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Mark: Għad irrid immur l-uffiċċju ewlieni? Lara: Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
-          "en": "Mark: Do I still need to go to the main office? Lara: No, the department decentralized its services; you can go to the village office.",
-          "zh": "马克：我还得去总部办事吗？拉拉：不用了，部门把服务分散到各地了，你可以去村里的办事处。",
+          "mt": "Maja: X'tgħallimtu fil-kors illum? Mark: Il-faxxatura tal-id; ipprattikajna fuq mudell.",
+          "en": "Maja: What did you learn on the course today? Mark: Hand bandaging; we practised on a model.",
+          "zh": "Maja：你们今天在课程里学了什么？Mark：手部包扎；我们用模型练习了。",
           "messages": [
             {
-              "speaker": "Mark (办事居民)",
-              "mt_spoken": "Għad irrid immur l-uffiċċju ewlieni?",
-              "mt_standard": "Għad irrid immur l-uffiċċju ewlieni?",
-              "zh": "我还得去总部办事吗？",
-              "en": "Do I still need to go to the main office?"
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "X'tgħallimtu fil-kors illum?",
+              "mt_standard": "X'tgħallimtu fil-kors illum?",
+              "zh": "你们今天在课程里学了什么？",
+              "en": "What did you learn on the course today?"
             },
             {
-              "speaker": "Lara (办事处职员)",
-              "mt_spoken": "Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
-              "mt_standard": "Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
-              "zh": "不用了，部门把服务分散到各地了，你可以去村里的办事处。",
-              "en": "No, the department decentralized its services; you can go to the village office."
+              "speaker": "Mark (学员)",
+              "mt_spoken": "Il-faxxatura tal-id; ipprattikajna fuq mudell.",
+              "mt_standard": "Il-faxxatura tal-id; ipprattikajna fuq mudell.",
+              "zh": "手部包扎；我们用模型练习了。",
+              "en": "Hand bandaging; we practised on a model."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1842,72 +1850,66 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "画一个中心圆，再把权力或服务的箭头分送到周围几个圆，用这幅图记住分散与下放。"
+      "cognitive_memory_aid": "想象绷带一圈圈绕过受伤的手，把整个“包扎过程”标成 faxxatura，重点记动作过程。"
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "ateni",
+      "exact_key": "ġermanju",
       "analysis_pos": [
-        "name"
+        "noun"
       ],
       "senses": [
         {
-          "pos": "name",
-          "en_definition": "Athens, the capital city of Greece.",
-          "zh_definition": "雅典，希腊的首都。",
-          "mt_definition": "Il-belt kapitali tal-Greċja.",
+          "pos": "noun",
+          "en_definition": "The chemical element germanium.",
+          "zh_definition": "化学元素锗。",
+          "mt_definition": "Element kimiku magħruf bħala ġermanju.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "name",
-          "en_definition": "Athens (the capital of Greece)",
-          "zh_definition": "雅典（希腊首都）。",
+          "pos": "noun",
+          "en_definition": "germanium (chemical element)",
+          "zh_definition": "锗，一种化学元素。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "il-ġermanju",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-laqgħa se ssir f'Ateni, il-belt kapitali tal-Greċja.",
-          "en": "The meeting will take place in Athens, the capital of Greece.",
-          "zh": "会议将在希腊首都雅典举行。",
+          "mt": "Il-kampjun ta' ġermanju tqiegħed f'kontenitur bit-tikketta tiegħu.",
+          "en": "The germanium sample was placed in a container with its label.",
+          "zh": "锗样品被放进了带有相应标签的容器中。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Maja: Fejn sejjer għall-vaganza? Mark: Se mmur Ateni ma' ħabib tiegħi. Maja: Kemm se ddumu hemm? Mark: Erbat ijiem.",
-          "en": "Maja: Where are you going on holiday? Mark: I'm going to Athens with a friend. Maja: How long will you stay there? Mark: Four days.",
-          "zh": "Maja：你要去哪里度假？Mark：我要和一个朋友去雅典。Maja：你们会在那里待多久？Mark：四天。",
+          "mt": "Lara: X'hemm f'dan il-kontenitur? Pawlu: Hemm kampjun ta' ġermanju; ara t-tikketta.",
+          "en": "Lara: What's in this container? Pawlu: There's a sample of germanium; look at the label.",
+          "zh": "拉拉：这个容器里有什么？保罗：里面有一份锗样品，看看标签。",
           "messages": [
             {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Fejn sejjer għall-vaganza?",
-              "mt_standard": "Fejn sejjer għall-vaganza?",
-              "zh": "你要去哪里度假？",
-              "en": "Where are you going on holiday?"
+              "speaker": "Lara (学生)",
+              "mt_spoken": "X'hemm f'dan il-kontenitur?",
+              "mt_standard": "X'hemm f'dan il-kontenitur?",
+              "zh": "这个容器里有什么？",
+              "en": "What's in this container?"
             },
             {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Se mmur Ateni ma' ħabib tiegħi.",
-              "mt_standard": "Se mmur Ateni ma' ħabib tiegħi.",
-              "zh": "我要和一个朋友去雅典。",
-              "en": "I'm going to Athens with a friend."
-            },
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Kemm se ddumu hemm?",
-              "mt_standard": "Kemm se ddumu hemm?",
-              "zh": "你们会在那里待多久？",
-              "en": "How long will you stay there?"
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Erbat ijiem.",
-              "mt_standard": "Erbat ijiem.",
-              "zh": "四天。",
-              "en": "Four days."
+              "speaker": "Pawlu (教师)",
+              "mt_spoken": "Hemm kampjun ta' ġermanju; ara t-tikketta.",
+              "mt_standard": "Hemm kampjun ta' ġermanju; ara t-tikketta.",
+              "zh": "里面有一份锗样品，看看标签。",
+              "en": "There's a sample of germanium; look at the label."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1916,7 +1918,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 Ateni 写在旅行地图的雅典位置旁，再连读 lejn Ateni（前往雅典），用目的地场景记住这个专名。"
+      "cognitive_memory_aid": "把 ġermanju 写在实验室样品瓶标签上，与中文“锗”和英文 germanium 一起记忆。"
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
@@ -2151,54 +2153,62 @@
     },
     {
       "stratum": "tier_2/semitic/enriched",
-      "exact_key": "dehes",
+      "exact_key": "ġimġma",
       "analysis_pos": [
-        "verb"
+        "noun"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "To push or thrust something into a place with force.",
-          "zh_definition": "把某物用力推入、插入或戳入某处。",
-          "mt_definition": "Iddaħħal xi ħaġa f'post b'daqqa jew bil-qawwa.",
+          "pos": "noun",
+          "en_definition": "The skull: the bony structure of the head that surrounds and protects the brain.",
+          "zh_definition": "头部的骨性结构，包围并保护脑部，即头骨或颅骨。",
+          "mt_definition": "L-istruttura tal-għadam tar-ras li ddawwar u tipproteġi l-moħħ.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "verb",
-          "en_definition": "to thrust in",
-          "zh_definition": "用力插入；戳入。",
+          "pos": "noun",
+          "en_definition": "skull",
+          "zh_definition": "头骨；颅骨。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "il-ġimġma",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-ħaddiem dehes arblu fl-art biex jimmarka l-post.",
-          "en": "The worker thrust a pole into the ground to mark the location.",
-          "zh": "工人把一根柱杆用力插入地面，以标明位置。",
+          "mt": "Fil-lezzjoni tal-bijoloġija, l-għalliema użat mudell biex turi kif il-ġimġma tipproteġi l-moħħ.",
+          "en": "In the biology lesson, the teacher used a model to show how the skull protects the brain.",
+          "zh": "生物课上，老师用模型展示头骨如何保护脑部。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Lara: Għaliex hemm virga fit-tajn? Mark: Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
-          "en": "Lara: Why is there a rod in the mud? Mark: Pawlu thrust the rod in there to see how deep the mud is.",
-          "zh": "拉拉：泥里为什么有一根杆？马克：保罗把杆插在那里，想看看泥有多深。",
+          "mt": "Lara: Dan il-mudell juri l-ġimġma? Rita: Iva, u hawn tista' tara fejn ikun il-moħħ.",
+          "en": "Lara: Does this model show the skull? Rita: Yes, and here you can see where the brain sits.",
+          "zh": "拉拉：这个模型展示的是头骨吗？丽塔：是的，这里可以看到脑部所在的位置。",
           "messages": [
             {
-              "speaker": "Lara (朋友)",
-              "mt_spoken": "Għaliex hemm virga fit-tajn?",
-              "mt_standard": "Għaliex hemm virga fit-tajn?",
-              "zh": "泥里为什么有一根杆？",
-              "en": "Why is there a rod in the mud?"
+              "speaker": "Lara (学生)",
+              "mt_spoken": "Dan il-mudell juri l-ġimġma?",
+              "mt_standard": "Dan il-mudell juri l-ġimġma?",
+              "zh": "这个模型展示的是头骨吗？",
+              "en": "Does this model show the skull?"
             },
             {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
-              "mt_standard": "Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
-              "zh": "保罗把杆插在那里，想看看泥有多深。",
-              "en": "Pawlu thrust the rod in there to see how deep the mud is."
+              "speaker": "Rita (老师)",
+              "mt_spoken": "Iva, u hawn tista' tara fejn ikun il-moħħ.",
+              "mt_standard": "Iva, u hawn tista' tara fejn ikun il-moħħ.",
+              "zh": "是的，这里可以看到脑部所在的位置。",
+              "en": "Yes, and here you can see where the brain sits."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -2207,7 +2217,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "记dehes时想象把杆猛地插进泥里，重点记住动作带有向内用力的感觉。"
+      "cognitive_memory_aid": "把 ġimġma 想成脑部外面的“骨头保护盔”：记住它指头骨，里面装着的是脑。"
     },
     {
       "stratum": "tier_2/semitic/unenriched",
