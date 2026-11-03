@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-8a0395804905",
+  "dataset_version": "malti-phase2-2026-11-03-391fe7d8ed82",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 10793,
-    "unenriched_count": 13252,
-    "showcase_count": 10793,
+    "enriched_count": 11793,
+    "unenriched_count": 12252,
+    "showcase_count": 11793,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
