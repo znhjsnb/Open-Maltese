@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-f49bbefb6a8c",
+  "dataset_version": "malti-phase2-2026-11-03-d98f20863fd2",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 3180,
-    "unenriched_count": 20865,
-    "showcase_count": 3180,
+    "enriched_count": 4182,
+    "unenriched_count": 19863,
+    "showcase_count": 4182,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1009,48 +1009,6 @@
     },
     {
       "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "razza",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "ethnicity",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "breed",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "lineage",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ir-razza",
-        "prefix": "ir-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/romance_sicilian_italian/unenriched",
       "exact_key": "stess",
       "analysis_pos": [
         "ADJ",
@@ -1084,6 +1042,41 @@
         "form": "l-istess",
         "prefix": "l-i",
         "rule": "vokali_tal_lehen",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/unenriched",
+      "exact_key": "tinda",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "tent",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "tent",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tinda",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -1248,74 +1241,6 @@
     },
     {
       "stratum": "tier_1/semitic/enriched",
-      "exact_key": "ħasad",
-      "analysis_pos": [
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To reap or harvest crops; also to surprise or startle someone, or to take a life prematurely.",
-          "zh_definition": "收割或收获庄稼；也指使某人吃惊、受惊，或过早夺去生命。",
-          "mt_definition": "Jaqta' u jiġbor il-ħsad; ukoll jissorprendi jew ibeżża' lil xi ħadd għal għarrieda, jew itemm ħajja qabel iż-żmien.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to reap",
-          "zh_definition": "收割庄稼。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to harvest",
-          "zh_definition": "收获农作物。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-bidwi ħasad il-qamħ meta kien misjur, qabel bdiet ix-xita.",
-          "en": "The farmer harvested the wheat when it was ripe, before the rain began.",
-          "zh": "农民在小麦成熟后、下雨之前完成了收割。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Rita: Dak il-ħoss ħasadni! X'kien? Ġanni: Il-bieb għalaq bis-saħħa minħabba r-riħ.",
-          "en": "Rita: That noise startled me! What was it? Ġanni: The door slammed shut because of the wind.",
-          "zh": "Rita：那声音吓了我一跳！是什么声音？Ġanni：风把门猛地吹关上了。",
-          "messages": [
-            {
-              "speaker": "Rita (室友)",
-              "mt_spoken": "Dak il-ħoss ħasadni! X'kien?",
-              "mt_standard": "Dak il-ħoss ħasadni! X'kien?",
-              "zh": "那声音吓了我一跳！是什么声音？",
-              "en": "That noise startled me! What was it?"
-            },
-            {
-              "speaker": "Ġanni (室友)",
-              "mt_spoken": "Il-bieb għalaq bis-saħħa minħabba r-riħ.",
-              "mt_standard": "Il-bieb għalaq bis-saħħa minħabba r-riħ.",
-              "zh": "风把门猛地吹关上了。",
-              "en": "The door slammed shut because of the wind."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "分三张场景卡记忆：田里收割、巨响惊吓、生命早逝；每次读句子时先找庄稼、声响或生命等线索。"
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
       "exact_key": "ngħas",
       "analysis_pos": [
         "NOUN",
@@ -1323,23 +1248,23 @@
       ],
       "senses": [
         {
+          "pos": "noun",
+          "en_definition": "The sleepy feeling that makes someone want to sleep; also sleep itself.",
+          "zh_definition": "使人想要睡觉的困倦感觉，也可指睡眠本身。",
+          "mt_definition": "Il-ħtieġa jew ix-xewqa li wieħed jorqod; jista' jfisser ukoll l-irqad innifsu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
           "pos": "NOUN",
           "en_definition": "sleep",
-          "zh_definition": null,
+          "zh_definition": "睡眠；睡觉",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "NOUN",
           "en_definition": "drowsiness",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "temple (region of skull)",
-          "zh_definition": null,
+          "zh_definition": "困意；困倦；昏昏欲睡的感觉",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1353,43 +1278,42 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "newwel",
-      "analysis_pos": [
-        "VERB",
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to work the loom",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Matul il-laqgħa twila, qabadni n-ngħas u bdejt insibha diffiċli biex nikkonċentra.",
+          "en": "During the long meeting, I became sleepy and began to find it difficult to concentrate.",
+          "zh": "在漫长的会议中，我开始犯困，逐渐难以集中注意力。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
         },
-        {
-          "pos": "VERB",
-          "en_definition": "to weave",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
+        "colloquial": {
+          "mt": "Mark: Għandi n-ngħas. Se mmur norqod. Lara: Sewwa, nitkellmu għada.",
+          "en": "Mark: I am sleepy. I am going to bed. Lara: All right, we will talk tomorrow.",
+          "zh": "Mark：我困了，要去睡觉了。Lara：好，我们明天再聊。",
+          "messages": [
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Għandi n-ngħas. Se mmur norqod.",
+              "mt_standard": "Għandi n-ngħas. Se mmur norqod.",
+              "zh": "我困了，要去睡觉了。",
+              "en": "I am sleepy. I am going to bed."
+            },
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Sewwa, nitkellmu għada.",
+              "mt_standard": "Sewwa, nitkellmu għada.",
+              "zh": "好，我们明天再聊。",
+              "en": "All right, we will talk tomorrow."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
         },
-        {
-          "pos": "VERB",
-          "en_definition": "to pass sth. to sb.",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "先用打哈欠的画面记住ngħas的困意和睡眠义，再另画一个指向太阳穴的箭头，分别记忆同形的身体部位义。"
     },
     {
       "stratum": "tier_1/semitic/unenriched",
@@ -1430,6 +1354,84 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "waqt",
+      "analysis_pos": [
+        "NOUN",
+        "ADP",
+        "noun",
+        "prep"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "instant",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "moment",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "ADP",
+          "en_definition": "while",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-waqt",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "tefa",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to extinguish",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to turn off",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to eclipse",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1503,6 +1505,82 @@
     },
     {
       "stratum": "tier_1/unspecified/enriched",
+      "exact_key": "milsen",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A dictionary or collection of words that records their meanings or use.",
+          "zh_definition": "收录词语并说明其意义或用法的词典或词汇集。",
+          "mt_definition": "Dizzjunarju jew ġabra ta' kliem bit-tifsir jew bl-użu tiegħu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "dictionary",
+          "zh_definition": "词典；供查阅词语及其释义等信息的工具书。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "lexicon",
+          "zh_definition": "词汇；词汇集，指某种语言或某一领域的词语集合。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-milsen",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "L-istudenti jistgħu jużaw milsen bilingwi biex jifhmu l-kliem fit-test.",
+          "en": "Students may use a bilingual dictionary to understand the words in the text.",
+          "zh": "学生可以使用双语词典来理解课文中的词语。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Xi tfisser din il-kelma? Mark: Ma nafx. Ejja nfittxuha fil-milsen.",
+          "en": "Maja: What does this word mean? Mark: I don't know. Let's look it up in the dictionary.",
+          "zh": "玛雅：这个词是什么意思？马克：我不知道。我们查一下词典吧。",
+          "messages": [
+            {
+              "speaker": "Maja (学生)",
+              "mt_spoken": "Xi tfisser din il-kelma?",
+              "mt_standard": "Xi tfisser din il-kelma?",
+              "zh": "这个词是什么意思？",
+              "en": "What does this word mean?"
+            },
+            {
+              "speaker": "Mark (同学)",
+              "mt_spoken": "Ma nafx. Ejja nfittxuha fil-milsen.",
+              "mt_standard": "Ma nafx. Ejja nfittxuha fil-milsen.",
+              "zh": "我不知道。我们查一下词典吧。",
+              "en": "I don't know. Let's look it up in the dictionary."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象一本封面写着 milsen 的词典：遇到生词就翻开它，把“查词”的动作和这个名词一起记。"
+    },
+    {
+      "stratum": "tier_1/unspecified/enriched",
       "exact_key": "bil-mod",
       "analysis_pos": [
         "ADV",
@@ -1571,124 +1649,6 @@
       "cognitive_memory_aid": "用三个动作记 bil-mod：走路放慢、水位渐升、关门放轻；分别对应速度、变化过程和动作力度。"
     },
     {
-      "stratum": "tier_1/unspecified/enriched",
-      "exact_key": "lajman",
-      "analysis_pos": [
-        "ADJ",
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "adj",
-          "en_definition": "Slow in movement or action, or calmer than the situation calls for.",
-          "zh_definition": "动作或行动缓慢的，也可形容镇定得超过情境所需、显得不够积极的。",
-          "mt_definition": "Li jiċċaqlaq jew jaġixxi bil-mod, jew li jkun kalm iżżejjed għas-sitwazzjoni.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "ADJ",
-          "en_definition": "excessively calm or slow",
-          "zh_definition": "过分镇定的，或行动过于迟缓的。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "slow",
-          "zh_definition": "缓慢的；行动迟缓的。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-lajman",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-ħaddiem kien lajman fil-movimenti tiegħu u dam biex temm ix-xogħol.",
-          "en": "The worker was slow in his movements and took a long time to finish the work.",
-          "zh": "那名工人动作迟缓，花了很长时间才完成工作。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Sara: Kemm int lajman illum! Se nitilfu l-karozza tal-linja. Mark: Għandek raġun; se nħaffef.",
-          "en": "Sara: You're so slow today! We're going to miss the bus. Mark: You're right; I'll hurry up.",
-          "zh": "Sara：你今天真慢！我们要赶不上公交车了。Mark：你说得对，我会加快脚步。",
-          "messages": [
-            {
-              "speaker": "Sara (朋友)",
-              "mt_spoken": "Kemm int lajman illum! Se nitilfu l-karozza tal-linja.",
-              "mt_standard": "Kemm int lajman illum! Se nitilfu l-karozza tal-linja.",
-              "zh": "你今天真慢！我们要赶不上公交车了。",
-              "en": "You're so slow today! We're going to miss the bus."
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Għandek raġun; se nħaffef.",
-              "mt_standard": "Għandek raġun; se nħaffef.",
-              "zh": "你说得对，我会加快脚步。",
-              "en": "You're right; I'll hurry up."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用赶公交的画面记 lajman：大家加快脚步，他仍慢吞吞。与表示状态的 lajma 对照，lajman 用来描述人或其动作。"
-    },
-    {
-      "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "milsen",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "dictionary",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "lexicon",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "dictionary",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-milsen",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_1/unspecified/unenriched",
       "exact_key": "tanbir",
       "analysis_pos": [
@@ -1754,6 +1714,41 @@
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "tisjib",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "discovery",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "act of finding, discovering",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tisjib",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
