@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-ddea009da90f",
+  "dataset_version": "malti-phase2-2026-11-03-42aed377f717",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 6188,
-    "unenriched_count": 17857,
-    "showcase_count": 6188,
+    "enriched_count": 7188,
+    "unenriched_count": 16857,
+    "showcase_count": 7188,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1384,52 +1384,6 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "disċarġ",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "discharge",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "id-disċarġ",
-        "prefix": "id-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
-      "exact_key": "ddikanta",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "to decant",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
       "exact_key": "ttajpja",
       "analysis_pos": [
         "verb"
@@ -1444,6 +1398,52 @@
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "ssippja",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to sip",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "skwiril",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "squirrel",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-iskwiril",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1726,6 +1726,126 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
+      "exact_key": "ddeċifra",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To work out the meaning of a coded message or read writing that is difficult to understand.",
+          "zh_definition": "解开编码信息的含义，或辨认难以读懂的文字。",
+          "mt_definition": "Jifhem messaġġ miktub b'kodiċi jew jaqra kitba li tkun diffiċli biex tingħaraf.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to decipher, to decode",
+          "zh_definition": "破译、解码；辨读难认的文字。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-riċerkatur ddeċifra l-messaġġ billi qabbel is-simboli ma' dawk f'dokumenti oħra.",
+          "en": "The researcher deciphered the message by comparing its symbols with those in other documents.",
+          "zh": "研究人员把信息中的符号与其他文献中的符号进行比较，从而破译了这条信息。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Sara: Tista' taqra x'hemm fuq din in-nota? Ben: Jien le, imma Toni ddeċifra l-kitba u qal li l-laqgħa fit-tlieta.",
+          "en": "Sara: Can you read what is on this note? Ben: I cannot, but Toni deciphered the handwriting and said the meeting is at three.",
+          "zh": "萨拉：你能看懂这张便条写了什么吗？本：我看不懂，不过托尼辨认出了字迹，说会议是三点。",
+          "messages": [
+            {
+              "speaker": "Sara (同事)",
+              "mt_spoken": "Tista' taqra x'hemm fuq din in-nota?",
+              "mt_standard": "Tista' taqra x'hemm fuq din in-nota?",
+              "zh": "你能看懂这张便条写了什么吗？",
+              "en": "Can you read what is on this note?"
+            },
+            {
+              "speaker": "Ben (同事)",
+              "mt_spoken": "Jien le, imma Toni ddeċifra l-kitba u qal li l-laqgħa fit-tlieta.",
+              "mt_standard": "Jien le, imma Toni ddeċifra l-kitba u qal li l-laqgħa fit-tlieta.",
+              "zh": "我看不懂，不过托尼辨认出了字迹，说会议是三点。",
+              "en": "I cannot, but Toni deciphered the handwriting and said the meeting is at three."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把密码纸和潦草便条并排想象：两者都需要费力读出意思，因此都能帮助记住破译和辨读。"
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/enriched",
+      "exact_key": "ddeċentra",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To distribute authority, activities, or services among several centres instead of keeping them in one central place.",
+          "zh_definition": "把权力、活动或服务从单一中心分散到多个地方或单位。",
+          "mt_definition": "Iqassam is-setgħat, l-attivitajiet jew is-servizzi bejn diversi ċentri minflok iżommhom f'ċentru wieħed.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to decentralize",
+          "zh_definition": "使分散；将权力、职能或服务从中心下放或分布到多个单位。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-gvern ddeċentra s-servizzi billi fetaħ uffiċċji reġjonali biex iċ-ċittadini jinqdew eqreb ta' darhom.",
+          "en": "The government decentralized services by opening regional offices so that citizens could access them closer to home.",
+          "zh": "政府通过设立地区办事处分散服务，让居民能在离家较近的地方办理事务。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Għad irrid immur l-uffiċċju ewlieni? Lara: Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
+          "en": "Mark: Do I still need to go to the main office? Lara: No, the department decentralized its services; you can go to the village office.",
+          "zh": "马克：我还得去总部办事吗？拉拉：不用了，部门把服务分散到各地了，你可以去村里的办事处。",
+          "messages": [
+            {
+              "speaker": "Mark (办事居民)",
+              "mt_spoken": "Għad irrid immur l-uffiċċju ewlieni?",
+              "mt_standard": "Għad irrid immur l-uffiċċju ewlieni?",
+              "zh": "我还得去总部办事吗？",
+              "en": "Do I still need to go to the main office?"
+            },
+            {
+              "speaker": "Lara (办事处职员)",
+              "mt_spoken": "Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
+              "mt_standard": "Le, id-dipartiment ddeċentra s-servizzi; tista' tmur fl-uffiċċju tar-raħal.",
+              "zh": "不用了，部门把服务分散到各地了，你可以去村里的办事处。",
+              "en": "No, the department decentralized its services; you can go to the village office."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "画一个中心圆，再把权力或服务的箭头分送到周围几个圆，用这幅图记住分散与下放。"
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/enriched",
       "exact_key": "ateni",
       "analysis_pos": [
         "name"
@@ -1799,134 +1919,6 @@
       "cognitive_memory_aid": "把 Ateni 写在旅行地图的雅典位置旁，再连读 lejn Ateni（前往雅典），用目的地场景记住这个专名。"
     },
     {
-      "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "ankoraġġ",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A place where a boat or ship can lie at anchor, or the act of securing it with an anchor.",
-          "zh_definition": "船只可以下锚停泊的水域，或用锚固定船只的停泊行为。",
-          "mt_definition": "Post fejn dgħajsa jew vapur jista' jieqaf bl-ankra, jew l-att li jinżamm f'postu permezz ta' ankra.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "anchorage",
-          "zh_definition": "锚地；抛锚停泊",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-ankoraġġ",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-kaptan għażel post ta' ankoraġġ protett mir-riħ.",
-          "en": "The captain chose an anchorage sheltered from the wind.",
-          "zh": "船长选择了一处避风的锚地。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Nistgħu nieqfu hawn bid-dgħajsa? Mark: Iva, dan ankoraġġ sigur.",
-          "en": "Maja: Can we stop here with the boat? Mark: Yes, this is a safe anchorage.",
-          "zh": "玛雅：我们可以把船停在这里吗？马克：可以，这是一处安全的锚地。",
-          "messages": [
-            {
-              "speaker": "Maja (乘客)",
-              "mt_spoken": "Nistgħu nieqfu hawn bid-dgħajsa?",
-              "mt_standard": "Nistgħu nieqfu hawn bid-dgħajsa?",
-              "zh": "我们可以把船停在这里吗？",
-              "en": "Can we stop here with the boat?"
-            },
-            {
-              "speaker": "Mark (船长)",
-              "mt_spoken": "Iva, dan ankoraġġ sigur.",
-              "mt_standard": "Iva, dan ankoraġġ sigur.",
-              "zh": "可以，这是一处安全的锚地。",
-              "en": "Yes, this is a safe anchorage."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 ankoraġġ 想成海图上标出的下锚位置：船到这里放下锚，便进入抛锚停泊状态。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "aborta",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To end a pregnancy through an induced abortion, or to lose a pregnancy through miscarriage.",
-          "zh_definition": "通过人工流产终止妊娠，或因自然流产而失去妊娠。",
-          "mt_definition": "Itemm tqala b'intervent apposta, jew jitlef tqala b'mod spontanju.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to abort a pregnancy, to have a miscarriage",
-          "zh_definition": "终止妊娠；发生自然流产。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Ir-rapport jindika li l-pazjenta abortiet spontanjament fit-tieni xahar tat-tqala.",
-          "en": "The report indicates that the patient had a spontaneous miscarriage in the second month of pregnancy.",
-          "zh": "报告显示，该患者在妊娠第二个月发生了自然流产。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Marta: Sara qaltli li abortiet spontanjament. | Nina: Jiddispjaċini ħafna. Jekk trid titkellem, nista' noqgħod nismagħha.",
-          "en": "Marta: Sara told me she had a miscarriage. | Nina: I'm very sorry. If she wants to talk, I can listen.",
-          "zh": "玛尔塔：萨拉告诉我，她自然流产了。 | 妮娜：听到这件事我很难过。如果她想聊聊，我可以听她说。",
-          "messages": [
-            {
-              "speaker": "Marta (朋友)",
-              "mt_spoken": "Sara qaltli li abortiet spontanjament.",
-              "mt_standard": "Sara qaltli li abortiet spontanjament.",
-              "zh": "萨拉告诉我，她自然流产了。",
-              "en": "Sara told me she had a miscarriage."
-            },
-            {
-              "speaker": "Nina (朋友)",
-              "mt_spoken": "Jiddispjaċini ħafna. Jekk trid titkellem, nista' noqgħod nismagħha.",
-              "mt_standard": "Jiddispjaċini ħafna. Jekk trid titkellem, nista' noqgħod nismagħha.",
-              "zh": "听到这件事我很难过。如果她想聊聊，我可以听她说。",
-              "en": "I'm very sorry. If she wants to talk, I can listen."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 aborta 放在“妊娠提前结束”的情境卡上；遇到 spontanjament 时联想自然发生，避免仅凭这个动词判断是否人为。"
-    },
-    {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
       "exact_key": "sessologu",
       "analysis_pos": [
@@ -1982,22 +1974,105 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "ddeċifra",
+      "exact_key": "rutenju",
       "analysis_pos": [
-        "verb"
+        "noun"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "to decipher, to decode",
+          "pos": "noun",
+          "en_definition": "ruthenium (chemical element)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "ir-rutenju",
+        "prefix": "ir-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
+      "exact_key": "dik",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "An attack of apoplexy; in a separate religious sense, exclusion from the communion of the Church.",
+          "zh_definition": "指中风发作；在另一个宗教义项中，指被排除于教会共融之外，即绝罚。",
+          "mt_definition": "Attakk ta' puplesija; f'sens reliġjuż separat, esklużjoni mill-komunjoni tal-Knisja.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "apoplexy",
+          "zh_definition": "中风，卒中发作。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "excommunication",
+          "zh_definition": "绝罚，逐出教会共融的宗教处分。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "id-dik",
+        "prefix": "id-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "F'dan it-test reliġjuż, il-kelma 'dik' tirreferi għall-esklużjoni mill-komunjoni tal-Knisja.",
+          "en": "In this religious text, the word 'dik' refers to exclusion from the communion of the Church.",
+          "zh": "在这篇宗教文本中，dik 一词指被排除于教会共融之外。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: X'tfisser 'dik' hawn? Pawlu: Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
+          "en": "Maja: What does 'dik' mean here? Pawlu: Here it means apoplexy; in a religious text it can mean excommunication.",
+          "zh": "Maja：这里的 dik 是什么意思？Pawlu：这里指中风；在宗教文本中，它也可以指绝罚。",
+          "messages": [
+            {
+              "speaker": "Maja (学生)",
+              "mt_spoken": "X'tfisser 'dik' hawn?",
+              "mt_standard": "X'tfisser 'dik' hawn?",
+              "zh": "这里的 dik 是什么意思？",
+              "en": "What does 'dik' mean here?"
+            },
+            {
+              "speaker": "Pawlu (教师)",
+              "mt_spoken": "Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
+              "mt_standard": "Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
+              "zh": "这里指中风；在宗教文本中，它也可以指绝罚。",
+              "en": "Here it means apoplexy; in a religious text it can mean excommunication."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 dik 做成两张语境卡：病情卡写中风，教会卡写绝罚；阅读时先看语境再选义。"
     },
     {
       "stratum": "tier_2/semitic/enriched",
@@ -2076,29 +2151,22 @@
     },
     {
       "stratum": "tier_2/semitic/enriched",
-      "exact_key": "qamas",
+      "exact_key": "dehes",
       "analysis_pos": [
         "verb"
       ],
       "senses": [
         {
           "pos": "verb",
-          "en_definition": "To kick with the legs, or to react with excitement.",
-          "zh_definition": "用腿踢蹬，也可指因兴奋而作出明显反应。",
-          "mt_definition": "Jagħti daqqa b'siequ jew jirreaġixxi b'eċċitament.",
+          "en_definition": "To push or thrust something into a place with force.",
+          "zh_definition": "把某物用力推入、插入或戳入某处。",
+          "mt_definition": "Iddaħħal xi ħaġa f'post b'daqqa jew bil-qawwa.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "verb",
-          "en_definition": "to kick",
-          "zh_definition": "踢；用脚或腿踢蹬。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to respond with excitement",
-          "zh_definition": "兴奋地作出反应；因激动而明显地动起来。",
+          "en_definition": "to thrust in",
+          "zh_definition": "用力插入；戳入。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -2106,31 +2174,31 @@
       "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Iż-żiemel qamas meta sema' ħoss qawwi, u l-ħaddiem resaq lura.",
-          "en": "The horse kicked when it heard a loud noise, and the worker stepped back.",
-          "zh": "马听到一声巨响后踢蹬起来，工作人员向后退了一步。",
+          "mt": "Il-ħaddiem dehes arblu fl-art biex jimmarka l-post.",
+          "en": "The worker thrust a pole into the ground to mark the location.",
+          "zh": "工人把一根柱杆用力插入地面，以标明位置。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Maja: Kif irreaġixxa Ben meta għedtlu li sejrin il-baħar? Sara: Qamas bil-ferħ u mar jiġri jġib ix-xugaman.",
-          "en": "Maja: How did Ben react when you told him we were going to the beach? Sara: He reacted with excitement and ran to get his towel.",
-          "zh": "玛雅：你告诉本我们要去海边时，他有什么反应？萨拉：他高兴得激动起来，跑去拿毛巾了。",
+          "mt": "Lara: Għaliex hemm virga fit-tajn? Mark: Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
+          "en": "Lara: Why is there a rod in the mud? Mark: Pawlu thrust the rod in there to see how deep the mud is.",
+          "zh": "拉拉：泥里为什么有一根杆？马克：保罗把杆插在那里，想看看泥有多深。",
           "messages": [
             {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Kif irreaġixxa Ben meta għedtlu li sejrin il-baħar?",
-              "mt_standard": "Kif irreaġixxa Ben meta għedtlu li sejrin il-baħar?",
-              "zh": "你告诉本我们要去海边时，他有什么反应？",
-              "en": "How did Ben react when you told him we were going to the beach?"
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Għaliex hemm virga fit-tajn?",
+              "mt_standard": "Għaliex hemm virga fit-tajn?",
+              "zh": "泥里为什么有一根杆？",
+              "en": "Why is there a rod in the mud?"
             },
             {
-              "speaker": "Sara (母亲)",
-              "mt_spoken": "Qamas bil-ferħ u mar jiġri jġib ix-xugaman.",
-              "mt_standard": "Qamas bil-ferħ u mar jiġri jġib ix-xugaman.",
-              "zh": "他高兴得激动起来，跑去拿毛巾了。",
-              "en": "He reacted with excitement and ran to get his towel."
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
+              "mt_standard": "Pawlu dehes il-virga hemm biex jara kemm hu fond it-tajn.",
+              "zh": "保罗把杆插在那里，想看看泥有多深。",
+              "en": "Pawlu thrust the rod in there to see how deep the mud is."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -2139,67 +2207,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "用两个动作画面记忆：马用腿踢蹬，孩子听到好消息兴奋起来；再按语境区分两个义项。"
-    },
-    {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "redda'",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To feed a baby or young animal with milk from the breast.",
-          "zh_definition": "用乳汁喂养婴儿或幼小动物，通常指直接哺乳。",
-          "mt_definition": "Titma' tarbija jew ferħ ta' annimal bil-ħalib mis-sider.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to breastfeed, suckle, give milk",
-          "zh_definition": "哺乳；用乳汁喂养婴儿或幼小动物。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-kamra privata tipprovdi post kwiet fejn omm tista' tredda' lit-tarbija tagħha.",
-          "en": "The private room provides a quiet place where a mother can breastfeed her baby.",
-          "zh": "这间独立房间为母亲提供一个可以给婴儿哺乳的安静场所。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Marija: Fejn nista' noqgħod biex tredda' lit-tarbija? Anna: Ejja, tista' toqgħod hawn ħdejja.",
-          "en": "Marija: Where can I sit so that you can breastfeed the baby? Anna: Come, you can sit here beside me.",
-          "zh": "Marija：我可以坐在哪里，方便你给宝宝喂奶？Anna：来，你可以坐在我旁边。",
-          "messages": [
-            {
-              "speaker": "Marija (朋友)",
-              "mt_spoken": "Fejn nista' noqgħod biex tredda' lit-tarbija?",
-              "mt_standard": "Fejn nista' noqgħod biex tredda' lit-tarbija?",
-              "zh": "我可以坐在哪里，方便你给宝宝喂奶？",
-              "en": "Where can I sit so that you can breastfeed the baby?"
-            },
-            {
-              "speaker": "Anna (母亲)",
-              "mt_spoken": "Ejja, tista' toqgħod hawn ħdejja.",
-              "mt_standard": "Ejja, tista' toqgħod hawn ħdejja.",
-              "zh": "来，你可以坐在我旁边。",
-              "en": "Come, you can sit here beside me."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把这个词放进“母亲抱着宝宝喂奶”的画面中记忆；搭配 lit-tarbija，整组联想为“给宝宝哺乳”。"
+      "cognitive_memory_aid": "记dehes时想象把杆猛地插进泥里，重点记住动作带有向内用力的感觉。"
     },
     {
       "stratum": "tier_2/semitic/unenriched",
@@ -2273,6 +2281,150 @@
       "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/enriched",
+      "exact_key": "ċaqċiq",
+      "analysis_pos": [
+        "NOUN",
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A cracking sound or a series of short, sharp cracking sounds.",
+          "zh_definition": "物体发出的短促清脆的咔嚓声，或连续的噼啪声。",
+          "mt_definition": "Ħoss qasir u qawwi, jew sensiela ta' ħsejjes bħal dawk ta' friegħi niexfa meta jinkisru.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "cracking sounds",
+          "zh_definition": "连续或反复发出的噼啪声、咔嚓声。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "crack",
+          "zh_definition": "一声短促清脆的咔嚓声或噼啪声。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "iċ-ċaqċiq",
+        "prefix": "iċ-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Matul il-lejl, iċ-ċaqċiq tal-injam fin-nar kien jinstema' fil-kamra kollha.",
+          "en": "During the night, the crackling of the wood in the fire could be heard throughout the room.",
+          "zh": "夜里，炉火中木头的噼啪声传遍了整个房间。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Smajt dak iċ-ċaqċiq? Maja: Iva, kienet fergħa niexfa li ksirt taħt saqajja.",
+          "en": "Mark: Did you hear that cracking sound? Maja: Yes, it was a dry branch I broke underfoot.",
+          "zh": "马克：你听见那声咔嚓了吗？玛雅：听见了，是我踩断了一根干树枝。",
+          "messages": [
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Smajt dak iċ-ċaqċiq?",
+              "mt_standard": "Smajt dak iċ-ċaqċiq?",
+              "zh": "你听见那声咔嚓了吗？",
+              "en": "Did you hear that cracking sound?"
+            },
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Iva, kienet fergħa niexfa li ksirt taħt saqajja.",
+              "mt_standard": "Iva, kienet fergħa niexfa li ksirt taħt saqajja.",
+              "zh": "听见了，是我踩断了一根干树枝。",
+              "en": "Yes, it was a dry branch I broke underfoot."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 ċaqċiq 配上脚踩干树枝的“咔嚓”声，再想象柴火连续“噼啪”；用一个声音和一串声音分别记住两个义项。"
+    },
+    {
+      "stratum": "tier_2/unspecified/enriched",
+      "exact_key": "disgħa u erbgħin",
+      "analysis_pos": [
+        "num"
+      ],
+      "senses": [
+        {
+          "pos": "num",
+          "en_definition": "The cardinal number 49, equal to forty plus nine.",
+          "zh_definition": "基数四十九，表示四十加九，即49。",
+          "mt_definition": "In-numru 49, jiġifieri erbgħin u disgħa flimkien.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "num",
+          "en_definition": "forty-nine",
+          "zh_definition": "四十九；49。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "id-disgħa u erbgħin",
+        "prefix": "id-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-rapport fih disgħa u erbgħin paġna, inklużi t-tabelli.",
+          "en": "The report contains forty-nine pages, including the tables.",
+          "zh": "这份报告包含表格在内共有四十九页。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Anna: Kemm jiswa dan il-flokk? Marija: Disgħa u erbgħin ewro. Trid tippruvah?",
+          "en": "Anna: How much does this top cost? Marija: Forty-nine euros. Would you like to try it on?",
+          "zh": "安娜：这件上衣多少钱？玛丽娅：四十九欧元。你想试穿吗？",
+          "messages": [
+            {
+              "speaker": "Anna (顾客)",
+              "mt_spoken": "Kemm jiswa dan il-flokk?",
+              "mt_standard": "Kemm jiswa dan il-flokk?",
+              "zh": "这件上衣多少钱？",
+              "en": "How much does this top cost?"
+            },
+            {
+              "speaker": "Marija (店员)",
+              "mt_spoken": "Disgħa u erbgħin ewro. Trid tippruvah?",
+              "mt_standard": "Disgħa u erbgħin ewro. Trid tippruvah?",
+              "zh": "四十九欧元。你想试穿吗？",
+              "en": "Forty-nine euros. Would you like to try it on?"
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把四十九倒着拆成“九和四十”：先说 disgħa，再用 u 连接 erbgħin；个位在前，十位在后。"
     },
     {
       "stratum": "tier_2/unspecified/enriched",
@@ -2350,141 +2502,6 @@
       "cognitive_memory_aid": "想象聚会桌上杯子旁边专门装冰的容器，把 buzzun 标签贴在容器上，与表示冰的 silġ 配对记忆。"
     },
     {
-      "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "għandu",
-      "analysis_pos": [
-        "adv"
-      ],
-      "senses": [
-        {
-          "pos": "adv",
-          "en_definition": "The third-person masculine singular form of għand, meaning at or to him or it, and commonly expressing that he or it has something.",
-          "zh_definition": "għand的第三人称阳性单数代词形式，表示在他或它那里、到他或它那里，也常用来表达他或它拥有某物。",
-          "mt_definition": "Forma ta' għand għat-tielet persuna maskili singular, li tindika post għand persuna jew pussess minnha.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "adv",
-          "en_definition": "third-person masculine singular pronominal form of għand:",
-          "zh_definition": "għand的第三人称阳性单数代词形式，所指对象为“他”或阳性单数的“它”。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adv",
-          "en_definition": "at him/it, to him/it",
-          "zh_definition": "在他或它那里；到他或它那里，具体含义由语境决定。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Kull student għandu kopja tat-test biex ikun jista' jsegwi l-lezzjoni.",
-          "en": "Each student has a copy of the text so that they can follow the lesson.",
-          "zh": "每名学生都有一份课文，以便跟上课堂内容。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Mark għandu l-ktieb tiegħi? Anna: Iva, mur għandu wara l-lezzjoni.",
-          "en": "Maja: Does Mark have my book? Anna: Yes, go to him after the lesson.",
-          "zh": "Maja：我的书在Mark那里吗？Anna：对，下课后去他那里吧。",
-          "messages": [
-            {
-              "speaker": "Maja (同学)",
-              "mt_spoken": "Mark għandu l-ktieb tiegħi?",
-              "mt_standard": "Mark għandu l-ktieb tiegħi?",
-              "zh": "我的书在Mark那里吗？",
-              "en": "Does Mark have my book?"
-            },
-            {
-              "speaker": "Anna (同学)",
-              "mt_spoken": "Iva, mur għandu wara l-lezzjoni.",
-              "mt_standard": "Iva, mur għandu wara l-lezzjoni.",
-              "zh": "对，下课后去他那里吧。",
-              "en": "Yes, go to him after the lesson."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用“书在他那里，所以他有书”串起处所和拥有两种用法，再加一句mur għandu记“到他那里去”；这是学习联想。"
-    },
-    {
-      "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "bexxiex",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A person who sprinkles water, for example over plants or the ground.",
-          "zh_definition": "把水洒在植物、地面等处的人。",
-          "mt_definition": "Persuna li tbexxex l-ilma, pereżempju fuq il-pjanti jew mal-art.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "sb. who sprinkles water",
-          "zh_definition": "洒水的人。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bexxiex",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-bexxiex xerred ftit ilma mal-art qabel bdew ix-xogħlijiet, biex inaqqas it-trab.",
-          "en": "The person sprinkling water scattered a little water over the ground before work began, to reduce the dust.",
-          "zh": "开工前，洒水的人往地面洒了些水，以减少扬尘。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Min hu dak il-bexxiex ħdejn il-fjuri? Pawlu: Hu ħija; qed ibexxex ftit ilma fuqhom.",
-          "en": "Maja: Who is that person sprinkling water beside the flowers? Pawlu: He is my brother; he is sprinkling a little water over them.",
-          "zh": "玛雅：花旁边那个洒水的人是谁？保罗：他是我哥哥，正在往花上洒一点水。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Min hu dak il-bexxiex ħdejn il-fjuri?",
-              "mt_standard": "Min hu dak il-bexxiex ħdejn il-fjuri?",
-              "zh": "花旁边那个洒水的人是谁？",
-              "en": "Who is that person sprinkling water beside the flowers?"
-            },
-            {
-              "speaker": "Pawlu (朋友)",
-              "mt_spoken": "Hu ħija; qed ibexxex ftit ilma fuqhom.",
-              "mt_standard": "Hu ħija; qed ibexxex ftit ilma fuqhom.",
-              "zh": "他是我哥哥，正在往花上洒一点水。",
-              "en": "He is my brother; he is sprinkling a little water over them."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象一个人提着水桶轻轻洒水，把 bexxiex 与“洒水的人”这一完整画面配对记忆。"
-    },
-    {
       "stratum": "tier_2/unspecified/unenriched",
       "exact_key": "ħġim",
       "analysis_pos": [
@@ -2547,36 +2564,20 @@
     },
     {
       "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "ċaqċiq",
+      "exact_key": "tgħanna",
       "analysis_pos": [
-        "NOUN",
-        "NOUN"
+        "VERB"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "cracking sounds",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "crack",
+          "pos": "VERB",
+          "en_definition": "to be sung",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "iċ-ċaqċiq",
-        "prefix": "iċ-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
