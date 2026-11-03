@@ -1,0 +1,6 @@
+# Raw datasets and large dumps (kept locally in data/raw/)
+data/raw/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
