@@ -86,7 +86,8 @@ def strip_definite_article(word: str, *, include_fused_prepositions: bool = Fals
                     and known is not None and normalize_exact_search(stem) not in known and lower.startswith('i')):
                 tokens = tokenize_maltese_graphemes(stem[1:])
                 if (len(tokens) > 1 and len(stem) > 2 and stem[2].isalpha() and tokens[0] in 'sxżz'
-                        and tokens[1].isalpha() and tokens[1] not in ('a', 'e', 'i', 'ie', 'o', 'u')
+                        and tokens[1].isalpha() and tokens[1] not in ('a', 'e', 'i', 'ie', 'o', 'u', 'għ', 'h')
+                        and normalize_exact_search(stem[1:]) != 'żmien'
                         and normalize_exact_search(stem[1:]) in known):
                     return stem[1:], text[:len(prefix) + 1]
             return stem, text[:len(prefix)]

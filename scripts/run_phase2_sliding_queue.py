@@ -1,0 +1,385 @@
+"""Host-only Continuous Sliding Pull Queue v3; workers return JSON, one writer publishes.
+
+No workers run on import. Wave 1 = audio across tiers 1/2, then remaining tier 1;
+Wave 2 = remaining tier 2. Index order is the source DMS order, not word frequency.
+"""
+import argparse
+from collections import deque
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from copy import deepcopy
+from functools import lru_cache
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import time
+import unicodedata
+import uuid
+
+try:
+    from .phase2_enrichment import (PROJECT, OVERLAY_DIR, apply_overlay, load_overlays,
+                                    pos_class, required_sense_selectors, validate_overlay, write_json)
+    from .phase2_quality_gates import (APOSTROPHES, HYPHENS, gate1, gate2, gate3, gate4,
+                                       protected_record, validate_dataset)
+    from .sync_enriched_to_shards import sync
+except ImportError:
+    from phase2_enrichment import (PROJECT, OVERLAY_DIR, apply_overlay, load_overlays,
+                                  pos_class, required_sense_selectors, validate_overlay, write_json)
+    from phase2_quality_gates import (APOSTROPHES, HYPHENS, gate1, gate2, gate3, gate4,
+                                     protected_record, validate_dataset)
+    from sync_enriched_to_shards import sync
+
+DATA = PROJECT / 'app/static/data'
+AUDIT = PROJECT / 'data/audit'
+QUARANTINE = AUDIT / 'quarantine_words.json'
+RETRY_TIMEOUT = 360
+# Initial attempt plus three retries; quarantine when failed retry count > 2.
+MAX_RETRIES = 3
+PROVENANCE = {'definition_origin': 'authored_pedagogical',
+              'source': 'phase2_enrichment', 'review_status': 'phase2_reviewed'}
+
+
+def read_json(path):
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+
+
+class SourceStore:
+    """Immutable source snapshot shared by threads; no shard writes in workers."""
+    def __init__(self, data=DATA):
+        data = Path(data)
+        self.manifest = read_json(data / 'manifest.json')
+        self.index = read_json(data / 'index_lite.json')
+        self.indices = {i['exact_key']: i for i in self.index}
+        self.entries = {e['id']: e for meta in self.manifest['shards']
+                        for e in read_json(data / meta['file'])}
+        self.lookup = read_json(data / 'wordforms_lookup.json')
+
+    def packet(self, key):
+        return assemble_packet(self.entries[key], self.indices[key])
+
+
+@lru_cache(maxsize=1)
+def source_store():
+    return SourceStore()
+
+
+def assemble_packet(entry, index=None):
+    """Compact evidence only. Never derive roots or rewrite English selectors."""
+    index = index or {}
+    selectors = required_sense_selectors(entry)
+    roots = list(dict.fromkeys(r for a in entry['lexeme_analyses'] for r in (a.get('roots') or [])))
+    return {'exact_key': entry['id'], 'word': entry['headword']['word'],
+            'tier': entry['headword']['tier'], 'stratum': entry['etymology']['stratum'],
+            'roots': roots, 'teaching_pos_default': next((s['pos'] for s in selectors if s['pos']), 'unspecified'),
+            'sense_selectors': selectors}
+
+
+def candidate_queue(index, enriched=(), quarantined=(), wave='all'):
+    """Deduplicate by exact key; preserve index order within each priority group."""
+    if str(wave) not in ('1', '2', 'all'):
+        raise ValueError('wave must be 1, 2 or all')
+    excluded = set(enriched) | set(quarantined)
+    eligible = [i for i in index if i['exact_key'] not in excluded
+                and not i.get('is_enriched') and i['tier'] in (1, 2)]
+    audio = [i for i in eligible if i.get('has_audio')]
+    core = [i for i in eligible if i['tier'] == 1 and not i.get('has_audio')]
+    rich = [i for i in eligible if i['tier'] == 2 and not i.get('has_audio')]
+    groups = rich if str(wave) == '2' else audio + core + (rich if wave == 'all' else [])
+    seen, out = set(), []
+    for item in groups:
+        if item['exact_key'] not in seen:
+            seen.add(item['exact_key'])
+            out.append(item)
+    return out
+
+
+SCHEMA_PROMPT = """Author Maltese–Chinese–English pedagogical overlays using ONLY these packets.
+Return a JSON list, one object per exact_key, in packet order; no prose, tools,
+filesystem changes, browsing, subprocesses or further workers. All words receive
+equal detail, including the last word. Never invent roots, patterns or historical claims.
+Each object has EXACTLY: exact_key, gloss_zh, teaching_sense, sense_translations,
+collocations, dual_scenarios, cognitive_memory_aid.
+teaching_sense: {pos, en_definition, zh_definition, mt_definition}; use the supplied
+teaching_pos_default, give a useful trilingual teaching definition.
+sense_translations: copy EVERY supplied sense_selectors object, copying pos AND
+en_definition VERBATIM, then add a non-empty Chinese zh_definition for EACH sense
+and optionally a Maltese mt_definition. Preserve homograph and POS boundaries.
+collocations: at least two DISTINCT useful {mt,en,zh} objects.
+dual_scenarios: {formal:{mt,en,zh},colloquial:{mt,en,zh,messages:[...]}}.
+formal is a pedagogical written example; colloquial is a natural pedagogical dialogue.
+colloquial mt/en/zh contain the FULL dialogue. messages has at least two turns,
+each {speaker,mt_spoken,mt_standard,zh,en}, all non-empty strings. speaker must give
+a name and social role in CHINESE, e.g. Maja (朋友), Mark (顾客), Omm (母亲).
+mt_standard may equal mt_spoken if already standard. Optional grammar_note explains
+standard contractions such as m'għandix, x'inhu or fused prepositions; do not label
+these nonstandard. cognitive_memory_aid: helpful Chinese learner mnemonic >=8 chars,
+clearly pedagogical, without unsupported etymology. Do not compress later entries.
+Use NFC and ASCII apostrophes in Maltese. Fixed authored provenance is added by
+the controller. Do not return source evidence or change selectors.
+Ground Truth Packets:
+"""
+
+
+def build_prompt(packets):
+    return SCHEMA_PROMPT + json.dumps(packets, ensure_ascii=False, separators=(',', ':'))
+
+
+def normalize_overlay(value, field=''):
+    """Normalize authored Maltese punctuation, never turn question marks into quotes.
+
+    Repair a corrupted '?' apostrophe only between letters in a Maltese field;
+    terminal question punctuation and verbatim English selectors remain untouched.
+    """
+    if isinstance(value, str):
+        value = unicodedata.normalize('NFC', value)
+        if field in ('exact_key', 'mt', 'mt_definition', 'mt_spoken', 'mt_standard'):
+            value = value.translate(str.maketrans({**{c: "'" for c in APOSTROPHES},
+                                                  **{c: '-' for c in HYPHENS}}))
+            value = re.sub(r'(?<=[^\W\d_])\?(?=[^\W\d_])', "'", value)
+        return value
+    if isinstance(value, list):
+        return [normalize_overlay(v, field) for v in value]
+    if isinstance(value, dict):
+        return {k: normalize_overlay(v, k) for k, v in value.items()}
+    return value
+
+
+def add_provenance(item):
+    item['teaching_sense'].update(PROVENANCE)
+    for sense in item['sense_translations']:
+        sense.update(PROVENANCE)
+    for c in item['collocations']:
+        c.update(source_type='pedagogical_example', source='phase2_enrichment',
+                 review_status='phase2_reviewed')
+    contexts = item['dual_scenarios']
+    contexts['review_status'] = 'phase2_reviewed'
+    for name, kind in [('formal', 'pedagogical_example'), ('colloquial', 'pedagogical_dialogue')]:
+        contexts[name].update(source_type=kind, source='phase2_enrichment', review_status='phase2_reviewed')
+    return item
+
+
+def parse_output(raw):
+    raw = raw.strip().lstrip('\ufeff')
+    if raw.startswith('```'):
+        raw = re.sub(r'^```(?:json)?\s*\n?', '', raw, count=1)
+        raw = re.sub(r'\s*```$', '', raw)
+    value = json.loads(raw)
+    if isinstance(value, dict):
+        if 'exact_key' in value:
+            value = [value]
+        elif isinstance(value.get('entries'), list):
+            value = value['entries']
+        else:
+            value = [dict(v, exact_key=v.get('exact_key', k)) if isinstance(v, dict) else v
+                     for k, v in value.items()]
+    if not isinstance(value, list):
+        raise ValueError('Worker JSON must be an object or list')
+    return value
+
+
+def validate_candidate(item, packet, store):
+    """Run per-word structural/evidence gates on copies before partial commit."""
+    key = packet['exact_key']
+    original, index = store.entries[key], deepcopy(store.indices[key])
+    if packet != assemble_packet(original, index):
+        raise ValueError('Ground truth packet differs from source snapshot')
+    validate_overlay(item, original)
+    entry = deepcopy(original)
+    apply_overlay(entry, index, item)
+    errors = (gate1([entry], [item])
+              + gate2([entry], {key: item}, {key: {'entry': original}})
+              + gate3([entry], {key: item}, store.lookup)
+              + gate4([entry], {key: item}, store.manifest, check_audio_totals=False))
+    # Gate 5 per-word conservation; the full 24,045-word ledger is checked at sync.
+    if (entry['id'] != key or index['exact_key'] != key
+            or index['tier'] != original['headword']['tier']
+            or len(entry['lexeme_analyses']) != len(original['lexeme_analyses'])
+            or protected_record(entry) != protected_record(original)):
+        errors.append('Per-word conservation failed')
+    if errors:
+        raise ValueError('; '.join(errors))
+    return item
+
+
+def _invoke_worker(command, prompt, timeout_sec):
+    """Kill the entire Windows worker tree on timeout, not just its CLI parent."""
+    with subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='replace',
+                          cwd=PROJECT, **({'creationflags': subprocess.CREATE_NO_WINDOW} if os.name == 'nt' else {})) as proc:
+        try:
+            stdout, stderr = proc.communicate(prompt, timeout=timeout_sec)
+        except subprocess.TimeoutExpired:
+            if os.name == 'nt':
+                subprocess.run(['taskkill', '/PID', str(proc.pid), '/T', '/F'],
+                               capture_output=True, check=False,
+                               creationflags=subprocess.CREATE_NO_WINDOW)
+            proc.kill()
+            proc.communicate()
+            raise
+        return proc.returncode, stdout, stderr
+
+
+def process_micro_batch(batch_tag, packets, timeout_sec, model='gpt-6.1-sol', effort='high'):
+    start = time.monotonic()
+    prompt = build_prompt(packets)
+    keys = [p['exact_key'] for p in packets]
+    result = {'batch_tag': batch_tag, 'words': keys, 'validated_entries': {}, 'errors': {},
+              'positions': {key: n for n, key in enumerate(keys, 1)},
+              'input_chars': len(prompt), 'input_chars_per_word': len(prompt) / max(len(keys), 1),
+              'timeout_sec': timeout_sec}
+    try:
+        if not keys or len(set(keys)) != len(keys):
+            raise ValueError('Batch requires unique non-empty packets')
+        executable = shutil.which('codex')
+        if not executable:
+            raise FileNotFoundError('Codex CLI is not on PATH')
+        scratch = PROJECT / '.tmp/phase2-workers'
+        scratch.mkdir(parents=True, exist_ok=True)
+        # Normal mkdir inherits the workspace ACL. Python 3.13 tempfile's 0700
+        # Windows ACL excludes the restricted sandbox identity.
+        folder = scratch / ('batch-' + uuid.uuid4().hex)
+        folder.mkdir()
+        try:
+            out_file = folder / 'output.json'
+            command = [executable, '-a', 'never', 'exec', '-C', str(PROJECT), '-s', 'read-only',
+                       '-m', model, '-c', f'model_reasoning_effort="{effort}"',
+                       '--ephemeral', '-o', str(out_file), '-']
+            code, _, _ = _invoke_worker(command, prompt, timeout_sec)
+            # Salvage a complete output file even when the CLI exits nonzero.
+            if not out_file.exists():
+                raise ValueError(f'Worker output missing (exit {code})')
+            rows = parse_output(out_file.read_text(encoding='utf-8'))
+        finally:
+            shutil.rmtree(folder, ignore_errors=True)
+        grouped = {}
+        for row in rows:
+            if isinstance(row, dict) and isinstance(row.get('exact_key'), str):
+                row = normalize_overlay(row)
+                grouped.setdefault(row['exact_key'], []).append(row)
+        store = source_store()
+        for packet in packets:
+            key = packet['exact_key']
+            try:
+                matches = grouped.get(key, [])
+                if len(matches) != 1:
+                    raise ValueError('Missing output' if not matches else 'Duplicate output exact_key')
+                item = add_provenance(matches[0])
+                result['validated_entries'][key] = validate_candidate(item, packet, store)
+            except (ValueError, TypeError, KeyError, AttributeError) as error:
+                result['errors'][key] = str(error)
+    except (OSError, ValueError, TypeError, subprocess.SubprocessError) as error:
+        result['errors'].update({key: str(error) for key in keys if key not in result['validated_entries']})
+    result['elapsed_sec'] = time.monotonic() - start
+    result['finished_monotonic'] = time.monotonic()
+    result['started_monotonic'] = start
+    result['status'] = 'partial' if result['validated_entries'] and result['errors'] else 'error' if result['errors'] else 'ok'
+    return result
+
+
+def chunks(items, size):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
+
+
+def publish_and_validate():
+    summary = sync()
+    report = validate_dataset()
+    write_json(AUDIT / 'phase2_quality_gate_report.json', report, pretty=True)
+    if not report['passed']:
+        raise ValueError('Published dataset failed five gates; see phase2_quality_gate_report.json')
+    return summary
+
+
+def persist_entries(path, entries, order):
+    if entries:
+        write_json(path, [entries[k] for k in order if k in entries], pretty=True)
+
+
+def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interval=100, wave='all'):
+    if min(slots, batch_size, timeout, milestone_interval) < 1 or max_words < 0:
+        raise ValueError('Positive slots/batch-size/timeout/milestone and nonnegative max-words required')
+    store = source_store()
+    overlays, _ = load_overlays()
+    quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
+    chosen = candidate_queue(store.index, overlays, quarantine, wave)
+    if max_words:
+        chosen = chosen[:max_words]
+    order = [i['exact_key'] for i in chosen]
+    pending = deque(chosen)
+    retries, attempts, committed = deque(), {}, {}
+    sequence, since_milestone = 0, 0
+    # Stable name/content across restarts; valid entries already on disk are excluded.
+    # Each file is a list of one entry, as required by the shared overlay loader.
+    def save_batch(valid):
+        for key, entry in valid.items():
+            filename = 'phase2_queue_' + hashlib.sha256(key.encode('utf-8')).hexdigest() + '.json'
+            write_json(OVERLAY_DIR / filename, [entry], pretty=True)
+
+    with ThreadPoolExecutor(max_workers=slots) as executor:
+        futures = {}
+        def refill():
+            nonlocal sequence
+            while len(futures) < slots and (retries or pending):
+                retry = bool(retries)
+                packets = retries.popleft() if retry else [store.packet(pending.popleft()['exact_key'])
+                    for _ in range(min(batch_size, len(pending)))]
+                sequence += 1
+                tag = f'queue_{sequence:06d}' + ('_retry' if retry else '')
+                future = executor.submit(process_micro_batch, tag, packets,
+                                         RETRY_TIMEOUT if retry else timeout)
+                futures[future] = (tag, packets)
+        refill()
+        while futures:
+            done, _ = wait(futures, return_when=FIRST_COMPLETED)
+            for future in sorted(done, key=lambda f: futures[f][0]):
+                tag, packets = futures.pop(future)
+                result = future.result()
+                valid = result['validated_entries']
+                save_batch(valid)
+                committed.update(valid)
+                since_milestone += len(valid)
+                failed = []
+                for packet in packets:
+                    key = packet['exact_key']
+                    if key in valid:
+                        continue
+                    attempts[key] = attempts.get(key, 0) + 1
+                    if attempts[key] > MAX_RETRIES:
+                        quarantine[key] = {'attempts': attempts[key], 'retries': attempts[key] - 1,
+                                           'error': result['errors'].get(key, 'Missing output')}
+                        write_json(QUARANTINE, dict(sorted(quarantine.items())), pretty=True)
+                    else:
+                        failed.append(packet)
+                retries.extend(chunks(failed, 2))
+                print(f'{tag}: {len(valid)}/{len(packets)} validated; session={len(committed)}', flush=True)
+            # Refill freed slots BEFORE potentially slow milestone publication.
+            refill()
+            if since_milestone >= milestone_interval:
+                publish_and_validate()
+                since_milestone = 0
+    summary = publish_and_validate()
+    return {'selected': len(order), 'validated': len(committed),
+            'quarantined': len(set(order) & set(quarantine)), 'enriched_count': summary['enriched_count']}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--slots', type=int, default=25)
+    parser.add_argument('--batch-size', type=int, default=4)
+    parser.add_argument('--timeout', type=int, default=420)
+    parser.add_argument('--max-words', type=int, default=0, help='0 exhausts the selected pool; retries do not count twice')
+    parser.add_argument('--milestone-interval', type=int, default=100)
+    parser.add_argument('--wave', choices=['1', '2', 'all'], default='all')
+    args = parser.parse_args()
+    if min(args.slots, args.batch_size, args.timeout, args.milestone_interval) < 1 or args.max_words < 0:
+        parser.error('counts/timeouts must be positive; --max-words may be 0')
+    result = run_queue(**vars(args))
+    print(json.dumps(result, ensure_ascii=False))
+    return 1 if result['quarantined'] else 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

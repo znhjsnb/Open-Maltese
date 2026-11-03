@@ -2,23 +2,31 @@
 
 欢迎接手 **Open-Malti（马耳他语–中文–英语三语认知词典）** 独立工作区 (`C:\Users\d\Documents\open-malti`)。
 
-## 当前状态（2026-11-03 · Phase 1 审查修复完成）
-- 已落实 [Phase 1 审查](docs/CODEX_PHASE1_REVIEW.md) 的 **6 项 P1 与 7 项 P2**，生成版本 `malti-phase1-2026-11-03-r2`。词汇复数排除动词人称/否定/代词连写；`lexeme_analyses` 保留来源记录、词性及词源编号边界；有共时词根但无历史供体证据时保留 `stratum=unspecified`。
-- 词池守恒 **24,045**：Tier 1 **5,051** / Tier 2 **11,414** / Tier 3 **7,580**，Tier 1+2 候选池 **16,465**；**30** 个 ASCII 文件名分片。统计与样例见 [lemma_pool_summary.json](data/seed/lemma_pool_summary.json)。
-- 反查 **124,488** 个表面形，紧凑表 **4,338,881 字节（4.34 MB）**，1,845 个共享标签描述。Worker 加载轻索引后立即开放基础查词与冠词规则搜索，反查表在第二阶段后台加载。覆盖合法融合/省略冠词，拒绝非法太阳/太阴组合，增音 i 必须命中实存词头。仍有 **10** 行无法连接的来源引用，未补造词头。
-- **597** 个词头有真人录音，均有 Commons 文件页署名链接。Ġabra 本地 MDX 标为 **CC BY 3.0**，保留 Camilleri 2013 Appendix D、整理者及 `aħwa` 修正说明；上游现网 CC BY 4.0 与本地快照明确区分。Markdown / Anki（9 列）包含来源许可、审核状态与录音署名链接。
-- DMS 数字先于字母、大写先于小写；发音指南最长匹配 `għ / ie`；过期检索报错被 requestId 过滤。全部、Tier 1、Tier 1+2 候选池、样板、词根、罗曼/英语借词和真人发音筛选可用。manifest 版本与 SHA-256 贯穿 Worker、IndexedDB 和分片缓存，SW 支持离线页面及数据回退；离线仅覆盖已完成缓存的索引和已访问分片。
-- 已按顺序成功重跑 Phase 0 审计、Phase 1 构建、`python -m unittest discover -s tests -v`：**83 项通过、0 失败、0 跳过**；独立 Node 客户端 **37 项通过**。含逐字节重建、真实 HTTP、同形词/语源/复数回归、基础检索先就绪、离线刷新、错误版本和损坏内容拒绝、存储受限降级。原始数据未改动；两份 Phase 0 审计 JSON 已按修正规则重建。
-- 本机工作台入口 **http://127.0.0.1:8767**。复现命令、固定来源 SHA-256、缓存恢复与依赖见 [README.md](README.md)。Phase 1 manifest 记录 78 个实际输入文件的 SHA-256 及 MDX 摘要。
-- **待 Antigravity 真机门禁与提交**：本批未执行真实 Chrome、移动端、视觉或听音验收，Node 的隔离客户端/IndexedDB/SW 检查不替代浏览器门禁。25 个原创三语展示词继续标为待语言学复核。按本项目角色与 workspace-write 边界，本轮未操作 Git 提交，保留原有工作区内容。
+## 当前状态（2026-11-04 · 双轮对话与滑动队列 / A/B 基准已实现，宿主实测待完成）
+- 本轮将首批 100 词全部补齐两轮 `colloquial.messages`（姓名与中文角色、口语、标准表达、中文、英文），保留原有三语整段对话；已有规范表达的标准栏与口语相同。`validate_overlay` / Gate 4 共用反稀释校验：每个实证义项中文非空、两个不同三语搭配、至少两轮完整对话、助记至少八字符。前端逐轮平铺并转义所有文本，PASS 8 消除了清空输入与筛选的 debounce 竞态，并等待卡片加载及 provenance。
+- 新增 [滑动队列](scripts/run_phase2_sliding_queue.py) 与 [80 词 A/B 基准](scripts/run_phase2_ab_benchmark.py)。只读 worker 使用 `gpt-6.1-sol / high`、UTF-8 stdin 与精确 POS/英文选择器；单词独立五门验证、部分成功落盘、两词 360 秒重试、耗尽重试后隔离。队列支持要求的全部 CLI 参数；A/B 为 10×4/420 秒对 5×8/840 秒，15 批并发，报告含重试、首轮质量和 B 的批内前后位置比较。完整 Wave 1 为 5,384，当前未精编 5,286；完整 Tier 1+2 为 16,465。偶奇交错不保证分类分布完全相同，报告记录实际差异，token 数明确标为估算。
+- 已执行快速同步：30 分片与索引/manifest 更新，`phase2_baseline.json` 保持叠加前来源记录，精编仍为 100。五门 5/5、0 错误；Python 全量 **117 项通过**（`tests/artifacts/phase2_queue_unittest_final.log`），Node 客户端 **37 项通过**。隔离测试覆盖部分提交、重复/缺失输出、精确义项、超时、重试隔离、持续补位及 A/B 统计；未启动嵌套 Codex 或 Chrome。
+- **Antigravity 宿主下一步**：执行 `node tests/frontend.browser.mjs` 与 `python -X utf8 scripts/run_phase2_ab_benchmark.py`，再复核语言、移动端及听音。真实基准输出将写入 `data/enriched/phase2_tier1_batch2_ab.json` 与 `data/audit/phase2_ab_benchmark_report.json`；本轮未生成虚构实测报告，未操作 Git。使用方式见 README。
+
+### 前序 100 词基线（2026-11-03，后续状态以上述更新为准）
+- 用户已批准 **Phase 2 受控批次精编**，UI 布局重构推迟至 Phase 2 之后。本批完成 [phase2_tier1_batch1.json](data/enriched/phase2_tier1_batch1.json)：原 25 词升级＋75 个新增 Tier 1 核心词，共 **100 词**、**200 组搭配**、**200 段双境教学场景**、**413 个逐 POS/原英文义项绑定的中文译释**。原展示词 `bongu`（Tier 3）、`għand`（Tier 2）保留原分层，其余 98 词均为 Tier 1。
+- 来源词池继续守恒 **24,045**：Tier 1 **5,051** / Tier 2 **11,414** / Tier 3 **7,580**；已丰富 **100**＋未丰富 **23,945**。反查表面形 **124,488**，真人录音词头 **597**，均有 Commons 文件页链接。原始数据与既有来源校验和不变。
+- 新增确定性冠词引擎与 [五门校验器](scripts/phase2_quality_gates.py)：Unicode/损坏文本、形态/同形词诚实、冠词/实证代词、许可/教学归属、守恒/分层样本。当前 [五门报告](data/audit/phase2_quality_gate_report.json) **5/5 通过、0 错误**；报告明确程序不能认证地道性或取代母语与听音验收。
+- 所有 `data/enriched/*.json` 按文件名排序加载，重键/未知词头/来源字段改写/未译原义项会拒绝。完整构建与 [快速同步器](scripts/sync_enriched_to_shards.py) 共用叠加、版本、序列化逻辑；分片摘要和来源基线校验后才同步，移除叠加可恢复基础记录。`skola → skejjel` 在基础构建标为 `hybrid_assimilated`，不补造词根。发布数据规范化了 12,738 处来源格式控制字符串，并隔离标明 15 处损坏文本；原始文件不变，计数见 summary。
+- `dar` 等同形词按原来源记录/词性分开呈现中文；来源英文保留，译释附 `translation_provenance=authored_pedagogical`。教学义项、搭配、场景与助记标为 `phase2_reviewed`（本批编审，不代表独立母语专家签核）。样板筛选从 manifest 动态读取 **100**，多子词位条目也显示助记。冠词校验与检索均拒绝 `l-iktieb / l-iżmien / l-itriq / ij-jum`。
+- 验证：完整构建成功；Python 全量回归 **107 项通过、0 失败、0 跳过**（日志 `tests/artifacts/phase2_unittest_final.log`），Node 客户端 **37 项通过**；全构建对照与快速同步/移除/恢复逐字节一致。本地 HTTP 资源与隔离临时端口测试通过。JS 语法及 diff 空白检查通过。
+- **真实浏览器未通过启动门禁**：已运行 `node tests/frontend.browser.mjs`，在创建子进程时因 `spawn EPERM` 退出；浏览器连接宿主不可用，现有 Chrome 的计算机操作访问亦未获批准。脚本已加入 `dar` 中文隔离、助记及动态 100 词筛选断言，但本轮不能把它们报为真机通过。母语语言学、移动端、视觉与听音验收仍待 Antigravity 完成。
+- 按 workspace-write 与工程分工，本轮不操作 `.git` 或提交。下一步由 Antigravity 在允许创建 Chrome 子进程的宿主运行浏览器脚本与语言学抽检，再审查并提交。详细命令与边界见 [README](README.md)。
 
 复现（从本工程根目录运行）：
 
 ```powershell
 python -X utf8 scripts/phase0_inventory_audit.py
 python -X utf8 scripts/build_phase1_shards.py
-python -m unittest discover -s tests -v
+python -X utf8 scripts/phase2_quality_gates.py
+python -X utf8 -m unittest discover -s tests -v
 node tests/phase1_client_checks.mjs
+node tests/frontend.browser.mjs
 python -X utf8 app/server.py
 ```
 

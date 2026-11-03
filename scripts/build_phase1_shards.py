@@ -10,6 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import unicodedata
 from urllib.parse import quote, unquote, urlparse
 
 try:
@@ -143,7 +144,15 @@ def lexeme_analysis(source, row, record_id, cam_paradigm=None):
             'senses': senses}
 
 
-def build(raw, output, seed_output):
+def build(raw, output, seed_output, overlay_dir=None):
+    try:
+        from .phase2_enrichment import (OVERLAY_DIR, load_overlays, apply_overlays,
+                                        enrichment_summary, write_json)
+        from .phase2_quality_gates import compute_definite_article
+    except ImportError:
+        from phase2_enrichment import (OVERLAY_DIR, load_overlays, apply_overlays,
+                                       enrichment_summary, write_json)
+        from phase2_quality_gates import compute_definite_article
     raw, output, seed_output = Path(raw), Path(output), Path(seed_output)
     if output.resolve().is_relative_to(raw.resolve()) or seed_output.resolve().is_relative_to(raw.resolve()):
         raise ValueError('Generated outputs must not be written into the raw source directory')
@@ -401,6 +410,17 @@ def build(raw, output, seed_output):
         # Never advertise a plural from a different POS as this verb's plural.
         entry['morphology']['plural_forms'] = unique(p for a in analyses for p in a['plural_forms'] or []) or None
         entry['inflection_and_clitics']['plural'] = entry['morphology']['plural_forms']
+        # A source-attested broken plural can evidence hybrid assimilation even
+        # when neither source supplies a consonantal root. Never invent one.
+        if key == 'skola' and 'skejjel' in (entry['morphology']['plural_forms'] or []):
+            entry['morphology']['pattern_type'] = 'hybrid_assimilated'
+            for analysis in analyses:
+                if 'skejjel' in (analysis['plural_forms'] or []):
+                    analysis['pattern_type'] = 'hybrid_assimilated'
+        for analysis in analyses:
+            analysis['definite_article'] = compute_definite_article(word, analysis['pos'])
+        nominal = next((a['pos'] for a in analyses if a['definite_article']), None)
+        entry['inflection_and_clitics']['definite_article'] = compute_definite_article(word, nominal)
         h = entry['headword']
         audio_file = (audio.get('audio') or unquote(urlparse(h['audio_url']).path.rsplit('/', 1)[-1])) if audio else None
         h['audio_file'] = audio_file
@@ -413,6 +433,31 @@ def build(raw, output, seed_output):
             'gloss_en': unique(s['en_definition'] for s in senses)[:3],
             'gloss_zh': SHOWCASE[key][1] if key in SHOWCASE else None,
             'has_audio': bool(audio), 'is_showcase': key in SHOWCASE, 'source_presence': source_presence})
+
+    # Keep raw files untouched. Flatten source formatting controls for the
+    # published JSON. Quarantine unreadable upstream placeholder glosses instead
+    # of pretending that question marks are an English dictionary definition.
+    source_text_repairs = Counter()
+    def publication_text(value):
+        if isinstance(value, str):
+            text = unicodedata.normalize('NFC', value)
+            if any(unicodedata.category(c) in ('Cc', 'Cf') for c in text):
+                source_text_repairs['formatting_controls_normalized'] += 1
+                text = ''.join(' ' if unicodedata.category(c) == 'Cc' else ''
+                               if unicodedata.category(c) == 'Cf' else c for c in text)
+            if re.search(r'\?{4,}|\b(?:TODO|TBD)\b|\ufffd', text):
+                source_text_repairs['unreadable_source_text_quarantined'] += 1
+                text = re.sub(r'\?{4,}|\b(?:TODO|TBD)\b|\ufffd', '[unreadable source text]', text)
+            return text
+        if isinstance(value, list):
+            return [publication_text(v) for v in value]
+        if isinstance(value, dict):
+            return {k: publication_text(v) for k, v in value.items()}
+        return value
+    entries = publication_text(entries)
+    lite = publication_text(lite)
+    overlays, overlay_digests = load_overlays(OVERLAY_DIR if overlay_dir is None else overlay_dir)
+    baseline = apply_overlays(entries, lite, overlays)
 
     lookup_out = {surface: [{'lemma': lemma, 'tag': ' | '.join(sorted(tags))}
                            for lemma, tags in sorted(candidates.items())]
@@ -443,15 +488,12 @@ def build(raw, output, seed_output):
             'WikiPron and Kaikki both derive from Wiktionary.',
             'Grammar lookup exceptions are labelled grammar_reference, not corpus-attested.',
             'Teaching examples and translations await linguistic review.']}
+    enrichment_summary(summary, lite, overlay_digests)
+    summary['source_text_repairs'] = dict(sorted(source_text_repairs.items()))
+    compact_lookup['version'] = summary['version']
     output.mkdir(parents=True, exist_ok=True)
-    def write(path, value, pretty=False):
-        path.parent.mkdir(parents=True, exist_ok=True)
-        payload = json.dumps(value, ensure_ascii=False, indent=2 if pretty else None,
-                             separators=None if pretty else (',', ':')) + '\n'
-        pending = path.with_suffix(path.suffix + '.tmp')
-        pending.write_text(payload, encoding='utf-8', newline='\n')
-        pending.replace(path)
-        return {'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+    write = write_json
+    write(output / 'phase2_baseline.json', baseline)
     shard_meta = []
     for bucket in MALTESE_UI_BUCKETS_30:
         content = [entry for entry, idx in zip(entries, lite) if idx['bucket'] == bucket]

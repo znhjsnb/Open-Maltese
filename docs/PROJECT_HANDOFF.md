@@ -6,6 +6,18 @@
 
 ---
 
+## Phase 2 当前交接（2026-11-03）
+
+2026-11-04 更新：首批 100 词已全部升级双轮 `messages` 并同步，反稀释门与前端渲染、PASS 8 竞态修复完成；新增只读 worker 滑动队列与 80 词 A/B 基准。Python 117 项、Node 37 项、五门 5/5 通过。未启动嵌套 Codex / Chrome，未运行真实 A/B；Antigravity 在宿主直接执行 `node tests/frontend.browser.mjs` 和 `python -X utf8 scripts/run_phase2_ab_benchmark.py`。详细最新状态与命令以 START / README 为准。
+
+最新状态以 [START](../START.md) 为准。已完成 100 词叠加、确定性五门校验与快速同步；词池 24,045、丰富 100、未丰富 23,945，原 25 词保留，其中 `bongu`/`għand` 的 Tier 3/2 分层不变。教学内容均有原创来源标签，413 个源义项中文译释逐 POS/英文绑定，`dar` 名词与动词不混用。UI 布局重构推迟至 Phase 2 后。
+
+本轮完整构建、Python 回归、37 项 Node 客户端及逐字节同步检查通过；详细最终结果见 START。五道确定性门全通过，但真实 Chrome 命令因 `spawn EPERM` 未能启动，计算机操作访问 Chrome 亦未获批准；不把机器门禁等同母语语言学、听音与浏览器验收。Antigravity 在宿主跑 `node tests/frontend.browser.mjs`（现有 8 组验收），复核 100 词的地道性、移动端及听音后再提交。原始数据、Phase 0 报告不变，当前 worker 不操作 Git。
+
+后续修改 `data/enriched/*.json` 后运行 `python -X utf8 scripts/run_phase2_enrichment.py --sync`。`--validate-only` 仅验证并写确定性报告；`--batch-size 25` 准备后续 Tier 1 来源材料，只有显式 `--dispatch` 才调用单个本机 Codex CLI worker；本轮未调用额外 worker 或付费 API。完整使用与缓存基线恢复见 README。
+
+---
+
 ## Phase 1 当前交接（2026-11-03）
 
 用户已确认三层全词池、30 桶导航（IE 在 I 内）、清洁词头与词形追踪条、诚实三分支发音。实现与操作说明见 [README](../README.md)，最新短状态见 [START](../START.md)，实测统计见 [lemma_pool_summary.json](../data/seed/lemma_pool_summary.json)。本段取代下文历史行动指南中的“等待词库定容”状态；历史原始资料清单保留。

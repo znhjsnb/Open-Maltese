@@ -52,7 +52,7 @@ test('tiers strata and pagination',()=>{
   assert.equal(engine.search({query:'zzzzzzzz',offset:1000}).total,0);
 });
 test('all feature filters',()=>{
-  assert.equal(engine.search({feature:'showcase'}).total,25);
+  assert.equal(engine.search({feature:'showcase'}).total,100);
   assert.ok(engine.search({feature:'showcase'}).results.every(e=>e.is_showcase));
   assert.ok(engine.search({feature:'root'}).results.every(e=>e.roots.length));
   assert.ok(engine.search({feature:'audio'}).results.every(e=>e.has_audio));
@@ -67,7 +67,7 @@ test('context-checked articles and euphonic vowel',()=>{
     assert.ok(basic.resolve(q).has(target),q);
     assert.ok(basic.resolve(q).get(target).every(t=>t.includes('grammar_rule')));
   }
-  for (const q of ['ix-ktieb','fix-ktieb','bid-xemx','il-dar','fil-xemx','lill-dar']) assert.equal(basic.resolve(q).size,0,q);
+  for (const q of ['ix-ktieb','fix-ktieb','bid-xemx','il-dar','fil-xemx','lill-dar','l-iktieb','l-iżmien','l-itriq','ij-jum','l-iżgħir']) assert.equal(basic.resolve(q).size,0,q);
   const known=new Set(['skola','iskola','għajn','sħab']);
   assert.deepEqual(stripArticle('l-iskola',known),['iskola','l-']);
   known.delete('iskola');
@@ -161,13 +161,18 @@ test('homograph cards and exports preserve analysis boundaries and evidence',()=
   const noun=sections[dar.lexeme_analyses.findIndex(a=>a.source==='kaikki' && a.pos==='noun')];
   const verb=sections[dar.lexeme_analyses.findIndex(a=>a.source==='kaikki' && a.pos==='verb')];
   assert.ok(noun.includes('djar'));assert.ok(!noun.includes('jdur'));assert.ok(!noun.includes('midur'));
+  assert.ok(noun.includes('房屋')); assert.ok(!verb.includes('房屋'));
+  assert.ok(verb.includes('转动')); assert.ok(verb.includes('authored_pedagogical'));
+  const mtSense=structuredClone(dar.lexeme_analyses[0]);
+  mtSense.senses[0].mt_definition='Definizzjoni <sigura>';
+  assert.ok(renderAnalyses([mtSense]).includes('Definizzjoni &lt;sigura&gt;'));
   assert.ok(verb.includes('jdur'));assert.ok(verb.includes('midur'));assert.ok(!verb.includes('djar'));
   const recorded=shardEntries.find(e=>e.headword.audio_commons_url && e.dual_scenarios);
   for (const anki of [false,true]) {
     const text=exportText(recorded,anki,manifest);
     assert.ok(text.includes('CC BY 3.0'));
     assert.ok(text.includes('source_attested'));
-    assert.ok(text.includes('pending_linguistic_review'));
+    assert.ok(text.includes('phase2_reviewed'));
     assert.ok(text.includes(recorded.headword.audio_commons_url));
     assert.ok(text.includes('https://mlrs.research.um.edu.mt/'));
     assert.ok(text.includes('aħwa'));

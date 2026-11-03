@@ -222,6 +222,21 @@ try {
   await until(async () => (await evaluate(`document.querySelector('#entry-card h1')?.textContent`)) === 'dar');
   const darAnalysesCount = await evaluate(`document.querySelectorAll('#entry-card .lexeme-analysis').length`);
   assert.ok(darAnalysesCount >= 2);
+  const darTranslations = await evaluate(`Array.from(document.querySelectorAll('#entry-card .lexeme-analysis')).map(a=>({
+    heading:a.querySelector('h3').textContent,
+    zh:Array.from(a.querySelectorAll('.sense .zh')).map(s=>s.textContent),
+    provenance:a.textContent.includes('authored_pedagogical')
+  }))`);
+  for (const analysis of darTranslations) {
+    assert.ok(analysis.zh.length > 0 && analysis.provenance);
+    if (analysis.heading.includes('noun') || analysis.heading.includes('NOUN')) {
+      assert.ok(analysis.zh.some(t=>t.includes('房')));
+      assert.ok(!analysis.zh.some(t=>t.includes('转向')));
+    } else {
+      assert.ok(!analysis.zh.some(t=>t.includes('房屋')));
+    }
+  }
+  assert.ok((await evaluate(`document.getElementById('entry-card').textContent`)).includes('学习助记：'));
   console.log(`PASS 5: Homograph 'dar' renders ${darAnalysesCount} isolated .lexeme-analysis blocks`);
 
   // 6. Verify 'għajn' has native audio button, and unrecorded 'għabex' opens longest-match 'għ' guide (no false 'ħ')
@@ -266,9 +281,25 @@ try {
   assert.equal(await evaluate(`document.body.classList.contains('english-mode')`), true);
   console.log('PASS 7: Paper themes (white/sepia/grey/night), font scale, and language mode switch');
 
+  // 8. Manifest-driven enrichment count and real Worker filter.
+  await evaluate(`(() => {
+    const input=document.getElementById('search'); input.value='';
+    // The filter click submits the cleared input itself; no pending debounce.
+    Array.from(document.querySelectorAll('#feature-filters button')).find(b=>b.textContent.startsWith('精选样板 (')).click();
+  })()`);
+  const showcaseCount = JSON.parse(await readFile(resolve('app/static/data/manifest.json'), 'utf8')).showcase_count;
+  await until(async () => await evaluate(`(() => {
+    const card=document.getElementById('entry-card');
+    return document.getElementById('result-count').textContent === '${showcaseCount.toLocaleString()} 个词目'
+      && !card.hasAttribute('aria-busy') && card.textContent.includes('phase2_reviewed')
+      && card.querySelectorAll('.dialogue-turn').length >= 2;
+  })()`));
+  assert.ok((await evaluate(`document.getElementById('entry-card').textContent`)).includes('phase2_reviewed'));
+  console.log(`PASS 8: Dynamic showcase (${showcaseCount}), Phase 2 teaching provenance, dialogue turns and filtered Worker results`);
+
   assert.equal(consoleErrors.length, 0, `Console errors: ${consoleErrors.join('; ')}`);
   assert.equal(pageErrors.length, 0, `Page errors: ${pageErrors.join('; ')}`);
-  console.log('ALL 7 REAL CHROME E2E ACCEPTANCE CASES PASSED (0 consoleErrors, 0 pageErrors)');
+  console.log('ALL 8 REAL CHROME E2E ACCEPTANCE CASES PASSED (0 consoleErrors, 0 pageErrors)');
 } finally {
   ws?.close();
   chrome.kill();

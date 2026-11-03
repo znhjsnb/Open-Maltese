@@ -1,0 +1,1750 @@
+{
+  "schema_version": 1,
+  "dataset_version": "malti-phase2-2026-11-03-66eb1326cdd6",
+  "passed": true,
+  "gates": {
+    "orthography_and_nfc": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "diachronic_synchronic_honesty": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "definite_article_and_clitics": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "provenance_and_copyright": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "conservation_and_sampling": {
+      "passed": true,
+      "error_count": 0,
+      "errors": []
+    }
+  },
+  "counts": {
+    "total_lemmas": 24045,
+    "tier_counts": {
+      "1": 5051,
+      "2": 11414,
+      "3": 7580
+    },
+    "enriched_count": 100,
+    "unenriched_count": 23945,
+    "showcase_count": 100,
+    "wordform_surface_count": 124488,
+    "audio_count": 597
+  },
+  "stratified_content_samples": [
+    {
+      "stratum": "tier_1/english/unenriched",
+      "exact_key": "ark",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "bow (e.g. of a string instrument)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "arc",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-ark",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/english/unenriched",
+      "exact_key": "londri",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "laundry",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "laundry",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-londri",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/english/unenriched",
+      "exact_key": "televixin",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "television",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "television",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-televixin",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/unenriched",
+      "exact_key": "sovjetiku",
+      "analysis_pos": [
+        "ADJ",
+        "adj"
+      ],
+      "senses": [
+        {
+          "pos": "ADJ",
+          "en_definition": "Soviet",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "adj",
+          "en_definition": "Soviet (pertaining to the Soviet Union)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "is-sovjetiku",
+        "prefix": "is-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/unenriched",
+      "exact_key": "kartun",
+      "analysis_pos": [
+        null,
+        "NOUN",
+        "noun",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "cardboard",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "cartoon (humorous drawing or strip)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "cartoon (animated cartoon)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-kartun",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/unenriched",
+      "exact_key": "bellus",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "velvet",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "sth. soft and pleasant to the touch",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "velvet",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bellus",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/enriched",
+      "exact_key": "mużika",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "music",
+          "zh_definition": "音乐",
+          "mt_definition": "Ħsejjes organizzati f'melodija jew ritmu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "music",
+          "zh_definition": "音乐",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "music",
+          "zh_definition": "音乐",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-mużika",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "L-iskola toffri lezzjonijiet tal-mużika.",
+          "en": "The school offers music lessons.",
+          "zh": "学校开设音乐课。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Liema mużika tħobb? — Mużika klassika.",
+          "en": "— What music do you like? — Classical music.",
+          "zh": "— 你喜欢什么音乐？— 古典音乐。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Liema mużika tħobb?",
+              "mt_standard": "Liema mużika tħobb?",
+              "zh": "你喜欢什么音乐？",
+              "en": "What music do you like?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Mużika klassika.",
+              "mt_standard": "Mużika klassika.",
+              "zh": "古典音乐。",
+              "en": "Classical music."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“古典音乐”的画面记 mużika，再连读“mużika Maltija”。"
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/enriched",
+      "exact_key": "missier",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "father",
+          "zh_definition": "父亲",
+          "mt_definition": "Il-ġenitur raġel ta' wild.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "father",
+          "zh_definition": "父亲",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "father",
+          "zh_definition": "父亲",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-missier",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-missier attenda l-laqgħa.",
+          "en": "The father attended the meeting.",
+          "zh": "父亲参加了会议。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Dak missierek? — Iva.",
+          "en": "— Is that your father? — Yes.",
+          "zh": "— 那是你父亲吗？— 是。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Dak missierek?",
+              "mt_standard": "Dak missierek?",
+              "zh": "那是你父亲吗？",
+              "en": "Is that your father?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva.",
+              "mt_standard": "Iva.",
+              "zh": "是。",
+              "en": "Yes."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 missier 与 omm 放在家庭照片里记。"
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/enriched",
+      "exact_key": "skola",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "school",
+          "zh_definition": "学校",
+          "mt_definition": "Post fejn l-istudenti jitgħallmu mal-għalliema.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "school",
+          "zh_definition": "学校",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "school (an institution dedicated to teaching and learning)",
+          "zh_definition": "学校；教学机构",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-iskola",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "L-iskola toffri korsijiet tal-Malti.",
+          "en": "The school offers Maltese courses.",
+          "zh": "学校开设马耳他语课程。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Fejn hi l-iskola? — Ħdejn il-knisja.",
+          "en": "— Where is the school? — Near the church.",
+          "zh": "— 学校在哪里？— 在教堂旁边。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Fejn hi l-iskola?",
+              "mt_standard": "Fejn hi l-iskola?",
+              "zh": "学校在哪里？",
+              "en": "Where is the school?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Ħdejn il-knisja.",
+              "mt_standard": "Ħdejn il-knisja.",
+              "zh": "在教堂旁边。",
+              "en": "Near the church."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 skola 和复数 skejjel 成对记；加冠词时读写 l-iskola。"
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/unenriched",
+      "exact_key": "bram",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "jellyfish",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "jellyfish",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bram",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/unenriched",
+      "exact_key": "vit",
+      "analysis_pos": [
+        "NOUN",
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "tap",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "faucet",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "screw",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-vit",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/unenriched",
+      "exact_key": "abitat",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "inhabited",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "peopled",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "built-up area",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-abitat",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/enriched",
+      "exact_key": "tifel",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "boy; child",
+          "zh_definition": "男孩；孩子",
+          "mt_definition": "Persuna żgħira ta' sess maskili.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "boy",
+          "zh_definition": "男孩",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "male child",
+          "zh_definition": "男童",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tifel",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "It-tifel beda l-iskola din is-sena.",
+          "en": "The boy started school this year.",
+          "zh": "男孩今年开始上学。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Min hu dak it-tifel? — Ibni.",
+          "en": "— Who is that boy? — My son.",
+          "zh": "— 那个男孩是谁？— 我儿子。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Min hu dak it-tifel?",
+              "mt_standard": "Min hu dak it-tifel?",
+              "zh": "那个男孩是谁？",
+              "en": "Who is that boy?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Ibni.",
+              "mt_standard": "Ibni.",
+              "zh": "我儿子。",
+              "en": "My son."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“小男孩”的画面记 tifel，再连读“tifel tal-iskola”。"
+    },
+    {
+      "stratum": "tier_1/semitic/enriched",
+      "exact_key": "xorob",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to drink",
+          "zh_definition": "喝；饮用",
+          "mt_definition": "Ħa likwidu f'ħalqu u belgħu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to drink",
+          "zh_definition": "喝",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to consume alcohol",
+          "zh_definition": "饮酒",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-pazjent xorob biżżejjed ilma.",
+          "en": "The patient drank enough water.",
+          "zh": "病人喝了足够的水。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— X'xorob? — Tazza ilma.",
+          "en": "— What did he drink? — A glass of water.",
+          "zh": "— 他喝了什么？— 一杯水。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "X'xorob?",
+              "mt_standard": "X'xorob?",
+              "zh": "他喝了什么？",
+              "en": "What did he drink?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Tazza ilma.",
+              "mt_standard": "Tazza ilma.",
+              "zh": "一杯水。",
+              "en": "A glass of water."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "xorob 是动词的词典引用形；用“xorob l-ilma（喝了水）”整组记。"
+    },
+    {
+      "stratum": "tier_1/semitic/enriched",
+      "exact_key": "tajjeb",
+      "analysis_pos": [
+        "ADJ",
+        "ADV",
+        "adj",
+        "adv"
+      ],
+      "senses": [
+        {
+          "pos": "adj",
+          "en_definition": "good",
+          "zh_definition": "好的",
+          "mt_definition": "Li għandu kwalità mixtieqa jew jagħmel ġid.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "fine",
+          "zh_definition": "好的；令人满意的",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "good",
+          "zh_definition": "好的",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tajjeb",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kumitat irrapporta riżultat tajjeb.",
+          "en": "The committee reported a good result.",
+          "zh": "委员会报告了良好结果。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Kif kien l-ikel? — Tajjeb ħafna.",
+          "en": "— How was the food? — Very good.",
+          "zh": "— 食物怎么样？— 很好吃。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Kif kien l-ikel?",
+              "mt_standard": "Kif kien l-ikel?",
+              "zh": "食物怎么样？",
+              "en": "How was the food?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Tajjeb ħafna.",
+              "mt_standard": "Tajjeb ħafna.",
+              "zh": "很好吃。",
+              "en": "Very good."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“好的工作”的画面记 tajjeb，再连读“ikel tajjeb”。"
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "ħesrem",
+      "analysis_pos": [
+        "ADJ",
+        "ADJ",
+        "noun",
+        "adv"
+      ],
+      "senses": [
+        {
+          "pos": "ADJ",
+          "en_definition": "sudden",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "suddenly",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "unripe grapes, sour grapes",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-ħesrem",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "għajb",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "disgrace",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "dishonour",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "disrepute",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-għajb",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "ngħas",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "sleep",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "drowsiness",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "temple (region of skull)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "in-ngħas",
+        "prefix": "in-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/enriched",
+      "exact_key": "fjura",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "flower",
+          "zh_definition": "花",
+          "mt_definition": "Il-parti ta' pjanta li ħafna drabi jkollha kuluri u riħa.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "flower",
+          "zh_definition": "花",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "singulative of fjur",
+          "zh_definition": "fjur 的个体名词；一朵花",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-fjura",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-fjura tħawlet fil-ġnien tal-iskola.",
+          "en": "The flower was planted in the school garden.",
+          "zh": "花种在了学校的花园里。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Trid fjura? — Iva, dik il-ħamra.",
+          "en": "— Would you like a flower? — Yes, that red one.",
+          "zh": "— 想要一朵花吗？— 想，要那朵红的。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Trid fjura?",
+              "mt_standard": "Trid fjura?",
+              "zh": "想要一朵花吗？",
+              "en": "Would you like a flower?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva, dik il-ħamra.",
+              "mt_standard": "Iva, dik il-ħamra.",
+              "zh": "想，要那朵红的。",
+              "en": "Yes, that red one."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“红花”的画面记 fjura，再连读“fjura sabiħa”。"
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "ħabbeż",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to bake frequently",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to put loaves in an oven",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "milsen",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "dictionary",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "lexicon",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "dictionary",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-milsen",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "tanbir",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "drumming",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "making a crashing noise",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "brainwashing",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tanbir",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "blakk",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "blacking, shoe polish",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-blakk",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "bbajndja",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to bind (a book)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "bbriġġja",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to bridge (to connect with a bridge)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/unenriched",
+      "exact_key": "avultun",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "vulture",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-avultun",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/unenriched",
+      "exact_key": "ruxx",
+      "analysis_pos": [
+        "noun",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "blush, rouge (makeup)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "ruche (fluted or pleated fabric)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ir-ruxx",
+        "prefix": "ir-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/unenriched",
+      "exact_key": "burkina faso",
+      "analysis_pos": [
+        "name"
+      ],
+      "senses": [
+        {
+          "pos": "name",
+          "en_definition": "Burkina Faso (a country in West Africa, formerly Upper Volta; official name: Burkina Faso)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "sessologu",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "sexologist",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "is-sessologu",
+        "prefix": "is-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "topografija",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "topography",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-topografija",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "ddeċifra",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to decipher, to decode",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
+      "exact_key": "għand",
+      "analysis_pos": [
+        "prep"
+      ],
+      "senses": [
+        {
+          "pos": "prep",
+          "en_definition": "at, to",
+          "zh_definition": "在……处；到……处",
+          "mt_definition": "Turi li xi ħadd jew xi ħaġa tinsab ma' persuna jew fil-post tagħha.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "prep",
+          "en_definition": "at, to",
+          "zh_definition": "在某人处；到某人处",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Id-dokument jinsab għand id-direttur.",
+          "en": "The document is with the director.",
+          "zh": "文件在主任那里。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Għand min sejjer? — Għand ħabib tiegħi.",
+          "en": "— Who are you going to see? — A friend of mine.",
+          "zh": "— 你要去谁那里？— 去我朋友那里。",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Għand min sejjer?",
+              "mt_standard": "Għand min sejjer?",
+              "zh": "你要去谁那里？",
+              "en": "Who are you going to see?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Għand ħabib tiegħi.",
+              "mt_standard": "Għand ħabib tiegħi.",
+              "zh": "去我朋友那里。",
+              "en": "A friend of mine."
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "għand 先记“在某人那里”；għandi 表“我有”，须整形记。"
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "lejlet il-milied",
+      "analysis_pos": [
+        "name"
+      ],
+      "senses": [
+        {
+          "pos": "name",
+          "en_definition": "Christmas Eve (final night before Christmas).",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "rgħajn",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "the voiced velar or voiced uvular fricative /ɣ~ʁ/, an archaic phoneme in Maltese; see għ for more",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ir-rgħajn",
+        "prefix": "ir-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "li",
+      "analysis_pos": [
+        "pron",
+        "conj"
+      ],
+      "senses": [
+        {
+          "pos": "pron",
+          "en_definition": "who; which; that",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "conj",
+          "en_definition": "that",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "ħġim",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "wolfing down of food",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-ħġim",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "tgħajjar",
+      "analysis_pos": [
+        "VERB",
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to insult",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to call sb. names",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to indulge in the act of insulting",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "ċaqċiq",
+      "analysis_pos": [
+        "NOUN",
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "cracking sounds",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "crack",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "iċ-ċaqċiq",
+        "prefix": "iċ-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "bongu",
+      "analysis_pos": [
+        "X",
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "intj",
+          "en_definition": "good morning",
+          "zh_definition": "早上好",
+          "mt_definition": "Tislima li ngħidu filgħodu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "X",
+          "en_definition": "hello",
+          "zh_definition": "你好",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "Hello",
+          "zh_definition": "你好；问候语",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bongu",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Bongu lil kull min qed jattendi din il-laqgħa.",
+          "en": "Good morning to everyone attending this meeting.",
+          "zh": "参加本次会议的各位，早上好。",
+          "source_type": "pedagogical_example",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "— Bongu! — Bongu, kif int?",
+          "en": "— Good morning! — Good morning, how are you?",
+          "zh": "— 早上好！— 早上好，你好吗？",
+          "source_type": "pedagogical_dialogue",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Bongu!",
+              "mt_standard": "Bongu!",
+              "zh": "早上好！",
+              "en": "Good morning!"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Bongu, kif int?",
+              "mt_standard": "Bongu, kif int?",
+              "zh": "早上好，你好吗？",
+              "en": "Good morning, how are you?"
+            }
+          ],
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把早晨见面和 bongu 绑定记忆。"
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "spazju ta' moviment liberu",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "area of free movement",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-ispazju ta' moviment liberu",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "għal raġunijiet ekonomiċi",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "for economic reasons",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-għal raġunijiet ekonomiċi",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "w.c.",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "watercloset",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-w.c.",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    }
+  ],
+  "limitations": [
+    "Deterministic structural and evidence checks cannot certify idiomaticity or historical truth.",
+    "phase2_reviewed denotes authored editorial review, not independent native-speaker approval.",
+    "Browser, audio/listening and human linguistic acceptance are separate checks."
+  ]
+}

@@ -23,7 +23,8 @@ export function stripArticle(text, known) {
     if (moons.includes(prefix) && suns.includes(stem[0])) continue;
     if (known?.has(stem)) return [stem,prefix];
     if (['l-','fl-','bil-','mal-','tal-','għall-'].includes(prefix)
-        && /^i[sxżz](?![aeiou])\p{L}/u.test(stem) && known?.has(stem.slice(1))) return [stem.slice(1),prefix+'i'];
+        && /^i[sxżz](?![aeiou]|għ|h)\p{L}/u.test(stem) && stem.slice(1)!=='żmien'
+        && known?.has(stem.slice(1))) return [stem.slice(1),prefix+'i'];
     return [stem,prefix];
   }
   return [q,null];

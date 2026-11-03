@@ -1,6 +1,6 @@
 # Open-Malti · 马耳他语认知词典
 
-马耳他语、中文、英语八维学习工作台。Phase 1 提供全量来源词头检索、词形反查和 25 个教学展示词；扩展内容缺证时保留 `null`。中文教学释义、搭配和例句均独立标为原创教学内容，仍待 Phase 2 语言学复核。
+马耳他语、中文、英语八维学习工作台。提供 24,045 个来源词头检索、124,488 个词形反查键，以及 Phase 2 首批 100 个三语教学词条。教学内容明确标为原创，`phase2_reviewed` 表示本批编审，不冒充母语专家认证；缺证维度仍可为空。UI 布局重构已按用户决定推迟至 Phase 2 之后。
 
 ## 本机使用
 
@@ -10,8 +10,10 @@
 Set-Location C:\Users\d\Documents\open-malti
 python -X utf8 scripts/phase0_inventory_audit.py
 python -X utf8 scripts/build_phase1_shards.py
-python -m unittest discover -s tests -v
+python -X utf8 scripts/phase2_quality_gates.py
+python -X utf8 -m unittest discover -s tests -v
 node tests/phase1_client_checks.mjs
+node tests/frontend.browser.mjs
 python -X utf8 app/server.py
 ```
 
@@ -52,7 +54,7 @@ app/server.py → 静态页面 → Web Worker 检索 → 按需读取词条分�
 
 构建复用 Phase 0 的 MDX 解析、词位分类、词根提取、DMS 排序与 Unicode 规范化。原始快照必须在 `data/raw/`：Ġabra ZIP、Kaikki JSONL、WikiPron TSV、Camilleri CSV 目录。若存在 Phase 0 的 Ġabra 仓库镜像，仍校验其 MDX 与 ZIP 一致；Phase 1 不强制另装该镜像，Phase 0 默认核验行为保持不变。构建不联网、不改原始数据或 Phase 0 审计 JSON。可用 `--raw`、`--output`、`--summary` 指定输入与输出位置。
 
-当前生成版本为 `malti-phase1-2026-11-03-r2`。以上第一条 Python 命令会按修正后的规则重建两份内容相同的 Phase 0 审计报告；第二条重建 Phase 1。Phase 0 还需要交接清单中的 MASRI、UD、Tatoeba 等本地辅助资料。固定输入校验和如下，不能以更新的上游下载静默替换：
+当前版本使用 `malti-phase2-2026-11-03-<叠加文件摘要>`，叠加内容变化会更新缓存代际。以上第一条 Python 命令会按修正后的规则重建两份内容相同的 Phase 0 审计报告；第二条重建 Phase 1。Phase 0 还需要交接清单中的 MASRI、UD、Tatoeba 等本地辅助资料。固定输入校验和如下，不能以更新的上游下载静默替换：
 
 | 本地输入（`data/raw/` 内） | SHA-256 |
 | --- | --- |
@@ -71,11 +73,48 @@ app/server.py → 静态页面 → Web Worker 检索 → 按需读取词条分�
 
 主导航为 29 个一级字母加 `#`，另有“全部”；`IE` 在 `I` 桶中作为优先展示的 `ie` 前缀。`għ` 按单一字素处理；`ie` 整词排序按 DMS 的 `i+e` 处理。文件名使用 `GH`、`C_DOT`、`G_DOT`、`H_BAR`、`Z_DOT`、`HASH`，manifest 显式映射，不依赖操作系统大小写或 Unicode 文件名处理。
 
-Worker 维护精确拼写与 ASCII 容错检索，分页返回 60 条。点击 `#root:k-t-b` 可查同根词；词族最多展示 16 个有据词头。页面用请求序号隔离过期的检索、错误与分片响应。Worker 第一阶段仅载入 `index_lite.json`，立即开放词头与冠词规则搜索；第二阶段后台载入反查表，完成后重跑当前查询并更新徽章。反查文件为 `{"version":...,"tags":[...],"forms":{"ktibt":[["kiteb",0]],...}}`，整数引用共享来源/语法描述，实际 **4,338,881 字节（4.34 MB）**，保留全部 124,488 个表面形。标签不再重复嵌入已由键和值确定的表面拼写、目标词头。
+Worker 维护精确拼写与 ASCII 容错检索，分页返回 60 条。点击 `#root:k-t-b` 可查同根词；词族最多展示 16 个有据词头。页面用请求序号隔离过期的检索、错误与分片响应。Worker 第一阶段仅载入 `index_lite.json`，立即开放词头与冠词规则搜索；第二阶段后台载入反查表，完成后重跑当前查询并更新徽章。反查文件为 `{"version":...,"tags":[...],"forms":{"ktibt":[["kiteb",0]],...}}`，整数引用共享来源/语法描述，约 **4.34 MB**（当前精确字节数见 manifest），保留全部 124,488 个表面形。标签不再重复嵌入已由键和值确定的表面拼写、目标词头。
 
 索引和分片缓存以 manifest **版本 + SHA-256** 为键并校验内容。IndexedDB 保存 manifest、两份索引及已访问分片，Service Worker 为页面模块、manifest 和数据请求提供网络优先与离线回退；离线刷新可以恢复已缓存词库。首次在线准备后才有离线数据，未访问分片和未完成下载的反查表仍需联网；第二阶段失败时基础搜索继续可用，不会借用旧代际的反查表。重建后刷新页面即可按新 manifest 加载，等待新 SW 激活时可关闭旧标签后重开。实际耗时受设备与传输影响，浏览器性能门禁仍待执行。
 
 太阳冠词及融合介词仅在辅音与词干首辅音一致时剥离；太阴前缀拒绝太阳辅音起首。支持 `fix-xemx`、`bid-dar`、`lill-kelb`、`x-xemx`、`d-dar`，拒绝 `ix-ktieb`。增音 `i` 仅在指定咝音辅音群及实存词头匹配时剥离，优先保留实存的 `i...` 词头。提示条区分 `grammar_rule`、`grammar_reference` 与词库来源变位。DMS 排序为数字先于字母、大写先于小写。
+
+## Phase 2 批次与五道门
+
+首批文件为 [phase2_tier1_batch1.json](data/enriched/phase2_tier1_batch1.json)：保留原 25 个展示词，新增 75 个 Tier 1 词，共 100 词、200 组搭配、200 段场景及 413 个按词性和原英文义项逐项绑定的中文译释。原展示词 `bongu`（Tier 3）、`għand`（Tier 2）保留原层级，其余 98 词均为 Tier 1；分层从未为凑数而修改。
+
+完整构建按文件名排序加载 `data/enriched/*.json`，重复键、未知键、来源证据改写和缺少义项译释都会拒绝。只添加教学义项、译释、搭配、场景、助记与冠词；保留英文来源释义及 `translation_provenance` 的独立归属。`skola → skejjel` 的实证破碎复数在基础构建器标为 `hybrid_assimilated`，词根仍为空。发布时将来源格式控制字符转为空格，损坏的问号释义明确标为 `[unreadable source text]`；数量记录于 summary/manifest 的 `source_text_repairs`，原始文件不变。
+
+```powershell
+# 后续修改叠加文件后快速同步，不重新解析原始词库
+python -X utf8 scripts/run_phase2_enrichment.py --sync
+# 或直接调用同步器，再单独写报告
+python -X utf8 scripts/sync_enriched_to_shards.py
+python -X utf8 scripts/run_phase2_enrichment.py --validate-only
+# 仅准备下一批的来源材料，不调用模型
+python -X utf8 scripts/run_phase2_enrichment.py --batch-size 25
+# 将准备材料经 UTF-8 stdin 交给本机 Codex CLI（显式 opt-in）
+python -X utf8 scripts/run_phase2_enrichment.py --batch-size 25 --dispatch
+```
+
+快速同步与完整构建共用叠加器、版本计算和序列化，测试逐字节比较分片、索引、manifest 和 summary。生成文件 `app/static/data/phase2_baseline.json` 用于撤销/重应用叠加；缺失时须先完整构建。该缓存不改变原始数据的权威性。同步也更新紧凑反查表的版本字段与摘要，表面形数量不变。所有内容文件先写入，manifest 最后更新；更新中途的读者由摘要检查拒绝混合版本，刷新后重试。
+
+Phase 2 的 `colloquial` 保留整段 `mt/en/zh`，并须提供至少两轮 `messages`，每轮包含 `speaker`（姓名＋中文社会角色）、`mt_spoken`、`mt_standard`、`en`、`zh`。标准表达已经规范时可与口语相同，规范缩合不应误标为非标准形式。反稀释门同时要求：逐实证义项中文译释、至少两个不同三语搭配、至少八字符的助记。首批 100 条已升级；baseline 保持叠加前的来源记录，避免撤销时遗留精编数据。
+
+宿主执行的持续滑动队列与 A/B 基准（这些命令会调用本机订阅 Codex CLI）：
+
+```powershell
+python -X utf8 scripts/run_phase2_ab_benchmark.py
+python -X utf8 scripts/run_phase2_sliding_queue.py --slots 25 --batch-size 4 --timeout 420 --max-words 0 --milestone-interval 100 --wave all
+```
+
+队列在每组内部沿用 `index_lite.json` 的 DMS 顺序：先 Tier 1/2 中有录音的未精编词，再其余 Tier 1（Wave 1），最后其余 Tier 2（Wave 2）；`--wave 2` 只取最后一组。完整 Wave 1 为 5,384，Tier 1+2 为 16,465，实际剩余数扣除已精编和隔离词。`--max-words` 限制新选词数，重试不重复计数。只读 worker 经 UTF-8 stdin 接收紧凑来源包和原样 POS/英文选择器，返回 JSON，由单一控制线程逐词验证和落盘；有空槽立即补位，每累计 100 个成功词同步并运行五门。失败项优先两词重试（360 秒），初次失败加三次重试仍失败才写 `data/audit/quarantine_words.json`。控制器不自动提交 Git。
+
+A/B 取接下来 80 个 Wave-1 候选，偶数索引分给 A（10×4，420 秒），奇数索引分给 B（5×8，840 秒），15 批并行；失败词再做一轮两词重试。成功词按原队列顺序写 `data/enriched/phase2_tier1_batch2_ab.json`，重新执行可追加后续候选，不覆盖先前成果。报告在 `data/audit/phase2_ab_benchmark_report.json`，包含耗时、吞吐、首轮通过率、输入字符节省、内容长度、真实分类分布以及 B 前后四词的首轮比较。交错分组不保证分类分布完全相同，报告会明确记录；token 数仅为字符数÷4 的估算。最终机器五门、母语内容和浏览器验收分别记录，当前沙箱不执行真实模型基准或 Chrome。
+
+[五门报告](data/audit/phase2_quality_gate_report.json) 无时间戳，包含逐门 pass/fail、错误及按 Tier/词源层/丰富状态固定哈希抽取的教学样本。门禁检查 Unicode、形态来源诚实、冠词/实证代词、许可/教学归属和守恒；不能以确定性程序替代母语语言学抽检与听音。Chrome 回归单独执行并单独记录。
+
+冠词引擎输出引用语境形式，处理咝音辅音群增音、`żmien` 例外、`j` 太阴字母、`għ/h` 语境提示，不宣称穷尽连续话语的全部变体。规则依据保留在 [主方案 Gate 3](docs/MASTER_PLAN_V2.md#gate-3)，一手参考为[马耳他大学 A1 教学大纲](https://www.um.edu.mt/library/oar/bitstream/123456789/138501/1/Maltese_for_foreigners_syllabus_level_A1_beginners_elementary_2017.pdf)与[Kunsill《Tagħrif》](https://kunsilltalmalti.gov.mt/wp-content/uploads/2023/03/taghrif.pdf)。
 
 ## 阅读与导出
 
@@ -85,7 +124,7 @@ Worker 维护精确拼写与 ASCII 容错检索，分页返回 60 条。点击 `
 
 快捷键：`/` 聚焦搜索、`↑ / ↓` 切词、`Esc` 关闭发音指南。筛选可叠加；无结果时可切回“全部”与“全部语源”。点击同根词或根标签会清除旧筛选再查询。
 
-筛选包含全部词头、Tier 1 双源核心、Tier 1+2 候选池（16,465）、精选样板（25）、有闪米特词根、罗曼/英语借词、有真人发音，以及各历史词源层。“有闪米特词根”表示实证共时辅音词根，历史词源仍可能待核。
+筛选包含全部词头、Tier 1 双源核心、Tier 1+2 候选池（16,465）、精选样板（100，随 manifest 动态更新）、有闪米特词根、罗曼/英语借词、有真人发音，以及各历史词源层。“有闪米特词根”表示实证共时辅音词根，历史词源仍可能待核。
 
 ## 发音依赖与诚实降级
 

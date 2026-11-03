@@ -17,6 +17,8 @@ from scripts.build_phase1_shards import build, resolve_edges, targets
 from scripts.maltese_alphabet import MALTESE_UI_BUCKETS_30, maltese_sort_key, normalize_exact_search
 from scripts.phase0_inventory_audit import audit_gabra, canonical_root, classify_kaikki_row, lexical_anomaly, LEMMA_CLASSES, read_kaikki
 from scripts.phase1_showcase import SHOWCASE
+from scripts.phase2_enrichment import load_overlays, dataset_version
+ENRICHED, OVERLAY_DIGESTS = load_overlays()
 
 PROJECT = Path(__file__).resolve().parents[1]
 
@@ -46,7 +48,7 @@ class Phase1ShardsTests(unittest.TestCase):
         cls.by_word = {e['id']: e for e in cls.entries}
 
     def test_artifacts_and_content_digests(self):
-        self.assertEqual(self.manifest['version'], 'malti-phase1-2026-11-03-r2')
+        self.assertEqual(self.manifest['version'], dataset_version(OVERLAY_DIGESTS))
         self.assertEqual(json.loads(self.seed.read_text(encoding='utf-8')), self.summary)
         self.assertEqual(len(list((self.output / 'shards').glob('*.json'))), 30)
         for meta in self.manifest['shards'] + [self.manifest['index_lite'], self.manifest['wordforms_lookup']]:
@@ -162,20 +164,21 @@ class Phase1ShardsTests(unittest.TestCase):
                 self.assertIn(relative_id,self.by_word)
                 self.assertTrue({r['root'] for r in m['root_evidence']} &
                                 {r['root'] for r in self.by_word[relative_id]['morphology']['root_evidence']})
-            if e['id'] not in SHOWCASE:
+            if e['id'] not in ENRICHED:
                 self.assertIsNone(e['dual_scenarios'])
                 self.assertTrue(all(s['zh_definition'] is None for s in e['senses']))
         self.assertIsNone(self.by_word['skola']['morphology']['root_consonants'])
+        self.assertEqual(self.by_word['skola']['morphology']['pattern_type'],'hybrid_assimilated')
         self.assertIn('kotba',self.by_word['ktieb']['morphology']['plural_forms'])
         self.assertEqual(self.by_word['kiteb']['morphology']['imperfect'],'jikteb')
 
     def test_showcase_has_honest_examples_and_translations(self):
-        self.assertEqual(self.summary['showcase_count'],25)
+        self.assertEqual(self.summary['showcase_count'],100)
         for key in SHOWCASE:
             entry=self.by_word[key]
             self.assertEqual(entry['dual_scenarios']['formal']['source_type'],'pedagogical_example')
             self.assertEqual(entry['dual_scenarios']['colloquial']['source_type'],'pedagogical_dialogue')
-            self.assertEqual(entry['dual_scenarios']['review_status'],'pending_linguistic_review')
+            self.assertEqual(entry['dual_scenarios']['review_status'],'phase2_reviewed')
             self.assertTrue(entry['dual_scenarios']['formal']['zh'])
             self.assertTrue(entry['dual_scenarios']['colloquial']['zh'])
             teaching=[s for s in entry['senses'] if s['definition_origin']=='authored_pedagogical']
