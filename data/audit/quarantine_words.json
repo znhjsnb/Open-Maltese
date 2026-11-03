@@ -1,0 +1,7 @@
+{
+  "kastellanija": {
+    "attempts": 4,
+    "retries": 3,
+    "error": "kastellanija: unsupported historical story"
+  }
+}

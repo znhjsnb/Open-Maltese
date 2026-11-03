@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-9bd45df5c731",
+  "dataset_version": "malti-phase2-2026-11-03-8a0395804905",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 9188,
-    "unenriched_count": 14857,
-    "showcase_count": 9188,
+    "enriched_count": 10793,
+    "unenriched_count": 13252,
+    "showcase_count": 10793,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1707,27 +1707,42 @@
     },
     {
       "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "mqar",
+      "exact_key": "venewwa",
       "analysis_pos": [
-        "adv"
+        "noun"
       ],
       "senses": [
         {
-          "pos": "adv",
-          "en_definition": "even",
+          "pos": "noun",
+          "en_definition": "lapwing (bird)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "adv",
-          "en_definition": "at least",
+          "pos": "noun",
+          "en_definition": "lapwing (bird):",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "northern lapwing (Vanellus vanellus)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "il-venewwa",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2010,6 +2025,134 @@
     },
     {
       "stratum": "tier_2/semitic/enriched",
+      "exact_key": "lejlet il-milied",
+      "analysis_pos": [
+        "name"
+      ],
+      "senses": [
+        {
+          "pos": "name",
+          "en_definition": "Christmas Eve, the final night immediately before Christmas.",
+          "zh_definition": "圣诞节到来之前的最后一夜，即圣诞前夜或平安夜。",
+          "mt_definition": "Il-lejl eżatt qabel il-Milied.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "name",
+          "en_definition": "Christmas Eve (final night before Christmas).",
+          "zh_definition": "圣诞前夜，即圣诞节到来之前的最后一夜。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "F'Lejlet il-Milied, il-mużew se jagħlaq fis-siegħa ta' waranofsinhar.",
+          "en": "On Christmas Eve, the museum will close at one in the afternoon.",
+          "zh": "圣诞前夜当天，博物馆将于下午一点闭馆。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: X'se nagħmlu f'Lejlet il-Milied? Mark: Nieklu flimkien id-dar u mbagħad niftħu r-rigali.",
+          "en": "Maja: What are we doing on Christmas Eve? Mark: We'll eat together at home and then open the presents.",
+          "zh": "Maja：圣诞前夜我们做什么？Mark：我们在家一起吃饭，然后拆礼物。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "X'se nagħmlu f'Lejlet il-Milied?",
+              "mt_standard": "X'se nagħmlu f'Lejlet il-Milied?",
+              "zh": "圣诞前夜我们做什么？",
+              "en": "What are we doing on Christmas Eve?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Nieklu flimkien id-dar u mbagħad niftħu r-rigali.",
+              "mt_standard": "Nieklu flimkien id-dar u mbagħad niftħu r-rigali.",
+              "zh": "我们在家一起吃饭，然后拆礼物。",
+              "en": "We'll eat together at home and then open the presents."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把日历上的圣诞节圈起来，再指向它正前方的那一夜：Lejlet il-Milied 就记作圣诞前夜。"
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
+      "exact_key": "li",
+      "analysis_pos": [
+        "pron",
+        "conj"
+      ],
+      "senses": [
+        {
+          "pos": "pron",
+          "en_definition": "A relative pronoun introducing a clause that identifies or describes a person or thing, corresponding to who, which, or that.",
+          "zh_definition": "引导关系从句，说明前面的某个人或事物，相当于英语的 who、which 或 that；汉语常译为“……的”。",
+          "mt_definition": "Pronom relattiv li jintroduċi sentenza li tidentifika jew tiddeskrivi persuna jew ħaġa msemmija qabel.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "pron",
+          "en_definition": "who; which; that",
+          "zh_definition": "关系代词，指代前文的人或事物并引出说明，汉语通常用“……的”表达。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "conj",
+          "en_definition": "that",
+          "zh_definition": "连词，引出陈述内容的从句，相当于英语 that；汉语常不单独译出。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kumitat ikkonferma li d-dokument li rċieva kien komplut.",
+          "en": "The committee confirmed that the document which it had received was complete.",
+          "zh": "委员会确认，收到的文件是完整的。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Fejn hu l-ktieb li selliftek? Mark: Naħseb li qiegħed fuq il-mejda. Ħa niċċekkja.",
+          "en": "Maja: Where is the book that I lent you? Mark: I think it's on the table. Let me check.",
+          "zh": "Maja：我借给你的那本书在哪里？Mark：我想在桌上。我看看。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Fejn hu l-ktieb li selliftek?",
+              "mt_standard": "Fejn hu l-ktieb li selliftek?",
+              "zh": "我借给你的那本书在哪里？",
+              "en": "Where is the book that I lent you?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Naħseb li qiegħed fuq il-mejda. Ħa niċċekkja.",
+              "mt_standard": "Naħseb li qiegħed fuq il-mejda. Ħa niċċekkja.",
+              "zh": "我想在桌上。我看看。",
+              "en": "I think it's on the table. Let me check."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 li 想成连接句子的细线：接在名词后常组成“……的”，接在“我想、我知道”后则引出所想所知的内容。"
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
       "exact_key": "għażżiela",
       "analysis_pos": [
         "noun"
@@ -2091,175 +2234,6 @@
       "cognitive_memory_aid": "给这个词画两张语境卡：草地上奔跑的是瞪羚，树枝上鸣叫的是蝉；靠场景区分两个义项。"
     },
     {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "dik",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "An attack of apoplexy; in a separate religious sense, exclusion from the communion of the Church.",
-          "zh_definition": "指中风发作；在另一个宗教义项中，指被排除于教会共融之外，即绝罚。",
-          "mt_definition": "Attakk ta' puplesija; f'sens reliġjuż separat, esklużjoni mill-komunjoni tal-Knisja.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "apoplexy",
-          "zh_definition": "中风，卒中发作。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "excommunication",
-          "zh_definition": "绝罚，逐出教会共融的宗教处分。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "id-dik",
-        "prefix": "id-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "F'dan it-test reliġjuż, il-kelma 'dik' tirreferi għall-esklużjoni mill-komunjoni tal-Knisja.",
-          "en": "In this religious text, the word 'dik' refers to exclusion from the communion of the Church.",
-          "zh": "在这篇宗教文本中，dik 一词指被排除于教会共融之外。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: X'tfisser 'dik' hawn? Pawlu: Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
-          "en": "Maja: What does 'dik' mean here? Pawlu: Here it means apoplexy; in a religious text it can mean excommunication.",
-          "zh": "Maja：这里的 dik 是什么意思？Pawlu：这里指中风；在宗教文本中，它也可以指绝罚。",
-          "messages": [
-            {
-              "speaker": "Maja (学生)",
-              "mt_spoken": "X'tfisser 'dik' hawn?",
-              "mt_standard": "X'tfisser 'dik' hawn?",
-              "zh": "这里的 dik 是什么意思？",
-              "en": "What does 'dik' mean here?"
-            },
-            {
-              "speaker": "Pawlu (教师)",
-              "mt_spoken": "Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
-              "mt_standard": "Hawn tfisser puplesija; f'test reliġjuż tista' tfisser skomunika.",
-              "zh": "这里指中风；在宗教文本中，它也可以指绝罚。",
-              "en": "Here it means apoplexy; in a religious text it can mean excommunication."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 dik 做成两张语境卡：病情卡写中风，教会卡写绝罚；阅读时先看语境再选义。"
-    },
-    {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "bħajra",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A body of water surrounded by land; in another sense, a field where melons are grown.",
-          "zh_definition": "被陆地环绕的水域，即湖泊；另一义指种植甜瓜的田地。",
-          "mt_definition": "Medda ta' ilma mdawra bl-art; f'tifsira oħra, għalqa fejn jitkabbar il-bettieħ.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "lake",
-          "zh_definition": "湖；湖泊。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "melon field",
-          "zh_definition": "甜瓜田；种植甜瓜的田地。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bħajra",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-mappa turi bħajra żgħira mdawra bis-siġar.",
-          "en": "The map shows a small lake surrounded by trees.",
-          "zh": "地图上标示着一个四周环绕树木的小湖。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Fejn ħawwelt il-bettieħ? Pawlu: Fil-bħajra ħdejn id-dar.",
-          "en": "Maja: Where did you plant the melons? Pawlu: In the melon field next to the house.",
-          "zh": "玛雅：你把甜瓜种在哪里了？保罗：在屋子旁边的甜瓜田里。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Fejn ħawwelt il-bettieħ?",
-              "mt_standard": "Fejn ħawwelt il-bettieħ?",
-              "zh": "你把甜瓜种在哪里了？",
-              "en": "Where did you plant the melons?"
-            },
-            {
-              "speaker": "Pawlu (种植者)",
-              "mt_spoken": "Fil-bħajra ħdejn id-dar.",
-              "mt_standard": "Fil-bħajra ħdejn id-dar.",
-              "zh": "在屋子旁边的甜瓜田里。",
-              "en": "In the melon field next to the house."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "画两幅并排的小图：一幅湖面，一幅甜瓜田，都标上 bħajra；读句子时用水岸或种瓜的语境判断词义。"
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "lejlet il-milied",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "Christmas Eve (final night before Christmas).",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/semitic/unenriched",
       "exact_key": "rgħajn",
       "analysis_pos": [
@@ -2288,28 +2262,47 @@
     },
     {
       "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "li",
+      "exact_key": "sqallija",
       "analysis_pos": [
-        "pron",
-        "conj"
+        "name"
       ],
       "senses": [
         {
-          "pos": "pron",
-          "en_definition": "who; which; that",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "conj",
-          "en_definition": "that",
+          "pos": "name",
+          "en_definition": "Sicily (the largest island in the Mediterranean Sea, an autonomous region of Italy, close to Africa and separated from Tunisia and Libya by the Strait of Sicily)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "tronġ",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "grapefruit(s), pomelo(s)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tronġ",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2459,62 +2452,54 @@
     },
     {
       "stratum": "tier_2/unspecified/enriched",
-      "exact_key": "disgħa u erbgħin",
+      "exact_key": "kixxef",
       "analysis_pos": [
-        "num"
+        "VERB"
       ],
       "senses": [
         {
-          "pos": "num",
-          "en_definition": "The cardinal number 49, equal to forty plus nine.",
-          "zh_definition": "基数四十九，表示四十加九，即49。",
-          "mt_definition": "In-numru 49, jiġifieri erbgħin u disgħa flimkien.",
+          "pos": "verb",
+          "en_definition": "To cause someone to disclose information.",
+          "zh_definition": "使某人透露或披露信息。",
+          "mt_definition": "Iġiegħel lil xi ħadd jiżvela informazzjoni.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "num",
-          "en_definition": "forty-nine",
-          "zh_definition": "四十九；49。",
+          "pos": "VERB",
+          "en_definition": "to cause to disclose",
+          "zh_definition": "使人透露；促使某人披露信息。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "id-disgħa u erbgħin",
-        "prefix": "id-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Ir-rapport fih disgħa u erbgħin paġna, inklużi t-tabelli.",
-          "en": "The report contains forty-nine pages, including the tables.",
-          "zh": "这份报告包含表格在内共有四十九页。",
+          "mt": "L-intervistatur kixxef lix-xhud permezz ta' mistoqsijiet preċiżi, u x-xhud żvela dak li kien jaf.",
+          "en": "The interviewer caused the witness to disclose information through precise questions, and the witness revealed what he knew.",
+          "zh": "访谈者通过准确的提问促使证人披露信息，证人随后说出了自己知道的情况。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Anna: Kemm jiswa dan il-flokk? Marija: Disgħa u erbgħin ewro. Trid tippruvah?",
-          "en": "Anna: How much does this top cost? Marija: Forty-nine euros. Would you like to try it on?",
-          "zh": "安娜：这件上衣多少钱？玛丽娅：四十九欧元。你想试穿吗？",
+          "mt": "Lara: Kif irnexxielek issir taf id-dettalji? Mark: Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
+          "en": "Lara: How did you manage to find out the details? Mark: Pawlu got the interviewee to disclose them with one question, and he told us everything.",
+          "zh": "拉拉：你是怎么弄清那些细节的？马克：保罗问了一个问题，就让受访者开了口，对方把一切都告诉了我们。",
           "messages": [
             {
-              "speaker": "Anna (顾客)",
-              "mt_spoken": "Kemm jiswa dan il-flokk?",
-              "mt_standard": "Kemm jiswa dan il-flokk?",
-              "zh": "这件上衣多少钱？",
-              "en": "How much does this top cost?"
+              "speaker": "Lara (同事)",
+              "mt_spoken": "Kif irnexxielek issir taf id-dettalji?",
+              "mt_standard": "Kif irnexxielek issir taf id-dettalji?",
+              "zh": "你是怎么弄清那些细节的？",
+              "en": "How did you manage to find out the details?"
             },
             {
-              "speaker": "Marija (店员)",
-              "mt_spoken": "Disgħa u erbgħin ewro. Trid tippruvah?",
-              "mt_standard": "Disgħa u erbgħin ewro. Trid tippruvah?",
-              "zh": "四十九欧元。你想试穿吗？",
-              "en": "Forty-nine euros. Would you like to try it on?"
+              "speaker": "Mark (同事)",
+              "mt_spoken": "Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
+              "mt_standard": "Pawlu kixxef lill-intervistat b'mistoqsija waħda, u dak qal kollox.",
+              "zh": "保罗问了一个问题，就让受访者开了口，对方把一切都告诉了我们。",
+              "en": "Pawlu got the interviewee to disclose them with one question, and he told us everything."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -2523,7 +2508,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把四十九倒着拆成“九和四十”：先说 disgħa，再用 u 连接 erbgħin；个位在前，十位在后。"
+      "cognitive_memory_aid": "记住“提问者让知情者开口”的两人画面：kixxef 的重点是促使别人披露。"
     },
     {
       "stratum": "tier_2/unspecified/unenriched",
