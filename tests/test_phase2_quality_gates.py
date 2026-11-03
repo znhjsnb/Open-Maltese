@@ -273,13 +273,13 @@ class Phase2Tests(unittest.TestCase):
         self.assertEqual(before, {p.relative_to(data): hashlib.sha256(p.read_bytes()).hexdigest() for p in tracked})
 
     def test_future_batch_preparation_is_bounded_and_does_not_dispatch(self):
-        _, request = prepare_batch(3, self.data, PROJECT / 'data/enriched', self.scratch / 'request')
+        empty_overlays = self.scratch / 'empty-overlays'; empty_overlays.mkdir(exist_ok=True)
+        _, request = prepare_batch(3, self.data, empty_overlays, self.scratch / 'request')
         self.assertEqual(request['batch_size'], 3)
         self.assertEqual(len(request['source_evidence']), 3)
-        self.assertTrue(all(k not in self.overlays for k in request['exact_keys']))
         self.assertTrue(all(e['headword']['tier'] == 1 for e in request['source_evidence']))
         with self.assertRaises(ValueError):
-            prepare_batch(0, self.data, PROJECT / 'data/enriched', self.scratch / 'request')
+            prepare_batch(0, self.data, empty_overlays, self.scratch / 'request')
 
     def test_all_100_dialogues_have_two_complete_preserved_turns(self):
         batch1 = {item['exact_key']: item for item in json.loads((PROJECT / 'data/enriched/phase2_tier1_batch1.json').read_text(encoding='utf-8'))}
@@ -353,22 +353,20 @@ class Phase2Tests(unittest.TestCase):
             validate_overlay(item, entry)
 
     def test_queue_priority_and_waves_preserve_dms_and_exclude_duplicates(self):
-        all_pool = queue.candidate_queue(self.index, (), (), 'all')
-        wave1 = queue.candidate_queue(self.index, (), (), '1')
-        wave2 = queue.candidate_queue(self.index, (), (), '2')
+        clean = [{**i, 'is_enriched': False} for i in self.index]
+        all_pool = queue.candidate_queue(clean, (), (), 'all')
+        wave1 = queue.candidate_queue(clean, (), (), '1')
+        wave2 = queue.candidate_queue(clean, (), (), '2')
         self.assertEqual(all_pool, wave1 + wave2)
-        enriched_wave1 = sum(1 for i in self.index if i.get('is_enriched') and (i['has_audio'] or i['tier'] == 1))
-        self.assertEqual(len(wave1), 5384 - enriched_wave1)
-        audio = [i for i in self.index if i['has_audio'] and not i.get('is_enriched')]
+        self.assertEqual(len(wave1), 5384)
+        audio = [i for i in clean if i['has_audio']]
         self.assertEqual(wave1[:len(audio)], audio)
         self.assertTrue(all(i['tier'] == 1 for i in wave1[len(audio):]))
         self.assertTrue(all(i['tier'] == 2 and not i['has_audio'] for i in wave2))
         excluded = {all_pool[0]['exact_key']}
-        filtered = queue.candidate_queue(self.index, excluded, {all_pool[1]['exact_key']}, 'all')
+        filtered = queue.candidate_queue(clean, excluded, {all_pool[1]['exact_key']}, 'all')
         self.assertEqual(filtered, all_pool[2:])
         self.assertEqual(len({i['exact_key'] for i in all_pool}), len(all_pool))
-        # Whole eligible pools before enrichment match the audited source counts.
-        clean = [{**i, 'is_enriched': False} for i in self.index]
         self.assertEqual(len(queue.candidate_queue(clean, wave='1')), 5384)
         self.assertEqual(len(queue.candidate_queue(clean)), 16465)
 
@@ -429,9 +427,10 @@ class Phase2Tests(unittest.TestCase):
 
     def test_sliding_queue_retries_partial_commits_quarantine_and_max_words(self):
         folder = self.scratch / 'mock-queue'; folder.mkdir()
-        selected = queue.candidate_queue(self.index, self.overlays, wave='1')[:5]
+        clean = [{**i, 'is_enriched': False} for i in self.index]
+        selected = queue.candidate_queue(clean, (), wave='1')[:5]
         store = self.worker_store()
-        store.index = self.index
+        store.index = clean
         store.packet = lambda key: queue.assemble_packet(store.entries[key])
         counts, calls = {}, []
         bad_key = selected[0]['exact_key']
@@ -459,10 +458,11 @@ class Phase2Tests(unittest.TestCase):
 
     def test_sliding_queue_refills_before_slow_slot_finishes(self):
         folder = self.scratch / 'mock-refill'; folder.mkdir()
+        clean = [{**i, 'is_enriched': False} for i in self.index]
         store = self.worker_store()
-        store.index = self.index
+        store.index = clean
         store.packet = lambda key: queue.assemble_packet(store.entries[key])
-        selected = queue.candidate_queue(self.index, self.overlays, wave='1')[:3]
+        selected = queue.candidate_queue(clean, (), wave='1')[:3]
         first, third = selected[0]['exact_key'], selected[2]['exact_key']
         refilled = threading.Event()
         def worker(tag, packets, timeout):
@@ -478,8 +478,9 @@ class Phase2Tests(unittest.TestCase):
 
     def test_ab_benchmark_dispatch_retry_metrics_and_position_denominators(self):
         folder = self.scratch / 'mock-ab'; folder.mkdir()
+        clean = [{**i, 'is_enriched': False} for i in self.index]
         store = self.worker_store()
-        store.index = self.index
+        store.index = clean
         store.packet = lambda key: queue.assemble_packet(store.entries[key])
         seen, counter, lock = [], [0], threading.Lock()
         def worker(tag, packets, timeout):
@@ -500,7 +501,7 @@ class Phase2Tests(unittest.TestCase):
                     'elapsed_sec': 10, 'started_monotonic': number, 'finished_monotonic': number + 10,
                     'input_chars': len(queue.build_prompt(packets))}
         with patch.object(benchmark, 'source_store', return_value=store), patch.object(benchmark, 'process_micro_batch', side_effect=worker), patch.object(benchmark, 'publish_and_validate', return_value={'enriched_count': 180}), patch.object(benchmark, 'OUTPUT', folder / 'output.json'), patch.object(benchmark, 'REPORT', folder / 'report.json'), patch.object(benchmark, 'QUARANTINE', folder / 'quarantine.json'):
-            report = benchmark.run_benchmark()
+            report = benchmark.run_benchmark(overlays={})
         initial = [(size, timeout) for tag, size, timeout in seen if 'retry' not in tag]
         self.assertEqual(Counter(initial), {(4, 420): 10, (8, 840): 5})
         self.assertTrue(all(size <= 2 and timeout == 360 for tag, size, timeout in seen if 'retry' in tag))

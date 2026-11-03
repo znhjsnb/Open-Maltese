@@ -95,9 +95,10 @@ def position_analysis(results):
                    **quality_metrics(group['entries'])} for name, group in groups.items()}
 
 
-def run_benchmark():
+def run_benchmark(overlays=None):
     store = source_store()
-    overlays, _ = load_overlays()
+    if overlays is None:
+        overlays, _ = load_overlays()
     quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
     candidates = candidate_queue(store.index, overlays, quarantine, wave='1')[:80]
     if len(candidates) != 80:

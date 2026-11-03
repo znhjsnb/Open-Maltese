@@ -334,7 +334,7 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
     if min(slots, batch_size, timeout, milestone_interval) < 1 or max_words < 0 or commit_every < 0:
         raise ValueError('Positive slots/batch-size/timeout/milestone and nonnegative max-words/commit-every required')
     store = source_store()
-    overlays, _ = load_overlays()
+    overlays, _ = load_overlays(OVERLAY_DIR)
     quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
     chosen = candidate_queue(store.index, overlays, quarantine, wave)
     if max_words:
