@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-391fe7d8ed82",
+  "dataset_version": "malti-phase2-2026-11-03-225935052f39",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 11793,
-    "unenriched_count": 12252,
-    "showcase_count": 11793,
+    "enriched_count": 12793,
+    "unenriched_count": 11252,
+    "showcase_count": 12793,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1403,42 +1403,50 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "ssippja",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "to sip",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
-      "exact_key": "skwiril",
+      "exact_key": "tajpist",
       "analysis_pos": [
         "noun"
       ],
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "squirrel",
+          "en_definition": "typist",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "l-iskwiril",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
+        "form": "it-tajpist",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "xer",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "share",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ix-xer",
+        "prefix": "ix-",
+        "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -1517,6 +1525,82 @@
     },
     {
       "stratum": "tier_2/other_or_hybrid/enriched",
+      "exact_key": "ruxx",
+      "analysis_pos": [
+        "noun",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "Makeup used to add colour to the cheeks; also fluted or pleated fabric used as a decorative trim.",
+          "zh_definition": "指给面颊增添颜色的腮红；也指用作装饰的起褶或打褶织物。",
+          "mt_definition": "Prodott tal-irtokk li jagħti l-kulur lill-ħaddejn; ukoll drapp bil-piegi li jintuża bħala tiżjin.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "blush, rouge (makeup)",
+          "zh_definition": "腮红，用于给面颊增添颜色的化妆品。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "ruche (fluted or pleated fabric)",
+          "zh_definition": "褶饰织物；带有槽褶或打褶效果的装饰性布料。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ir-ruxx",
+        "prefix": "ir-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-libsa għandha ruxx madwar l-għonq bħala tiżjin.",
+          "en": "The dress has a ruche around the neckline as decoration.",
+          "zh": "这条连衣裙的领口周围有一圈褶饰。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Taħseb li għandi bżonn aktar ruxx fuq ħaddejja? Lara: Le, diġà għandek biżżejjed.",
+          "en": "Maja: Do you think I need more blush on my cheeks? Lara: No, you already have enough.",
+          "zh": "玛雅：你觉得我脸上还需要再涂些腮红吗？拉拉：不用，已经够了。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Taħseb li għandi bżonn aktar ruxx fuq ħaddejja?",
+              "mt_standard": "Taħseb li għandi bżonn aktar ruxx fuq ħaddejja?",
+              "zh": "你觉得我脸上还需要再涂些腮红吗？",
+              "en": "Do you think I need more blush on my cheeks?"
+            },
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Le, diġà għandek biżżejjed.",
+              "mt_standard": "Le, diġà għandek biżżejjed.",
+              "zh": "不用，已经够了。",
+              "en": "No, you already have enough."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "给 ruxx 画两张独立小图：一张是面颊上的腮红，一张是衣领上的褶饰；看到化妆或服装语境时，分别选择对应义项。"
+    },
+    {
+      "stratum": "tier_2/other_or_hybrid/enriched",
       "exact_key": "burkina faso",
       "analysis_pos": [
         "name"
@@ -1574,109 +1658,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "把 Burkina Faso 分成两个书写单元，对应中文“布基纳／法索”，再在词卡旁标注“西非”。"
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/enriched",
-      "exact_key": "anisi",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "Anise, the plant Pimpinella anisum, or its aromatic seeds used to flavour food.",
-          "zh_definition": "茴芹，又称洋茴香，学名为 Pimpinella anisum；也可指其用于食物调味的芳香种子。",
-          "mt_definition": "Il-pjanta Pimpinella anisum, jew iż-żrieragħ aromatiċi tagħha li jintużaw biex jagħtu togħma lill-ikel.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "anise, Pimpinella anisum",
-          "zh_definition": "茴芹；洋茴香，学名为 Pimpinella anisum",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-anisi",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Din ir-riċetta tuża ż-żrieragħ tal-anisi biex tagħti togħma lill-gallettini.",
-          "en": "This recipe uses anise seeds to flavour the biscuits.",
-          "zh": "这个食谱使用茴芹籽给饼干增添风味。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: X'poġġejt f'dawn il-gallettini? Rita: Ftit anisi; jogħġbok it-togħma?",
-          "en": "Maja: What did you put in these biscuits? Rita: A little anise; do you like the flavour?",
-          "zh": "玛雅：你在这些饼干里放了什么？丽塔：一点洋茴香，你喜欢这个味道吗？",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "X'poġġejt f'dawn il-gallettini?",
-              "mt_standard": "X'poġġejt f'dawn il-gallettini?",
-              "zh": "你在这些饼干里放了什么？",
-              "en": "What did you put in these biscuits?"
-            },
-            {
-              "speaker": "Rita (烘焙者)",
-              "mt_spoken": "Ftit anisi; jogħġbok it-togħma?",
-              "mt_standard": "Ftit anisi; jogħġbok it-togħma?",
-              "zh": "一点洋茴香，你喜欢这个味道吗？",
-              "en": "A little anise; do you like the flavour?"
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象把一小撮茴芹籽加入饼干面团，闻到香气时联想 anisi，记住它是洋茴香。"
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "ruxx",
-      "analysis_pos": [
-        "noun",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "blush, rouge (makeup)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "ruche (fluted or pleated fabric)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ir-ruxx",
-        "prefix": "ir-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
     },
     {
       "stratum": "tier_2/other_or_hybrid/unenriched",
@@ -1747,6 +1728,101 @@
       "cognitive_memory_aid": null
     },
     {
+      "stratum": "tier_2/other_or_hybrid/unenriched",
+      "exact_key": "twaletta",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "dressing table",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-twaletta",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/enriched",
+      "exact_key": "sessologu",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A specialist who studies human sexuality.",
+          "zh_definition": "专门研究人类性与性相关现象的学者或专家。",
+          "mt_definition": "Speċjalista li jistudja s-sesswalità tal-bniedem.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "sexologist",
+          "zh_definition": "性学家，专门研究人类性与性相关现象的学者或专家。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "is-sessologu",
+        "prefix": "is-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Is-sessologu mistieden ippreżenta r-riċerka tiegħu dwar is-sesswalità tal-bniedem.",
+          "en": "The guest sexologist presented his research on human sexuality.",
+          "zh": "受邀性学家介绍了他关于人类性的研究。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Min se jitkellem fil-laqgħa? Mark: Sessologu. Se jispjega x'jistudja fix-xogħol tiegħu.",
+          "en": "Maja: Who is going to speak at the meeting? Mark: A sexologist. He will explain what he studies in his work.",
+          "zh": "Maja：谁要在会上发言？Mark：一位性学家。他会介绍自己的研究内容。",
+          "messages": [
+            {
+              "speaker": "Maja (活动参加者)",
+              "mt_spoken": "Min se jitkellem fil-laqgħa?",
+              "mt_standard": "Min se jitkellem fil-laqgħa?",
+              "zh": "谁要在会上发言？",
+              "en": "Who is going to speak at the meeting?"
+            },
+            {
+              "speaker": "Mark (活动组织者)",
+              "mt_spoken": "Sessologu. Se jispjega x'jistudja fix-xogħol tiegħu.",
+              "mt_standard": "Sessologu. Se jispjega x'jistudja fix-xogħol tiegħu.",
+              "zh": "一位性学家。他会介绍自己的研究内容。",
+              "en": "A sexologist. He will explain what he studies in his work."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象讲台上的研究者：sessologu 是“性学家”这个人，sessoloġija 是“性学”这门学科，成对区分。"
+    },
+    {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
       "exact_key": "ddeċifra",
       "analysis_pos": [
@@ -1808,166 +1884,71 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "faxxatura",
+      "exact_key": "rutenju",
       "analysis_pos": [
         "noun"
       ],
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "The act of wrapping an injured part of the body with a bandage.",
-          "zh_definition": "用绷带缠裹身体受伤部位的动作或过程。",
-          "mt_definition": "L-att li tgeżwer parti midruba tal-ġisem b'faxxa.",
+          "en_definition": "The chemical element called ruthenium.",
+          "zh_definition": "一种化学元素，中文名为“钌”。",
+          "mt_definition": "L-element kimiku magħruf bħala rutenju.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "noun",
-          "en_definition": "bandaging",
-          "zh_definition": "包扎；用绷带缠裹受伤部位的过程。",
+          "en_definition": "ruthenium (chemical element)",
+          "zh_definition": "钌，一种化学元素。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-faxxatura",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Waqt il-lezzjoni, l-għalliem wera l-faxxatura ta' id midruba permezz ta' mudell.",
-          "en": "During the lesson, the teacher demonstrated the bandaging of an injured hand using a model.",
-          "zh": "课堂上，老师用模型演示了受伤手部的包扎过程。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: X'tgħallimtu fil-kors illum? Mark: Il-faxxatura tal-id; ipprattikajna fuq mudell.",
-          "en": "Maja: What did you learn on the course today? Mark: Hand bandaging; we practised on a model.",
-          "zh": "Maja：你们今天在课程里学了什么？Mark：手部包扎；我们用模型练习了。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "X'tgħallimtu fil-kors illum?",
-              "mt_standard": "X'tgħallimtu fil-kors illum?",
-              "zh": "你们今天在课程里学了什么？",
-              "en": "What did you learn on the course today?"
-            },
-            {
-              "speaker": "Mark (学员)",
-              "mt_spoken": "Il-faxxatura tal-id; ipprattikajna fuq mudell.",
-              "mt_standard": "Il-faxxatura tal-id; ipprattikajna fuq mudell.",
-              "zh": "手部包扎；我们用模型练习了。",
-              "en": "Hand bandaging; we practised on a model."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象绷带一圈圈绕过受伤的手，把整个“包扎过程”标成 faxxatura，重点记动作过程。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "inaljenabbli",
-      "analysis_pos": [
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "adj",
-          "en_definition": "That cannot be taken away from its holder or transferred to someone else, especially a right.",
-          "zh_definition": "不能从持有人那里剥夺或转让给他人的，尤用于权利。",
-          "mt_definition": "Li ma jistax jittieħed minn min għandu jew jiġi trasferit lil ħaddieħor, speċjalment dritt.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "unalienable, not alienable",
-          "zh_definition": "不可剥夺的；不可转让的",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-inaljenabbli",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Id-dikjarazzjoni tiddeskrivi l-libertà bħala dritt inaljenabbli ta' kull persuna.",
-          "en": "The declaration describes freedom as an inalienable right of every person.",
-          "zh": "该宣言将自由描述为每个人不可剥夺的权利。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: Xi jfisser dritt inaljenabbli? David: Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
-          "en": "Lara: What does an inalienable right mean? David: A right that cannot be taken away from you or transferred to someone else.",
-          "zh": "劳拉：不可剥夺的权利是什么意思？戴维：就是不能从你这里夺走，也不能转让给别人的权利。",
-          "messages": [
-            {
-              "speaker": "Lara (同学)",
-              "mt_spoken": "Xi jfisser dritt inaljenabbli?",
-              "mt_standard": "Xi jfisser dritt inaljenabbli?",
-              "zh": "不可剥夺的权利是什么意思？",
-              "en": "What does an inalienable right mean?"
-            },
-            {
-              "speaker": "David (同学)",
-              "mt_spoken": "Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
-              "mt_standard": "Dritt li ma jistax jittieħed mingħandek jew jiġi trasferit lil xi ħadd ieħor.",
-              "zh": "就是不能从你这里夺走，也不能转让给别人的权利。",
-              "en": "A right that cannot be taken away from you or transferred to someone else."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象写着“权利”的卡片始终属于本人，不能被夺走或转给别人；用这个画面记住 inaljenabbli 的权利含义。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "sessologu",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "sexologist",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "is-sessologu",
-        "prefix": "is-",
+        "form": "ir-rutenju",
+        "prefix": "ir-",
         "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Fir-rapport tal-kimika, l-istudenta semmiet ir-rutenju bħala wieħed mill-elementi li studjat.",
+          "en": "In her chemistry report, the student mentioned ruthenium as one of the elements she had studied.",
+          "zh": "在化学报告中，这名学生把钌列为她研究过的元素之一。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Lara: X'inhu r-rutenju? Pawlu: Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
+          "en": "Lara: What is ruthenium? Pawlu: It's a chemical element. We can look up its name in the chemistry book.",
+          "zh": "拉拉：钌是什么？保罗：是一种化学元素。我们可以在化学书里查它的名称。",
+          "messages": [
+            {
+              "speaker": "Lara (同学)",
+              "mt_spoken": "X'inhu r-rutenju?",
+              "mt_standard": "X'inhu r-rutenju?",
+              "zh": "钌是什么？",
+              "en": "What is ruthenium?"
+            },
+            {
+              "speaker": "Pawlu (同学)",
+              "mt_spoken": "Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
+              "mt_standard": "Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
+              "zh": "是一种化学元素。我们可以在化学书里查它的名称。",
+              "en": "It's a chemical element. We can look up its name in the chemistry book."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "制作一张三语元素卡，把 rutenju、ruthenium 和“钌”并排写，每次先看马耳他语，再回忆英文与中文名称。"
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
@@ -1998,22 +1979,49 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "rutenju",
+      "exact_key": "vanadju",
       "analysis_pos": [
         "noun"
       ],
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "ruthenium (chemical element)",
+          "en_definition": "vanadium (chemical element)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "ir-rutenju",
-        "prefix": "ir-",
+        "form": "il-vanadju",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "temperamentali",
+      "analysis_pos": [
+        "adj"
+      ],
+      "senses": [
+        {
+          "pos": "adj",
+          "en_definition": "temperamental",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-temperamentali",
+        "prefix": "it-",
         "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
@@ -2085,6 +2093,74 @@
     },
     {
       "stratum": "tier_2/semitic/enriched",
+      "exact_key": "rgħajn",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "An archaic Maltese phoneme described as a voiced velar or voiced uvular fricative, /ɣ~ʁ/.",
+          "zh_definition": "马耳他语中的一个旧音位，记作 /ɣ~ʁ/，属于浊软腭擦音或浊小舌擦音。",
+          "mt_definition": "Fonema arkajka fil-Malti, /ɣ~ʁ/, deskritta bħala frikattiva velari jew uvulari leħnija.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "the voiced velar or voiced uvular fricative /ɣ~ʁ/, an archaic phoneme in Maltese; see għ for more",
+          "zh_definition": "浊软腭擦音或浊小舌擦音 /ɣ~ʁ/，是马耳他语中的一个旧音位；更多说明参见 għ。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ir-rgħajn",
+        "prefix": "ir-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Fil-glossarju, ir-rgħajn hija deskritta bħala fonema arkajka tal-Malti, rappreżentata bis-simboli /ɣ~ʁ/.",
+          "en": "In the glossary, rgħajn is described as an archaic Maltese phoneme, represented by the symbols /ɣ~ʁ/.",
+          "zh": "词汇表将 rgħajn 描述为马耳他语的一个旧音位，用 /ɣ~ʁ/ 表示。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Sara: X'inhi r-rgħajn f'dawn in-noti? Toni: Hija fonema arkajka tal-Malti; hawn juruha bħala /ɣ~ʁ/.",
+          "en": "Sara: What is rgħajn in these notes? Toni: It is an archaic Maltese phoneme; here they show it as /ɣ~ʁ/.",
+          "zh": "萨拉：这份笔记里的 rgħajn 是什么？托尼：它是马耳他语的一个旧音位，这里用 /ɣ~ʁ/ 表示。",
+          "messages": [
+            {
+              "speaker": "Sara (学生)",
+              "mt_spoken": "X'inhi r-rgħajn f'dawn in-noti?",
+              "mt_standard": "X'inhi r-rgħajn f'dawn in-noti?",
+              "zh": "这份笔记里的 rgħajn 是什么？",
+              "en": "What is rgħajn in these notes?"
+            },
+            {
+              "speaker": "Toni (同学)",
+              "mt_spoken": "Hija fonema arkajka tal-Malti; hawn juruha bħala /ɣ~ʁ/.",
+              "mt_standard": "Hija fonema arkajka tal-Malti; hawn juruha bħala /ɣ~ʁ/.",
+              "zh": "它是马耳他语的一个旧音位，这里用 /ɣ~ʁ/ 表示。",
+              "en": "It is an archaic Maltese phoneme; here they show it as /ɣ~ʁ/."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把词形和音标 /ɣ~ʁ/ 写在同一张卡片上，再标注“旧音位、浊擦音”，用语音标签辅助记忆。"
+    },
+    {
+      "stratum": "tier_2/semitic/enriched",
       "exact_key": "li",
       "analysis_pos": [
         "pron",
@@ -2152,134 +2228,6 @@
       "cognitive_memory_aid": "把 li 想成连接句子的细线：接在名词后常组成“……的”，接在“我想、我知道”后则引出所想所知的内容。"
     },
     {
-      "stratum": "tier_2/semitic/enriched",
-      "exact_key": "għażżiela",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A gazelle, or a cicada; the intended animal is identified from the context.",
-          "zh_definition": "可指瞪羚，也可指蝉；需要根据草地、树木、鸣声等语境判断具体所指。",
-          "mt_definition": "Annimal li jista' jkun gazzella jew insett li jgħanni fis-siġar, skont il-kuntest.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "gazelle",
-          "zh_definition": "瞪羚，一种身形轻巧的羚羊。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "cicada",
-          "zh_definition": "蝉，会发出明显鸣声的昆虫。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-għażżiela",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Fir-ritratt tidher għażżiela tiġri fil-mergħa ħdejn annimali oħra.",
-          "en": "The photograph shows a gazelle running in the meadow near other animals.",
-          "zh": "照片中，一只瞪羚正在其他动物附近的草地上奔跑。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Anna: Tisma' dak il-ħoss fis-siġra? Mark: Iva, hemm għażżiela fuq il-fergħa. Anna: Mela hawn qed nitkellmu dwar l-insett.",
-          "en": "Anna: Can you hear that sound in the tree? Mark: Yes, there is a cicada on the branch. Anna: So here we are talking about the insect.",
-          "zh": "Anna：你听见树上的声音了吗？Mark：听见了，树枝上有一只蝉。Anna：所以这里说的是那种昆虫。",
-          "messages": [
-            {
-              "speaker": "Anna (朋友)",
-              "mt_spoken": "Tisma' dak il-ħoss fis-siġra?",
-              "mt_standard": "Tisma' dak il-ħoss fis-siġra?",
-              "zh": "你听见树上的声音了吗？",
-              "en": "Can you hear that sound in the tree?"
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Iva, hemm għażżiela fuq il-fergħa.",
-              "mt_standard": "Iva, hemm għażżiela fuq il-fergħa.",
-              "zh": "听见了，树枝上有一只蝉。",
-              "en": "Yes, there is a cicada on the branch."
-            },
-            {
-              "speaker": "Anna (朋友)",
-              "mt_spoken": "Mela hawn qed nitkellmu dwar l-insett.",
-              "mt_standard": "Mela hawn qed nitkellmu dwar l-insett.",
-              "zh": "所以这里说的是那种昆虫。",
-              "en": "So here we are talking about the insect."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "给这个词画两张语境卡：草地上奔跑的是瞪羚，树枝上鸣叫的是蝉；靠场景区分两个义项。"
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "rgħajn",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "the voiced velar or voiced uvular fricative /ɣ~ʁ/, an archaic phoneme in Maltese; see għ for more",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ir-rgħajn",
-        "prefix": "ir-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "sqallija",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "Sicily (the largest island in the Mediterranean Sea, an autonomous region of Italy, close to Africa and separated from Tunisia and Libya by the Strait of Sicily)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/semitic/unenriched",
       "exact_key": "tronġ",
       "analysis_pos": [
@@ -2298,6 +2246,74 @@
         "form": "it-tronġ",
         "prefix": "it-",
         "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "tamar",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "date, dates (fruit)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "date shell",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "fruit",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tamar",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "wiżagħ",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "lizards (in practice especially geckos or lacertids)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-wiżagħ",
+        "prefix": "il-",
+        "rule": "moon_consonant",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
