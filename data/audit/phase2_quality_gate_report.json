@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-b7bad23b3656",
+  "dataset_version": "malti-phase2-2026-11-03-14652d75fcfc",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 14793,
-    "unenriched_count": 9252,
-    "showcase_count": 14793,
+    "enriched_count": 15793,
+    "unenriched_count": 8252,
+    "showcase_count": 15793,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1384,25 +1384,6 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "ttajpja",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "to type",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
       "exact_key": "xer",
       "analysis_pos": [
         "noun"
@@ -1430,20 +1411,54 @@
     },
     {
       "stratum": "tier_2/english/unenriched",
-      "exact_key": "ttrippja",
+      "exact_key": "żilċ",
       "analysis_pos": [
-        "verb"
+        "pron"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "to trip, to trip out (through overload, a short circuit)",
+          "pos": "pron",
+          "en_definition": "nothing, (not) anything",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "pron",
+          "en_definition": "no one",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/english/unenriched",
+      "exact_key": "xort",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "short-circuit",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ix-xort",
+        "prefix": "ix-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1652,101 +1667,6 @@
       "cognitive_memory_aid": "把 Burkina Faso 分成两个书写单元，对应中文“布基纳／法索”，再在词卡旁标注“西非”。"
     },
     {
-      "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "vroma",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "disaster, fiasco, failure",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-vroma",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "venewwa",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "lapwing (bird)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "lapwing (bird):",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "northern lapwing (Vanellus vanellus)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-venewwa",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/other_or_hybrid/unenriched",
-      "exact_key": "twaletta",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "dressing table",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-twaletta",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
       "exact_key": "sessologu",
       "analysis_pos": [
@@ -1816,6 +1736,74 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/enriched",
+      "exact_key": "topografija",
+      "analysis_pos": [
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "The shape and physical features of an area of land, or the study and description of those features.",
+          "zh_definition": "某片土地的形状、起伏及其他地表特征，也指对这些特征的研究和描述。",
+          "mt_definition": "Il-forma u l-karatteristiċi fiżiċi tal-art f'żona, jew l-istudju u d-deskrizzjoni tagħhom.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "topography",
+          "zh_definition": "地形；地表形态及其特征；研究或描述这些特征的地形学。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-topografija",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-rapport jiddeskrivi t-topografija taż-żona u juri l-għoljiet u l-widien fuq mappa.",
+          "en": "The report describes the area's topography and shows the hills and valleys on a map.",
+          "zh": "报告描述了该地区的地形，并在地图上标出了山丘和山谷。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Lara: Għaliex din il-mixja tidher diffiċli? Pawlu: Ħares lejn it-topografija fuq il-mappa: hemm ħafna għoljiet.",
+          "en": "Lara: Why does this walk look difficult? Pawlu: Look at the topography on the map: there are lots of hills.",
+          "zh": "拉拉：为什么这条步行路线看起来很难走？保罗：看看地图上的地形：那里有很多山丘。",
+          "messages": [
+            {
+              "speaker": "Lara (徒步伙伴)",
+              "mt_spoken": "Għaliex din il-mixja tidher diffiċli?",
+              "mt_standard": "Għaliex din il-mixja tidher diffiċli?",
+              "zh": "为什么这条步行路线看起来很难走？",
+              "en": "Why does this walk look difficult?"
+            },
+            {
+              "speaker": "Pawlu (徒步伙伴)",
+              "mt_spoken": "Ħares lejn it-topografija fuq il-mappa: hemm ħafna għoljiet.",
+              "mt_standard": "Ħares lejn it-topografija fuq il-mappa: hemm ħafna għoljiet.",
+              "zh": "看看地图上的地形：那里有很多山丘。",
+              "en": "Look at the topography on the map: there are lots of hills."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 topografija 想成一张展示山丘、山谷和高低起伏的地图：它回答“这片土地是什么形状”，也可指研究这些特征的学问。"
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/enriched",
       "exact_key": "ddeċifra",
       "analysis_pos": [
         "verb"
@@ -1875,128 +1863,6 @@
       "cognitive_memory_aid": "把密码纸和潦草便条并排想象：两者都需要费力读出意思，因此都能帮助记住破译和辨读。"
     },
     {
-      "stratum": "tier_2/romance_sicilian_italian/enriched",
-      "exact_key": "rutenju",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "The chemical element called ruthenium.",
-          "zh_definition": "一种化学元素，中文名为“钌”。",
-          "mt_definition": "L-element kimiku magħruf bħala rutenju.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "ruthenium (chemical element)",
-          "zh_definition": "钌，一种化学元素。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ir-rutenju",
-        "prefix": "ir-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Fir-rapport tal-kimika, l-istudenta semmiet ir-rutenju bħala wieħed mill-elementi li studjat.",
-          "en": "In her chemistry report, the student mentioned ruthenium as one of the elements she had studied.",
-          "zh": "在化学报告中，这名学生把钌列为她研究过的元素之一。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: X'inhu r-rutenju? Pawlu: Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
-          "en": "Lara: What is ruthenium? Pawlu: It's a chemical element. We can look up its name in the chemistry book.",
-          "zh": "拉拉：钌是什么？保罗：是一种化学元素。我们可以在化学书里查它的名称。",
-          "messages": [
-            {
-              "speaker": "Lara (同学)",
-              "mt_spoken": "X'inhu r-rutenju?",
-              "mt_standard": "X'inhu r-rutenju?",
-              "zh": "钌是什么？",
-              "en": "What is ruthenium?"
-            },
-            {
-              "speaker": "Pawlu (同学)",
-              "mt_spoken": "Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
-              "mt_standard": "Huwa element kimiku. Nistgħu nfittxu ismu fil-ktieb tal-kimika.",
-              "zh": "是一种化学元素。我们可以在化学书里查它的名称。",
-              "en": "It's a chemical element. We can look up its name in the chemistry book."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "制作一张三语元素卡，把 rutenju、ruthenium 和“钌”并排写，每次先看马耳他语，再回忆英文与中文名称。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "topografija",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "topography",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-topografija",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "vanadju",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "vanadium (chemical element)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-vanadju",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
       "exact_key": "żvita",
       "analysis_pos": [
@@ -2006,6 +1872,44 @@
         {
           "pos": "verb",
           "en_definition": "to unscrew",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "żvara",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to slip away",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/romance_sicilian_italian/unenriched",
+      "exact_key": "xxampla",
+      "analysis_pos": [
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "to have abundant, enough space",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -2213,33 +2117,6 @@
     },
     {
       "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "tronġ",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "grapefruit(s), pomelo(s)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-tronġ",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
       "exact_key": "wiżagħ",
       "analysis_pos": [
         "noun"
@@ -2281,6 +2158,33 @@
         }
       ],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/semitic/unenriched",
+      "exact_key": "xahri",
+      "analysis_pos": [
+        "adj"
+      ],
+      "senses": [
+        {
+          "pos": "adj",
+          "en_definition": "monthly",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ix-xahri",
+        "prefix": "ix-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -2498,25 +2402,6 @@
     },
     {
       "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "tnaġġar",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to be trimmed (used especially of stone)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
       "exact_key": "żakkir",
       "analysis_pos": [
         "NOUN"
@@ -2551,35 +2436,53 @@
     },
     {
       "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "tnaqniq",
+      "exact_key": "zerzer",
       "analysis_pos": [
-        "NOUN"
+        "VERB"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "croaking",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "squawking",
+          "pos": "VERB",
+          "en_definition": "to sing (used of certain types of birds)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "it-tnaqniq",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_2/unspecified/unenriched",
+      "exact_key": "żżakkar",
+      "analysis_pos": [
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to protrude",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to become paunchy",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to develop a pot belly",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
