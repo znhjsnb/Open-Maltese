@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-65bab0449706",
+  "dataset_version": "malti-phase2-2026-11-03-520b41126e0c",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 1180,
-    "unenriched_count": 22865,
-    "showcase_count": 1180,
+    "enriched_count": 2180,
+    "unenriched_count": 21865,
+    "showcase_count": 2180,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -455,116 +455,36 @@
     },
     {
       "stratum": "tier_1/other_or_hybrid/enriched",
-      "exact_key": "avukat",
+      "exact_key": "gawwi",
       "analysis_pos": [
         "NOUN",
-        "noun",
         "noun"
       ],
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "A legal professional who advises clients and represents them in legal matters.",
-          "zh_definition": "为当事人提供法律意见，并在法律事务中代表当事人的专业人员，即律师。",
-          "mt_definition": "Persuna professjonali li tagħti pariri legali u tirrappreżenta lill-klijenti fi kwistjonijiet tal-liġi.",
+          "en_definition": "A gull or seagull; also gulls or seagulls referred to collectively.",
+          "zh_definition": "指鸥或海鸥，也可统称多只鸥或海鸥；具体数量须结合语境理解。",
+          "mt_definition": "Għasfur tal-baħar; il-kelma tista' tirreferi wkoll għal dawn l-għasafar flimkien.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "NOUN",
-          "en_definition": "lawyer",
-          "zh_definition": "律师；从事法律咨询或代理工作的专业人员。",
+          "en_definition": "gull",
+          "zh_definition": "鸥，一类鸟。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "NOUN",
-          "en_definition": "attorney",
-          "zh_definition": "律师；获授权代表当事人处理法律事务的人。",
+          "en_definition": "seagull",
+          "zh_definition": "海鸥。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "l-avukat",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-klijent talab parir mingħand avukat qabel iffirma l-ftehim.",
-          "en": "The client sought advice from a lawyer before signing the agreement.",
-          "zh": "客户在签署协议之前向一位律师征求了意见。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Għandi bżonn avukat biex nifhem dan il-kuntratt. Mark: Nista' nagħtik in-numru ta' avukat li naf.",
-          "en": "Maja: I need a lawyer to help me understand this contract. Mark: I can give you the number of a lawyer I know.",
-          "zh": "玛雅：我需要一位律师帮我看懂这份合同。马克：我可以给你一位我认识的律师的电话号码。",
-          "messages": [
-            {
-              "speaker": "Maja (客户)",
-              "mt_spoken": "Għandi bżonn avukat biex nifhem dan il-kuntratt.",
-              "mt_standard": "Għandi bżonn avukat biex nifhem dan il-kuntratt.",
-              "zh": "我需要一位律师帮我看懂这份合同。",
-              "en": "I need a lawyer to help me understand this contract."
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Nista' nagħtik in-numru ta' avukat li naf.",
-              "mt_standard": "Nista' nagħtik in-numru ta' avukat li naf.",
-              "zh": "我可以给你一位我认识的律师的电话号码。",
-              "en": "I can give you the number of a lawyer I know."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "给 avukat 画两张独立词义卡：合同旁站着律师，水果盘里放着牛油果；靠语境选择，别把两义混在一起。"
-    },
-    {
-      "stratum": "tier_1/other_or_hybrid/enriched",
-      "exact_key": "bass",
-      "analysis_pos": [
-        "VERB",
-        "NOUN",
-        "verb",
-        "noun",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To release gas from the bowels through the anus, sometimes audibly.",
-          "zh_definition": "从肛门排出肠道气体，即放屁，有时会发出声音。",
-          "mt_definition": "Joħroġ gass mill-imsaren minn ġol-anus, xi drabi b'ħoss.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to break wind",
-          "zh_definition": "排出肠道气体；放屁。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to fart",
-          "zh_definition": "放屁。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bass",
+        "form": "il-gawwi",
         "prefix": "il-",
         "rule": "moon_consonant",
         "context": "citation",
@@ -574,31 +494,31 @@
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Matul il-laqgħa, wieħed mill-parteċipanti bass bla ma ried u talab skuża.",
-          "en": "During the meeting, one of the participants accidentally passed wind and apologized.",
-          "zh": "会议期间，一位与会者不小心放了屁，随后道了歉。",
+          "mt": "Waqt iż-żjara fil-port, l-istudenti raw gawwi jtir fuq il-baħar.",
+          "en": "During the visit to the harbour, the students saw a gull flying over the sea.",
+          "zh": "参观港口时，学生们看见一只海鸥在海面上方飞翔。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Maja: Xi ħadd bass? Mark: Iva, jien. Skużani!",
-          "en": "Maja: Did someone fart? Mark: Yes, I did. Sorry!",
-          "zh": "Maja：有人放屁了吗？Mark：对，是我。不好意思！",
+          "mt": "Maja: Ara dak il-gawwi ħdejn id-dgħajsa! Mark: Qed narah. Issa qed itir lejn il-port.",
+          "en": "Maja: Look at that gull beside the boat! Mark: I can see it. Now it's flying towards the harbour.",
+          "zh": "玛雅：看船旁边那只海鸥！马克：我看见了。它现在正朝港口飞去。",
           "messages": [
             {
               "speaker": "Maja (朋友)",
-              "mt_spoken": "Xi ħadd bass?",
-              "mt_standard": "Xi ħadd bass?",
-              "zh": "有人放屁了吗？",
-              "en": "Did someone fart?"
+              "mt_spoken": "Ara dak il-gawwi ħdejn id-dgħajsa!",
+              "mt_standard": "Ara dak il-gawwi ħdejn id-dgħajsa!",
+              "zh": "看船旁边那只海鸥！",
+              "en": "Look at that gull beside the boat!"
             },
             {
               "speaker": "Mark (朋友)",
-              "mt_spoken": "Iva, jien. Skużani!",
-              "mt_standard": "Iva, jien. Skużani!",
-              "zh": "对，是我。不好意思！",
-              "en": "Yes, I did. Sorry!"
+              "mt_spoken": "Qed narah. Issa qed itir lejn il-port.",
+              "mt_standard": "Qed narah. Issa qed itir lejn il-port.",
+              "zh": "我看见了。它现在正朝港口飞去。",
+              "en": "I can see it. Now it's flying towards the harbour."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -607,7 +527,83 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 bass 配上“突然排气，赶紧道歉”的小场景来记；名词中的巴士义另画一辆车，按词性和语境分别记忆。"
+      "cognitive_memory_aid": "把 gawwi 和“海面、船、港口”的画面连在一起记忆；看到这个词，就想象海鸥掠过船边，数量再由上下文判断。"
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/enriched",
+      "exact_key": "gorboġ",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A rough or poor shelter or dwelling; also an enclosure used to keep pigs or rabbits.",
+          "zh_definition": "粗陋的棚屋或贫旧住宅；也可指饲养猪或兔子的圈舍。",
+          "mt_definition": "Kenn jew dar fqira u sempliċi; ukoll post magħluq fejn jinżammu l-ħnieżer jew il-fniek.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "shack",
+          "zh_definition": "简陋棚屋；用简单材料搭成的小屋。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "sty, pigsty (an enclosure where pigs are kept)",
+          "zh_definition": "猪圈；饲养猪的圈舍。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-gorboġ",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Id-dokument jiddeskrivi gorboġ antik li kien jintuża bħala kenn mill-maltemp.",
+          "en": "The document describes an old shack that was used as shelter from bad weather.",
+          "zh": "文件描述了一间旧棚屋，人们曾用它躲避恶劣天气。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Il-fenek għadu fil-gorboġ? Pawlu: Iva, u għandu ilma frisk u ikel.",
+          "en": "Maja: Is the rabbit still in the hutch? Pawlu: Yes, and it has fresh water and food.",
+          "zh": "玛雅：兔子还在兔舍里吗？保罗：是的，里面有干净的饮水和食物。",
+          "messages": [
+            {
+              "speaker": "Maja (农场访客)",
+              "mt_spoken": "Il-fenek għadu fil-gorboġ?",
+              "mt_standard": "Il-fenek għadu fil-gorboġ?",
+              "zh": "兔子还在兔舍里吗？",
+              "en": "Is the rabbit still in the hutch?"
+            },
+            {
+              "speaker": "Pawlu (农夫)",
+              "mt_spoken": "Iva, u għandu ilma frisk u ikel.",
+              "mt_standard": "Iva, u għandu ilma frisk u ikel.",
+              "zh": "是的，里面有干净的饮水和食物。",
+              "en": "Yes, and it has fresh water and food."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 gorboġ 放进“简陋住所与圈舍”的图片组：棚屋、破屋、猪圈、兔舍各一张；看到 tal-ħnieżer 或 tal-fniek 就能确定是哪种圈舍。"
     },
     {
       "stratum": "tier_1/other_or_hybrid/unenriched",
@@ -1081,7 +1077,7 @@
     },
     {
       "stratum": "tier_1/semitic/enriched",
-      "exact_key": "bewl",
+      "exact_key": "għajb",
       "analysis_pos": [
         "NOUN",
         "noun"
@@ -1089,62 +1085,62 @@
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "The liquid waste produced by the kidneys and passed out of the body.",
-          "zh_definition": "由肾脏产生并排出体外的液体废物，即尿液。",
-          "mt_definition": "Il-likwidu ta' skart li jipproduċu l-kliewi u li joħroġ mill-ġisem.",
+          "en_definition": "Disgrace or shame caused by behaviour that damages a person's or group's honour or reputation.",
+          "zh_definition": "因某种行为损害个人或群体的荣誉、名声而产生的耻辱或羞辱。",
+          "mt_definition": "Telf ta' ġieħ jew ta' reputazzjoni minħabba mġiba ħażina jew mhux xierqa.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "NOUN",
-          "en_definition": "urine",
-          "zh_definition": "尿液；人体或动物排出的液体废物。",
+          "en_definition": "disgrace",
+          "zh_definition": "耻辱；使人蒙羞的事或状态",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "noun",
-          "en_definition": "pee, piss, urine",
-          "zh_definition": "尿；尿液，对应英语中口语、粗俗或中性等不同表达。",
+          "pos": "NOUN",
+          "en_definition": "dishonour",
+          "zh_definition": "失去荣誉；蒙羞；名节受损",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-bewl",
-        "prefix": "il-",
-        "rule": "moon_consonant",
+        "form": "l-għajb",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
         "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-laboratorju rċieva l-kampjun tal-bewl għall-analiżi.",
-          "en": "The laboratory received the urine sample for testing.",
-          "zh": "实验室收到了用于检测的尿液样本。",
+          "mt": "L-imġiba tal-mexxej ġabet għajb fuq l-organizzazzjoni kollha.",
+          "en": "The leader's behaviour brought disgrace on the entire organisation.",
+          "zh": "这位领导人的行为使整个组织蒙羞。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Mark: Fejn inħalli l-kampjun tal-bewl? Rita: Agħtih lill-infermiera ħdejn il-bieb.",
-          "en": "Mark: Where should I leave the urine sample? Rita: Give it to the nurse by the door.",
-          "zh": "Mark：尿液样本放在哪里？Rita：交给门旁边的护士。",
+          "mt": "Maja: Smajt kif tkellem mal-anzjan? Mark: Iva, dak kien għajb. Messu talab skuża.",
+          "en": "Maja: Did you hear how he spoke to the elderly man? Mark: Yes, that was disgraceful. He should have apologised.",
+          "zh": "玛雅：你听到他怎么跟那位老人说话了吗？马克：听到了，真丢脸。他本该道歉的。",
           "messages": [
             {
-              "speaker": "Mark (患者)",
-              "mt_spoken": "Fejn inħalli l-kampjun tal-bewl?",
-              "mt_standard": "Fejn inħalli l-kampjun tal-bewl?",
-              "zh": "尿液样本放在哪里？",
-              "en": "Where should I leave the urine sample?"
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Smajt kif tkellem mal-anzjan?",
+              "mt_standard": "Smajt kif tkellem mal-anzjan?",
+              "zh": "你听到他怎么跟那位老人说话了吗？",
+              "en": "Did you hear how he spoke to the elderly man?"
             },
             {
-              "speaker": "Rita (接待员)",
-              "mt_spoken": "Agħtih lill-infermiera ħdejn il-bieb.",
-              "mt_standard": "Agħtih lill-infermiera ħdejn il-bieb.",
-              "zh": "交给门旁边的护士。",
-              "en": "Give it to the nurse by the door."
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva, dak kien għajb. Messu talab skuża.",
+              "mt_standard": "Iva, dak kien għajb. Messu talab skuża.",
+              "zh": "听到了，真丢脸。他本该道歉的。",
+              "en": "Yes, that was disgraceful. He should have apologised."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1153,87 +1149,11 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 bewl 放进“尿液样本杯”的检查场景记忆，再连读 kampjun tal-bewl，让单词和常见搭配一起进入记忆。"
+      "cognitive_memory_aid": "把għajb和“行为让自己及家人蒙羞”的情境连接；它强调耻辱和名誉受损，比普通的不好意思更重。"
     },
     {
       "stratum": "tier_1/semitic/enriched",
-      "exact_key": "bokra",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "The early part of the morning; also, getting up early in the saying 'il-bokra ssewwi ż-żokra'.",
-          "zh_definition": "指清晨；在谚语 il-bokra ssewwi ż-żokra 中，也表示早起。",
-          "mt_definition": "Il-ħin bikri ta' filgħodu; fil-qawl 'il-bokra ssewwi ż-żokra', tfisser ukoll li wieħed iqum kmieni.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "waking up early (only attested in the saying 'il-bokra ssewwi ż-żokra')",
-          "zh_definition": "早起；此义仅见于谚语 il-bokra ssewwi ż-żokra。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "early morning",
-          "zh_definition": "清晨；一大早。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bokra",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-qawl 'il-bokra ssewwi ż-żokra' ifaħħar id-drawwa li wieħed iqum kmieni.",
-          "en": "The saying 'il-bokra ssewwi ż-żokra' praises the habit of getting up early.",
-          "zh": "谚语 il-bokra ssewwi ż-żokra 赞扬早起的习惯。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Xi tfisser 'bokra' f'dan il-qawl? Pawlu: Tfisser li tqum kmieni; il-qawl jgħid li dan jagħmillek il-ġid.",
-          "en": "Maja: What does 'bokra' mean in this saying? Pawlu: It means getting up early; the saying says that this does you good.",
-          "zh": "玛雅：这句谚语里的 bokra 是什么意思？保罗：指早起；这句谚语说早起对人有益。",
-          "messages": [
-            {
-              "speaker": "Maja (学生)",
-              "mt_spoken": "Xi tfisser 'bokra' f'dan il-qawl?",
-              "mt_standard": "Xi tfisser 'bokra' f'dan il-qawl?",
-              "zh": "这句谚语里的 bokra 是什么意思？",
-              "en": "What does 'bokra' mean in this saying?"
-            },
-            {
-              "speaker": "Pawlu (教师)",
-              "mt_spoken": "Tfisser li tqum kmieni; il-qawl jgħid li dan jagħmillek il-ġid.",
-              "mt_standard": "Tfisser li tqum kmieni; il-qawl jgħid li dan jagħmillek il-ġid.",
-              "zh": "指早起；这句谚语说早起对人有益。",
-              "en": "It means getting up early; the saying says that this does you good."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 bokra 连到清晨起床的画面，再整句记住早起谚语；表示“早起”时不要脱离该谚语随意套用。"
-    },
-    {
-      "stratum": "tier_1/semitic/enriched",
-      "exact_key": "berraħ",
+      "exact_key": "feġġ",
       "analysis_pos": [
         "VERB",
         "verb"
@@ -1241,22 +1161,22 @@
       "senses": [
         {
           "pos": "verb",
-          "en_definition": "To open something wide, such as a door, or to make information or a statement public.",
-          "zh_definition": "把门等充分打开、敞开；也指公开信息或声明，使人知晓。",
-          "mt_definition": "Jiftaħ xi ħaġa beraħ, bħal bieb, jew jagħmel informazzjoni jew stqarrija magħrufa lill-pubbliku.",
+          "en_definition": "To come into view or become visible suddenly.",
+          "zh_definition": "突然进入视野，或原本看不见的事物一下子显现出来。",
+          "mt_definition": "Jidher f'daqqa jew isir viżibbli wara li ma kienx jidher.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "VERB",
-          "en_definition": "to open wide",
-          "zh_definition": "大大打开；使充分敞开。",
+          "en_definition": "to appear suddenly",
+          "zh_definition": "突然出现；一下子进入视野。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "VERB",
-          "en_definition": "to make sth. public (especially a statement or piece of information)",
-          "zh_definition": "公开某事，尤指公布声明或信息。",
+          "pos": "verb",
+          "en_definition": "to appear (suddenly)",
+          "zh_definition": "出现；显现，常带有突然出现的意味。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1264,38 +1184,31 @@
       "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Wara l-laqgħa, il-president berraħ l-aħbar dwar il-proġett il-ġdid.",
-          "en": "After the meeting, the president made the news about the new project public.",
-          "zh": "会议结束后，主席公布了有关新项目的消息。",
+          "mt": "Waqt l-osservazzjoni, dawl qawwi feġġ fuq l-orizzont.",
+          "en": "During the observation, a bright light suddenly appeared on the horizon.",
+          "zh": "观测期间，地平线上突然出现了一道强光。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Elena: Berraħ il-bieb, jekk jogħġbok; din il-kaxxa kbira. Toni: Hekk tajjeb? Elena: Iva, issa nista' ngħaddi.",
-          "en": "Elena: Open the door wide, please; this box is big. Toni: Is that wide enough? Elena: Yes, now I can get through.",
-          "zh": "埃莱娜：请把门开大一点，这个箱子很大。托尼：这样够大吗？埃莱娜：够了，现在我能过去了。",
+          "mt": "Sara: Rajt min feġġ fil-bieb? Pawlu: Iva, kien Mark! Ma kontx qed nistennieh.",
+          "en": "Sara: Did you see who suddenly appeared at the door? Pawlu: Yes, it was Mark! I wasn't expecting him.",
+          "zh": "萨拉：你看到谁突然出现在门口了吗？保罗：看到了，是马克！我没想到他会来。",
           "messages": [
             {
-              "speaker": "Elena (搬家住户)",
-              "mt_spoken": "Berraħ il-bieb, jekk jogħġbok; din il-kaxxa kbira.",
-              "mt_standard": "Berraħ il-bieb, jekk jogħġbok; din il-kaxxa kbira.",
-              "zh": "请把门开大一点，这个箱子很大。",
-              "en": "Open the door wide, please; this box is big."
+              "speaker": "Sara (朋友)",
+              "mt_spoken": "Rajt min feġġ fil-bieb?",
+              "mt_standard": "Rajt min feġġ fil-bieb?",
+              "zh": "你看到谁突然出现在门口了吗？",
+              "en": "Did you see who suddenly appeared at the door?"
             },
             {
-              "speaker": "Toni (帮忙的朋友)",
-              "mt_spoken": "Hekk tajjeb?",
-              "mt_standard": "Hekk tajjeb?",
-              "zh": "这样够大吗？",
-              "en": "Is that wide enough?"
-            },
-            {
-              "speaker": "Elena (搬家住户)",
-              "mt_spoken": "Iva, issa nista' ngħaddi.",
-              "mt_standard": "Iva, issa nista' ngħaddi.",
-              "zh": "够了，现在我能过去了。",
-              "en": "Yes, now I can get through."
+              "speaker": "Pawlu (朋友)",
+              "mt_spoken": "Iva, kien Mark! Ma kontx qed nistennieh.",
+              "mt_standard": "Iva, kien Mark! Ma kontx qed nistennieh.",
+              "zh": "看到了，是马克！我没想到他会来。",
+              "en": "Yes, it was Mark! I wasn't expecting him."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1304,7 +1217,84 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "用“打开”串起两个学习画面：把门打开是敞开，把消息向大家打开是公开；这是记忆联想，不是词源解释。"
+      "cognitive_memory_aid": "想象空空的门口突然冒出一位朋友，用这个“突然入镜”的画面记住 feġġ。"
+    },
+    {
+      "stratum": "tier_1/semitic/enriched",
+      "exact_key": "għam",
+      "analysis_pos": [
+        "VERB",
+        "verb",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To move through water by swimming, or to stay on the surface of water by floating.",
+          "zh_definition": "通过身体动作在水中游动，或漂浮在水面上。",
+          "mt_definition": "Jimxi fl-ilma billi jċaqlaq ġismu, jew jibqa' fuq wiċċ l-ilma.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to swim",
+          "zh_definition": "游泳；通过身体动作在水中前进。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to swim",
+          "zh_definition": "游泳；通过身体动作在水中前进。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-għam",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "L-atleta għam minn naħa għall-oħra tal-pixxina waqt it-taħriġ.",
+          "en": "The athlete swam from one side of the pool to the other during training.",
+          "zh": "这名运动员在训练时从泳池的一侧游到了另一侧。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Mark għam illum? Lara: Iva, għam fil-pixxina għal nofs siegħa.",
+          "en": "Maja: Did Mark swim today? Lara: Yes, he swam in the pool for half an hour.",
+          "zh": "Maja：Mark今天游泳了吗？Lara：游了，他在泳池里游了半个小时。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Mark għam illum?",
+              "mt_standard": "Mark għam illum?",
+              "zh": "Mark今天游泳了吗？",
+              "en": "Did Mark swim today?"
+            },
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Iva, għam fil-pixxina għal nofs siegħa.",
+              "mt_standard": "Iva, għam fil-pixxina għal nofs siegħa.",
+              "zh": "游了，他在泳池里游了半个小时。",
+              "en": "Yes, he swam in the pool for half an hour."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "先用“他在水里游泳”的画面记动词义，再把名词“年”单独记一张卡，避免混淆词性。"
     },
     {
       "stratum": "tier_1/semitic/unenriched",
@@ -1352,48 +1342,6 @@
     },
     {
       "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "għajb",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "disgrace",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "dishonour",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "disrepute",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-għajb",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
       "exact_key": "ngħas",
       "analysis_pos": [
         "NOUN",
@@ -1431,6 +1379,40 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "ħasad",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to reap",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to harvest",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to surprise",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1573,30 +1555,32 @@
     },
     {
       "stratum": "tier_1/unspecified/enriched",
-      "exact_key": "beżżel",
+      "exact_key": "felles",
       "analysis_pos": [
+        "VERB",
+        "VERB",
         "VERB",
         "verb"
       ],
       "senses": [
         {
           "pos": "verb",
-          "en_definition": "To cause someone to suffer misfortune or to bring bad luck.",
-          "zh_definition": "使某人遭遇不幸，或带来厄运、霉运。",
-          "mt_definition": "Iġiegħel lil xi ħadd jgħaddi minn sfortuna jew iġib ix-xorti ħażina.",
+          "en_definition": "To insert a wedge or secure something with one; separate senses refer to plants sprouting, minting money, and producing or hatching chicks.",
+          "zh_definition": "插入楔子或用楔子固定东西；另有植物发芽、铸造钱币，以及繁育或孵出小鸡等独立义项。",
+          "mt_definition": "Daħħal feles jew waħħal xi ħaġa bih; għandu wkoll tifsiriet marbuta mat-tkabbir tal-blanzuni, mal-produzzjoni tal-muniti u mat-tfaqqis tal-flieles.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "VERB",
-          "en_definition": "to cause misfortune to sb.",
-          "zh_definition": "使某人遭遇不幸。",
+          "en_definition": "to insert a wedge",
+          "zh_definition": "插入楔子。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "verb",
-          "en_definition": "to bring misfortune, ill-luck",
-          "zh_definition": "带来不幸或霉运。",
+          "pos": "VERB",
+          "en_definition": "to sprout or grow buds (used of plants)",
+          "zh_definition": "发芽或长出芽苞，用于植物。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1604,31 +1588,31 @@
       "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Skont il-leġġenda, il-barrani beżżel lill-familja li laqgħetu f'darha.",
-          "en": "According to the legend, the stranger brought misfortune upon the family that welcomed him into its home.",
-          "zh": "据传说，那个陌生人给收留他的家庭带来了厄运。",
+          "mt": "Il-lewż felles fil-bidu tar-rebbiegħa, u l-ġardinar osserva l-blanzuni l-ġodda fuq il-friegħi.",
+          "en": "The almond tree sprouted buds at the beginning of spring, and the gardener observed the new buds on the branches.",
+          "zh": "杏树在初春萌芽，园丁观察了枝条上新长出的芽苞。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Marta: Għaliex fir-rakkont jgħidu li l-barrani beżżel lill-familja? Pawlu: Għax jemmnu li ġabilha xorti ħażina.",
-          "en": "Marta: Why do they say in the story that the stranger brought misfortune upon the family? Pawlu: Because they believe he brought it bad luck.",
-          "zh": "玛尔塔：故事里为什么说那个陌生人给这家人带来了厄运？保罗：因为他们相信他带来了霉运。",
+          "mt": "Lara: Għaliex il-bieb baqa' miftuħ? Toni: Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
+          "en": "Lara: Why did the door stay open? Toni: My father wedged the door so the wind wouldn't close it.",
+          "zh": "拉拉：门怎么一直开着？托尼：我爸爸用楔子撑住了门，免得风把它吹关。",
           "messages": [
             {
-              "speaker": "Marta (朋友)",
-              "mt_spoken": "Għaliex fir-rakkont jgħidu li l-barrani beżżel lill-familja?",
-              "mt_standard": "Għaliex fir-rakkont jgħidu li l-barrani beżżel lill-familja?",
-              "zh": "故事里为什么说那个陌生人给这家人带来了厄运？",
-              "en": "Why do they say in the story that the stranger brought misfortune upon the family?"
+              "speaker": "Lara (家人)",
+              "mt_spoken": "Għaliex il-bieb baqa' miftuħ?",
+              "mt_standard": "Għaliex il-bieb baqa' miftuħ?",
+              "zh": "门怎么一直开着？",
+              "en": "Why did the door stay open?"
             },
             {
-              "speaker": "Pawlu (朋友)",
-              "mt_spoken": "Għax jemmnu li ġabilha xorti ħażina.",
-              "mt_standard": "Għax jemmnu li ġabilha xorti ħażina.",
-              "zh": "因为他们相信他带来了霉运。",
-              "en": "Because they believe he brought it bad luck."
+              "speaker": "Toni (家人)",
+              "mt_spoken": "Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
+              "mt_standard": "Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
+              "zh": "我爸爸用楔子撑住了门，免得风把它吹关。",
+              "en": "My father wedged the door so the wind wouldn't close it."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1637,7 +1621,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把这个动词配上故事画面：陌生人一来，全家接连倒霉，记住核心是“带来厄运”。"
+      "cognitive_memory_aid": "给 felles 画四张独立记忆卡：楔住门、树发芽、铸钱币、孵小鸡；靠具体语境选择义项，不强行串成词源故事。"
     },
     {
       "stratum": "tier_1/unspecified/unenriched",
