@@ -99,17 +99,18 @@ class Phase2Tests(unittest.TestCase):
         self.assertTrue(all(g['passed'] and g['error_count'] == 0 for g in report['gates'].values()))
 
     def test_batch_complete_and_conserved(self):
-        self.assertEqual(len(self.overlays), 100)
+        self.assertGreaterEqual(len(self.overlays), 100)
         self.assertTrue(set(SHOWCASE) <= set(self.overlays))
-        self.assertEqual(len(set(self.overlays) - set(SHOWCASE)), 75)
+        self.assertGreaterEqual(len(set(self.overlays) - set(SHOWCASE)), 75)
         self.assertEqual({e['id'] for e in self.index if e.get('is_enriched')}, set(self.overlays))
-        self.assertEqual(self.manifest['enriched_count'], 100)
-        self.assertEqual(self.manifest['unenriched_count'], 23945)
-        self.assertEqual(self.manifest['showcase_count'], 100)
+        self.assertEqual(self.manifest['enriched_count'], len(self.overlays))
+        self.assertEqual(self.manifest['unenriched_count'], 24045 - len(self.overlays))
+        self.assertEqual(self.manifest['showcase_count'], len(self.overlays))
         self.assertEqual(self.manifest['total_lemmas'], 24045)
         self.assertEqual(len(self.lookup['forms']), 124488)
         tiers = {i['id']: i['tier'] for i in self.index}
-        self.assertTrue(all(tiers[k] == 1 for k in set(self.overlays) - set(SHOWCASE)))
+        has_audio = {i['id']: i['has_audio'] for i in self.index}
+        self.assertTrue(all(tiers[k] in (1, 2) or has_audio[k] for k in set(self.overlays) - set(SHOWCASE)))
         self.assertEqual(tiers['bongu'], 3)
         self.assertEqual(tiers['għand'], 2)
 
@@ -267,7 +268,7 @@ class Phase2Tests(unittest.TestCase):
         meta = next(m for m in self.manifest['shards'] if m['bucket'] == 'D')
         dar = next(e for e in json.loads((data / meta['file']).read_text(encoding='utf-8')) if e['id'] == 'dar')
         self.assertEqual(dar, self.baseline['dar']['entry'])
-        self.assertEqual(json.loads(summary.read_text(encoding='utf-8'))['enriched_count'], 99)
+        self.assertEqual(json.loads(summary.read_text(encoding='utf-8'))['enriched_count'], len(self.overlays) - 1)
         sync(data, summary)
         self.assertEqual(before, {p.relative_to(data): hashlib.sha256(p.read_bytes()).hexdigest() for p in tracked})
 
@@ -281,7 +282,9 @@ class Phase2Tests(unittest.TestCase):
             prepare_batch(0, self.data, PROJECT / 'data/enriched', self.scratch / 'request')
 
     def test_all_100_dialogues_have_two_complete_preserved_turns(self):
-        for key, item in self.overlays.items():
+        batch1 = {item['exact_key']: item for item in json.loads((PROJECT / 'data/enriched/phase2_tier1_batch1.json').read_text(encoding='utf-8'))}
+        self.assertEqual(len(batch1), 100)
+        for key, item in batch1.items():
             c = item['dual_scenarios']['colloquial']
             self.assertEqual(len(c['messages']), 2, key)
             for lang, field in [('mt', 'mt_spoken'), ('en', 'en'), ('zh', 'zh')]:
@@ -290,6 +293,9 @@ class Phase2Tests(unittest.TestCase):
             for turn in c['messages']:
                 self.assertEqual(turn['mt_spoken'], turn['mt_standard'])
                 self.assertRegex(turn['speaker'], r'[\u4e00-\u9fff]')
+        for key, item in self.overlays.items():
+            c = item['dual_scenarios']['colloquial']
+            self.assertGreaterEqual(len(c['messages']), 2, key)
             validate_overlay(item, self.by_key[key])
 
     def test_messages_and_anti_dilution_fail_closed_in_overlay_and_gate4(self):
@@ -351,7 +357,8 @@ class Phase2Tests(unittest.TestCase):
         wave1 = queue.candidate_queue(self.index, (), (), '1')
         wave2 = queue.candidate_queue(self.index, (), (), '2')
         self.assertEqual(all_pool, wave1 + wave2)
-        self.assertEqual(len(wave1), 5286)
+        enriched_wave1 = sum(1 for i in self.index if i.get('is_enriched') and (i['has_audio'] or i['tier'] == 1))
+        self.assertEqual(len(wave1), 5384 - enriched_wave1)
         audio = [i for i in self.index if i['has_audio'] and not i.get('is_enriched')]
         self.assertEqual(wave1[:len(audio)], audio)
         self.assertTrue(all(i['tier'] == 1 for i in wave1[len(audio):]))

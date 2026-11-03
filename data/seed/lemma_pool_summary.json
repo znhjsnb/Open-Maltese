@@ -1,5 +1,5 @@
 {
-  "version": "malti-phase2-2026-11-03-66eb1326cdd6",
+  "version": "malti-phase2-2026-11-03-0e5eb9512424",
   "total_lemmas": 24045,
   "tier_counts": {
     "1": 5051,
@@ -73,8 +73,846 @@
   "audio_source_rows": 720,
   "wordform_surface_count": 124488,
   "camilleri_rows_indexed": 53512,
-  "showcase_count": 100,
+  "showcase_count": 180,
   "samples": [
+    {
+      "id": "abatija",
+      "word": "abatija",
+      "exact_key": "abatija",
+      "ascii_key": "abatija",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/a.baˈtiː.ja/",
+      "root": null,
+      "roots": [],
+      "stratum": "other_or_hybrid",
+      "strata": [
+        "other_or_hybrid"
+      ],
+      "gloss_en": [
+        "abbey; nunnery",
+        "orphanage"
+      ],
+      "gloss_zh": "修道院；女修道院；孤儿院",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbandun",
+      "word": "abbandun",
+      "exact_key": "abbandun",
+      "ascii_key": "abbandun",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/ab.banˈduːn/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abandon, abandonment, neglect"
+      ],
+      "gloss_zh": "遗弃；弃置；疏于照管",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbanduna",
+      "word": "abbanduna",
+      "exact_key": "abbanduna",
+      "ascii_key": "abbanduna",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐbbɐndʊnɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abandon",
+        "to desert",
+        "to neglect, forsake"
+      ],
+      "gloss_zh": "放弃；遗弃；离弃；疏于照顾",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbati",
+      "word": "abbati",
+      "exact_key": "abbati",
+      "ascii_key": "abbati",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/abˈbaː.tɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "altar boy",
+        "abbot"
+      ],
+      "gloss_zh": "辅祭男童；修道院院长",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbatissa",
+      "word": "abbatissa",
+      "exact_key": "abbatissa",
+      "ascii_key": "abbatissa",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/ab.baˈtɪs.sa/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abbess"
+      ],
+      "gloss_zh": "女修道院院长",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbazija",
+      "word": "abbazija",
+      "exact_key": "abbazija",
+      "ascii_key": "abbazija",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbɐtsɪjɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abbey",
+        "abbacy, abbey"
+      ],
+      "gloss_zh": "修道院；修道院院长职位或任期",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbiltà",
+      "word": "abbiltà",
+      "exact_key": "abbiltà",
+      "ascii_key": "abbilta",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbɪltà/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "ability",
+        "skill",
+        "ability, skill, aptitude"
+      ],
+      "gloss_zh": "能力；技能；才干；资质",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbina",
+      "word": "abbina",
+      "exact_key": "abbina",
+      "ascii_key": "abbina",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/abˈbiː.na/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to couple; to combine"
+      ],
+      "gloss_zh": "配对；搭配；组合",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbiss",
+      "word": "abbiss",
+      "exact_key": "abbiss",
+      "ascii_key": "abbiss",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbɪss/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abyss",
+        "wide gap, big difference"
+      ],
+      "gloss_zh": "深渊；巨大差距",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbli",
+      "word": "abbli",
+      "exact_key": "abbli",
+      "ascii_key": "abbli",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˈab.blɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "skillful"
+      ],
+      "gloss_zh": "熟练的；技艺娴熟的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbon",
+      "word": "abbon",
+      "exact_key": "abbon",
+      "ascii_key": "abbon",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/abˈbɔːn/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abatement",
+        "release",
+        "relief"
+      ],
+      "gloss_zh": "减免；解除；缓解；折扣；返还",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbona",
+      "word": "abbona",
+      "exact_key": "abbona",
+      "ascii_key": "abbona",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐbbɔnɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to subscribe",
+        "to subscribe (someone) (to something) (to pay for someone's subscription to something)",
+        "to make a discount"
+      ],
+      "gloss_zh": "订阅；替人付费订阅；给予折扣",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbonament",
+      "word": "abbonament",
+      "exact_key": "abbonament",
+      "ascii_key": "abbonament",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/ab.bɔ.naˈmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "subscription"
+      ],
+      "gloss_zh": "订阅；订用",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbonat",
+      "word": "abbonat",
+      "exact_key": "abbonat",
+      "ascii_key": "abbonat",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbɔnɐt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "subscriber"
+      ],
+      "gloss_zh": "订阅者；订户",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abborrixxa",
+      "word": "abborrixxa",
+      "exact_key": "abborrixxa",
+      "ascii_key": "abborrixxa",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/ab.bɔrˈrɪʃ.ʃa/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abhor, to detest"
+      ],
+      "gloss_zh": "憎恶；深恶痛绝",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbozz",
+      "word": "abbozz",
+      "exact_key": "abbozz",
+      "ascii_key": "abbozz",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbɔtsts/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "draft",
+        "sketch",
+        "consultation document (in law)"
+      ],
+      "gloss_zh": "草稿；草图；提纲；法律咨询文件",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbozza",
+      "word": "abbozza",
+      "exact_key": "abbozza",
+      "ascii_key": "abbozza",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐbbɔtstsɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to draft",
+        "to sketch",
+        "to sketch, to outline"
+      ],
+      "gloss_zh": "起草；画草图；勾勒概要",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbrevja",
+      "word": "abbrevja",
+      "exact_key": "abbrevja",
+      "ascii_key": "abbrevja",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/abˈbrɛːv.ja/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abbreviate"
+      ],
+      "gloss_zh": "缩写；简写",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbrevjazzjoni",
+      "word": "abbrevjazzjoni",
+      "exact_key": "abbrevjazzjoni",
+      "ascii_key": "abbrevjazzjoni",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbbrɛvjɐtstsjɔnɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abbreviation"
+      ],
+      "gloss_zh": "缩写；缩略形式",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abbuża",
+      "word": "abbuża",
+      "exact_key": "abbuża",
+      "ascii_key": "abbuza",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐbbʊzɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abuse",
+        "to dare"
+      ],
+      "gloss_zh": "滥用；虐待；敢于；胆敢",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abdika",
+      "word": "abdika",
+      "exact_key": "abdika",
+      "ascii_key": "abdika",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/ˈab.dɪ.ka/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abdicate"
+      ],
+      "gloss_zh": "退位；放弃王位",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abdikazzjoni",
+      "word": "abdikazzjoni",
+      "exact_key": "abdikazzjoni",
+      "ascii_key": "abdikazzjoni",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/ab.dɪ.katˈt͡sjɔː.nɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abdication"
+      ],
+      "gloss_zh": "退位；放弃王位",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abdilla",
+      "word": "Abdilla",
+      "exact_key": "abdilla",
+      "ascii_key": "abdilla",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/abˈdɪl.la/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "semitic"
+      ],
+      "gloss_en": [
+        "a surname"
+      ],
+      "gloss_zh": "Abdilla（姓氏，可音译为“阿布迪拉”）",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abela",
+      "word": "Abela",
+      "exact_key": "abela",
+      "ascii_key": "abela",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/aˈbɛː.la/",
+      "root": null,
+      "roots": [],
+      "stratum": "other_or_hybrid",
+      "strata": [
+        "other_or_hybrid"
+      ],
+      "gloss_en": [
+        "a surname from Spanish"
+      ],
+      "gloss_zh": "阿贝拉（姓氏）",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abita",
+      "word": "abita",
+      "exact_key": "abita",
+      "ascii_key": "abita",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/ˈaː.bɪ.ta/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to inhabit, to reside"
+      ],
+      "gloss_zh": "居住；居留",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abitant",
+      "word": "abitant",
+      "exact_key": "abitant",
+      "ascii_key": "abitant",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/a.bɪˈtant/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "inhabitant"
+      ],
+      "gloss_zh": "居民；居住者",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abitat",
+      "word": "abitat",
+      "exact_key": "abitat",
+      "ascii_key": "abitat",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐbɪtɐt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "inhabited",
+        "peopled",
+        "built-up area"
+      ],
+      "gloss_zh": "有人居住的地方；建成区",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
     {
       "id": "abjad",
       "word": "abjad",
@@ -107,6 +945,1611 @@
       "is_showcase": true,
       "source_presence": [
         "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjad fiġla",
+      "word": "abjad fiġla",
+      "exact_key": "abjad fiġla",
+      "ascii_key": "abjadfigla",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˌab.jat‿ˈfɪd͡ʒ.la/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "as white as snow"
+      ],
+      "gloss_zh": "雪白的；洁白的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjad ħalib",
+      "word": "abjad ħalib",
+      "exact_key": "abjad ħalib",
+      "ascii_key": "abjadhalib",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˌab.jat‿ħaˈliːp/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "as white as snow"
+      ],
+      "gloss_zh": "雪白的；洁白如奶的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjad qotna",
+      "word": "abjad qotna",
+      "exact_key": "abjad qotna",
+      "ascii_key": "abjadqotna",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˌab.jat‿ˈʔɔt.na/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "as white as snow"
+      ],
+      "gloss_zh": "雪白的；洁白的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjad qoton",
+      "word": "abjad qoton",
+      "exact_key": "abjad qoton",
+      "ascii_key": "abjadqoton",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˌab.jat‿ˈʔɔ.tɔn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "as white as snow"
+      ],
+      "gloss_zh": "雪白的；洁白如棉的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjad silġ",
+      "word": "abjad silġ",
+      "exact_key": "abjad silġ",
+      "ascii_key": "abjadsilg",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˌab.jat‿ˈsɪlt͡ʃ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "as white as snow"
+      ],
+      "gloss_zh": "雪白的；洁白的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abjura",
+      "word": "abjura",
+      "exact_key": "abjura",
+      "ascii_key": "abjura",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb",
+        "noun"
+      ],
+      "ipa": "/abˈjuː.ra/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abjure, to renounce",
+        "abjuration"
+      ],
+      "gloss_zh": "正式声明放弃；宣誓弃绝",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abolixxa",
+      "word": "abolixxa",
+      "exact_key": "abolixxa",
+      "ascii_key": "abolixxa",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/a.bɔˈlɪʃ.ʃa/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abolish, to annul"
+      ],
+      "gloss_zh": "废除；撤销",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abolizzjoni",
+      "word": "abolizzjoni",
+      "exact_key": "abolizzjoni",
+      "ascii_key": "abolizzjoni",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/a.bɔ.lɪtˈt͡sjɔː.nɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "abolition"
+      ],
+      "gloss_zh": "废除；取消",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aborta",
+      "word": "aborta",
+      "exact_key": "aborta",
+      "ascii_key": "aborta",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/aˈbɔr.ta/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to abort a pregnancy, to have a miscarriage"
+      ],
+      "gloss_zh": "终止妊娠；流产",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abt",
+      "word": "abt",
+      "exact_key": "abt",
+      "ascii_key": "abt",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/apt/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "semitic"
+      ],
+      "gloss_en": [
+        "armpit"
+      ],
+      "gloss_zh": "腋窝；腋下",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "abti",
+      "word": "abti",
+      "exact_key": "abti",
+      "ascii_key": "abti",
+      "bucket": "A",
+      "sub_prefix": "ab",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/ˈap.tɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "pertaining to the armpit"
+      ],
+      "gloss_zh": "腋部的；与腋窝有关的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aċċessa",
+      "word": "aċċessa",
+      "exact_key": "aċċessa",
+      "ascii_key": "accessa",
+      "bucket": "A",
+      "sub_prefix": "aċ",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/atˈt͡ʃɛs.sa/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to access"
+      ],
+      "gloss_zh": "访问；进入；存取",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aċċetta",
+      "word": "aċċetta",
+      "exact_key": "aċċetta",
+      "ascii_key": "accetta",
+      "bucket": "A",
+      "sub_prefix": "aċ",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐʧʧɛttɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to accept",
+        "to condone"
+      ],
+      "gloss_zh": "接受；容忍；默许",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adam",
+      "word": "Adam",
+      "exact_key": "adam",
+      "ascii_key": "adam",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/aˈdaːm/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "Adam"
+      ],
+      "gloss_zh": "亚当（人名）",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adatt",
+      "word": "adatt",
+      "exact_key": "adatt",
+      "ascii_key": "adatt",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/aˈdat/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "suitable, fit"
+      ],
+      "gloss_zh": "合适的；适用的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adatta",
+      "word": "adatta",
+      "exact_key": "adatta",
+      "ascii_key": "adatta",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/aˈdat.ta/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to adapt, to fit",
+        "to adjust"
+      ],
+      "gloss_zh": "改编；使适合；调整",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "addoċċ",
+      "word": "addoċċ",
+      "exact_key": "addoċċ",
+      "ascii_key": "addocc",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 1,
+      "pos_list": [
+        "ADV",
+        "adv"
+      ],
+      "ipa": "/ɐddɔʧʧ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "haphazard",
+        "random",
+        "randomly, at random, haphazardly"
+      ],
+      "gloss_zh": "随意地；随机地；杂乱无章地",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adorabbli",
+      "word": "adorabbli",
+      "exact_key": "adorabbli",
+      "ascii_key": "adorabbli",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/a.dɔˈrab.blɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "adorable"
+      ],
+      "gloss_zh": "可爱的；惹人喜爱的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adorazzjoni",
+      "word": "adorazzjoni",
+      "exact_key": "adorazzjoni",
+      "ascii_key": "adorazzjoni",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐdɔrɐtstsjɔnɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "adoration",
+        "worship (of God)"
+      ],
+      "gloss_zh": "爱慕；崇敬；对上帝的敬拜",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adotta",
+      "word": "adotta",
+      "exact_key": "adotta",
+      "ascii_key": "adotta",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐdɔttɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to adopt"
+      ],
+      "gloss_zh": "收养；领养；采纳",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adottat",
+      "word": "adottat",
+      "exact_key": "adottat",
+      "ascii_key": "adottat",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/a.dɔtˈtaːt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "adopted"
+      ],
+      "gloss_zh": "被收养的；被采纳的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adozzjoni",
+      "word": "Adozzjoni",
+      "exact_key": "adozzjoni",
+      "ascii_key": "adozzjoni",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/a.dɔtˈt͡sjɔː.nɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "Adoption",
+        "adoption"
+      ],
+      "gloss_zh": "收养；采用",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adultera",
+      "word": "adultera",
+      "exact_key": "adultera",
+      "ascii_key": "adultera",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/aˈdul.tɛ.ra/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to adulterate"
+      ],
+      "gloss_zh": "掺假；掺入杂质",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "adura",
+      "word": "adura",
+      "exact_key": "adura",
+      "ascii_key": "adura",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐdʊrɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to adore",
+        "to adore, to worship"
+      ],
+      "gloss_zh": "深爱；崇拜；敬拜",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aduratur",
+      "word": "aduratur",
+      "exact_key": "aduratur",
+      "ascii_key": "aduratur",
+      "bucket": "A",
+      "sub_prefix": "ad",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/a.du.raˈtuːr/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "worshipper",
+        "admirer"
+      ],
+      "gloss_zh": "崇拜者；仰慕者",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affaxxina",
+      "word": "affaxxina",
+      "exact_key": "affaxxina",
+      "ascii_key": "affaxxina",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfaʃ.ʃɪ.na/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to charm, to fascinate, to enchant"
+      ],
+      "gloss_zh": "使着迷；迷住；使陶醉",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affaxxinanti",
+      "word": "affaxxinanti",
+      "exact_key": "affaxxinanti",
+      "ascii_key": "affaxxinanti",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 1,
+      "pos_list": [
+        "ADJ",
+        "adj"
+      ],
+      "ipa": "/af.faʃ.ʃɪˈnan.tɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "fascinating",
+        "fascinating, charming"
+      ],
+      "gloss_zh": "引人入胜的；迷人的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "afferma",
+      "word": "afferma",
+      "exact_key": "afferma",
+      "ascii_key": "afferma",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfɛr.ma/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to affirm, to state, to confirm, to assert"
+      ],
+      "gloss_zh": "肯定；明确陈述；确认；断言",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affettwa",
+      "word": "affettwa",
+      "exact_key": "affettwa",
+      "ascii_key": "affettwa",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfɛt.twa/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to affect"
+      ],
+      "gloss_zh": "影响；对……产生作用",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affezzjona",
+      "word": "affezzjona",
+      "exact_key": "affezzjona",
+      "ascii_key": "affezzjona",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/af.fɛtˈt͡sjɔː.na/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to be fond of"
+      ],
+      "gloss_zh": "喜爱；对……产生感情",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affezzjoni",
+      "word": "affezzjoni",
+      "exact_key": "affezzjoni",
+      "ascii_key": "affezzjoni",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/af.fɛtˈt͡sjɔː.nɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "affection"
+      ],
+      "gloss_zh": "喜爱；关爱；亲爱之情",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affilja",
+      "word": "affilja",
+      "exact_key": "affilja",
+      "ascii_key": "affilja",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfiːl.ja/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to affiliate"
+      ],
+      "gloss_zh": "使加入；使隶属；加入组织",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affiljazzjoni",
+      "word": "affiljazzjoni",
+      "exact_key": "affiljazzjoni",
+      "ascii_key": "affiljazzjoni",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/af.fɪl.jatˈt͡sjɔː.nɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "affiliation"
+      ],
+      "gloss_zh": "隶属关系；组织关联；成员归属",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affordja",
+      "word": "affordja",
+      "exact_key": "affordja",
+      "ascii_key": "affordja",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfɔr.dja/",
+      "root": null,
+      "roots": [],
+      "stratum": "english",
+      "strata": [
+        "english"
+      ],
+      "gloss_en": [
+        "to afford"
+      ],
+      "gloss_zh": "负担得起；有条件承担",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "affronta",
+      "word": "affronta",
+      "exact_key": "affronta",
+      "ascii_key": "affronta",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/afˈfrɔn.ta/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to face, to tackle"
+      ],
+      "gloss_zh": "面对；着手应对；处理",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "afgan",
+      "word": "Afgan",
+      "exact_key": "afgan",
+      "ascii_key": "afgan",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "adj",
+        "noun"
+      ],
+      "ipa": "/afˈɡaːn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Afghan",
+        "Afghan (person)"
+      ],
+      "gloss_zh": "阿富汗的；阿富汗人",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "afganistan",
+      "word": "Afganistan",
+      "exact_key": "afganistan",
+      "ascii_key": "afganistan",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/af.ɡa.nɪsˈtaːn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Afghanistan (a landlocked country between Central Asia and South Asia; official name: Repubblika Iżlamika tal-Afganistan)"
+      ],
+      "gloss_zh": "阿富汗",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "afrika",
+      "word": "Afrika",
+      "exact_key": "afrika",
+      "ascii_key": "afrika",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 1,
+      "pos_list": [
+        "PROPN",
+        "name"
+      ],
+      "ipa": "/ɐfrɪkɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "Africa",
+        "Africa (the continent south of Europe and between the Atlantic and Indian Oceans)"
+      ],
+      "gloss_zh": "非洲",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "afrikans",
+      "word": "Afrikans",
+      "exact_key": "afrikans",
+      "ascii_key": "afrikans",
+      "bucket": "A",
+      "sub_prefix": "af",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/af.rɪˈkans/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Afrikaans (language)"
+      ],
+      "gloss_zh": "南非荷兰语",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aġġettiv",
+      "word": "aġġettiv",
+      "exact_key": "aġġettiv",
+      "ascii_key": "aggettiv",
+      "bucket": "A",
+      "sub_prefix": "aġ",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐʤɛttɪf/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "an adjective (the part of speech or grammatical category)",
+        "agective",
+        "adjective"
+      ],
+      "gloss_zh": "形容词",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aġġorna",
+      "word": "aġġorna",
+      "exact_key": "aġġorna",
+      "ascii_key": "aggorna",
+      "bucket": "A",
+      "sub_prefix": "aġ",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐʤʤɔrnɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to adjourn",
+        "to update"
+      ],
+      "gloss_zh": "休会；延期；更新",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aġġornament",
+      "word": "aġġornament",
+      "exact_key": "aġġornament",
+      "ascii_key": "aggornament",
+      "bucket": "A",
+      "sub_prefix": "aġ",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐʤʤɔrnɐmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "adjournment",
+        "adjourning",
+        "update, updating"
+      ],
+      "gloss_zh": "更新；延期；休会",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aġġustament",
+      "word": "aġġustament",
+      "exact_key": "aġġustament",
+      "ascii_key": "aggustament",
+      "bucket": "A",
+      "sub_prefix": "aġ",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/ad.d͡ʒus.taˈmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "english",
+      "strata": [
+        "english"
+      ],
+      "gloss_en": [
+        "adjustment"
+      ],
+      "gloss_zh": "调整；调节",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aġixxa",
+      "word": "aġixxa",
+      "exact_key": "aġixxa",
+      "ascii_key": "agixxa",
+      "bucket": "A",
+      "sub_prefix": "aġ",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐʤɪʃʃɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to act",
+        "to take action",
+        "to act, to behave"
+      ],
+      "gloss_zh": "行动；采取行动；表现",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggrava",
+      "word": "aggrava",
+      "exact_key": "aggrava",
+      "ascii_key": "aggrava",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/aɡˈɡraː.va/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to aggravate"
+      ],
+      "gloss_zh": "加重；使恶化",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggravant",
+      "word": "aggravant",
+      "exact_key": "aggravant",
+      "ascii_key": "aggravant",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/aɡ.ɡraˈvant/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggravation"
+      ],
+      "gloss_zh": "加重；使情况恶化的因素",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggravanti",
+      "word": "aggravanti",
+      "exact_key": "aggravanti",
+      "ascii_key": "aggravanti",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/aɡ.ɡraˈvan.tɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggravating"
+      ],
+      "gloss_zh": "使情况加重的；加剧问题的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggredixxa",
+      "word": "aggredixxa",
+      "exact_key": "aggredixxa",
+      "ascii_key": "aggredixxa",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐggrɛdɪʃʃɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "to assault",
+        "to attack",
+        "to act fiercely towards"
+      ],
+      "gloss_zh": "袭击；攻击；凶狠地对待",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggressiv",
+      "word": "aggressiv",
+      "exact_key": "aggressiv",
+      "ascii_key": "aggressiv",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 1,
+      "pos_list": [
+        "ADJ",
+        "adj"
+      ],
+      "ipa": "/ɐggrɛssɪf/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggressive"
+      ],
+      "gloss_zh": "好斗的；咄咄逼人的；具有攻击性的",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggressivament",
+      "word": "aggressivament",
+      "exact_key": "aggressivament",
+      "ascii_key": "aggressivament",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/aɡ.ɡrɛs.sɪ.vaˈmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggressively"
+      ],
+      "gloss_zh": "攻击性地；咄咄逼人地",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggressività",
+      "word": "aggressività",
+      "exact_key": "aggressività",
+      "ascii_key": "aggressivita",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/aɡ.ɡrɛs.sɪ.vɪˈtaː/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggressiveness"
+      ],
+      "gloss_zh": "攻击性；好斗性",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggressjoni",
+      "word": "aggressjoni",
+      "exact_key": "aggressjoni",
+      "ascii_key": "aggressjoni",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐggrɛssjɔnɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggression",
+        "violence"
+      ],
+      "gloss_zh": "攻击行为；侵略；暴力",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "aggressur",
+      "word": "aggressur",
+      "exact_key": "aggressur",
+      "ascii_key": "aggressur",
+      "bucket": "A",
+      "sub_prefix": "ag",
+      "tier": 2,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/aɡ.ɡrɛsˈsuːr/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "aggressor"
+      ],
+      "gloss_zh": "攻击者；侵略者",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
         "kaikki"
       ],
       "is_enriched": true
@@ -3564,10 +6007,11 @@
     "Grammar lookup exceptions are labelled grammar_reference, not corpus-attested.",
     "Phase 2 reviewed means editorial review of authored teaching material; independent linguistic and listening acceptance is separate."
   ],
-  "enriched_count": 100,
-  "unenriched_count": 23945,
+  "enriched_count": 180,
+  "unenriched_count": 23865,
   "enrichment_files_sha256": {
-    "phase2_tier1_batch1.json": "29c8d975e489b98d46a0a773ba6557a14dd73d6e8e696dff57f511051badb057"
+    "phase2_tier1_batch1.json": "29c8d975e489b98d46a0a773ba6557a14dd73d6e8e696dff57f511051badb057",
+    "phase2_tier1_batch2_ab.json": "2936d7375d82a8e41a7c262723db3cdbe510825ffa2efa5845c42c636390ffa6"
   },
   "source_text_repairs": {
     "formatting_controls_normalized": 12738,

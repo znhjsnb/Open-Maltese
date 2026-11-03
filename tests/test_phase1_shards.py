@@ -173,7 +173,8 @@ class Phase1ShardsTests(unittest.TestCase):
         self.assertEqual(self.by_word['kiteb']['morphology']['imperfect'],'jikteb')
 
     def test_showcase_has_honest_examples_and_translations(self):
-        self.assertEqual(self.summary['showcase_count'],100)
+        self.assertGreaterEqual(self.summary['showcase_count'],100)
+        self.assertEqual(self.summary['showcase_count'],len(ENRICHED))
         for key in SHOWCASE:
             entry=self.by_word[key]
             self.assertEqual(entry['dual_scenarios']['formal']['source_type'],'pedagogical_example')

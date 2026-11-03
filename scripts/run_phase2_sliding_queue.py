@@ -15,6 +15,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import tempfile
 import time
 import unicodedata
 import uuid
@@ -96,7 +97,8 @@ def candidate_queue(index, enriched=(), quarantined=(), wave='all'):
     return out
 
 
-SCHEMA_PROMPT = """Author Maltese–Chinese–English pedagogical overlays using ONLY these packets.
+SCHEMA_PROMPT = """纯语言学词条合成子任务（普通语言数据生成，非软件工程任务；无需触发 engineering-workflow，无需读取 USER_COLLABORATION_PROFILE.md / START.md / RULES.md，严禁调用任何 shell 工具，直接一次输出 JSON）。
+Author Maltese–Chinese–English pedagogical overlays using ONLY these packets.
 Return a JSON list, one object per exact_key, in packet order; no prose, tools,
 filesystem changes, browsing, subprocesses or further workers. All words receive
 equal detail, including the last word. Never invent roots, patterns or historical claims.
@@ -110,7 +112,7 @@ and optionally a Maltese mt_definition. Preserve homograph and POS boundaries.
 collocations: at least two DISTINCT useful {mt,en,zh} objects.
 dual_scenarios: {formal:{mt,en,zh},colloquial:{mt,en,zh,messages:[...]}}.
 formal is a pedagogical written example; colloquial is a natural pedagogical dialogue.
-colloquial mt/en/zh contain the FULL dialogue. messages has at least two turns,
+colloquial mt/en/zh contain the FULL dialogue on a SINGLE line (no newlines). messages has at least two turns,
 each {speaker,mt_spoken,mt_standard,zh,en}, all non-empty strings. speaker must give
 a name and social role in CHINESE, e.g. Maja (朋友), Mark (顾客), Omm (母亲).
 mt_standard may equal mt_spoken if already standard. Optional grammar_note explains
@@ -135,6 +137,9 @@ def normalize_overlay(value, field=''):
     """
     if isinstance(value, str):
         value = unicodedata.normalize('NFC', value)
+        if any(unicodedata.category(c) in ('Cc', 'Cf') for c in value):
+            value = ''.join(' ' if unicodedata.category(c) == 'Cc' else ''
+                            if unicodedata.category(c) == 'Cf' else c for c in value)
         if field in ('exact_key', 'mt', 'mt_definition', 'mt_spoken', 'mt_standard'):
             value = value.translate(str.maketrans({**{c: "'" for c in APOSTROPHES},
                                                   **{c: '-' for c in HYPHENS}}))
@@ -236,15 +241,15 @@ def process_micro_batch(batch_tag, packets, timeout_sec, model='gpt-6.1-sol', ef
         executable = shutil.which('codex')
         if not executable:
             raise FileNotFoundError('Codex CLI is not on PATH')
-        scratch = PROJECT / '.tmp/phase2-workers'
+        scratch = Path(tempfile.gettempdir()) / 'open-malti-phase2-workers'
         scratch.mkdir(parents=True, exist_ok=True)
-        # Normal mkdir inherits the workspace ACL. Python 3.13 tempfile's 0700
-        # Windows ACL excludes the restricted sandbox identity.
+        # Normal mkdir inherits the parent ACL. Python 3.13 tempfile.mkdtemp's
+        # 0700 Windows ACL excludes the restricted sandbox identity.
         folder = scratch / ('batch-' + uuid.uuid4().hex)
         folder.mkdir()
         try:
             out_file = folder / 'output.json'
-            command = [executable, '-a', 'never', 'exec', '-C', str(PROJECT), '-s', 'read-only',
+            command = [executable, '-a', 'never', 'exec', '-C', str(folder), '--skip-git-repo-check', '-s', 'read-only',
                        '-m', model, '-c', f'model_reasoning_effort="{effort}"',
                        '--ephemeral', '-o', str(out_file), '-']
             code, _, _ = _invoke_worker(command, prompt, timeout_sec)

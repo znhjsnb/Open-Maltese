@@ -123,7 +123,8 @@ def run_benchmark():
             completed.update(result['validated_entries'])
             persisted.update(result['validated_entries'])
             persist_entries(OUTPUT, persisted, persist_order)
-            print(f"{result['batch_tag']}: {len(result['validated_entries'])}/{len(result['words'])} first pass", flush=True)
+            print(f"{result['batch_tag']}: {len(result['validated_entries'])}/{len(result['words'])} first pass in {result['elapsed_sec']:.1f}s"
+                  + (f" | errors={result['errors']}" if result['errors'] else ""), flush=True)
         first_pass_finished = time.monotonic()
         retries = {}
         for arm, group in arms.items():

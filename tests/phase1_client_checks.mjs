@@ -6,6 +6,7 @@ import {pronunciationGraphemes,currentWorkerError,renderAnalyses,exportText} fro
 import {createPronouncer,malteseVoice,availableVoice} from '../app/static/audio.js';
 import {loadEntry} from '../app/static/db.js';
 import vm from 'node:vm';
+const manifest=JSON.parse(fs.readFileSync('app/static/data/manifest.json','utf8'));
 const entries=JSON.parse(fs.readFileSync('app/static/data/index_lite.json','utf8'));
 const lookup=JSON.parse(fs.readFileSync('app/static/data/wordforms_lookup.json','utf8'));
 const engine=makeSearchEngine(entries,lookup);
@@ -52,7 +53,8 @@ test('tiers strata and pagination',()=>{
   assert.equal(engine.search({query:'zzzzzzzz',offset:1000}).total,0);
 });
 test('all feature filters',()=>{
-  assert.equal(engine.search({feature:'showcase'}).total,100);
+  assert.ok(manifest.showcase_count>=100);
+  assert.equal(engine.search({feature:'showcase'}).total,manifest.showcase_count);
   assert.ok(engine.search({feature:'showcase'}).results.every(e=>e.is_showcase));
   assert.ok(engine.search({feature:'root'}).results.every(e=>e.roots.length));
   assert.ok(engine.search({feature:'audio'}).results.every(e=>e.has_audio));
@@ -151,7 +153,6 @@ await honest.play('skola'); assert.equal(foreign.spoken.length,0); assert.equal(
 const delayed=new Synth(); const waiting=availableVoice(delayed); delayed.voices=[voice]; delayed.dispatchEvent(new Event('voiceschanged')); assert.equal(await waiting,voice); count++;
 const stale=new Synth(); const cancel=createPronouncer({synth:stale,AudioClass:Recording,Utterance,guide:t=>guides.push(t),status:()=>{}});
 const before=guides.length;const pending=cancel.play('old'); cancel.stop(); await pending;assert.equal(guides.length,before);count++;
-const manifest=JSON.parse(fs.readFileSync('app/static/data/manifest.json','utf8'));
 const shardEntries=manifest.shards.flatMap(s=>JSON.parse(fs.readFileSync(`app/static/data/${s.file}`,'utf8')));
 test('homograph cards and exports preserve analysis boundaries and evidence',()=>{
   const dar=shardEntries.find(e=>e.id==='dar');
@@ -167,7 +168,7 @@ test('homograph cards and exports preserve analysis boundaries and evidence',()=
   mtSense.senses[0].mt_definition='Definizzjoni <sigura>';
   assert.ok(renderAnalyses([mtSense]).includes('Definizzjoni &lt;sigura&gt;'));
   assert.ok(verb.includes('jdur'));assert.ok(verb.includes('midur'));assert.ok(!verb.includes('djar'));
-  const recorded=shardEntries.find(e=>e.headword.audio_commons_url && e.dual_scenarios);
+  const recorded=shardEntries.find(e=>e.id==='abjad');
   for (const anki of [false,true]) {
     const text=exportText(recorded,anki,manifest);
     assert.ok(text.includes('CC BY 3.0'));
