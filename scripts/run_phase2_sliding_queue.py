@@ -298,14 +298,41 @@ def publish_and_validate():
     return summary
 
 
+def compact_and_commit_milestone():
+    qfiles = sorted(OVERLAY_DIR.glob('phase2_queue_*.json'))
+    if not qfiles:
+        return publish_and_validate()
+    merged = {}
+    for qf in qfiles:
+        for item in read_json(qf):
+            merged[item['exact_key']] = item
+    existing = sorted(OVERLAY_DIR.glob('phase2_milestone_*.json'))
+    num = len(existing) + 1
+    while (OVERLAY_DIR / f'phase2_milestone_{num:03d}.json').exists():
+        num += 1
+    target = OVERLAY_DIR / f'phase2_milestone_{num:03d}.json'
+    write_json(target, [merged[k] for k in sorted(merged)], pretty=True)
+    for qf in qfiles:
+        qf.unlink()
+    summary = publish_and_validate()
+    stage_paths = ['data/enriched', 'data/audit/phase2_quality_gate_report.json', 'data/seed/lemma_pool_summary.json']
+    if QUARANTINE.exists():
+        stage_paths.append('data/audit/quarantine_words.json')
+    subprocess.run(['git', 'add', '--'] + stage_paths, cwd=PROJECT, check=True)
+    msg = f"feat(phase2): milestone {num:03d} (+{len(merged)} words, total {summary['enriched_count']}/24045, 5-gate pass)"
+    subprocess.run(['git', 'commit', '-m', msg], cwd=PROJECT, check=True)
+    print(f"[MILESTONE {num:03d}] Committed +{len(merged)} words -> enriched_count={summary['enriched_count']}/24045", flush=True)
+    return summary
+
+
 def persist_entries(path, entries, order):
     if entries:
         write_json(path, [entries[k] for k in order if k in entries], pretty=True)
 
 
-def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interval=100, wave='all'):
-    if min(slots, batch_size, timeout, milestone_interval) < 1 or max_words < 0:
-        raise ValueError('Positive slots/batch-size/timeout/milestone and nonnegative max-words required')
+def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interval=100, wave='all', commit_every=0):
+    if min(slots, batch_size, timeout, milestone_interval) < 1 or max_words < 0 or commit_every < 0:
+        raise ValueError('Positive slots/batch-size/timeout/milestone and nonnegative max-words/commit-every required')
     store = source_store()
     overlays, _ = load_overlays()
     quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
@@ -315,7 +342,7 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
     order = [i['exact_key'] for i in chosen]
     pending = deque(chosen)
     retries, attempts, committed = deque(), {}, {}
-    sequence, since_milestone = 0, 0
+    sequence, since_milestone, since_commit = 0, 0, 0
     # Stable name/content across restarts; valid entries already on disk are excluded.
     # Each file is a list of one entry, as required by the shared overlay loader.
     def save_batch(valid):
@@ -346,6 +373,7 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
                 save_batch(valid)
                 committed.update(valid)
                 since_milestone += len(valid)
+                since_commit += len(valid)
                 failed = []
                 for packet in packets:
                     key = packet['exact_key']
@@ -362,10 +390,14 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
                 print(f'{tag}: {len(valid)}/{len(packets)} validated; session={len(committed)}', flush=True)
             # Refill freed slots BEFORE potentially slow milestone publication.
             refill()
-            if since_milestone >= milestone_interval:
+            if commit_every and since_commit >= commit_every:
+                compact_and_commit_milestone()
+                since_commit = 0
+                since_milestone = 0
+            elif since_milestone >= milestone_interval:
                 publish_and_validate()
                 since_milestone = 0
-    summary = publish_and_validate()
+    summary = compact_and_commit_milestone() if (commit_every and since_commit > 0) else publish_and_validate()
     return {'selected': len(order), 'validated': len(committed),
             'quarantined': len(set(order) & set(quarantine)), 'enriched_count': summary['enriched_count']}
 
@@ -377,10 +409,11 @@ def main():
     parser.add_argument('--timeout', type=int, default=420)
     parser.add_argument('--max-words', type=int, default=0, help='0 exhausts the selected pool; retries do not count twice')
     parser.add_argument('--milestone-interval', type=int, default=100)
+    parser.add_argument('--commit-every', type=int, default=0, help='Compact queue files into milestone JSON and git commit every N words')
     parser.add_argument('--wave', choices=['1', '2', 'all'], default='all')
     args = parser.parse_args()
-    if min(args.slots, args.batch_size, args.timeout, args.milestone_interval) < 1 or args.max_words < 0:
-        parser.error('counts/timeouts must be positive; --max-words may be 0')
+    if min(args.slots, args.batch_size, args.timeout, args.milestone_interval) < 1 or args.max_words < 0 or args.commit_every < 0:
+        parser.error('counts/timeouts must be positive; --max-words/--commit-every may be 0')
     result = run_queue(**vars(args))
     print(json.dumps(result, ensure_ascii=False))
     return 1 if result['quarantined'] else 0
