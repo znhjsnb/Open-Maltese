@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-520b41126e0c",
+  "dataset_version": "malti-phase2-2026-11-03-f49bbefb6a8c",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 2180,
-    "unenriched_count": 21865,
-    "showcase_count": 2180,
+    "enriched_count": 3180,
+    "unenriched_count": 20865,
+    "showcase_count": 3180,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -121,6 +121,82 @@
     },
     {
       "stratum": "tier_1/english/enriched",
+      "exact_key": "londri",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "Laundry: clothes or other textiles to be washed, or the work or service of washing them.",
+          "zh_definition": "需要清洗的衣物等纺织品，也指清洗这些物品的工作或服务。",
+          "mt_definition": "Ħwejjeġ jew drappijiet għall-ħasil, jew ix-xogħol jew is-servizz tal-ħasil tagħhom.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "laundry",
+          "zh_definition": "洗衣；待洗或送洗的衣物；洗衣服务，具体含义依语境而定。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "laundry",
+          "zh_definition": "洗衣；待洗或送洗的衣物；洗衣服务，具体含义依语境而定。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-londri",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-lukanda toffri servizz tal-londri lill-klijenti tagħha.",
+          "en": "The hotel offers a laundry service to its guests.",
+          "zh": "这家酒店为住客提供洗衣服务。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Marija: Fejn hi l-borża tal-londri? Ġanni: Fil-kamra tal-banju, ħdejn il-magna tal-ħasil.",
+          "en": "Marija: Where is the laundry bag? Ġanni: In the bathroom, next to the washing machine.",
+          "zh": "Marija：洗衣袋在哪里？Ġanni：在浴室里，洗衣机旁边。",
+          "messages": [
+            {
+              "speaker": "Marija (室友)",
+              "mt_spoken": "Fejn hi l-borża tal-londri?",
+              "mt_standard": "Fejn hi l-borża tal-londri?",
+              "zh": "洗衣袋在哪里？",
+              "en": "Where is the laundry bag?"
+            },
+            {
+              "speaker": "Ġanni (室友)",
+              "mt_spoken": "Fil-kamra tal-banju, ħdejn il-magna tal-ħasil.",
+              "mt_standard": "Fil-kamra tal-banju, ħdejn il-magna tal-ħasil.",
+              "zh": "在浴室里，洗衣机旁边。",
+              "en": "In the bathroom, next to the washing machine."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“装袋、送洗、取回”的生活画面记 londri；把 borża tal-londri 与 servizz tal-londri 分别对应洗衣袋和洗衣服务。"
+    },
+    {
+      "stratum": "tier_1/english/enriched",
       "exact_key": "brejk",
       "analysis_pos": [
         "NOUN",
@@ -197,117 +273,6 @@
       "cognitive_memory_aid": "用“让动作停一停”串联两义：车上踩 brejk 是刹车，工作时 tieħu brejk 是休息；靠情境区分。"
     },
     {
-      "stratum": "tier_1/english/enriched",
-      "exact_key": "bajsikil",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A two-wheeled vehicle that a rider usually moves by pushing pedals.",
-          "zh_definition": "通常由骑车人踩动踏板来驱动的两轮交通工具。",
-          "mt_definition": "Vettura b'żewġ roti li normalment titmexxa minn persuna billi tagħfas il-pedali.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "bicycle",
-          "zh_definition": "自行车；脚踏车。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "bicycle",
-          "zh_definition": "自行车；脚踏车。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bajsikil",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-istudent juża l-bajsikil biex imur l-iskola kuljum.",
-          "en": "The student uses his bicycle to go to school every day.",
-          "zh": "这名学生每天骑自行车上学。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Marta: Kif se tmur il-ħanut? Ġużeppi: Bil-bajsikil. Nasal malajr.",
-          "en": "Marta: How are you going to the shop? Ġużeppi: By bicycle. I'll get there quickly.",
-          "zh": "玛尔塔：你怎么去商店？朱塞佩：骑自行车，很快就到。",
-          "messages": [
-            {
-              "speaker": "Marta (朋友)",
-              "mt_spoken": "Kif se tmur il-ħanut?",
-              "mt_standard": "Kif se tmur il-ħanut?",
-              "zh": "你怎么去商店？",
-              "en": "How are you going to the shop?"
-            },
-            {
-              "speaker": "Ġużeppi (朋友)",
-              "mt_spoken": "Bil-bajsikil. Nasal malajr.",
-              "mt_standard": "Bil-bajsikil. Nasal malajr.",
-              "zh": "骑自行车，很快就到。",
-              "en": "By bicycle. I'll get there quickly."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 bajsikil 与“踩踏板、两轮转”的动作一起记，再整块练习 bil-bajsikil，表达“骑自行车”这种出行方式。"
-    },
-    {
-      "stratum": "tier_1/english/unenriched",
-      "exact_key": "londri",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "laundry",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "laundry",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-londri",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_1/english/unenriched",
       "exact_key": "televixin",
       "analysis_pos": [
@@ -376,6 +341,126 @@
       },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/english/unenriched",
+      "exact_key": "żu",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "zoo",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "zoo",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "iż-żu",
+        "prefix": "iż-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/enriched",
+      "exact_key": "kartun",
+      "analysis_pos": [
+        null,
+        "NOUN",
+        "noun",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "Cardboard as a material; also a humorous drawing or comic strip, or an animated cartoon.",
+          "zh_definition": "可指纸板这种材料，也可指幽默漫画、连环漫画或动画片，具体含义由语境决定。",
+          "mt_definition": "Materjal magħmul minn karta ħoxna; il-kelma tista' tfisser ukoll tpinġija umoristika, sensiela ta' tpinġijiet jew film animat.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "cardboard",
+          "zh_definition": "纸板；用于制作盒子等物品的厚纸质材料。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "cartoon (humorous drawing or strip)",
+          "zh_definition": "漫画；幽默图画或连环漫画。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-kartun",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kelma kartun tista' tirreferi għall-materjal ta' kaxxa, għal tpinġija umoristika jew għal film animat.",
+          "en": "The word kartun can refer to the material of a box, a humorous drawing, or an animated cartoon.",
+          "zh": "kartun 一词可以指箱子所用的纸板材料、幽默漫画或动画片。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Xi trid tagħmel wara l-ikel? Ben: Irrid nara kartun fuq it-televiżjoni. Maja: Tajjeb, nagħżlu wieħed flimkien.",
+          "en": "Maja: What do you want to do after eating? Ben: I want to watch a cartoon on television. Maja: Okay, let's choose one together.",
+          "zh": "Maja：吃完饭你想做什么？Ben：我想在电视上看动画片。Maja：好，我们一起选一部。",
+          "messages": [
+            {
+              "speaker": "Maja (姐姐)",
+              "mt_spoken": "Xi trid tagħmel wara l-ikel?",
+              "mt_standard": "Xi trid tagħmel wara l-ikel?",
+              "zh": "吃完饭你想做什么？",
+              "en": "What do you want to do after eating?"
+            },
+            {
+              "speaker": "Ben (弟弟)",
+              "mt_spoken": "Irrid nara kartun fuq it-televiżjoni.",
+              "mt_standard": "Irrid nara kartun fuq it-televiżjoni.",
+              "zh": "我想在电视上看动画片。",
+              "en": "I want to watch a cartoon on television."
+            },
+            {
+              "speaker": "Maja (姐姐)",
+              "mt_spoken": "Tajjeb, nagħżlu wieħed flimkien.",
+              "mt_standard": "Tajjeb, nagħżlu wieħed flimkien.",
+              "zh": "好，我们一起选一部。",
+              "en": "Okay, let's choose one together."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "并排想象纸板箱、报纸漫画和电视动画三个画面，用周围的词判断 kartun 在说哪一个。"
     },
     {
       "stratum": "tier_1/other_or_hybrid/enriched",
@@ -455,36 +540,37 @@
     },
     {
       "stratum": "tier_1/other_or_hybrid/enriched",
-      "exact_key": "gawwi",
+      "exact_key": "mejt",
       "analysis_pos": [
         "NOUN",
+        "noun",
         "noun"
       ],
       "senses": [
         {
           "pos": "noun",
-          "en_definition": "A gull or seagull; also gulls or seagulls referred to collectively.",
-          "zh_definition": "指鸥或海鸥，也可统称多只鸥或海鸥；具体数量须结合语境理解。",
-          "mt_definition": "Għasfur tal-baħar; il-kelma tista' tirreferi wkoll għal dawn l-għasafar flimkien.",
+          "en_definition": "A feeling of dizziness or spinning that can make it difficult to keep one's balance.",
+          "zh_definition": "头昏或感觉周围旋转、可能难以保持平衡的状态。",
+          "mt_definition": "Sensazzjoni ta' sturdament jew li kollox qed idur, li tista' tagħmilha diffiċli biex wieħed iżomm il-bilanċ.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "NOUN",
-          "en_definition": "gull",
-          "zh_definition": "鸥，一类鸟。",
+          "en_definition": "dizziness",
+          "zh_definition": "头晕；头昏、站立不稳的感觉。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "NOUN",
-          "en_definition": "seagull",
-          "zh_definition": "海鸥。",
+          "en_definition": "vertigo",
+          "zh_definition": "眩晕；感觉自己或周围环境在旋转。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-gawwi",
+        "form": "il-mejt",
         "prefix": "il-",
         "rule": "moon_consonant",
         "context": "citation",
@@ -494,31 +580,31 @@
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Waqt iż-żjara fil-port, l-istudenti raw gawwi jtir fuq il-baħar.",
-          "en": "During the visit to the harbour, the students saw a gull flying over the sea.",
-          "zh": "参观港口时，学生们看见一只海鸥在海面上方飞翔。",
+          "mt": "Waqt il-mixja, ir-raġel waqaf u qagħad bilqiegħda għax qabdu l-mejt.",
+          "en": "During the walk, the man stopped and sat down because he became dizzy.",
+          "zh": "散步时，那名男子感到头晕，于是停下来坐下。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Maja: Ara dak il-gawwi ħdejn id-dgħajsa! Mark: Qed narah. Issa qed itir lejn il-port.",
-          "en": "Maja: Look at that gull beside the boat! Mark: I can see it. Now it's flying towards the harbour.",
-          "zh": "玛雅：看船旁边那只海鸥！马克：我看见了。它现在正朝港口飞去。",
+          "mt": "Rita: Għaliex qgħadt bilqiegħda? Mark: Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
+          "en": "Rita: Why did you sit down? Mark: I felt dizzy when I stood up. I'm going to rest for a bit.",
+          "zh": "丽塔：你怎么坐下了？马克：我站起来时有点头晕，想休息一会儿。",
           "messages": [
             {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Ara dak il-gawwi ħdejn id-dgħajsa!",
-              "mt_standard": "Ara dak il-gawwi ħdejn id-dgħajsa!",
-              "zh": "看船旁边那只海鸥！",
-              "en": "Look at that gull beside the boat!"
+              "speaker": "Rita (朋友)",
+              "mt_spoken": "Għaliex qgħadt bilqiegħda?",
+              "mt_standard": "Għaliex qgħadt bilqiegħda?",
+              "zh": "你怎么坐下了？",
+              "en": "Why did you sit down?"
             },
             {
               "speaker": "Mark (朋友)",
-              "mt_spoken": "Qed narah. Issa qed itir lejn il-port.",
-              "mt_standard": "Qed narah. Issa qed itir lejn il-port.",
-              "zh": "我看见了。它现在正朝港口飞去。",
-              "en": "I can see it. Now it's flying towards the harbour."
+              "mt_spoken": "Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
+              "mt_standard": "Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
+              "zh": "我站起来时有点头晕，想休息一会儿。",
+              "en": "I felt dizzy when I stood up. I'm going to rest for a bit."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -527,83 +613,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 gawwi 和“海面、船、港口”的画面连在一起记忆；看到这个词，就想象海鸥掠过船边，数量再由上下文判断。"
-    },
-    {
-      "stratum": "tier_1/other_or_hybrid/enriched",
-      "exact_key": "gorboġ",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A rough or poor shelter or dwelling; also an enclosure used to keep pigs or rabbits.",
-          "zh_definition": "粗陋的棚屋或贫旧住宅；也可指饲养猪或兔子的圈舍。",
-          "mt_definition": "Kenn jew dar fqira u sempliċi; ukoll post magħluq fejn jinżammu l-ħnieżer jew il-fniek.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "shack",
-          "zh_definition": "简陋棚屋；用简单材料搭成的小屋。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "sty, pigsty (an enclosure where pigs are kept)",
-          "zh_definition": "猪圈；饲养猪的圈舍。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-gorboġ",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Id-dokument jiddeskrivi gorboġ antik li kien jintuża bħala kenn mill-maltemp.",
-          "en": "The document describes an old shack that was used as shelter from bad weather.",
-          "zh": "文件描述了一间旧棚屋，人们曾用它躲避恶劣天气。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Il-fenek għadu fil-gorboġ? Pawlu: Iva, u għandu ilma frisk u ikel.",
-          "en": "Maja: Is the rabbit still in the hutch? Pawlu: Yes, and it has fresh water and food.",
-          "zh": "玛雅：兔子还在兔舍里吗？保罗：是的，里面有干净的饮水和食物。",
-          "messages": [
-            {
-              "speaker": "Maja (农场访客)",
-              "mt_spoken": "Il-fenek għadu fil-gorboġ?",
-              "mt_standard": "Il-fenek għadu fil-gorboġ?",
-              "zh": "兔子还在兔舍里吗？",
-              "en": "Is the rabbit still in the hutch?"
-            },
-            {
-              "speaker": "Pawlu (农夫)",
-              "mt_spoken": "Iva, u għandu ilma frisk u ikel.",
-              "mt_standard": "Iva, u għandu ilma frisk u ikel.",
-              "zh": "是的，里面有干净的饮水和食物。",
-              "en": "Yes, and it has fresh water and food."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 gorboġ 放进“简陋住所与圈舍”的图片组：棚屋、破屋、猪圈、兔舍各一张；看到 tal-ħnieżer 或 tal-fniek 就能确定是哪种圈舍。"
+      "cognitive_memory_aid": "把 mejt 的头晕义放进“站起后坐下休息”的画面；伙伴义另联想英语 mate，作为记忆提示。"
     },
     {
       "stratum": "tier_1/other_or_hybrid/unenriched",
@@ -642,40 +652,39 @@
     },
     {
       "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "kartun",
+      "exact_key": "xkupilja",
       "analysis_pos": [
-        null,
         "NOUN",
         "noun",
-        "noun"
+        "verb"
       ],
       "senses": [
         {
           "pos": "NOUN",
-          "en_definition": "cardboard",
+          "en_definition": "brush",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "whisk",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "noun",
-          "en_definition": "cartoon (humorous drawing or strip)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "cartoon (animated cartoon)",
+          "en_definition": "brush",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-kartun",
-        "prefix": "il-",
-        "rule": "moon_consonant",
+        "form": "l-ixkupilja",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -686,7 +695,7 @@
     },
     {
       "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "mejt",
+      "exact_key": "sejf",
       "analysis_pos": [
         "NOUN",
         "noun",
@@ -695,30 +704,30 @@
       "senses": [
         {
           "pos": "NOUN",
-          "en_definition": "dizziness",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "vertigo",
+          "en_definition": "dagger",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "noun",
-          "en_definition": "dizziness",
+          "en_definition": "dagger (short sword)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "sword (in general)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-mejt",
-        "prefix": "il-",
-        "rule": "moon_consonant",
+        "form": "is-sejf",
+        "prefix": "is-",
+        "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -1042,31 +1051,39 @@
     },
     {
       "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "independenti",
+      "exact_key": "stess",
       "analysis_pos": [
-        null,
-        "adj"
+        "ADJ",
+        "pron",
+        "det"
       ],
       "senses": [
         {
-          "pos": null,
-          "en_definition": "independent",
+          "pos": "ADJ",
+          "en_definition": "same",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "adj",
-          "en_definition": "independent",
+          "pos": "ADJ",
+          "en_definition": "self",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "pron",
+          "en_definition": "-self",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "l-independenti",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
+        "form": "l-istess",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
@@ -1074,6 +1091,84 @@
       },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/enriched",
+      "exact_key": "ħesrem",
+      "analysis_pos": [
+        "ADJ",
+        "ADJ",
+        "noun",
+        "adv"
+      ],
+      "senses": [
+        {
+          "pos": "adj",
+          "en_definition": "Happening abruptly and without warning.",
+          "zh_definition": "突然发生、事先没有预兆的。",
+          "mt_definition": "Li jiġri għal għarrieda u mingħajr twissija.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "sudden",
+          "zh_definition": "突然的；骤然发生的。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "suddenly",
+          "zh_definition": "突然地；骤然。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-ħesrem",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-rapport jiddeskrivi waqfien ħesrem tas-servizz minħabba ħsara teknika.",
+          "en": "The report describes a sudden interruption of the service due to a technical fault.",
+          "zh": "报告描述了技术故障导致的服务突然中断。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Għaliex waqaf il-film ħesrem? Pawlu: Naħseb li nqata' l-internet.",
+          "en": "Maja: Why did the film suddenly stop? Pawlu: I think the internet connection dropped.",
+          "zh": "玛雅：电影怎么突然停了？保罗：我想是断网了。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Għaliex waqaf il-film ħesrem?",
+              "mt_standard": "Għaliex waqaf il-film ħesrem?",
+              "zh": "电影怎么突然停了？",
+              "en": "Why did the film suddenly stop?"
+            },
+            {
+              "speaker": "Pawlu (朋友)",
+              "mt_spoken": "Naħseb li nqata' l-internet.",
+              "mt_standard": "Naħseb li nqata' l-internet.",
+              "zh": "我想是断网了。",
+              "en": "I think the internet connection dropped."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "给 ħesrem 分设两张记忆卡：一张画突然停止的电影，一张画未熟的酸葡萄；分别记忆，避免混义。"
     },
     {
       "stratum": "tier_1/semitic/enriched",
@@ -1153,7 +1248,7 @@
     },
     {
       "stratum": "tier_1/semitic/enriched",
-      "exact_key": "feġġ",
+      "exact_key": "ħasad",
       "analysis_pos": [
         "VERB",
         "verb"
@@ -1161,22 +1256,22 @@
       "senses": [
         {
           "pos": "verb",
-          "en_definition": "To come into view or become visible suddenly.",
-          "zh_definition": "突然进入视野，或原本看不见的事物一下子显现出来。",
-          "mt_definition": "Jidher f'daqqa jew isir viżibbli wara li ma kienx jidher.",
+          "en_definition": "To reap or harvest crops; also to surprise or startle someone, or to take a life prematurely.",
+          "zh_definition": "收割或收获庄稼；也指使某人吃惊、受惊，或过早夺去生命。",
+          "mt_definition": "Jaqta' u jiġbor il-ħsad; ukoll jissorprendi jew ibeżża' lil xi ħadd għal għarrieda, jew itemm ħajja qabel iż-żmien.",
           "definition_origin": "authored_pedagogical"
         },
         {
           "pos": "VERB",
-          "en_definition": "to appear suddenly",
-          "zh_definition": "突然出现；一下子进入视野。",
+          "en_definition": "to reap",
+          "zh_definition": "收割庄稼。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "verb",
-          "en_definition": "to appear (suddenly)",
-          "zh_definition": "出现；显现，常带有突然出现的意味。",
+          "pos": "VERB",
+          "en_definition": "to harvest",
+          "zh_definition": "收获农作物。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1184,31 +1279,31 @@
       "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Waqt l-osservazzjoni, dawl qawwi feġġ fuq l-orizzont.",
-          "en": "During the observation, a bright light suddenly appeared on the horizon.",
-          "zh": "观测期间，地平线上突然出现了一道强光。",
+          "mt": "Il-bidwi ħasad il-qamħ meta kien misjur, qabel bdiet ix-xita.",
+          "en": "The farmer harvested the wheat when it was ripe, before the rain began.",
+          "zh": "农民在小麦成熟后、下雨之前完成了收割。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Sara: Rajt min feġġ fil-bieb? Pawlu: Iva, kien Mark! Ma kontx qed nistennieh.",
-          "en": "Sara: Did you see who suddenly appeared at the door? Pawlu: Yes, it was Mark! I wasn't expecting him.",
-          "zh": "萨拉：你看到谁突然出现在门口了吗？保罗：看到了，是马克！我没想到他会来。",
+          "mt": "Rita: Dak il-ħoss ħasadni! X'kien? Ġanni: Il-bieb għalaq bis-saħħa minħabba r-riħ.",
+          "en": "Rita: That noise startled me! What was it? Ġanni: The door slammed shut because of the wind.",
+          "zh": "Rita：那声音吓了我一跳！是什么声音？Ġanni：风把门猛地吹关上了。",
           "messages": [
             {
-              "speaker": "Sara (朋友)",
-              "mt_spoken": "Rajt min feġġ fil-bieb?",
-              "mt_standard": "Rajt min feġġ fil-bieb?",
-              "zh": "你看到谁突然出现在门口了吗？",
-              "en": "Did you see who suddenly appeared at the door?"
+              "speaker": "Rita (室友)",
+              "mt_spoken": "Dak il-ħoss ħasadni! X'kien?",
+              "mt_standard": "Dak il-ħoss ħasadni! X'kien?",
+              "zh": "那声音吓了我一跳！是什么声音？",
+              "en": "That noise startled me! What was it?"
             },
             {
-              "speaker": "Pawlu (朋友)",
-              "mt_spoken": "Iva, kien Mark! Ma kontx qed nistennieh.",
-              "mt_standard": "Iva, kien Mark! Ma kontx qed nistennieh.",
-              "zh": "看到了，是马克！我没想到他会来。",
-              "en": "Yes, it was Mark! I wasn't expecting him."
+              "speaker": "Ġanni (室友)",
+              "mt_spoken": "Il-bieb għalaq bis-saħħa minħabba r-riħ.",
+              "mt_standard": "Il-bieb għalaq bis-saħħa minħabba r-riħ.",
+              "zh": "风把门猛地吹关上了。",
+              "en": "The door slammed shut because of the wind."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1217,128 +1312,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "想象空空的门口突然冒出一位朋友，用这个“突然入镜”的画面记住 feġġ。"
-    },
-    {
-      "stratum": "tier_1/semitic/enriched",
-      "exact_key": "għam",
-      "analysis_pos": [
-        "VERB",
-        "verb",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To move through water by swimming, or to stay on the surface of water by floating.",
-          "zh_definition": "通过身体动作在水中游动，或漂浮在水面上。",
-          "mt_definition": "Jimxi fl-ilma billi jċaqlaq ġismu, jew jibqa' fuq wiċċ l-ilma.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to swim",
-          "zh_definition": "游泳；通过身体动作在水中前进。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to swim",
-          "zh_definition": "游泳；通过身体动作在水中前进。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-għam",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-atleta għam minn naħa għall-oħra tal-pixxina waqt it-taħriġ.",
-          "en": "The athlete swam from one side of the pool to the other during training.",
-          "zh": "这名运动员在训练时从泳池的一侧游到了另一侧。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Mark għam illum? Lara: Iva, għam fil-pixxina għal nofs siegħa.",
-          "en": "Maja: Did Mark swim today? Lara: Yes, he swam in the pool for half an hour.",
-          "zh": "Maja：Mark今天游泳了吗？Lara：游了，他在泳池里游了半个小时。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Mark għam illum?",
-              "mt_standard": "Mark għam illum?",
-              "zh": "Mark今天游泳了吗？",
-              "en": "Did Mark swim today?"
-            },
-            {
-              "speaker": "Lara (朋友)",
-              "mt_spoken": "Iva, għam fil-pixxina għal nofs siegħa.",
-              "mt_standard": "Iva, għam fil-pixxina għal nofs siegħa.",
-              "zh": "游了，他在泳池里游了半个小时。",
-              "en": "Yes, he swam in the pool for half an hour."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "先用“他在水里游泳”的画面记动词义，再把名词“年”单独记一张卡，避免混淆词性。"
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "ħesrem",
-      "analysis_pos": [
-        "ADJ",
-        "ADJ",
-        "noun",
-        "adv"
-      ],
-      "senses": [
-        {
-          "pos": "ADJ",
-          "en_definition": "sudden",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "ADJ",
-          "en_definition": "suddenly",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "unripe grapes, sour grapes",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-ħesrem",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "cognitive_memory_aid": "分三张场景卡记忆：田里收割、巨响惊吓、生命早逝；每次读句子时先找庄稼、声响或生命等线索。"
     },
     {
       "stratum": "tier_1/semitic/unenriched",
@@ -1384,29 +1358,30 @@
     },
     {
       "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "ħasad",
+      "exact_key": "newwel",
       "analysis_pos": [
+        "VERB",
         "VERB",
         "verb"
       ],
       "senses": [
         {
           "pos": "VERB",
-          "en_definition": "to reap",
+          "en_definition": "to work the loom",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "VERB",
-          "en_definition": "to harvest",
+          "en_definition": "to weave",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "VERB",
-          "en_definition": "to surprise",
+          "en_definition": "to pass sth. to sb.",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -1415,6 +1390,116 @@
       "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "xaħxieħ",
+      "analysis_pos": [
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "poppy",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "opium poppy",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "noun",
+          "en_definition": "poppy (Papaver gen. et spp.)",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ix-xaħxieħ",
+        "prefix": "ix-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/enriched",
+      "exact_key": "ħabbeż",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To bake bread frequently or put loaves into an oven for baking.",
+          "zh_definition": "经常烤面包，或把一条条面包放入烤炉烘烤。",
+          "mt_definition": "Jaħmi l-ħobż ta' spiss jew idaħħal il-ħobż fil-forn biex jinħema.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to bake frequently",
+          "zh_definition": "经常烘烤；频繁烤面包。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to put loaves in an oven",
+          "zh_definition": "把面包放入烤炉中。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Wara li l-għaġina kienet lesta, il-furnar ħabbeż il-ħobż fil-forn.",
+          "en": "Once the dough was ready, the baker put the loaves into the oven.",
+          "zh": "面团准备好后，面包师把面包放进了烤炉。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Rita: Il-furnar diġà ħabbeż il-ħobż fil-forn? Pawlu: Iva, għadu kemm daħħlu. Nistennew ftit.",
+          "en": "Rita: Has the baker already put the loaves into the oven? Pawlu: Yes, he's just put them in. Let's wait a little.",
+          "zh": "Rita：面包师已经把面包放进烤炉了吗？Pawlu：是的，刚放进去。我们等一会儿吧。",
+          "messages": [
+            {
+              "speaker": "Rita (顾客)",
+              "mt_spoken": "Il-furnar diġà ħabbeż il-ħobż fil-forn?",
+              "mt_standard": "Il-furnar diġà ħabbeż il-ħobż fil-forn?",
+              "zh": "面包师已经把面包放进烤炉了吗？",
+              "en": "Has the baker already put the loaves into the oven?"
+            },
+            {
+              "speaker": "Pawlu (店员)",
+              "mt_spoken": "Iva, għadu kemm daħħlu. Nistennew ftit.",
+              "mt_standard": "Iva, għadu kemm daħħlu. Nistennew ftit.",
+              "zh": "是的，刚放进去。我们等一会儿吧。",
+              "en": "Yes, he's just put them in. Let's wait a little."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象面包师每天把一炉炉面包送进烤炉，同时记住“经常烤”和“把面包入炉”两个相关场景。"
     },
     {
       "stratum": "tier_1/unspecified/enriched",
@@ -1487,62 +1572,70 @@
     },
     {
       "stratum": "tier_1/unspecified/enriched",
-      "exact_key": "blieh",
+      "exact_key": "lajman",
       "analysis_pos": [
-        "VERB",
-        "verb"
+        "ADJ",
+        "adj"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "To become foolish, or to develop mental confusion associated with old age.",
-          "zh_definition": "变得愚笨、糊涂；也可指随年老而出现心智衰退。",
-          "mt_definition": "Isir iblah, jew jibda jitlef iċ-ċarezza tal-ħsieb minħabba x-xjuħija.",
+          "pos": "adj",
+          "en_definition": "Slow in movement or action, or calmer than the situation calls for.",
+          "zh_definition": "动作或行动缓慢的，也可形容镇定得超过情境所需、显得不够积极的。",
+          "mt_definition": "Li jiċċaqlaq jew jaġixxi bil-mod, jew li jkun kalm iżżejjed għas-sitwazzjoni.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "VERB",
-          "en_definition": "to become foolish",
-          "zh_definition": "变得愚笨；变得糊涂",
+          "pos": "ADJ",
+          "en_definition": "excessively calm or slow",
+          "zh_definition": "过分镇定的，或行动过于迟缓的。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "VERB",
-          "en_definition": "to become senile",
-          "zh_definition": "因年老而变得糊涂；出现老年性心智衰退",
+          "pos": "adj",
+          "en_definition": "slow",
+          "zh_definition": "缓慢的；行动迟缓的。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": null,
+      "definite_article": {
+        "form": "il-lajman",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": {
         "formal": {
-          "mt": "Fir-rakkont, ir-re blieh u beda jieħu deċiżjonijiet bla ħsieb.",
-          "en": "In the story, the king became foolish and began making thoughtless decisions.",
-          "zh": "在故事中，国王变得愚笨，开始不加思考地作决定。",
+          "mt": "Il-ħaddiem kien lajman fil-movimenti tiegħu u dam biex temm ix-xogħol.",
+          "en": "The worker was slow in his movements and took a long time to finish the work.",
+          "zh": "那名工人动作迟缓，花了很长时间才完成工作。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Nina: Għaliex ir-re ta r-renju tiegħu lil barrani? Leo: Għax blieh! Hekk jgħid ir-rakkont.",
-          "en": "Nina: Why did the king give his kingdom to a stranger? Leo: Because he became foolish! That's what the story says.",
-          "zh": "妮娜：国王为什么把自己的王国送给陌生人？利奥：因为他变糊涂了呀！故事就是这么说的。",
+          "mt": "Sara: Kemm int lajman illum! Se nitilfu l-karozza tal-linja. Mark: Għandek raġun; se nħaffef.",
+          "en": "Sara: You're so slow today! We're going to miss the bus. Mark: You're right; I'll hurry up.",
+          "zh": "Sara：你今天真慢！我们要赶不上公交车了。Mark：你说得对，我会加快脚步。",
           "messages": [
             {
-              "speaker": "Nina (读书会成员)",
-              "mt_spoken": "Għaliex ir-re ta r-renju tiegħu lil barrani?",
-              "mt_standard": "Għaliex ir-re ta r-renju tiegħu lil barrani?",
-              "zh": "国王为什么把自己的王国送给陌生人？",
-              "en": "Why did the king give his kingdom to a stranger?"
+              "speaker": "Sara (朋友)",
+              "mt_spoken": "Kemm int lajman illum! Se nitilfu l-karozza tal-linja.",
+              "mt_standard": "Kemm int lajman illum! Se nitilfu l-karozza tal-linja.",
+              "zh": "你今天真慢！我们要赶不上公交车了。",
+              "en": "You're so slow today! We're going to miss the bus."
             },
             {
-              "speaker": "Leo (读书会成员)",
-              "mt_spoken": "Għax blieh! Hekk jgħid ir-rakkont.",
-              "mt_standard": "Għax blieh! Hekk jgħid ir-rakkont.",
-              "zh": "因为他变糊涂了呀！故事就是这么说的。",
-              "en": "Because he became foolish! That's what the story says."
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Għandek raġun; se nħaffef.",
+              "mt_standard": "Għandek raġun; se nħaffef.",
+              "zh": "你说得对，我会加快脚步。",
+              "en": "You're right; I'll hurry up."
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -1551,104 +1644,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 blieh 放进“故事里的国王变糊涂了”这句话，记住它强调变得糊涂这一变化。"
-    },
-    {
-      "stratum": "tier_1/unspecified/enriched",
-      "exact_key": "felles",
-      "analysis_pos": [
-        "VERB",
-        "VERB",
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To insert a wedge or secure something with one; separate senses refer to plants sprouting, minting money, and producing or hatching chicks.",
-          "zh_definition": "插入楔子或用楔子固定东西；另有植物发芽、铸造钱币，以及繁育或孵出小鸡等独立义项。",
-          "mt_definition": "Daħħal feles jew waħħal xi ħaġa bih; għandu wkoll tifsiriet marbuta mat-tkabbir tal-blanzuni, mal-produzzjoni tal-muniti u mat-tfaqqis tal-flieles.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to insert a wedge",
-          "zh_definition": "插入楔子。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to sprout or grow buds (used of plants)",
-          "zh_definition": "发芽或长出芽苞，用于植物。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-lewż felles fil-bidu tar-rebbiegħa, u l-ġardinar osserva l-blanzuni l-ġodda fuq il-friegħi.",
-          "en": "The almond tree sprouted buds at the beginning of spring, and the gardener observed the new buds on the branches.",
-          "zh": "杏树在初春萌芽，园丁观察了枝条上新长出的芽苞。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lara: Għaliex il-bieb baqa' miftuħ? Toni: Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
-          "en": "Lara: Why did the door stay open? Toni: My father wedged the door so the wind wouldn't close it.",
-          "zh": "拉拉：门怎么一直开着？托尼：我爸爸用楔子撑住了门，免得风把它吹关。",
-          "messages": [
-            {
-              "speaker": "Lara (家人)",
-              "mt_spoken": "Għaliex il-bieb baqa' miftuħ?",
-              "mt_standard": "Għaliex il-bieb baqa' miftuħ?",
-              "zh": "门怎么一直开着？",
-              "en": "Why did the door stay open?"
-            },
-            {
-              "speaker": "Toni (家人)",
-              "mt_spoken": "Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
-              "mt_standard": "Missieri felles il-bieb biex ma jingħalaqx bir-riħ.",
-              "zh": "我爸爸用楔子撑住了门，免得风把它吹关。",
-              "en": "My father wedged the door so the wind wouldn't close it."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "给 felles 画四张独立记忆卡：楔住门、树发芽、铸钱币、孵小鸡；靠具体语境选择义项，不强行串成词源故事。"
-    },
-    {
-      "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "ħabbeż",
-      "analysis_pos": [
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to bake frequently",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "verb",
-          "en_definition": "to put loaves in an oven",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "cognitive_memory_aid": "用赶公交的画面记 lajman：大家加快脚步，他仍慢吞吞。与表示状态的 lajma 对照，lajman 用来描述人或其动作。"
     },
     {
       "stratum": "tier_1/unspecified/unenriched",
@@ -1731,6 +1727,33 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "ziek",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to make insulting remarks",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to insult",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
