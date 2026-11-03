@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-d98f20863fd2",
+  "dataset_version": "malti-phase2-2026-11-03-583633330a5d",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 4182,
-    "unenriched_count": 19863,
-    "showcase_count": 4182,
+    "enriched_count": 5188,
+    "unenriched_count": 18857,
+    "showcase_count": 5188,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -197,83 +197,6 @@
     },
     {
       "stratum": "tier_1/english/enriched",
-      "exact_key": "brejk",
-      "analysis_pos": [
-        "NOUN",
-        "noun",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A brake used to slow or stop a vehicle; also a break or short pause from an activity.",
-          "zh_definition": "使车辆减速或停止的刹车装置；也指工作或其他活动中的短暂休息。",
-          "mt_definition": "Apparat biex vettura tnaqqas il-veloċità jew tieqaf; ukoll waqfa qasira mix-xogħol jew minn attività.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "brake",
-          "zh_definition": "刹车；制动器。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "brake (device used to slow or stop a vehicle)",
-          "zh_definition": "刹车装置，用于使车辆减速或停止。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-brejk",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Waqt il-lezzjoni tas-sewqan, l-għalliem spjega meta s-sewwieq għandu jagħfas il-brejk.",
-          "en": "During the driving lesson, the instructor explained when the driver should press the brake.",
-          "zh": "在驾驶课上，教练讲解了驾驶员应该在什么时候踩刹车。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Nieħdu brejk? Ilna naħdmu sagħtejn. Mark: Iva, ejja nieħdu kafè u mbagħad inkomplu.",
-          "en": "Maja: Shall we take a break? We've been working for two hours. Mark: Yes, let's have a coffee and then carry on.",
-          "zh": "玛雅：我们休息一下好吗？已经工作两个小时了。马克：好，喝杯咖啡再继续吧。",
-          "messages": [
-            {
-              "speaker": "Maja (同事)",
-              "mt_spoken": "Nieħdu brejk? Ilna naħdmu sagħtejn.",
-              "mt_standard": "Nieħdu brejk? Ilna naħdmu sagħtejn.",
-              "zh": "我们休息一下好吗？已经工作两个小时了。",
-              "en": "Shall we take a break? We've been working for two hours."
-            },
-            {
-              "speaker": "Mark (同事)",
-              "mt_spoken": "Iva, ejja nieħdu kafè u mbagħad inkomplu.",
-              "mt_standard": "Iva, ejja nieħdu kafè u mbagħad inkomplu.",
-              "zh": "好，喝杯咖啡再继续吧。",
-              "en": "Yes, let's have a coffee and then carry on."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用“让动作停一停”串联两义：车上踩 brejk 是刹车，工作时 tieħu brejk 是休息；靠情境区分。"
-    },
-    {
-      "stratum": "tier_1/english/unenriched",
       "exact_key": "televixin",
       "analysis_pos": [
         "NOUN",
@@ -281,16 +204,23 @@
       ],
       "senses": [
         {
+          "pos": "noun",
+          "en_definition": "Television: the medium that broadcasts moving pictures and sound, or the programmes watched through it.",
+          "zh_definition": "电视这种传播图像和声音的媒介，也可指观看的电视节目。",
+          "mt_definition": "Il-mezz li jxandar stampi li jiċċaqalqu u ħoss, jew il-programmi li wieħed jara permezz tiegħu.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
           "pos": "NOUN",
           "en_definition": "television",
-          "zh_definition": null,
+          "zh_definition": "电视；电视广播或电视节目。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "noun",
           "en_definition": "television",
-          "zh_definition": null,
+          "zh_definition": "电视；电视广播或电视节目。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -304,43 +234,49 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/english/unenriched",
-      "exact_key": "swejd",
-      "analysis_pos": [
-        "NOUN",
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "suede",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Dan il-programm tat-televixin jippreżenta tagħrif dwar l-annimali b'lingwaġġ sempliċi għat-tfal.",
+          "en": "This television programme presents information about animals in language that is simple for children.",
+          "zh": "这个电视节目用适合儿童的简单语言介绍动物知识。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
         },
-        {
-          "pos": "noun",
-          "en_definition": "suede (type of leather)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-iswejd",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+        "colloquial": {
+          "mt": "Lara: Trid tara t-televixin wara l-ikel? Pawlu: Iva, hemm programm dwar il-baħar. Lara: Mela narawh flimkien.",
+          "en": "Lara: Do you want to watch television after dinner? Pawlu: Yes, there's a programme about the sea. Lara: Then let's watch it together.",
+          "zh": "拉拉：晚饭后想看电视吗？保罗：想，有个关于海洋的节目。拉拉：那我们一起看吧。",
+          "messages": [
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Trid tara t-televixin wara l-ikel?",
+              "mt_standard": "Trid tara t-televixin wara l-ikel?",
+              "zh": "晚饭后想看电视吗？",
+              "en": "Do you want to watch television after dinner?"
+            },
+            {
+              "speaker": "Pawlu (朋友)",
+              "mt_spoken": "Iva, hemm programm dwar il-baħar.",
+              "mt_standard": "Iva, hemm programm dwar il-baħar.",
+              "zh": "想，有个关于海洋的节目。",
+              "en": "Yes, there's a programme about the sea."
+            },
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Mela narawh flimkien.",
+              "mt_standard": "Mela narawh flimkien.",
+              "zh": "那我们一起看吧。",
+              "en": "Then let's watch it together."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "cognitive_memory_aid": "用固定搭配 nara t-televixin 记住“看电视”；把遥控器、屏幕和节目连成一个生活场景，同时留意词尾拼写是 xin。"
     },
     {
       "stratum": "tier_1/english/unenriched",
@@ -376,6 +312,82 @@
       },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/other_or_hybrid/enriched",
+      "exact_key": "sovjetiku",
+      "analysis_pos": [
+        "ADJ",
+        "adj"
+      ],
+      "senses": [
+        {
+          "pos": "adj",
+          "en_definition": "Relating to the Soviet Union, its people, institutions, or culture.",
+          "zh_definition": "与苏联及其人民、机构或文化有关的。",
+          "mt_definition": "Li għandu x'jaqsam mal-Unjoni Sovjetika, man-nies tagħha, mal-istituzzjonijiet tagħha jew mal-kultura tagħha.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "ADJ",
+          "en_definition": "Soviet",
+          "zh_definition": "苏联的；与苏联有关的。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "adj",
+          "en_definition": "Soviet (pertaining to the Soviet Union)",
+          "zh_definition": "属于苏联或与苏联有关的。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "is-sovjetiku",
+        "prefix": "is-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-katalgu tal-mużew jinkludi deskrizzjoni ta' poster sovjetiku.",
+          "en": "The museum catalogue includes a description of a Soviet poster.",
+          "zh": "博物馆目录收录了一张苏联海报的介绍。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Nina: Dan film sovjetiku? David: Iva, il-programm jgħid li sar fl-Unjoni Sovjetika.",
+          "en": "Nina: Is this a Soviet film? David: Yes, the programme says it was made in the Soviet Union.",
+          "zh": "Nina：这是一部苏联电影吗？David：是的，节目单上说它是在苏联拍摄的。",
+          "messages": [
+            {
+              "speaker": "Nina (朋友)",
+              "mt_spoken": "Dan film sovjetiku?",
+              "mt_standard": "Dan film sovjetiku?",
+              "zh": "这是一部苏联电影吗？",
+              "en": "Is this a Soviet film?"
+            },
+            {
+              "speaker": "David (朋友)",
+              "mt_spoken": "Iva, il-programm jgħid li sar fl-Unjoni Sovjetika.",
+              "mt_standard": "Iva, il-programm jgħid li sar fl-Unjoni Sovjetika.",
+              "zh": "是的，节目单上说它是在苏联拍摄的。",
+              "en": "Yes, the programme says it was made in the Soviet Union."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 sovjetiku 和英语 Soviet 并排写在苏联电影海报旁，用拼写相似处与海报画面记住“苏联的”。"
     },
     {
       "stratum": "tier_1/other_or_hybrid/enriched",
@@ -539,108 +551,31 @@
       "cognitive_memory_aid": "想象手指轻轻划过天鹅绒表面，把 bellus 和柔软舒服的触感一起记住。"
     },
     {
-      "stratum": "tier_1/other_or_hybrid/enriched",
-      "exact_key": "mejt",
+      "stratum": "tier_1/other_or_hybrid/unenriched",
+      "exact_key": "żibeġ",
       "analysis_pos": [
         "NOUN",
-        "noun",
         "noun"
       ],
       "senses": [
         {
+          "pos": "NOUN",
+          "en_definition": "beads",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
           "pos": "noun",
-          "en_definition": "A feeling of dizziness or spinning that can make it difficult to keep one's balance.",
-          "zh_definition": "头昏或感觉周围旋转、可能难以保持平衡的状态。",
-          "mt_definition": "Sensazzjoni ta' sturdament jew li kollox qed idur, li tista' tagħmilha diffiċli biex wieħed iżomm il-bilanċ.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "dizziness",
-          "zh_definition": "头晕；头昏、站立不稳的感觉。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "vertigo",
-          "zh_definition": "眩晕；感觉自己或周围环境在旋转。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-mejt",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Waqt il-mixja, ir-raġel waqaf u qagħad bilqiegħda għax qabdu l-mejt.",
-          "en": "During the walk, the man stopped and sat down because he became dizzy.",
-          "zh": "散步时，那名男子感到头晕，于是停下来坐下。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Rita: Għaliex qgħadt bilqiegħda? Mark: Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
-          "en": "Rita: Why did you sit down? Mark: I felt dizzy when I stood up. I'm going to rest for a bit.",
-          "zh": "丽塔：你怎么坐下了？马克：我站起来时有点头晕，想休息一会儿。",
-          "messages": [
-            {
-              "speaker": "Rita (朋友)",
-              "mt_spoken": "Għaliex qgħadt bilqiegħda?",
-              "mt_standard": "Għaliex qgħadt bilqiegħda?",
-              "zh": "你怎么坐下了？",
-              "en": "Why did you sit down?"
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
-              "mt_standard": "Qabadni l-mejt meta qomt. Se nistrieħ ftit.",
-              "zh": "我站起来时有点头晕，想休息一会儿。",
-              "en": "I felt dizzy when I stood up. I'm going to rest for a bit."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 mejt 的头晕义放进“站起后坐下休息”的画面；伙伴义另联想英语 mate，作为记忆提示。"
-    },
-    {
-      "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "sovjetiku",
-      "analysis_pos": [
-        "ADJ",
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "ADJ",
-          "en_definition": "Soviet",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "Soviet (pertaining to the Soviet Union)",
+          "en_definition": "beads",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "is-sovjetiku",
-        "prefix": "is-",
+        "form": "iż-żibeġ",
+        "prefix": "iż-",
         "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
@@ -652,81 +587,30 @@
     },
     {
       "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "xkupilja",
+      "exact_key": "xufier",
       "analysis_pos": [
         "NOUN",
-        "noun",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "brush",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "whisk",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "brush",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-ixkupilja",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/other_or_hybrid/unenriched",
-      "exact_key": "sejf",
-      "analysis_pos": [
-        "NOUN",
-        "noun",
         "noun"
       ],
       "senses": [
         {
           "pos": "NOUN",
-          "en_definition": "dagger",
+          "en_definition": "chauffeur",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "noun",
-          "en_definition": "dagger (short sword)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "sword (in general)",
+          "en_definition": "chauffeur",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "is-sejf",
-        "prefix": "is-",
+        "form": "ix-xufier",
+        "prefix": "ix-",
         "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
@@ -814,6 +698,83 @@
     },
     {
       "stratum": "tier_1/romance_sicilian_italian/enriched",
+      "exact_key": "vit",
+      "analysis_pos": [
+        "NOUN",
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A device that controls the flow of water from a pipe; also a threaded fastener used to hold things together.",
+          "zh_definition": "控制水管出水的水龙头；也指通过螺纹固定物件的螺钉。",
+          "mt_definition": "Apparat li jikkontrolla l-ħruġ tal-ilma minn pajp; ukoll biċċa tal-metall bil-kamin li tintuża biex twaħħal affarijiet flimkien.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "tap",
+          "zh_definition": "水龙头；控制水流开关的装置。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "faucet",
+          "zh_definition": "水龙头，常见于洗手盆或厨房水槽。",
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-vit",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Wara li tuża l-ilma, agħlaq il-vit biex tevita l-ħela.",
+          "en": "After using the water, turn off the tap to avoid waste.",
+          "zh": "用水后请关上水龙头，以免浪费。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Għaliex dan l-ixkaff jik 움직? Rita: Hemm vit maħlul; irridu nissikkawh.",
+          "en": "Mark: Why is this shelf moving? Rita: There is a loose screw; we need to tighten it.",
+          "zh": "马克：这个架子怎么会晃？丽塔：有一颗螺钉松了，我们得把它拧紧。",
+          "messages": [
+            {
+              "speaker": "Mark (室友)",
+              "mt_spoken": "Għaliex dan l-ixkaff jiċċaqlaq?",
+              "mt_standard": "Għaliex dan l-ixkaff jiċċaqlaq?",
+              "zh": "这个架子怎么会晃？",
+              "en": "Why is this shelf moving?"
+            },
+            {
+              "speaker": "Rita (室友)",
+              "mt_spoken": "Hemm vit maħlul; irridu nissikkawh.",
+              "mt_standard": "Hemm vit maħlul; irridu nissikkawh.",
+              "zh": "有一颗螺钉松了，我们得把它拧紧。",
+              "en": "There is a loose screw; we need to tighten it."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“转动”连接两个画面：转水龙头控制水流，转螺钉固定架子；再靠上下文分义。"
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/enriched",
       "exact_key": "abitat",
       "analysis_pos": [
         "NOUN",
@@ -889,157 +850,30 @@
       "cognitive_memory_aid": "想象地图上房屋密集、有人生活的一片区域，用 abitat 给它贴标签，再用“区域边缘”和“区域外面”两个场景巩固记忆。"
     },
     {
-      "stratum": "tier_1/romance_sicilian_italian/enriched",
-      "exact_key": "appostoliku",
-      "analysis_pos": [
-        "ADJ",
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "adj",
-          "en_definition": "Relating to the apostles or to their teaching and mission.",
-          "zh_definition": "与使徒，或与使徒的教导和使命有关的。",
-          "mt_definition": "Li għandu x'jaqsam mal-appostli, mat-tagħlim tagħhom jew mal-missjoni tagħhom.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "ADJ",
-          "en_definition": "apostolic",
-          "zh_definition": "使徒的；与使徒的教导或使命有关的。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "adj",
-          "en_definition": "apostolic",
-          "zh_definition": "使徒的；与使徒的教导或使命有关的。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-appostoliku",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "L-istudju jiddiskuti t-tagħlim appostoliku u r-rabta tiegħu mal-ħajja tal-komunità.",
-          "en": "The study discusses apostolic teaching and its connection with the life of the community.",
-          "zh": "这项研究讨论使徒教导及其与团体生活的联系。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Lina: Xi jfisser appostoliku hawn? Pawlu: Ifisser li għandu x'jaqsam mal-appostli u mat-tagħlim tagħhom.",
-          "en": "Lina: What does apostolic mean here? Pawlu: It means that it relates to the apostles and their teaching.",
-          "zh": "莉娜：这里的 appostoliku 是什么意思？保罗：意思是与使徒及其教导有关。",
-          "messages": [
-            {
-              "speaker": "Lina (学生)",
-              "mt_spoken": "Xi jfisser appostoliku hawn?",
-              "mt_standard": "Xi jfisser appostoliku hawn?",
-              "zh": "这里的 appostoliku 是什么意思？",
-              "en": "What does apostolic mean here?"
-            },
-            {
-              "speaker": "Pawlu (教师)",
-              "mt_spoken": "Ifisser li għandu x'jaqsam mal-appostli u mat-tagħlim tagħhom.",
-              "mt_standard": "Ifisser li għandu x'jaqsam mal-appostli u mat-tagħlim tagħhom.",
-              "zh": "意思是与使徒及其教导有关。",
-              "en": "It means that it relates to the apostles and their teaching."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "把 appostoliku 放进“使徒教导”这一固定画面记忆；再配合 missjoni appostolika 观察形容词随名词变化。"
-    },
-    {
       "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "vit",
+      "exact_key": "żmerald",
       "analysis_pos": [
-        "NOUN",
         "NOUN",
         "noun"
       ],
       "senses": [
         {
           "pos": "NOUN",
-          "en_definition": "tap",
+          "en_definition": "emerald",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "NOUN",
-          "en_definition": "faucet",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "screw",
+          "pos": "noun",
+          "en_definition": "emerald (gemstone)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-vit",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "stess",
-      "analysis_pos": [
-        "ADJ",
-        "pron",
-        "det"
-      ],
-      "senses": [
-        {
-          "pos": "ADJ",
-          "en_definition": "same",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "ADJ",
-          "en_definition": "self",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "pron",
-          "en_definition": "-self",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-istess",
+        "form": "l-iżmerald",
         "prefix": "l-i",
         "rule": "vokali_tal_lehen",
         "context": "citation",
@@ -1052,36 +886,70 @@
     },
     {
       "stratum": "tier_1/romance_sicilian_italian/unenriched",
-      "exact_key": "tinda",
+      "exact_key": "żviluppa",
       "analysis_pos": [
-        "NOUN",
-        "noun"
+        "VERB",
+        "VERB",
+        "verb"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "tent",
+          "pos": "VERB",
+          "en_definition": "develop",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "noun",
-          "en_definition": "tent",
+          "pos": "VERB",
+          "en_definition": "expand",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to develop",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "it-tinda",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/romance_sicilian_italian/unenriched",
+      "exact_key": "zzika",
+      "analysis_pos": [
+        "VERB",
+        "verb"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to irritate",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to goad sb.",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "verb",
+          "en_definition": "to nag; to goad",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1317,36 +1185,81 @@
     },
     {
       "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "xaħxieħ",
+      "exact_key": "żahar",
       "analysis_pos": [
+        "VERB",
         "NOUN",
-        "noun"
+        "noun",
+        "verb"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "poppy",
+          "pos": "VERB",
+          "en_definition": "to blossom",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "NOUN",
-          "en_definition": "opium poppy",
+          "en_definition": "bloom",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "noun",
-          "en_definition": "poppy (Papaver gen. et spp.)",
+          "pos": "NOUN",
+          "en_definition": "blossom",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "ix-xaħxieħ",
+        "form": "iż-żahar",
+        "prefix": "iż-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/semitic/unenriched",
+      "exact_key": "xini",
+      "analysis_pos": [
+        "NOUN",
+        "NOUN",
+        "noun"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "hatred",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "galley",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "sailing ship",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "ix-xini",
         "prefix": "ix-",
         "rule": "sun_assimilation",
         "context": "citation",
@@ -1359,79 +1272,43 @@
     },
     {
       "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "waqt",
+      "exact_key": "żieni",
       "analysis_pos": [
-        "NOUN",
-        "ADP",
-        "noun",
-        "prep"
+        "ADJ",
+        "adj"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "instant",
+          "pos": "ADJ",
+          "en_definition": "lewd",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "NOUN",
-          "en_definition": "moment",
+          "pos": "ADJ",
+          "en_definition": "lustful",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "ADP",
-          "en_definition": "while",
+          "pos": "adj",
+          "en_definition": "lewd, promiscuous, adulterous; (especially religion) given to or constituting sexual sin",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-waqt",
-        "prefix": "il-",
-        "rule": "moon_consonant",
+        "form": "iż-żieni",
+        "prefix": "iż-",
+        "rule": "sun_assimilation",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_1/semitic/unenriched",
-      "exact_key": "tefa",
-      "analysis_pos": [
-        "VERB",
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to extinguish",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to turn off",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to eclipse",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     },
@@ -1581,75 +1458,6 @@
     },
     {
       "stratum": "tier_1/unspecified/enriched",
-      "exact_key": "bil-mod",
-      "analysis_pos": [
-        "ADV",
-        "ADV",
-        "adv"
-      ],
-      "senses": [
-        {
-          "pos": "adv",
-          "en_definition": "At a slow pace, through gradual change, or with gentle movement or force.",
-          "zh_definition": "以较慢的速度、逐步变化的方式，或轻柔的动作与力度进行。",
-          "mt_definition": "B'pass kajman, bi ftit ftit, jew b'moviment ħafif u delikat.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "ADV",
-          "en_definition": "slowly",
-          "zh_definition": "缓慢地；慢慢地，强调速度不快。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "ADV",
-          "en_definition": "gradually",
-          "zh_definition": "逐渐地；一点一点地，强调变化逐步发生。",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-livell tal-ilma żdied bil-mod matul il-lejl.",
-          "en": "The water level rose gradually during the night.",
-          "zh": "水位在夜间逐渐上升。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Tista' tagħlaq il-bieb bil-mod? It-tarbija rieqda. Mark: Iva, noqgħod attent.",
-          "en": "Maja: Can you close the door gently? The baby is asleep. Mark: Yes, I'll be careful.",
-          "zh": "玛雅：你能轻轻关门吗？宝宝睡着了。马克：可以，我会小心的。",
-          "messages": [
-            {
-              "speaker": "Maja (母亲)",
-              "mt_spoken": "Tista' tagħlaq il-bieb bil-mod? It-tarbija rieqda.",
-              "mt_standard": "Tista' tagħlaq il-bieb bil-mod? It-tarbija rieqda.",
-              "zh": "你能轻轻关门吗？宝宝睡着了。",
-              "en": "Can you close the door gently? The baby is asleep."
-            },
-            {
-              "speaker": "Mark (父亲)",
-              "mt_spoken": "Iva, noqgħod attent.",
-              "mt_standard": "Iva, noqgħod attent.",
-              "zh": "可以，我会小心的。",
-              "en": "Yes, I'll be careful."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用三个动作记 bil-mod：走路放慢、水位渐升、关门放轻；分别对应速度、变化过程和动作力度。"
-    },
-    {
-      "stratum": "tier_1/unspecified/unenriched",
       "exact_key": "tanbir",
       "analysis_pos": [
         "NOUN",
@@ -1657,23 +1465,23 @@
       ],
       "senses": [
         {
+          "pos": "noun",
+          "en_definition": "The activity or sound of drumming or making a crashing noise; also, brainwashing.",
+          "zh_definition": "击鼓的活动或声音，也可指制造轰响；另有洗脑之义。",
+          "mt_definition": "Id-daqq tat-tanbur jew ħoss qawwi ta' tħabbit; ukoll, influwenza ripetuta biex tbiddel il-ħsieb ta' xi ħadd.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
           "pos": "NOUN",
           "en_definition": "drumming",
-          "zh_definition": null,
+          "zh_definition": "击鼓；打鼓声。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
           "pos": "NOUN",
           "en_definition": "making a crashing noise",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "noun",
-          "en_definition": "brainwashing",
-          "zh_definition": null,
+          "zh_definition": "制造轰响或响亮撞击声的行为。",
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
@@ -1687,8 +1495,42 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "dual_scenarios": {
+        "formal": {
+          "mt": "It-tanbir ritmiku akkumpanja l-purċissjoni tul it-triq prinċipali.",
+          "en": "Rhythmic drumming accompanied the procession along the main street.",
+          "zh": "有节奏的鼓声伴随着队伍沿主街前进。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Lara: Qed tisma' dak it-tanbir? Mark: Iva, ġej mis-sala; il-grupp qed jipprova għall-kunċert.",
+          "en": "Lara: Can you hear that drumming? Mark: Yes, it's coming from the hall; the group is rehearsing for the concert.",
+          "zh": "拉拉：你听到那阵鼓声了吗？马克：听到了，是从礼堂传来的，乐团正在为音乐会排练。",
+          "messages": [
+            {
+              "speaker": "Lara (朋友)",
+              "mt_spoken": "Qed tisma' dak it-tanbir?",
+              "mt_standard": "Qed tisma' dak it-tanbir?",
+              "zh": "你听到那阵鼓声了吗？",
+              "en": "Can you hear that drumming?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva, ġej mis-sala; il-grupp qed jipprova għall-kunċert.",
+              "mt_standard": "Iva, ġej mis-sala; il-grupp qed jipprova għall-kunċert.",
+              "zh": "听到了，是从礼堂传来的，乐团正在为音乐会排练。",
+              "en": "Yes, it's coming from the hall; the group is rehearsing for the concert."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "先用“听见一阵鼓声”记住名词用法，再把“洗脑”单独做成义项卡，按上下文区分。"
     },
     {
       "stratum": "tier_1/unspecified/unenriched",
@@ -1719,31 +1561,74 @@
     },
     {
       "stratum": "tier_1/unspecified/unenriched",
-      "exact_key": "tisjib",
+      "exact_key": "zappap",
       "analysis_pos": [
+        "VERB",
         "NOUN",
-        "noun"
+        "verb"
       ],
       "senses": [
         {
-          "pos": "NOUN",
-          "en_definition": "discovery",
+          "pos": "VERB",
+          "en_definition": "to limp",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         },
         {
-          "pos": "noun",
-          "en_definition": "act of finding, discovering",
+          "pos": "VERB",
+          "en_definition": "to make unsteady progress",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "sth. causing limping",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "it-tisjib",
-        "prefix": "it-",
+        "form": "iz-zappap",
+        "prefix": "iz-",
         "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_1/unspecified/unenriched",
+      "exact_key": "żluqi",
+      "analysis_pos": [
+        "ADJ",
+        "adj"
+      ],
+      "senses": [
+        {
+          "pos": "ADJ",
+          "en_definition": "slippery",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "adj",
+          "en_definition": "slippery",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-iżluqi",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
         "source_type": "grammar_reference",
