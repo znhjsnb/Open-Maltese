@@ -209,13 +209,14 @@ class EntryHTMLParser(HTMLParser):
         return self.builder.close()
 
 
-def audit_gabra(raw):
+def audit_gabra(raw, *, require_repository=True):
     with zipfile.ZipFile(raw / 'GabraMalteseDict_MDX_v1.0.zip') as archive:
         members = {name: archive.read(name) for name in archive.namelist() if not name.endswith('/')}
     mdx_name = next(n for n in members if Path(n).name == 'Gabra.mdx')
     mdx = members[mdx_name]
-    local = (raw / 'gabra-maltese-dictionary/dictionaries/mdx/Gabra.mdx').read_bytes()
-    if mdx != local:
+    mirror = raw / 'gabra-maltese-dictionary/dictionaries/mdx/Gabra.mdx'
+    local = mirror.read_bytes() if require_repository or mirror.exists() else None
+    if local is not None and mdx != local:
         raise ValueError('Release and repository Gabra.mdx differ')
     attrs, items = read_mdx(mdx)
     records, anomalies, counts = [], [], Counter()
@@ -256,7 +257,7 @@ def audit_gabra(raw):
     digest = sha256(mdx)
     report = {
         'mdx_format': attrs, 'mdx_bytes': len(mdx), 'mdx_sha256': digest,
-        'release_repository_byte_identity': True,
+        'release_repository_byte_identity': mdx == local if local is not None else None,
         'matches_repository_validation_sha256': digest == EXPECTED_MDX_SHA,
         'matches_task_supplied_sha256': digest == REQUESTED_MDX_SHA,
         'task_supplied_sha256': REQUESTED_MDX_SHA,
@@ -375,14 +376,27 @@ def etymological_stratum(row):
         if match:
             lang = match[1].lower()
             groups.add('semitic' if 'arabic' in lang else 'english' if lang == 'english' else 'romance_sicilian_italian')
-        elif extract_roots(row):
-            groups.add('semitic')
     return next(iter(groups)) if len(groups) == 1 else 'other_or_hybrid' if groups else 'unspecified'
 
 
 def valid_surface(value):
     return (isinstance(value, str) and value not in ('', '-', '?', '—', 'no-table-tags')
             and not any(c in value for c in '#<>[]{}') and lexical_anomaly(value) is None)
+
+
+NOMINAL_POS = {'noun', 'name', 'proper-noun', 'adj', 'adjective', 'participle', 'num', 'numeral'}
+INFLECTION_TAGS = {'first-person', 'second-person', 'third-person', 'imperfect',
+                  'perfect', 'imperative', 'negative', 'possessive', 'object',
+                  'indirect-object', 'direct-object'}
+
+
+def lexical_number_form(row, tags=()):
+    """Number belongs to a lexical nominal analysis, never a finite paradigm."""
+    tags = set(tags)
+    context = set(row.get('tags', []))
+    heads = set(mt_head_values(row))
+    nominal = row.get('pos') in NOMINAL_POS or bool((tags | context | heads) & NOMINAL_POS)
+    return nominal and not (tags | context) & INFLECTION_TAGS
 
 
 def extract_morphology(row):
@@ -399,13 +413,14 @@ def extract_morphology(row):
         for key in ('p', 'coll', 'sing'):
             for value in str(args.get(key, '')).split(','):
                 value = re.sub(r'<[^>]*>', '', value).strip()
-                if valid_surface(value):
+                if valid_surface(value) and lexical_number_form(row):
                     number_forms[key].add(value)
     for label in labels:
         for match in re.finditer(r'(?:[Ff]orma?[- ]+|[Ff]orm[- ]+)(VIII|VII|III|VI|IV|IX|II|V|X|I)(?![A-Za-z])', label):
             verb_forms.add(match[1])
     for form in row.get('forms', []):
-        if valid_surface(form.get('form')) and not set(form.get('tags', [])) & {'table-tags', 'inflection-template'}:
+        if (valid_surface(form.get('form')) and lexical_number_form(row, form.get('tags', []))
+                and not set(form.get('tags', [])) & {'table-tags', 'inflection-template'}):
             for tag in set(form.get('tags', [])) & {'plural', 'collective', 'singulative'}:
                 number_forms[tag].add(form['form'])
     return {'verb_forms': sorted(verb_forms), 'number_forms': {k: sorted(v) for k, v in sorted(number_forms.items())}}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#215c87">
+  <title>Open-Malti · 马耳他语认知词典</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body data-theme="white">
+  <header class="masthead">
+    <a class="brand" href="./"><span lang="mt">Il-Malti</span><small>Open-Malti · 马耳他语认知词典</small></a>
+    <div class="preferences" aria-label="阅读设置">
+      <label><span class="sr-only">纸张主题</span><select id="theme"><option value="white">白纸</option><option value="sepia">暖纸</option><option value="grey">灰纸</option><option value="night">夜读</option></select></label>
+      <button id="font-down" aria-label="缩小字号">A−</button><button id="font-up" aria-label="放大字号">A+</button>
+      <button id="language-mode" aria-pressed="false">马–中–英</button>
+    </div>
+  </header>
+  <main>
+    <section class="search-desk" aria-label="词典检索">
+      <div class="search-line"><label for="search">查一个马耳他语词</label><span class="key-hint">/ 搜索　↑ ↓ 切词</span></div>
+      <input id="search" type="search" placeholder="ktieb、ktibt、ix-xemx、#root:k-t-b…" autocomplete="off" spellcheck="false" disabled>
+      <nav id="letter-bar" aria-label="马耳他语字母"></nav>
+      <nav id="sub-prefix-bar" aria-label="二级字素前缀"></nav>
+      <div class="filter-line"><div id="tier-filters" role="group" aria-label="词库层级"></div><div id="stratum-filters" role="group" aria-label="词源层"></div></div>
+      <div id="feature-filters" role="group" aria-label="样板、共时词根与真人发音筛选"></div>
+      <p id="wordforms-status" role="status">正在准备基础词头检索…</p>
+    </section>
+    <div class="workbench">
+      <aside class="lexicon" aria-label="词目列表">
+        <div class="list-heading"><span id="result-count" role="status">正在载入词库…</span><span id="search-time"></span></div>
+        <div id="headword-list" aria-label="检索结果"></div>
+        <div class="pagination"><button id="previous-page" disabled>上一页</button><span id="page-number"></span><button id="next-page" disabled>下一页</button></div>
+      </aside>
+      <article id="entry-card" aria-label="词条八维卡片" aria-live="polite"><p class="empty">词条正在准备中。</p></article>
+    </div>
+  </main>
+  <footer><span id="inventory-note">离线词库 · 来源实证优先</span><a href="https://kaikki.org/dictionary/Maltese/" target="_blank" rel="noreferrer">Kaikki / Wiktionary</a><a href="https://mlrs.research.um.edu.mt/resources/gabra/" target="_blank" rel="noreferrer">Ġabra MDX · CC BY 3.0</a><small>本地快照依 Camilleri 2013 Appendix D，含整理者 aħwa 修正；上游现网标 CC BY 4.0。</small></footer>
+  <dialog id="pronunciation-guide-popover" aria-labelledby="pronunciation-title"><div class="dialog-heading"><h2 id="pronunciation-title">马耳他语发音指南</h2><button id="close-pronunciation" aria-label="关闭发音指南">×</button></div><div id="pronunciation-content"></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

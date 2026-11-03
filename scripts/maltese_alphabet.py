@@ -59,15 +59,37 @@ def tokenize_root_consonants(root: str) -> list[str]:
             if g not in ('a', 'e', 'i', 'ie', 'o', 'u')]
 
 
-def strip_definite_article(word: str, *, include_fused_prepositions: bool = False
+def strip_definite_article(word: str, *, include_fused_prepositions: bool = False,
+                           known_lemmas=None
                            ) -> tuple[str, str | None]:
     text = normalize_nfc(word)
-    prefixes = ['il-', 'l-'] + ['i' + c + '-' for c in SUN_CONSONANTS]
+    sun_prefixes = {base + c + '-': c for base in ('i', '') for c in SUN_CONSONANTS}
+    moon_prefixes = ['il-']
+    elided_prefixes = ['l-']
     if include_fused_prepositions:
-        prefixes += ['fil-', 'bil-', 'mal-', 'għall-', 'tal-', 'lil-']
+        sun_prefixes.update({base + c + '-': c for base in ('fi', 'bi', 'ma', 'ta', 'għa', 'li') for c in SUN_CONSONANTS})
+        moon_prefixes += ['fil-', 'bil-', 'mal-', 'għall-', 'tal-', 'lil-', 'lill-']
+        elided_prefixes += ['fl-']
+    known = {normalize_exact_search(w) for w in known_lemmas} if known_lemmas is not None else None
+    prefixes = list(sun_prefixes) + moon_prefixes + elided_prefixes
     for prefix in sorted(prefixes, key=len, reverse=True):
         if text.lower().startswith(prefix) and len(text) > len(prefix):
-            return text[len(prefix):], text[:len(prefix)]
+            stem = text[len(prefix):]
+            initial = tokenize_maltese_graphemes(stem, include_non_letters=True)[0]
+            if prefix in sun_prefixes and initial != sun_prefixes[prefix]:
+                continue
+            if prefix in moon_prefixes and initial in SUN_CONSONANTS:
+                continue
+            # Prefer an attested i-initial lemma before removing euphonic i.
+            lower = stem.lower()
+            if (prefix in ('l-', 'fl-', 'bil-', 'mal-', 'tal-', 'għall-')
+                    and known is not None and normalize_exact_search(stem) not in known and lower.startswith('i')):
+                tokens = tokenize_maltese_graphemes(stem[1:])
+                if (len(tokens) > 1 and len(stem) > 2 and stem[2].isalpha() and tokens[0] in 'sxżz'
+                        and tokens[1].isalpha() and tokens[1] not in ('a', 'e', 'i', 'ie', 'o', 'u')
+                        and normalize_exact_search(stem[1:]) in known):
+                    return stem[1:], text[:len(prefix) + 1]
+            return stem, text[:len(prefix)]
     return text, None
 
 
@@ -113,10 +135,10 @@ def maltese_sort_key(word: str, *, mode: str = 'dms200', strip_article: bool = F
     tokens = tokenize_maltese_graphemes(letters, include_non_letters=True)
     if mode == 'dms200':
         tokens = [part for g in tokens for part in (('i', 'e') if g == 'ie' else (g,))]
-    primary = tuple((0, weights[g]) if g in weights else (1, ord(g[0])) for g in tokens)
+    primary = tuple((-1, int(g)) if g in '0123456789' else (0, weights[g]) if g in weights else (1, ord(g[0])) for g in tokens)
     accents = tuple(0 if _fold(c.lower()) == c.lower() else ord(c.lower()) for c in letters)
     punctuation = tuple((i, ord(c)) for i, c in enumerate(text) if not c.isalnum())
-    case = tuple(1 if c.isupper() else 0 for c in letters)
+    case = tuple(0 if c.isupper() else 1 for c in letters)
     has_article = 1 if (strip_article and article_prefix is not None) else 0
     return primary, accents, punctuation, case, has_article, raw_text
 

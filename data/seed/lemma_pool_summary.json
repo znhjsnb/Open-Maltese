@@ -1,0 +1,918 @@
+{
+  "version": "malti-phase1-2026-11-03-r2",
+  "total_lemmas": 24045,
+  "tier_counts": {
+    "1": 5051,
+    "2": 11414,
+    "3": 7580
+  },
+  "enrichment_target_count": 16465,
+  "bucket_counts": {
+    "A": 970,
+    "B": 1238,
+    "Ċ": 435,
+    "D": 1197,
+    "E": 451,
+    "F": 986,
+    "Ġ": 488,
+    "G": 435,
+    "GĦ": 557,
+    "H": 130,
+    "Ħ": 888,
+    "I": 1375,
+    "J": 184,
+    "K": 1361,
+    "L": 617,
+    "M": 1547,
+    "N": 1008,
+    "O": 235,
+    "P": 983,
+    "Q": 617,
+    "R": 762,
+    "S": 2024,
+    "T": 3467,
+    "U": 177,
+    "V": 287,
+    "W": 305,
+    "X": 561,
+    "Ż": 606,
+    "Z": 79,
+    "#": 75
+  },
+  "audio_count": 597,
+  "root_count": 10138,
+  "unique_roots": 1686,
+  "stratum_counts": {
+    "english": 264,
+    "other_or_hybrid": 93,
+    "romance_sicilian_italian": 3921,
+    "semitic": 2724,
+    "unspecified": 17043
+  },
+  "kaikki_row_classes": {
+    "meta_or_affix_or_character": 97,
+    "independent_lemma": 10060,
+    "pure_inflected_wordform": 69617,
+    "orthographic_or_alt_variant": 896,
+    "hybrid_lemma_and_wordform": 120
+  },
+  "unresolved_reference_rows": 10,
+  "unresolved_reference_samples": [
+    "BĊE",
+    "bil-",
+    "istudenti",
+    "konkordat",
+    "nankina",
+    "qtigħ il-qalb",
+    "segregati",
+    "varietajiet",
+    "vibrati",
+    "wil-"
+  ],
+  "tier_policy": "Tier 2 Gabra-only requires a single record with a valid attested root, phonetic and glosses.",
+  "audio_source_rows": 720,
+  "wordform_surface_count": 124488,
+  "camilleri_rows_indexed": 53512,
+  "showcase_count": 25,
+  "samples": [
+    {
+      "id": "baħar",
+      "word": "baħar",
+      "exact_key": "baħar",
+      "ascii_key": "bahar",
+      "bucket": "B",
+      "sub_prefix": "ba",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/bɐhɐr/",
+      "root": "b-ħ-r",
+      "roots": [
+        "b-ħ-r"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "sea",
+        "sea; ocean",
+        "abundance, big quantity"
+      ],
+      "gloss_zh": "海",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "belt",
+      "word": "belt",
+      "exact_key": "belt",
+      "ascii_key": "belt",
+      "bucket": "B",
+      "sub_prefix": "be",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/bɛlt/",
+      "root": "b-l-t",
+      "roots": [
+        "b-l-t"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "city",
+        "town",
+        "city, town"
+      ],
+      "gloss_zh": "城镇；城市",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "bniedem",
+      "word": "bniedem",
+      "exact_key": "bniedem",
+      "ascii_key": "bniedem",
+      "bucket": "B",
+      "sub_prefix": "bn",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/bnɪːdɛm/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "human being",
+        "man",
+        "human, human being, man (male or unspecified sex)"
+      ],
+      "gloss_zh": "人",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "bongu",
+      "word": "Bongu",
+      "exact_key": "bongu",
+      "ascii_key": "bongu",
+      "bucket": "B",
+      "sub_prefix": "bo",
+      "tier": 3,
+      "pos_list": [
+        "X",
+        "NOUN"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "good morning",
+        "hello",
+        "Hello"
+      ],
+      "gloss_zh": "早上好",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ]
+    },
+    {
+      "id": "dar",
+      "word": "dar",
+      "exact_key": "dar",
+      "ascii_key": "dar",
+      "bucket": "D",
+      "sub_prefix": "da",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "NOUN",
+        "noun",
+        "verb"
+      ],
+      "ipa": "/dɐr/",
+      "root": "d-j-r",
+      "roots": [
+        "d-j-r",
+        "d-w-r"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "house",
+        "to reside",
+        "to dwell"
+      ],
+      "gloss_zh": "房屋",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "grazzi",
+      "word": "grazzi",
+      "exact_key": "grazzi",
+      "ascii_key": "grazzi",
+      "bucket": "G",
+      "sub_prefix": "gr",
+      "tier": 1,
+      "pos_list": [
+        "INTJ",
+        "intj"
+      ],
+      "ipa": "/grɐtsɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "thank you",
+        "thank you (expression of gratitude)"
+      ],
+      "gloss_zh": "谢谢",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "għajn",
+      "word": "għajn",
+      "exact_key": "għajn",
+      "ascii_key": "ghajn",
+      "bucket": "GĦ",
+      "sub_prefix": "għa",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɐɪn/",
+      "root": "għ-j-n",
+      "roots": [
+        "għ-j-n"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "eye",
+        "spring (water)",
+        "source"
+      ],
+      "gloss_zh": "眼睛",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "għamel",
+      "word": "Għamel",
+      "exact_key": "għamel",
+      "ascii_key": "ghamel",
+      "bucket": "GĦ",
+      "sub_prefix": "għa",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/ɐːmɛl/",
+      "root": "għ-m-l",
+      "roots": [
+        "għ-m-l"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "to do, to make",
+        "make",
+        "do"
+      ],
+      "gloss_zh": "做；制作",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "għand",
+      "word": "għand",
+      "exact_key": "għand",
+      "ascii_key": "ghand",
+      "bucket": "GĦ",
+      "sub_prefix": "għa",
+      "tier": 2,
+      "pos_list": [
+        "prep"
+      ],
+      "ipa": "/aːnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "semitic"
+      ],
+      "gloss_en": [
+        "at, to"
+      ],
+      "gloss_zh": "在……处；到……处",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "kaikki"
+      ]
+    },
+    {
+      "id": "ħabib",
+      "word": "ħabib",
+      "exact_key": "ħabib",
+      "ascii_key": "habib",
+      "bucket": "Ħ",
+      "sub_prefix": "ħa",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/hɐbɪp/",
+      "root": "ħ-b-b",
+      "roots": [
+        "ħ-b-b"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "friend"
+      ],
+      "gloss_zh": "朋友",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "ħobż",
+      "word": "ħobż",
+      "exact_key": "ħobż",
+      "ascii_key": "hobz",
+      "bucket": "Ħ",
+      "sub_prefix": "ħo",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/hɔbs/",
+      "root": "ħ-b-ż",
+      "roots": [
+        "ħ-b-ż"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "bread",
+        "loaf"
+      ],
+      "gloss_zh": "面包",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "ilma",
+      "word": "ilma",
+      "exact_key": "ilma",
+      "ascii_key": "ilma",
+      "bucket": "I",
+      "sub_prefix": "il",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɪlmɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "water"
+      ],
+      "gloss_zh": "水",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "iva",
+      "word": "iva",
+      "exact_key": "iva",
+      "ascii_key": "iva",
+      "bucket": "I",
+      "sub_prefix": "iv",
+      "tier": 1,
+      "pos_list": [
+        "ADV",
+        "intj"
+      ],
+      "ipa": "/ɪvɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "yes"
+      ],
+      "gloss_zh": "是；好",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "kelma",
+      "word": "kelma",
+      "exact_key": "kelma",
+      "ascii_key": "kelma",
+      "bucket": "K",
+      "sub_prefix": "ke",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/kɛlmɐ/",
+      "root": "k-l-m",
+      "roots": [
+        "k-l-m"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "word",
+        "a word",
+        "an exchange between two or more people"
+      ],
+      "gloss_zh": "词；话语",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "kien",
+      "word": "kien",
+      "exact_key": "kien",
+      "ascii_key": "kien",
+      "bucket": "K",
+      "sub_prefix": "kie",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/kɪːn/",
+      "root": "k-w-n",
+      "roots": [
+        "k-w-n"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "to be",
+        "to exist"
+      ],
+      "gloss_zh": "是；曾经",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "kiteb",
+      "word": "kiteb",
+      "exact_key": "kiteb",
+      "ascii_key": "kiteb",
+      "bucket": "K",
+      "sub_prefix": "ki",
+      "tier": 1,
+      "pos_list": [
+        "VERB",
+        "verb"
+      ],
+      "ipa": "/kɪtɛp/",
+      "root": "k-t-b",
+      "roots": [
+        "k-t-b"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "to write",
+        "to enrol sb.",
+        "to name sb. as the heir of sth."
+      ],
+      "gloss_zh": "写",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "ktieb",
+      "word": "ktieb",
+      "exact_key": "ktieb",
+      "ascii_key": "ktieb",
+      "bucket": "K",
+      "sub_prefix": "kt",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ktɪːp/",
+      "root": "k-t-b",
+      "roots": [
+        "k-t-b"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "book",
+        "ledger"
+      ],
+      "gloss_zh": "书",
+      "has_audio": true,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "le",
+      "word": "le",
+      "exact_key": "le",
+      "ascii_key": "le",
+      "bucket": "L",
+      "sub_prefix": "le",
+      "tier": 1,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/lɛ/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "no"
+      ],
+      "gloss_zh": "不；不是",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "missier",
+      "word": "missier",
+      "exact_key": "missier",
+      "ascii_key": "missier",
+      "bucket": "M",
+      "sub_prefix": "mi",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/mɪssɪːr/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "father",
+        "forefather, ancestor"
+      ],
+      "gloss_zh": "父亲",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "omm",
+      "word": "omm",
+      "exact_key": "omm",
+      "ascii_key": "omm",
+      "bucket": "O",
+      "sub_prefix": "om",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ɔmm/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "mother"
+      ],
+      "gloss_zh": "母亲",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "qalb",
+      "word": "qalb",
+      "exact_key": "qalb",
+      "ascii_key": "qalb",
+      "bucket": "Q",
+      "sub_prefix": "qa",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "ADP",
+        "noun",
+        "prep"
+      ],
+      "ipa": "/ʔɐlp/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "heart",
+        "among",
+        "in the middle of"
+      ],
+      "gloss_zh": "心脏；心",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "skola",
+      "word": "skola",
+      "exact_key": "skola",
+      "ascii_key": "skola",
+      "bucket": "S",
+      "sub_prefix": "sk",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/skɔlɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "unspecified",
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "school",
+        "school (an institution dedicated to teaching and learning)",
+        "school (the followers of a particular doctrine)"
+      ],
+      "gloss_zh": "学校",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "triq",
+      "word": "triq",
+      "exact_key": "triq",
+      "ascii_key": "triq",
+      "bucket": "T",
+      "sub_prefix": "tr",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/triːʔ/",
+      "root": "t-r-q",
+      "roots": [
+        "t-r-q"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "road",
+        "street",
+        "way"
+      ],
+      "gloss_zh": "路；街道",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "xemx",
+      "word": "xemx",
+      "exact_key": "xemx",
+      "ascii_key": "xemx",
+      "bucket": "X",
+      "sub_prefix": "xe",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/ʃɛmʃ/",
+      "root": "x-m-x",
+      "roots": [
+        "x-m-x"
+      ],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "sun",
+        "sun, Sun"
+      ],
+      "gloss_zh": "太阳",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    },
+    {
+      "id": "żmien",
+      "word": "żmien",
+      "exact_key": "żmien",
+      "ascii_key": "zmien",
+      "bucket": "Ż",
+      "sub_prefix": "żm",
+      "tier": 1,
+      "pos_list": [
+        "NOUN",
+        "noun"
+      ],
+      "ipa": "/zmɪːn/",
+      "root": null,
+      "roots": [],
+      "stratum": "semitic",
+      "strata": [
+        "unspecified",
+        "semitic"
+      ],
+      "gloss_en": [
+        "time",
+        "age",
+        "epoch"
+      ],
+      "gloss_zh": "时间；时期",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "kaikki"
+      ]
+    }
+  ],
+  "notes": [
+    "Counts are measured, not rounded target promises.",
+    "Tier 1 denotes source presence, not independent verification.",
+    "WikiPron and Kaikki both derive from Wiktionary.",
+    "Grammar lookup exceptions are labelled grammar_reference, not corpus-attested.",
+    "Teaching examples and translations await linguistic review."
+  ]
+}

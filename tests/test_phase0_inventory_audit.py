@@ -178,7 +178,7 @@ class RootAndEtymologyTests(unittest.TestCase):
             with self.subTest(text=text):
                 self.assertEqual(etymological_stratum({'etymology_text': text}), expected)
         self.assertEqual(etymological_stratum({'etymology_templates': [{'name': 'mt-root', 'args': {'1': 'k-t-b'}}]}),
-                         'semitic')
+                         'unspecified')
         self.assertEqual(etymological_stratum({'word': 'kiteb'}), 'unspecified')
 
 
@@ -194,7 +194,7 @@ class MorphologyAndIPATests(unittest.TestCase):
         self.assertEqual(extract_morphology({'tags': ['Form INVALID', 'Form XIV']})['verb_forms'], [])
 
     def test_number_forms_filter_placeholders_and_deduplicate(self):
-        row = {'head_templates': [{'args': {'p': '<b>kotba</b>, kotba, -, ?',
+        row = {'pos': 'noun', 'head_templates': [{'args': {'p': '<b>kotba</b>, kotba, -, ?',
                                           'coll': 'tuffieħ', 'sing': 'tuffieħa'}}],
                'forms': [{'form': 'kotba', 'tags': ['plural']},
                          {'form': 'kotba', 'tags': ['plural']},
@@ -212,6 +212,20 @@ class MorphologyAndIPATests(unittest.TestCase):
         self.assertEqual(normalize_ipa('/ˈkɪ.tɛːb/'), 'kiteb')
         self.assertEqual(normalize_ipa('[ ˌK I : T E ˑ B ]\t\n'), 'kiteb')
         self.assertEqual(normalize_ipa(''), '')
+
+    def test_lexical_number_excludes_finite_and_pronominal_forms(self):
+        bad = ['first-person', 'second-person', 'third-person', 'imperfect', 'perfect',
+               'imperative', 'negative', 'possessive', 'object', 'indirect-object', 'direct-object']
+        for pos in ('noun', 'adj', 'participle', 'num'):
+            for tag in bad:
+                row = {'pos': pos, 'forms': [{'form': 'kotba', 'tags': ['plural', tag]}]}
+                self.assertEqual(extract_morphology(row)['number_forms'], {})
+        for pos in ('verb', 'prep'):
+            row = {'pos': pos, 'head_templates': [{'args': {'p': 'ktibna'}}],
+                   'forms': [{'form': 'jiktbu', 'tags': ['plural']}]}
+            self.assertEqual(extract_morphology(row)['number_forms'], {})
+            row['forms'].append({'form': 'miktubin', 'tags': ['plural', 'participle']})
+            self.assertEqual(extract_morphology(row)['number_forms'], {'plural': ['miktubin']})
 
     def test_ipa_affricates_and_lossy_symbol_equivalence(self):
         for variants, expected in [(('t͡ʃ', 'ʧ', 'tʃ'), 'tʃ'),

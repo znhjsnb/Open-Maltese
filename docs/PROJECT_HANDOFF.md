@@ -6,6 +6,21 @@
 
 ---
 
+## Phase 1 当前交接（2026-11-03）
+
+用户已确认三层全词池、30 桶导航（IE 在 I 内）、清洁词头与词形追踪条、诚实三分支发音。实现与操作说明见 [README](../README.md)，最新短状态见 [START](../START.md)，实测统计见 [lemma_pool_summary.json](../data/seed/lemma_pool_summary.json)。本段取代下文历史行动指南中的“等待词库定容”状态；历史原始资料清单保留。
+
+- 构建器 `scripts/build_phase1_shards.py` 生成 24,045 个词头、30 片及两个检索索引；Tier 1/2/3 实测为 5,051 / 11,414 / 7,580。Tier 2 的 Ġabra-only 资格使用同一条记录的有效实证词根 + IPA + 英文释义，计 6,898；Kaikki-only 4,516。估算规模已按来源复算替换。
+- 反查表 124,488 个表面形；10 行无法连接既有词池的引用已列在 summary。冠词与 `m'għandix` 等明确例外标为 `grammar_reference`，其余引用沿原有形态表连接。音频 720 是原始行数；独立规范化词位覆盖为 597。
+- 审查的 6 项 P1 / 7 项 P2 已修复，版本 `malti-phase1-2026-11-03-r2`：子词位按来源/POS/词源编号隔离，共时词根与历史语源分开，词汇复数排除人称变位；合法冠词规则、DMS 次序、最长字素发音指南、过期报错过滤与全部筛选完成。Ġabra MDX 标 CC BY 3.0，录音均有 Commons 文件页链接，两类导出保留来源及待审标签。
+- 反查表紧凑为 4,338,881 字节，第一阶段基础查词不等待反查表；manifest 版本与摘要传至 Worker，IndexedDB 缓存清单、索引与已访问分片，SW 缓存页面模块和数据。固定输入校验和、完整复现及恢复方式见 README；离线缓存缺失时明确保留功能边界。
+- 25 个展示词具有原创三语释义、搭配、书面例句与日常对话，并标为待语言学复核；其它未丰富字段保持空值。没有自动填补词根、十型、词频排名或马耳他语单语释义。
+- 验证：构建成功，unittest 全量 83 项通过；另有 Node 客户端 37 项通过；跨进程重建逐字节一致；隔离临时端口的实际 HTTP 资源与边界测试通过；JavaScript 语法检查通过。8767 当前未运行，按 README 启动即可。TTS 检测脚本保留，先前检测未发现本机 eSpeak-NG / System.Speech 马语 voice；本批未重测听音。
+- Antigravity 下一步直接读取本段与现有代码，完成真实 Chrome E2E、视觉/移动端检查及听音；重点复核词形追踪、I→ie、语音缺失弹窗、四主题与复制按钮。本次整改未执行真机浏览器；Node 隔离环境中的 IndexedDB/SW 离线回归不代替该门禁。
+- 通过浏览器与语言学抽检后，由 Antigravity 按项目分工审查并执行 Git 原子提交。`app/static/data/` 与测试临时产物已忽略，代码、测试、README 与 seed summary 保持可跟踪；原始数据未改动，Phase 0 两份报告已按修正规则重建；保留用户已有 `docs/codex_phase1_prompt.md`。
+
+---
+
 ## 一、 核心架构共识与防幻觉铁律（必读摘要）
 
 在启动任何脚本或精编任务前，必须牢记以下经 **Codex CLI (`gpt-6.1-sol`) 实测核查** 的关键事实（详见 [docs/CODEX_HALLUCINATION_AUDIT.md](CODEX_HALLUCINATION_AUDIT.md) 与 [docs/MASTER_PLAN_V2.md](MASTER_PLAN_V2.md)）：
@@ -14,7 +29,7 @@
    - 经直接拉取 `https://dizzjunarju.mt/lista.html`（`21,685` bytes）与 `assets/site.js`（`29,681` bytes）拆解验证，该站是由 `build_static_site.py` 生成的纯静态展示站，全站 `<a class='lista-entry'>` 仅 **81 个词条**，30 个字母中有 11 个字母为空（`<span class='lista-jump-empty'>`）。
    - **定位**：仅作新词形、现代借词与学术规范的**辅助参考源**，严禁将其当作万词级底座。
 2. **核心词典底座（`data/raw/` 已拉取就绪）**：
-   - **Ġabra 开源词库快照 (CC-BY 4.0)**：已拉取 `data/raw/gabra-maltese-dictionary` 仓库及 Release 包 `data/raw/GabraMalteseDict_MDX_v1.0.zip`（含 `19,831` 唯一词头 / `21,083` 词条记录，涵盖 `lexemes` 词根、词性、派生动词 Form I–X 与屈折词形）+ 官方 `data/raw/gabra-api` Schema 仓库。
+   - **Ġabra 开源词库快照（本地 MDX CC BY 3.0；上游现网 CC BY 4.0）**：已拉取 `data/raw/gabra-maltese-dictionary` 仓库及 Release 包 `data/raw/GabraMalteseDict_MDX_v1.0.zip`（含 `19,831` 唯一词头 / `21,083` 词条记录，MDX 保留词根、词性、英文释义及已有 IPA，未导出动词十型与屈折词形表）+ 官方 `data/raw/gabra-api` Schema 仓库。
    - **Kaikki / English Wiktionary 马耳他语全量转储**：`data/raw/kaikki.org-dictionary-Maltese.jsonl`（`99,021,210` bytes，约 94.4 MB，含词头、词性、英语释义、词源、IPA 及屈折表）。
    - **Camilleri 动词屈折黄金表**：`data/raw/maltese-verb-inflections/`（186 个核心动词全套变位 TSV）。
    - **WikiPron 宽式 IPA 音标库**：`data/raw/mlt_latn_broad.tsv`（`543,365` bytes）与 `mlt_latn_broad_filtered.tsv`（`541,408` bytes）+ G2P 学术规则论文 `data/raw/maltese-g2p-rules.pdf`。

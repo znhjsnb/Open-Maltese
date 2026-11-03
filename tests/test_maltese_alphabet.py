@@ -176,11 +176,37 @@ class CollationTests(unittest.TestCase):
 
     def test_accent_and_case_secondary_order(self):
         self.assert_order(['kafe', 'kafè'])
-        self.assert_order(['għajn', 'Għajn'])
+        self.assert_order(['Għajn', 'għajn'])
+        self.assert_order(['Marsa', 'marsa'])
         self.assertEqual(compare_maltese_headwords('G\u0307abra', 'Ġabra'), 0)
 
     def test_empty_digits_and_unknown_letters_are_comparable(self):
-        self.assert_order(['', 'a', '2', 'Ω'])
+        self.assert_order(['', '0', '2', '9', 'a', 'Ω'])
+
+    def test_article_phonological_context(self):
+        known = {'xemx', 'dar', 'skola', 'ktieb', 'kelb', 'għajn'}
+        for surface, stem in [('fix-xemx', 'xemx'), ('bid-dar', 'dar'),
+                              ('x-xemx', 'xemx'), ('d-dar', 'dar'), ('lill-kelb', 'kelb'),
+                              ('l-iskola', 'skola'), ('fl-iskola', 'skola'),
+                              ('bil-iskola', 'skola'), ('mal-iskola', 'skola'),
+                              ('tal-iskola', 'skola'), ('għall-iskola', 'skola')]:
+            with self.subTest(surface=surface):
+                self.assertEqual(strip_definite_article(surface, include_fused_prepositions=True,
+                                                       known_lemmas=known)[0], stem)
+        for surface in ('ix-ktieb', 'fix-ktieb', 'bid-xemx', 'il-dar', 'fil-xemx', 'lill-dar'):
+            self.assertEqual(strip_definite_article(surface, include_fused_prepositions=True,
+                                                   known_lemmas=known), (surface, None))
+        self.assertEqual(strip_definite_article('l-iskola', known_lemmas=known | {'iskola'}), ('iskola', 'l-'))
+        self.assertEqual(strip_definite_article('l-iktieb', known_lemmas=known)[0], 'iktieb')
+
+    def test_all_fused_and_apocopated_sun_articles(self):
+        for base in ('', 'i', 'fi', 'bi', 'ma', 'ta', 'għa', 'li'):
+            for consonant in SUN_CONSONANTS:
+                prefix = base + consonant + '-'
+                self.assertEqual(strip_definite_article(prefix + consonant + 'a',
+                    include_fused_prepositions=True), (consonant + 'a', prefix))
+                self.assertEqual(strip_definite_article(prefix + 'kelb',
+                    include_fused_prepositions=True), (prefix + 'kelb', None))
 
     def test_invalid_mode(self):
         with self.assertRaises(ValueError):
