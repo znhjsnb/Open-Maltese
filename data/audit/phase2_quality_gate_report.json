@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-14652d75fcfc",
+  "dataset_version": "malti-phase2-2026-11-03-9d57b07907ae",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 15793,
-    "unenriched_count": 8252,
-    "showcase_count": 15793,
+    "enriched_count": 16465,
+    "unenriched_count": 7580,
+    "showcase_count": 16465,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1383,86 +1383,6 @@
       "cognitive_memory_aid": "想象山谷两边原本不通，中间架起一座桥；把这个动作与“架桥连接”一起记。"
     },
     {
-      "stratum": "tier_2/english/unenriched",
-      "exact_key": "xer",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "share",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ix-xer",
-        "prefix": "ix-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
-      "exact_key": "żilċ",
-      "analysis_pos": [
-        "pron"
-      ],
-      "senses": [
-        {
-          "pos": "pron",
-          "en_definition": "nothing, (not) anything",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "pron",
-          "en_definition": "no one",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/english/unenriched",
-      "exact_key": "xort",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "short-circuit",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ix-xort",
-        "prefix": "ix-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_2/other_or_hybrid/enriched",
       "exact_key": "avultun",
       "analysis_pos": [
@@ -1864,52 +1784,14 @@
     },
     {
       "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "żvita",
+      "exact_key": "kastellanija",
       "analysis_pos": [
-        "verb"
+        "name"
       ],
       "senses": [
         {
-          "pos": "verb",
-          "en_definition": "to unscrew",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "żvara",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "to slip away",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "xxampla",
-      "analysis_pos": [
-        "verb"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "to have abundant, enough space",
+          "pos": "name",
+          "en_definition": "Castellania (former residence of the head of justice during the Order of Saint John's rule)",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
@@ -2114,79 +1996,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "把 li 想成连接句子的细线：接在名词后常组成“……的”，接在“我想、我知道”后则引出所想所知的内容。"
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "wiżagħ",
-      "analysis_pos": [
-        "noun"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "lizards (in practice especially geckos or lacertids)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-wiżagħ",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "zerafa",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "a surname",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/semitic/unenriched",
-      "exact_key": "xahri",
-      "analysis_pos": [
-        "adj"
-      ],
-      "senses": [
-        {
-          "pos": "adj",
-          "en_definition": "monthly",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "ix-xahri",
-        "prefix": "ix-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
     },
     {
       "stratum": "tier_2/unspecified/enriched",
@@ -2399,92 +2208,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "把 ċaqċiq 配上脚踩干树枝的“咔嚓”声，再想象柴火连续“噼啪”；用一个声音和一串声音分别记住两个义项。"
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "żakkir",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "walking ostentatiously",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "swaggering",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "iż-żakkir",
-        "prefix": "iż-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "zerzer",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to sing (used of certain types of birds)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_2/unspecified/unenriched",
-      "exact_key": "żżakkar",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "VERB",
-          "en_definition": "to protrude",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to become paunchy",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to develop a pot belly",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
     },
     {
       "stratum": "tier_3/unspecified/enriched",
