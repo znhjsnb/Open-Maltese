@@ -255,8 +255,12 @@ def gate4(entries, overlays, manifest, check_audio_totals=True):
             if aid != item.get('cognitive_memory_aid'):
                 errors.append(key + ': published mnemonic differs from overlay')
             teaching_text = json.dumps(item, ensure_ascii=False)
-            historical = e['etymology'].get('etymology_text_en') or ''
-            for claim, evidence in [('骑士团时期', r'knights|hospitaller'), ('英国海军时期', r'british navy|royal navy'),
+            # Historical context can be explicit in a licensed definition, not
+            # just in an etymology. Authored teaching text is never evidence.
+            historical = '\n'.join([e['etymology'].get('etymology_text_en') or ''] + [
+                s['en_definition'] for a in e['lexeme_analyses'] for s in a['senses']
+                if s.get('definition_origin') == 'licensed_source'])
+            for claim, evidence in [('骑士团时期', r'knights|hospitaller|order of saint john'), ('英国海军时期', r'british navy|royal navy'),
                                     ('阿拉伯统治时期', r'arab rule|arab period'), ('阿拉伯时期', r'arab rule|arab period'),
                                     ('英国殖民时期', r'british|colonial'), ('中世纪时期', r'medieval|middle ages')]:
                 if claim in teaching_text and not re.search(evidence, historical, re.I):

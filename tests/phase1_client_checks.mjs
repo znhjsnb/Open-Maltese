@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {makeSearchEngine,exact,ascii,stripArticle,createWorkerHandler} from '../app/static/worker.js';
-import {pronunciationGraphemes,currentWorkerError,renderAnalyses,renderInflections,renderEtymology,renderSenses,mergeResultPage,exportText} from '../app/static/app.js';
+import {pronunciationGraphemes,currentWorkerError,renderAnalyses,renderInflections,renderEtymology,renderSenses,mergeResultPage,exportText,sourceChain} from '../app/static/app.js';
 import {createPronouncer,malteseVoice,availableVoice} from '../app/static/audio.js';
 import {loadEntry} from '../app/static/db.js';
 import vm from 'node:vm';
@@ -211,7 +211,7 @@ const shardEntries=manifest.shards.flatMap(s=>JSON.parse(fs.readFileSync(`app/st
 test('homograph cards and exports preserve analysis boundaries and evidence',()=>{
   const dar=shardEntries.find(e=>e.id==='dar');
   const html=renderAnalyses(dar.lexeme_analyses);
-  const sections=html.split('<section class="lexeme-analysis">').slice(1);
+  const sections=html.split('<section class="lexeme-analysis morphology-subentry"').slice(1);
   assert.equal(sections.length,dar.lexeme_analyses.length);
   const noun=sections[dar.lexeme_analyses.findIndex(a=>a.source==='kaikki' && a.pos==='noun')];
   const verb=sections[dar.lexeme_analyses.findIndex(a=>a.source==='kaikki' && a.pos==='verb')];
@@ -240,21 +240,28 @@ test('dimensions 06 and 08 use each exact analysis id without aggregate fallback
     assert.ok(!six.includes('lexeme-analysis'));assert.ok(!eight.includes('lexeme-analysis'));
     for(const [html,css] of [[six,'inflection-subentry'],[eight,'etymology-subentry']]) {
       const blocks=html.split(`<section class="${css}"`).slice(1);
-      assert.equal(blocks.length,entry.lexeme_analyses.length);
-      entry.lexeme_analyses.forEach((a,i)=>assert.ok(blocks[i].startsWith(` data-analysis-id="${a.id}"`)));
+      const expected=css==='etymology-subentry' ? entry.lexeme_analyses.filter(a=>a.source==='kaikki') : entry.lexeme_analyses.filter(a=>a.attested_forms?.length || a.definite_article || a.pronomi_mehmuzin?.length || Object.values(a.verb_paradigm || {}).some(Boolean));
+      assert.equal(blocks.length,expected.length);
+      expected.forEach((a,i)=>assert.ok(blocks[i].startsWith(` data-analysis-id="${a.id}"`)));
       assert.ok(!/列于上方|分列如下/.test(html));
     }
     if(word==='abaku') {
       assert.ok(six.includes('abaki'));assert.ok(six.includes('l-abaku'));
       assert.ok(!six.includes('Perfett 3sg.m'));
+      assert.ok(!six.includes('Pronomi Mehmużin'));
+      assert.ok(eight.includes('gabra:') && eight.includes('未单列历史词源'));
+      assert.equal((eight.match(/<li>/g)||[]).length,1);
+      const morph=renderAnalyses(entry.lexeme_analyses);
+      assert.equal((morph.match(/class="lexeme-analysis morphology-subentry"/g)||[]).length,1);
+      assert.ok(!/not recorded|未完成体|过去分词|动名词/.test(morph));
       const gabra=six.split('<section class="inflection-subentry"')[1];
       assert.ok(!gabra.includes('abaki'));
       assert.ok(eight.includes('Borrowed from Italian abaco.'));assert.ok(eight.includes('学习助记：'));
       assert.ok(eight.includes('authored_pedagogical · phase2_reviewed'));
     } else {
       const blocks=six.split('<section class="inflection-subentry"').slice(1);
-      const noun=blocks[entry.lexeme_analyses.findIndex(a=>a.source==='kaikki'&&a.pos==='noun')];
-      const verb=blocks[entry.lexeme_analyses.findIndex(a=>a.source==='kaikki'&&a.pos==='verb')];
+      const noun=blocks.find(b=>b.startsWith(' data-analysis-id="kaikki:dar:0"'));
+      const verb=blocks.find(b=>b.startsWith(' data-analysis-id="kaikki:dar:1"'));
       assert.ok(noun.includes('djar')&&noun.includes('id-dar')&&!/jdur|midur/.test(noun));
       assert.ok(verb.includes('jdur')&&verb.includes('midur')&&!verb.includes('djar'));
       assert.ok(verb.includes('已展示 24 / 共 55 项'));
@@ -263,6 +270,24 @@ test('dimensions 06 and 08 use each exact analysis id without aggregate fallback
       assert.ok(!renderInflections(changed).includes('POISON'));assert.ok(!renderEtymology(changed).includes('POISON'));
     }
   }
+});
+test('empty paradigms and empty analyses stay compact; clitics and templates retain evidence',()=>{
+  const entry=structuredClone(shardEntries.find(e=>e.id==='dar'));
+  entry.lexeme_analyses=entry.lexeme_analyses.slice(0,2).map(a=>({...a,roots:[],root_consonants:null,pattern_type:'unspecified',word_family:null,verb_forms_attested:[],plural_forms:null,collective_forms:null,singulative_forms:null,verb_paradigm:{perfett_3sg_m:null,imperfett_3sg_m:'',imperattiv_2sg:null,past_participle:null,verbal_noun:null},attested_forms:[],pronomi_mehmuzin:[],definite_article:null,etymology_text:'',etymology_templates:[],source_chain:[],stratum:'unspecified'}));
+  assert.ok(!renderAnalyses(entry.lexeme_analyses).includes('morphology-subentry'));
+  assert.ok(!renderInflections(entry).includes('inflection-subentry'));
+  assert.ok(!renderEtymology(entry).includes('etymology-subentry'));
+  assert.equal((renderEtymology(entry).match(/not recorded/g)||[]).length,1);
+  const ghand=shardEntries.find(e=>e.id==='għand');
+  assert.ok(renderInflections(ghand).includes('Pronomi Mehmużin'));
+  for(const form of ['għandi','għandek','għandu'])assert.ok(ghand.inflection_and_clitics.pronomi_mehmuzin.some(f=>f.form===form));
+  const t={template:'etymon',args:{'1':'mt','2':':bor','3':'it:abaco'}};
+  const formatted=sourceChain([t,{...t,args:{'3':'it:abaco','2':':bor','1':'mt'}},{template:'bor',args:{'1':'mt','2':'it','3':'abaco'}}]);
+  assert.equal((formatted.match(/<li>/g)||[]).length,1);assert.ok(formatted.includes('borrowed'));
+  for(const relation of ['inh','der','cog'])assert.ok(sourceChain([{template:relation,args:{'1':'mt','2':'ar','3':'x'}}]).includes({inh:'inherited',der:'derived',cog:'cognate'}[relation]));
+  const unknown={template:'unknown',args:{x:'<evidence>'}};
+  assert.equal((sourceChain([unknown,unknown]).match(/<li>/g)||[]).length,1);
+  assert.ok(sourceChain([unknown]).includes('&lt;evidence&gt;'));
 });
 test('source English and pedagogical translations have distinct provenance',()=>{
   const dar=shardEntries.find(e=>e.id==='dar'),html=renderSenses(dar.senses);

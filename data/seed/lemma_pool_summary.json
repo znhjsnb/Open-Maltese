@@ -1,5 +1,5 @@
 {
-  "version": "malti-phase2-2026-11-03-9d57b07907ae",
+  "version": "malti-phase2-2026-11-03-7856ffd03871",
   "total_lemmas": 24045,
   "tier_counts": {
     "1": 5051,
@@ -73,7 +73,7 @@
   "audio_source_rows": 720,
   "wordform_surface_count": 124488,
   "camilleri_rows_indexed": 53512,
-  "showcase_count": 16465,
+  "showcase_count": 16466,
   "samples": [
     {
       "id": "abaku",
@@ -201046,6 +201046,35 @@
       "is_showcase": true,
       "source_presence": [
         "gabra",
+        "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "kastellanija",
+      "word": "Kastellanija",
+      "exact_key": "kastellanija",
+      "ascii_key": "kastellanija",
+      "bucket": "K",
+      "sub_prefix": "ka",
+      "tier": 2,
+      "pos_list": [
+        "name"
+      ],
+      "ipa": "/kas.tɛl.laˈniː.ja/",
+      "root": null,
+      "roots": [],
+      "stratum": "romance_sicilian_italian",
+      "strata": [
+        "romance_sicilian_italian"
+      ],
+      "gloss_en": [
+        "Castellania (former residence of the head of justice during the Order of Saint John's rule)"
+      ],
+      "gloss_zh": "卡斯特拉尼亚宫（瓦莱塔历史司法建筑）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
         "kaikki"
       ],
       "is_enriched": true
@@ -524077,9 +524106,10 @@
     "Grammar lookup exceptions are labelled grammar_reference, not corpus-attested.",
     "Phase 2 reviewed means editorial review of authored teaching material; independent linguistic and listening acceptance is separate."
   ],
-  "enriched_count": 16465,
-  "unenriched_count": 7580,
+  "enriched_count": 16466,
+  "unenriched_count": 7579,
   "enrichment_files_sha256": {
+    "phase2_kastellanija.json": "96a0956a33de5ef398d349a39428aa3d7bcbc22d02a3a4a58f1a8c0f9fdf1243",
     "phase2_milestone_001.json": "55eed87d35eb580fb1b4683996dde9ceb88ae75d8f7f3a48d001de2f8f4a8255",
     "phase2_milestone_002.json": "d6e21a337cfa9549f740d72624e483f6f938f3520f88932a44e52b4e067b9497",
     "phase2_milestone_003.json": "b6724172c286aabcba2499f1dc3ea25a95b42ed70432ae9218ed15cab2064876",
@@ -524100,7 +524130,7 @@
     "phase2_tier1_batch2_ab.json": "2936d7375d82a8e41a7c262723db3cdbe510825ffa2efa5845c42c636390ffa6"
   },
   "source_text_repairs": {
-    "formatting_controls_normalized": 12738,
+    "formatting_controls_normalized": 10530,
     "unreadable_source_text_quarantined": 15
   }
 }

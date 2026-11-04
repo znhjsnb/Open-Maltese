@@ -47,6 +47,38 @@ def unique(values):
     return list(dict.fromkeys(v for v in values if v))
 
 
+def unique_templates(templates):
+    """Template identity is name/arguments, not two extractor expansions."""
+    found, result = set(), []
+    for template in templates:
+        key = (template.get('name'), json.dumps(template.get('args', {}), sort_keys=True, ensure_ascii=False))
+        if key not in found:
+            found.add(key)
+            result.append(template)
+    return result
+
+
+def source_chain(templates):
+    return [{'template': t['name'], 'args': t.get('args', {}), 'source': 'kaikki'}
+            for t in unique_templates(templates)
+            if t.get('name') in ('ety', 'etymon', 'bor', 'bor+', 'inh', 'inh+',
+                                 'der', 'der+', 'cog', 'calque')]
+
+
+def prepositional_clitics(row):
+    """Person/number on a preposition indexes its pronominal complement.
+
+    The same tags on verbs index conjugation and on nouns may index possession;
+    neither is classified here. Keep only source forms, never generate suffixes.
+    """
+    if row.get('pos') not in ('prep', 'adp', 'postp'):
+        return []
+    return [{'form': f['form'], 'tags': f.get('tags', []), 'source': 'kaikki'}
+            for f in usable_forms(row)
+            if set(f.get('tags', [])) & {'first-person', 'second-person', 'third-person'}
+            and set(f.get('tags', [])) & {'singular', 'plural'}]
+
+
 def usable_forms(row):
     return [f for f in row.get('forms', []) if audit.valid_surface(f.get('form'))
             and not set(f.get('tags', [])) & {'table-tags', 'inflection-template'}]
@@ -140,7 +172,10 @@ def lexeme_analysis(source, row, record_id, cam_paradigm=None):
             'singulative_forms': unique(numbers.get('sing', []) + numbers.get('singulative', [])) or None,
             'attested_form_count': len(forms),
             'attested_forms': [{'form': f['form'], 'tags': f.get('tags', []), 'source': source} for f in forms[:24]] or None,
-            'etymology_text': row.get('etymology_text'), 'etymology_templates': row.get('etymology_templates') or None,
+            'etymology_text': row.get('etymology_text'),
+            'etymology_templates': unique_templates(row.get('etymology_templates', [])) or None,
+            'source_chain': source_chain(row.get('etymology_templates', [])) or None,
+            'pronomi_mehmuzin': prepositional_clitics(row) or None if not gabra else None,
             'senses': senses}
 
 
@@ -333,14 +368,9 @@ def build(raw, output, seed_output, overlay_dir=None):
         plural = unique(numbers['p'] + numbers['plural'])
         family = unique(names[k] for root in roots for k in root_groups[root] if k != key)[:16]
         ety_text = unique(r.get('etymology_text') for r in ks)
-        chain = []
-        for r in ks:
-            for t in r.get('etymology_templates', []):
-                # Preserve structured arguments; corrupted expansion HTML isn't a source chain.
-                if t.get('name') in ('ety', 'bor', 'bor+', 'inh', 'inh+', 'der', 'der+', 'cog', 'calque'):
-                    item = {'template': t['name'], 'args': t.get('args', {}), 'source': 'kaikki'}
-                    if item not in chain:
-                        chain.append(item)
+        chain = source_chain([t for r in ks for t in r.get('etymology_templates', [])])
+        attested_clitics = [f for r in ks for f in prepositional_clitics(r)] + clitics[key]
+        attested_clitics = list({json.dumps(f, sort_keys=True): f for f in attested_clitics}.values())
         synonyms, antonyms = [], []
         for r in ks:
             for container in [r] + r.get('senses', []):
@@ -376,7 +406,7 @@ def build(raw, output, seed_output, overlay_dir=None):
             'inflection_and_clitics': {'perfett_3sg_m': form_for('perfect', 'third-person', 'singular', 'masculine') or cam_paradigms[key].get('perfett_3sg_m'),
                 'imperfett_3sg_m': imperfect, 'imperattiv_2sg': form_for('imperative', 'singular') or cam_paradigms[key].get('imperattiv_2sg'),
                 'plural': plural or None, 'attested_forms': (forms[:24] + cam_forms[key]) or None,
-                'definite_article': article, 'pronomi_mehmuzin': clitics[key] or None},
+                'definite_article': article, 'pronomi_mehmuzin': attested_clitics or None},
             'pragmatics_and_cognates': {'register': register or None, 'synonyms': unique(synonyms) or None,
                 'antonyms': unique(antonyms) or None, 'cognates_and_false_friends': cognates or None}
                 if register or synonyms or antonyms or cognates else None,
@@ -391,7 +421,6 @@ def build(raw, output, seed_output, overlay_dir=None):
             analysis['word_family'] = unique(names[k] for root in analysis['roots']
                 for k in root_groups[root] if k != key)[:16] or None
             analysis['definite_article'] = article if (analysis['pos'] or '').lower() in audit.NOMINAL_POS else None
-            analysis['pronomi_mehmuzin'] = None
             if (analysis['source'] == 'kaikki' and analysis['pos'] == 'verb'
                     and sum(r.get('pos') == 'verb' for r in ks) == 1):
                 analysis['attested_forms'] = (analysis['attested_forms'] or []) + cam_forms[key] or None
@@ -524,6 +553,8 @@ def main():
     parser.add_argument('--raw', type=Path, default=PROJECT / 'data/raw')
     parser.add_argument('--output', type=Path, default=PROJECT / 'app/static/data')
     parser.add_argument('--summary', type=Path, default=PROJECT / 'data/seed/lemma_pool_summary.json')
+    parser.add_argument('--apply-phase2-overlays', action='store_true',
+                        help='Compatibility flag: full builds always apply validated Phase 2 overlays')
     args = parser.parse_args()
     summary = build(args.raw, args.output, args.summary)
     print(json.dumps({k: summary[k] for k in ('version', 'total_lemmas', 'tier_counts',

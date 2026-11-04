@@ -1,7 +1,7 @@
 // Real Chrome CDP End-to-End Acceptance Test for Open-Malti (0 external npm packages)
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, openSync, closeSync } from 'node:fs';
 import { readFile, mkdtemp, rm, mkdir } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 
@@ -35,8 +35,12 @@ if (!chromePath) {
 
 await mkdir(resolve('.tmp'), { recursive: true });
 const profile = await mkdtemp(resolve('.tmp/chrome-e2e-'));
-const serverProc = spawn('python', ['-X', 'utf8', 'app/server.py', '--port', '0'], { windowsHide: true });
-const origin = await new Promise((resolveOrigin, rejectOrigin) => {
+// A supplied local origin reuses the already-running static server on hosts
+// where Node cannot create a subprocess with piped stdio.
+const existingOrigin = process.env.OPEN_MALTI_E2E_ORIGIN;
+if (existingOrigin && !/^http:\/\/127\.0\.0\.1:\d+$/.test(existingOrigin)) throw new Error('E2E origin must be a local loopback HTTP server');
+const serverProc = existingOrigin ? null : spawn('python', ['-X', 'utf8', 'app/server.py', '--port', '0'], { windowsHide: true });
+const origin = existingOrigin || await new Promise((resolveOrigin, rejectOrigin) => {
   serverProc.stdout.once('data', chunk => {
     const match = String(chunk).match(/http:\/\/127\.0\.0\.1:\d+/);
     if (match) resolveOrigin(match[0]);
@@ -45,6 +49,9 @@ const origin = await new Promise((resolveOrigin, rejectOrigin) => {
   serverProc.once('error', rejectOrigin);
 });
 
+await mkdir(resolve('tests/artifacts'), { recursive: true });
+const chromeLog = resolve('tests/artifacts/blank_fix_chrome.log');
+const chromeError = openSync(chromeLog, 'w');
 const chrome = spawn(
   chromePath,
   [
@@ -56,8 +63,9 @@ const chrome = spawn(
     '--window-size=1440,960',
     'about:blank',
   ],
-  { windowsHide: true, stdio: 'ignore' }
+  { windowsHide: true, stdio: ['ignore', 'ignore', chromeError] }
 );
+closeSync(chromeError);
 
 let ws;
 const consoleErrors = [];
@@ -66,6 +74,7 @@ try {
   let cdpPort;
   const started = Date.now();
   while (!cdpPort) {
+    if (chrome.exitCode !== null) throw new Error(`Chrome exited with ${chrome.exitCode}: ${await readFile(chromeLog, 'utf8')}`);
     if (Date.now() - started > 12000) throw new Error('Chrome CDP startup timed out');
     try {
       cdpPort = (await readFile(join(profile, 'DevToolsActivePort'), 'utf8')).split('\n')[0].trim();
@@ -311,6 +320,7 @@ try {
     return {six:dims[5].textContent,eight:dims[7].textContent,ipa:document.querySelector('.ipa').textContent,
       all:document.getElementById('entry-card').textContent,
       morphology:document.querySelectorAll('#entry-card .lexeme-analysis').length,
+      two:dims[1].textContent,chain:Array.from(dims[7].querySelectorAll('.source-chain li')).map(a=>a.textContent),
       sixIds:Array.from(dims[5].querySelectorAll('.inflection-subentry')).map(a=>a.dataset.analysisId),
       eightIds:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>a.dataset.analysisId)};
   })()`);
@@ -319,7 +329,12 @@ try {
   assert.ok(abaku.eight.includes('Borrowed from Italian abaco.') && abaku.eight.includes('学习助记：'));
   assert.ok(!/列于上方|分列如下/.test(abaku.all));
   assert.ok(abaku.ipa.includes('/ˈaː.ba.ku/ (kaikki)'));
-  assert.equal(abaku.morphology,2);assert.deepEqual(abaku.sixIds,abaku.eightIds);
+  assert.equal(abaku.morphology,1);assert.deepEqual(abaku.eightIds,['kaikki:abaku:0']);
+  assert.ok(abaku.sixIds.includes('kaikki:abaku:0'));
+  assert.ok(abaku.eight.includes('gabra:') && abaku.eight.includes('未单列历史词源'));
+  assert.equal(abaku.chain.length,1);assert.equal(new Set(abaku.chain).size,abaku.chain.length);
+  assert.ok(!/Pronomi Mehmużin/.test(abaku.six));
+  assert.ok(!/not recorded|未完成体|过去分词|动名词/.test(abaku.two));
   await searchWord('dar');
   const darGroups=await evaluate(`(() => {
     const dims=document.querySelectorAll('#entry-card > .dimension');
@@ -327,7 +342,9 @@ try {
       eight:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>({id:a.dataset.analysisId,text:a.textContent})),
       source: dims[2].textContent, senses: dims[2].querySelectorAll('.sense-card').length};
   })()`);
-  assert.equal(darGroups.six.length,5);assert.deepEqual(darGroups.six.map(a=>a.id),darGroups.eight.map(a=>a.id));
+  assert.deepEqual(darGroups.eight.map(a=>a.id),['kaikki:dar:0','kaikki:dar:1']);
+  assert.ok(darGroups.six.some(a=>a.id==='kaikki:dar:0') && darGroups.six.some(a=>a.id==='kaikki:dar:1'));
+  for(const a of darGroups.six) if(a.id!=='kaikki:dar:0')assert.ok(!a.text.includes('djar'));
   const noun=darGroups.six.find(a=>a.id==='kaikki:dar:0').text,verb=darGroups.six.find(a=>a.id==='kaikki:dar:1').text;
   assert.ok(noun.includes('djar') && noun.includes('id-dar') && !/jdur|midur/.test(noun));
   assert.ok(verb.includes('jdur') && verb.includes('midur') && !verb.includes('djar'));
@@ -338,6 +355,11 @@ try {
   assert.ok(darGroups.senses>1);
   console.log('PASS 9: abaku/dar dimensions 06/08 preserve exact analysis ids, applicable rows, excerpts and translation provenance');
 
+  await send('Emulation.setDeviceMetricsOverride',{width:1920,height:1080,deviceScaleFactor:1,mobile:false});
+  const wide=await evaluate(`(() => {const card=document.getElementById('entry-card'), c=document.getElementById('content').getBoundingClientRect(),r=card.getBoundingClientRect(),style=getComputedStyle(card);return {width:r.width,left:r.left-c.left+parseFloat(style.paddingLeft),overflow:document.documentElement.scrollWidth>innerWidth};})()`);
+  assert.ok(wide.width>1300 && wide.left<120 && !wide.overflow,JSON.stringify(wide));
+  console.log('WIDE 1920px: '+JSON.stringify(wide));
+  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:960,deviceScaleFactor:1,mobile:false});
   const point = id => evaluate(`(() => {const r=document.getElementById('${id}').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);
   const drag = async (id,dx,dy) => {
     const p=await point(id);
@@ -437,7 +459,7 @@ try {
 } finally {
   ws?.close();
   chrome.kill();
-  serverProc.kill();
+  serverProc?.kill();
   await new Promise(r => (chrome.exitCode !== null ? r() : chrome.once('exit', r)));
   await rm(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 100 }).catch(() => {});
 }

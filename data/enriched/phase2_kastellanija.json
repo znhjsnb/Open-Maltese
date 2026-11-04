@@ -1,0 +1,73 @@
+[
+  {
+    "exact_key": "kastellanija",
+    "gloss_zh": "卡斯特拉尼亚宫（瓦莱塔历史司法建筑）",
+    "teaching_sense": {
+      "pos": "name",
+      "en_definition": "Castellania, a historic palace in Valletta formerly used as the law courts of the Order of Saint John.",
+      "zh_definition": "卡斯特拉尼亚宫：瓦莱塔的历史宫殿，曾用作圣约翰骑士团时期的法院。",
+      "mt_definition": "Il-Kastellanija hija binja storika fil-Belt Valletta li kienet tintuża bħala qorti fi żmien l-Ordni ta' San Ġwann.",
+      "definition_origin": "authored_pedagogical",
+      "source": "phase2_enrichment",
+      "review_status": "phase2_reviewed"
+    },
+    "sense_translations": [
+      {
+        "pos": "name",
+        "en_definition": "Castellania (former residence of the head of justice during the Order of Saint John's rule)",
+        "zh_definition": "卡斯特拉尼亚宫（圣约翰骑士团统治时期司法长官的旧居）"
+      }
+    ],
+    "collocations": [
+      {
+        "mt": "il-faċċata tal-Kastellanija",
+        "en": "the façade of the Castellania",
+        "zh": "卡斯特拉尼亚宫的正立面",
+        "source_type": "pedagogical_example",
+        "review_status": "phase2_reviewed"
+      },
+      {
+        "mt": "l-istorja tal-Kastellanija",
+        "en": "the history of the Castellania",
+        "zh": "卡斯特拉尼亚宫的历史",
+        "source_type": "pedagogical_example",
+        "review_status": "phase2_reviewed"
+      }
+    ],
+    "dual_scenarios": {
+      "review_status": "phase2_reviewed",
+      "formal": {
+        "mt": "Il-Kastellanija hija binja storika fi Triq il-Merkanti fil-Belt Valletta.",
+        "en": "The Castellania is a historic building on Merchants Street in Valletta.",
+        "zh": "卡斯特拉尼亚宫是瓦莱塔商人街上的一座历史建筑。",
+        "source_type": "pedagogical_example",
+        "review_status": "phase2_reviewed"
+      },
+      "colloquial": {
+        "mt": "Fejn hi l-Kastellanija? Il-Kastellanija tinsab fi Triq il-Merkanti.",
+        "en": "Where is the Castellania? The Castellania is on Merchants Street.",
+        "zh": "卡斯特拉尼亚宫在哪里？在商人街上。",
+        "source_type": "pedagogical_dialogue",
+        "review_status": "phase2_reviewed",
+        "messages": [
+          {
+            "speaker": "Mei（游客）",
+            "mt_spoken": "Fejn hi l-Kastellanija?",
+            "mt_standard": "Fejn hi l-Kastellanija?",
+            "en": "Where is the Castellania?",
+            "zh": "卡斯特拉尼亚宫在哪里？"
+          },
+          {
+            "speaker": "Luca（当地朋友）",
+            "mt_spoken": "Il-Kastellanija tinsab fi Triq il-Merkanti.",
+            "mt_standard": "Il-Kastellanija tinsab fi Triq il-Merkanti.",
+            "en": "The Castellania is on Merchants Street.",
+            "zh": "卡斯特拉尼亚宫在商人街上。"
+          }
+        ],
+        "grammar_note": "Kastellanija 是建筑专名，保留大写；tal-Kastellanija 表示‘卡斯特拉尼亚宫的’。"
+      }
+    },
+    "cognitive_memory_aid": "把 Kastellanija 作为建筑专名整词记忆：联想瓦莱塔商人街上的旧司法宫殿，不把拼写拆成未经实证的马耳他语词根。"
+  }
+]

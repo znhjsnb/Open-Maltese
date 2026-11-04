@@ -201,6 +201,16 @@ class Phase2Tests(unittest.TestCase):
             self.assertTrue(gate5(self.entries, self.index, self.lookup, manifest, self.overlays), field)
         self.assertTrue(gate5(self.entries[:-1], self.index, self.lookup, self.manifest, self.overlays))
 
+    def test_historical_context_uses_licensed_definition_but_not_teaching(self):
+        e = deepcopy(self.by_key['kastellanija'])
+        item = self.overlays['kastellanija']
+        self.assertEqual(gate4([e], {'kastellanija': item}, self.manifest, check_audio_totals=False), [])
+        for a in e['lexeme_analyses']:
+            for s in a['senses']:
+                s['definition_origin'] = 'authored_pedagogical'
+        self.assertIn('unsupported historical story', ' '.join(gate4(
+            [e], {'kastellanija': item}, self.manifest, check_audio_totals=False)))
+
     def test_stratified_samples_stable_and_cover_all_tiers(self):
         samples = content_samples(self.entries, self.index)
         self.assertEqual(samples, content_samples(list(reversed(self.entries)), self.index))

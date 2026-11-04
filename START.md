@@ -2,7 +2,28 @@
 
 欢迎接手 **Open-Malti（马耳他语–中文–英语三语认知词典）** 独立工作区 (`C:\Users\d\Documents\open-malti`)。
 
-## 当前状态（2026-11-04 · Phase 2 16,465 词全量落盘 & Phase 3 工作台移植与 12 项真机 Chrome E2E 门禁全部通过）
+## 当前修复批次（2026-11-04 · 空值收敛与 Tier 1+2 覆盖补齐）
+- 已保留 01—08 八维平铺，02/06/08 只为有对应实证的子词位生成卡片，空来源合并为紧凑注记。`dar` 名词与动词按 `analysis.id` 隔离；`abaku` 仅保留一张有效构词卡和一张 Kaikki 历史词源卡，无空附着代词小节。
+- 构建器统一去重模板及传播链，纳入全库 96 词的 `etymon`；从来源介词表的人称＋数标签归类附着代词，顶层覆盖 55 → 85 词，不把普通动词变位或名词词形归入。`kastellanija` 精编写入现有 `data/enriched/phase2_kastellanija.json`：Tier 1 为 5,051 / Tier 2 为 11,414，合计 16,465 全覆盖，另含 `bongu`，总精编 16,466。
+- 已执行 `python -X utf8 scripts/build_phase1_shards.py --apply-phase2-overlays`，32 项资产字节数及 SHA-256 全部匹配；8767 实际返回更新后的 JS、CSS 与 manifest。工程实际发布路径为 `index_lite.json`、`wordforms_lookup.json`、`manifest.json`，未另造任务中所称的索引别名或 overlay 目录。原始数据未修改。
+- 五道质量门禁 5/5、0 错误。历史声明检查兼查受保护的 licensed_source 义项，修复“原义项有历史背景但词源正文未提及”的误报；教学编写内容仍不能作为自身证据。`kastellanija` 的旧法院背景与地址另核对了[国家文化遗产清单](https://schmalta.mt/wp-content/uploads/2023/08/DC-01132.pdf)。
+- 全库 24,045 词实测 `renderEntry()` HTML 字面 `not recorded`（忽略大小写，不含其他缺失措辞）平均 **15.9518 → 2.5261**，减少 **84.16%**；每次扫描均断言八维仍在。详见 [原始对比](tests/artifacts/blank_fix_render_comparison.json)。
+- 最终顺序回归：Python **121 项通过**（[日志](tests/artifacts/blank_fix_unittest.log)），Node **56 项通过**（[日志](tests/artifacts/blank_fix_client.log)），JS 语法与 diff 空白检查通过。宽屏卡片上限已从 1100px 放宽至 1440px，保留移动端规则。本批未操作 Git，提交仍由 Antigravity 宿主负责。
+- **本轮真实浏览器门禁未通过启动，页面断言未执行**：要求的 `node tests/frontend.browser.mjs` 首先在临时 Python 服务启动处遇到 `spawn EPERM`；新增可选 `OPEN_MALTI_E2E_ORIGIN` 后复用在线 8767，Chrome 仍因 Crashpad/Mojo 命名通信通道 `Access denied (0x5)` 提前退出（[浏览器日志](tests/artifacts/blank_fix_browser.log)、[Chrome 诊断](tests/artifacts/blank_fix_chrome.log)）。未提高权限或关闭安全机制，不能以历史 PASS 1—12 记录替代本批实测。测试已更新有效卡片 id、空代词小节、词源去重及 1920px 留白断言；宽屏、移动端和离线真机回归仍待 Antigravity 宿主执行。
+- Antigravity 宿主直接运行（无需重新构建）：`$env:OPEN_MALTI_E2E_ORIGIN='http://127.0.0.1:8767'; node tests/frontend.browser.mjs`。若使用隔离临时服务，可清除该环境变量后直接运行原命令。成功后再复核语言与听音并提交；当前 `phase2_reviewed` 仍仅表示教学编审，不等于母语独立签核。
+
+| 每词平均字面 `not recorded` | 修复前 | 修复后 |
+|---|---:|---:|
+| 01 词头发音 | 2.1082 | 0.0000 |
+| 02 构词词族 | 8.8633 | 0.3946 |
+| 03 三语释义 | 0.0336 | 0.0336 |
+| 04 实用搭配 / 05 双境表达 | 0.0000 | 0.0000 |
+| 06 屈折附着 | 2.5860 | 0.2131 |
+| 07 语用同源 | 1.1012 | 0.9003 |
+| 08 历史词源与助记 | 1.2596 | 0.9845 |
+| **合计** | **15.9518** | **2.5261** |
+
+## 前序状态（2026-11-04 · Phase 2 16,465 词全量落盘 & Phase 3 工作台移植与 12 项真机 Chrome E2E 门禁全部通过）
 - 已按 [Phase 3 共识方案](docs/PHASE3_WORKBENCH_PORT_PLAN.md) 移植双栏工作台：可拖拽并持久保存栏宽、吸顶词头、沉浸阅读、义项速跳、排版浮层与新旧偏好控件同步、3D 抽认卡与下滑关闭、收藏筛选、排序、页码跳转及每批 60 条流式追加。保留原 DOM / 导出契约、8 个顶层维度与 0 个 `<details>`，第二阶段回放按 offset 替换并按 id 去重。音频波形随实际录音或 TTS 播放状态变化，无马语语音时保留指南。
 - 02 保留子词位形态与逐义项译释；03 平铺全部来源义项并分开标注原文与教学译释；06/08 按 `analysis.id` 独立呈现屈折和历史词源，不使用顶层聚合字段填补多子词位空缺。`abaku` 的 `abaki / l-abaku` 与意大利语源直出；`dar` 的名词 `djar` 与动词 `jdur / midur` 隔离，屈折节选标注展示数 / 来源总数。
 - `prepareOffline` 固定清单版本，依次校验两份索引与 30 分片的 SHA-256，写入 IndexedDB `files` 后回读校验，支持暂停续传；缺存储、回读为空或损坏均拒绝成功。数据库 v2 兼容读取旧 `assets`；`sw.js` 路由和 `/data/` 缓存回退未改。未修改 `data/`，32 项发布资产摘要全部匹配清单。

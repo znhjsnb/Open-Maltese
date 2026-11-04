@@ -13,7 +13,7 @@ from urllib.error import HTTPError
 from urllib.request import urlopen
 
 from app.server import make_server
-from scripts.build_phase1_shards import build, resolve_edges, targets
+from scripts.build_phase1_shards import build, resolve_edges, targets, source_chain, unique_templates, prepositional_clitics
 from scripts.maltese_alphabet import MALTESE_UI_BUCKETS_30, maltese_sort_key, normalize_exact_search
 from scripts.phase0_inventory_audit import audit_gabra, canonical_root, classify_kaikki_row, lexical_anomaly, LEMMA_CLASSES, read_kaikki
 from scripts.phase1_showcase import SHOWCASE
@@ -24,6 +24,37 @@ PROJECT = Path(__file__).resolve().parents[1]
 
 
 class Phase1ShardsTests(unittest.TestCase):
+    def test_history_templates_are_deduplicated_by_arguments(self):
+        templates = [{'name': 'etymon', 'args': {'1': 'mt', '2': ':bor', '3': 'it:abaco'}, 'expansion': expansion}
+                     for expansion in ('raw extractor expansion', 'Borrowed from Italian abaco.')]
+        self.assertEqual(len(unique_templates(templates)), 1)
+        chain = source_chain(templates + [{'name': 'mt-root', 'args': {'1': 'x-y-z'}}])
+        self.assertEqual(len(chain), 1)
+        self.assertEqual(chain[0]['template'], 'etymon')
+        entry = self.by_word['abaku']
+        self.assertEqual(len(entry['etymology']['source_chain']), 1)
+        self.assertEqual(len(next(a for a in entry['lexeme_analyses'] if a['source'] == 'kaikki')['etymology_templates']), 1)
+
+    def test_prepositional_clitics_require_person_number_and_pos(self):
+        form = {'form': 'għandi', 'tags': ['first-person', 'positive', 'singular']}
+        self.assertEqual(prepositional_clitics({'pos': 'prep', 'forms': [form]})[0]['form'], 'għandi')
+        for pos in ('verb', 'noun', 'pron', None):
+            self.assertEqual(prepositional_clitics({'pos': pos, 'forms': [form]}), [])
+        for tags in (['first-person'], ['singular'], ['plural', 'possessive']):
+            self.assertEqual(prepositional_clitics({'pos': 'prep', 'forms': [{'form': 'x', 'tags': tags}]}), [])
+        entry = self.by_word['għand']
+        self.assertTrue({'għandi', 'għandek', 'għandu'} <= {f['form'] for f in entry['inflection_and_clitics']['pronomi_mehmuzin']})
+        for analysis in entry['lexeme_analyses']:
+            if analysis['source'] == 'gabra':
+                self.assertIsNone(analysis['pronomi_mehmuzin'])
+
+    def test_all_tier_one_and_two_entries_are_enriched(self):
+        selected = [e for e in self.index if e['tier'] in (1, 2)]
+        self.assertEqual(len(selected), 16465)
+        self.assertTrue(all(e['is_enriched'] for e in selected))
+        self.assertEqual(self.summary['enriched_count'], 16466)
+        self.assertEqual(self.by_word['kastellanija']['senses'][0]['id'], 'teaching')
+
     @classmethod
     def setUpClass(cls):
         artifacts = PROJECT / 'tests/artifacts'

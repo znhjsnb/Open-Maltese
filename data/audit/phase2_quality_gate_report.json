@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-9d57b07907ae",
+  "dataset_version": "malti-phase2-2026-11-03-7856ffd03871",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 16465,
-    "unenriched_count": 7580,
-    "showcase_count": 16465,
+    "enriched_count": 16466,
+    "unenriched_count": 7579,
+    "showcase_count": 16466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -1781,25 +1781,6 @@
         "review_status": "phase2_reviewed"
       },
       "cognitive_memory_aid": "把密码纸和潦草便条并排想象：两者都需要费力读出意思，因此都能帮助记住破译和辨读。"
-    },
-    {
-      "stratum": "tier_2/romance_sicilian_italian/unenriched",
-      "exact_key": "kastellanija",
-      "analysis_pos": [
-        "name"
-      ],
-      "senses": [
-        {
-          "pos": "name",
-          "en_definition": "Castellania (former residence of the head of justice during the Order of Saint John's rule)",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
     },
     {
       "stratum": "tier_2/semitic/enriched",
