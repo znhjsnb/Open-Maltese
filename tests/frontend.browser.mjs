@@ -297,9 +297,143 @@ try {
   assert.ok((await evaluate(`document.getElementById('entry-card').textContent`)).includes('phase2_reviewed'));
   console.log(`PASS 8: Dynamic showcase (${showcaseCount}), Phase 2 teaching provenance, dialogue turns and filtered Worker results`);
 
+  const searchWord = async word => {
+    await evaluate(`(() => {
+      document.getElementById('search').value=${JSON.stringify(word)};
+      Array.from(document.querySelectorAll('#feature-filters button')).find(b=>b.textContent==='全部特征').click();
+    })()`);
+    await until(async()=>await evaluate(`document.querySelector('#entry-card h1')?.textContent===${JSON.stringify(word)} && !document.getElementById('entry-card').hasAttribute('aria-busy')`));
+  };
+  // 9. Independently inspect each dimension's exact source-record boundary.
+  await searchWord('abaku');
+  const abaku = await evaluate(`(() => {
+    const dims=document.querySelectorAll('#entry-card > .dimension');
+    return {six:dims[5].textContent,eight:dims[7].textContent,ipa:document.querySelector('.ipa').textContent,
+      all:document.getElementById('entry-card').textContent,
+      morphology:document.querySelectorAll('#entry-card .lexeme-analysis').length,
+      sixIds:Array.from(dims[5].querySelectorAll('.inflection-subentry')).map(a=>a.dataset.analysisId),
+      eightIds:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>a.dataset.analysisId)};
+  })()`);
+  assert.ok(abaku.six.includes('abaki') && abaku.six.includes('l-abaku'));
+  assert.ok(!/Perfett 3sg.m|Imperfett 3sg.m|Imperattiv 2sg/.test(abaku.six));
+  assert.ok(abaku.eight.includes('Borrowed from Italian abaco.') && abaku.eight.includes('学习助记：'));
+  assert.ok(!/列于上方|分列如下/.test(abaku.all));
+  assert.ok(abaku.ipa.includes('/ˈaː.ba.ku/ (kaikki)'));
+  assert.equal(abaku.morphology,2);assert.deepEqual(abaku.sixIds,abaku.eightIds);
+  await searchWord('dar');
+  const darGroups=await evaluate(`(() => {
+    const dims=document.querySelectorAll('#entry-card > .dimension');
+    return {six:Array.from(dims[5].querySelectorAll('.inflection-subentry')).map(a=>({id:a.dataset.analysisId,text:a.textContent})),
+      eight:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>({id:a.dataset.analysisId,text:a.textContent})),
+      source: dims[2].textContent, senses: dims[2].querySelectorAll('.sense-card').length};
+  })()`);
+  assert.equal(darGroups.six.length,5);assert.deepEqual(darGroups.six.map(a=>a.id),darGroups.eight.map(a=>a.id));
+  const noun=darGroups.six.find(a=>a.id==='kaikki:dar:0').text,verb=darGroups.six.find(a=>a.id==='kaikki:dar:1').text;
+  assert.ok(noun.includes('djar') && noun.includes('id-dar') && !/jdur|midur/.test(noun));
+  assert.ok(verb.includes('jdur') && verb.includes('midur') && !verb.includes('djar'));
+  assert.ok(verb.includes('已展示 24 / 共 55 项'));
+  assert.ok(darGroups.eight.find(a=>a.id==='kaikki:dar:0').text.includes('From Arabic دَار (dār).'));
+  assert.ok(!darGroups.eight.find(a=>a.id==='kaikki:dar:0').text.includes('دَارَ (dāra)'));
+  assert.ok(darGroups.source.includes('licensed_source') && darGroups.source.includes('译释：authored_pedagogical · phase2_reviewed'));
+  assert.ok(darGroups.senses>1);
+  console.log('PASS 9: abaku/dar dimensions 06/08 preserve exact analysis ids, applicable rows, excerpts and translation provenance');
+
+  const point = id => evaluate(`(() => {const r=document.getElementById('${id}').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);
+  const drag = async (id,dx,dy) => {
+    const p=await point(id);
+    await send('Input.dispatchMouseEvent',{type:'mousePressed',...p,button:'left',clickCount:1});
+    for(let step=1;step<=5;step++)await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:p.x+dx*step/5,y:p.y+dy*step/5,button:'left',buttons:1});
+    await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:p.x+dx,y:p.y+dy,button:'left',clickCount:1});
+  };
+  // 10. Use actual pointer input for the splitter, then scroll the content pane.
+  assert.equal(await evaluate(`['.topbar','.workspace','#word-sidebar','#resizer','#content','.content-toolbar'].every(s=>!!document.querySelector(s))`),true);
+  const widthBefore=await evaluate(`document.getElementById('word-sidebar').getBoundingClientRect().width`);
+  await drag('resizer',50,0);
+  const widthAfter=await evaluate(`document.getElementById('word-sidebar').getBoundingClientRect().width`);
+  assert.ok(Math.abs(widthAfter-widthBefore-50)<2);
+  assert.equal(await evaluate(`JSON.parse(localStorage.getItem('open-malti-sidebar-width'))`),widthAfter);
+  await evaluate(`document.getElementById('content').scrollTop=600`);
+  await until(async()=>await evaluate(`!document.getElementById('toolbar-pinned-word').hidden`));
+  assert.ok((await evaluate(`document.getElementById('toolbar-pinned-word').textContent`)).includes('dar'));
+  await evaluate(`document.getElementById('focus').click()`);
+  assert.equal(await evaluate(`getComputedStyle(document.getElementById('word-sidebar')).display`),'none');
+  await evaluate(`document.getElementById('focus').click();document.querySelector('.sense-chip').click()`);
+  await until(async()=>await evaluate(`document.getElementById('sense-0').classList.contains('pulse') && document.activeElement.id==='sense-0'`));
+  console.log('PASS 10: Workbench shell, pointer splitter persistence, pinned word, focus mode and pulsing sense navigation');
+
+  // 11. New and legacy controls share state and survive a real document reload.
+  await evaluate(`document.getElementById('typography-btn').click()`);
+  assert.equal(await evaluate(`document.getElementById('typography-panel').open`),true);
+  await evaluate(`document.querySelector('[data-paper="sepia"]').click();document.querySelector('[data-font-family="mono"]').click();document.querySelector('[data-density="compact"]').click();document.getElementById('font-increase').click();document.getElementById('lang-bilingual').click()`);
+  const prefs=await evaluate(`JSON.parse(localStorage.getItem('open-malti-preferences'))`);
+  assert.equal(prefs.theme,'sepia');assert.equal(prefs.font,'mono');assert.equal(prefs.density,'compact');assert.equal(prefs.language,'bilingual');
+  assert.equal(await evaluate(`document.getElementById('theme').value`),'sepia');
+  const larger=await evaluate(`Number(document.documentElement.style.getPropertyValue('--scale'))`);
+  await evaluate(`document.getElementById('font-down').click();document.getElementById('font-up').click();document.getElementById('font-decrease').click();document.getElementById('font-increase').click();document.getElementById('language-mode').click()`);
+  assert.equal(await evaluate(`Number(document.documentElement.style.getPropertyValue('--font-scale'))`),larger);
+  assert.equal(await evaluate(`document.getElementById('lang-en').getAttribute('aria-pressed')`),'true');
+  assert.equal(await evaluate(`document.body.classList.contains('english-mode')`),true);
+  await evaluate(`document.getElementById('typography-close').click()`);
+  await send('Page.reload',{ignoreCache:true});
+  await until(async()=>await evaluate(`document.querySelectorAll('#entry-card > .dimension').length===8 && document.getElementById('wordforms-status').textContent.includes('均已就绪')`));
+  const reloaded=await evaluate(`({paper:document.documentElement.dataset.readingPaper,font:document.documentElement.dataset.readingFont,density:document.documentElement.dataset.readingDensity,en:document.body.classList.contains('english-mode'),scale:Number(document.documentElement.style.getPropertyValue('--scale')),width:document.getElementById('word-sidebar').getBoundingClientRect().width})`);
+  assert.deepEqual(reloaded,{paper:'sepia',font:'mono',density:'compact',en:true,scale:larger,width:widthAfter});
+  await evaluate(`document.getElementById('lang-trilingual').click();document.getElementById('theme-toggle').click()`);
+  assert.equal(await evaluate(`document.body.dataset.theme`),'night');
+  await evaluate(`document.getElementById('typography-btn').click();document.getElementById('typo-reset').click();document.getElementById('typography-close').click()`);
+  assert.equal(await evaluate(`document.body.dataset.theme`),'white');
+  console.log('PASS 11: Typography dialog, legacy/new preference synchronization and reload persistence');
+
+  // 12. Physical study drawer, bookmarks, then all 32 persistent assets.
+  await evaluate(`document.getElementById('practice').click()`);
+  await until(async()=>await evaluate(`document.getElementById('study').open && !document.getElementById('study-known').disabled`));
+  await evaluate(`document.getElementById('flashcard').click()`);
+  assert.equal(await evaluate(`document.getElementById('flashcard').getAttribute('aria-pressed')`),'true');
+  assert.equal(await evaluate(`getComputedStyle(document.querySelector('.flashcard-inner')).transformStyle`),'preserve-3d');
+  assert.equal(await evaluate(`document.querySelector('.flashcard-back').getAttribute('aria-hidden')`),'false');
+  await drag('study-grabber',0,180);
+  await until(async()=>await evaluate(`!document.getElementById('study').open`));
+  await searchWord('abaku');
+  await evaluate(`document.getElementById('save').click();document.getElementById('search').value='';document.getElementById('bookmarks').click()`);
+  await until(async()=>await evaluate(`document.getElementById('result-count').textContent==='1 个词目' && document.querySelector('#entry-card h1')?.textContent==='abaku' && !document.getElementById('save').disabled`));
+  assert.equal(await evaluate(`document.getElementById('bookmark-count').textContent`),'1');
+  await evaluate(`document.getElementById('save').click()`);
+  await until(async()=>await evaluate(`document.getElementById('result-count').textContent==='0 个词目' && document.querySelectorAll('.word-row').length===0`));
+  await evaluate(`document.getElementById('bookmarks').click();document.getElementById('offline').click()`);
+  await until(async()=>await evaluate(`document.getElementById('offline').textContent.includes('32/32')`),120000);
+  const persisted=await evaluate(`(async()=>{
+    const db=await new Promise((resolve,reject)=>{const r=indexedDB.open('open-malti-data',2);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});
+    const read=key=>new Promise((resolve,reject)=>{const r=db.transaction('files').objectStore('files').get(key);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});
+    const m=await read('manifest'),assets=[m.index_lite,m.wordforms_lookup,...m.shards];let verified=0;
+    for(const meta of assets){const bytes=await read(m.version+':'+meta.sha256);if(!bytes)throw new Error('Missing IndexedDB asset '+meta.file);const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(b=>b.toString(16).padStart(2,'0')).join('');if(digest!==meta.sha256)throw new Error('SHA mismatch '+meta.file);verified++;}
+    db.close();return verified;
+  })()`);
+  assert.equal(persisted,32);
+  await evaluate(`navigator.serviceWorker.ready.then(()=>true)`);
+  await send('Network.enable');
+  await send('Network.emulateNetworkConditions',{offline:true,latency:0,downloadThroughput:0,uploadThroughput:0});
+  await send('Page.reload');
+  await until(async()=>await evaluate(`document.getElementById('wordforms-status').textContent.includes('均已就绪')`));
+  await searchWord('żmien');
+  assert.equal(await evaluate(`document.querySelectorAll('#entry-card > .dimension').length`),8);
+  await send('Network.emulateNetworkConditions',{offline:false,latency:0,downloadThroughput:-1,uploadThroughput:-1});
+  await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+  await evaluate(`document.getElementById('daily').click()`);
+  await until(async()=>await evaluate(`!document.getElementById('study-known').disabled`));
+  await evaluate(`document.getElementById('flashcard').click()`);
+  assert.equal(await evaluate(`getComputedStyle(document.querySelector('.flashcard-inner')).transform`),'none');
+  await evaluate(`document.getElementById('close-study').click()`);
+  await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+  await evaluate(`document.querySelector('.word-row').click()`);
+  await until(async()=>await evaluate(`getComputedStyle(document.getElementById('content')).display!=='none'`));
+  assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth`),true);
+  await evaluate(`document.getElementById('back').click()`);
+  assert.equal(await evaluate(`getComputedStyle(document.getElementById('word-sidebar')).display`),'flex');
+  console.log('PASS 12: 3D study drawer/drag close, bookmarks including empty, 32 SHA-verified IndexedDB assets, offline reload, reduced motion and mobile navigation');
+
   assert.equal(consoleErrors.length, 0, `Console errors: ${consoleErrors.join('; ')}`);
   assert.equal(pageErrors.length, 0, `Page errors: ${pageErrors.join('; ')}`);
-  console.log('ALL 8 REAL CHROME E2E ACCEPTANCE CASES PASSED (0 consoleErrors, 0 pageErrors)');
+  console.log('ALL 12 REAL CHROME E2E ACCEPTANCE CASES PASSED (0 consoleErrors, 0 pageErrors)');
 } finally {
   ws?.close();
   chrome.kill();

@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {makeSearchEngine,exact,ascii,stripArticle,createWorkerHandler} from '../app/static/worker.js';
-import {pronunciationGraphemes,currentWorkerError,renderAnalyses,exportText} from '../app/static/app.js';
+import {pronunciationGraphemes,currentWorkerError,renderAnalyses,renderInflections,renderEtymology,renderSenses,mergeResultPage,exportText} from '../app/static/app.js';
 import {createPronouncer,malteseVoice,availableVoice} from '../app/static/audio.js';
 import {loadEntry} from '../app/static/db.js';
 import vm from 'node:vm';
@@ -12,6 +12,18 @@ const lookup=JSON.parse(fs.readFileSync('app/static/data/wordforms_lookup.json',
 const engine=makeSearchEngine(entries,lookup);
 let count=0;
 function test(name,run) { run(); count++; }
+test('UTF-8 shell preserves legacy and new selector contracts without duplicate ids',()=>{
+  const html=fs.readFileSync('app/static/index.html','utf8');
+  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+  assert.equal(ids.length,new Set(ids).size);
+  for(const id of ['theme','font-down','font-up','language-mode','search','clear','search-key','letter-bar','sub-prefix-bar','tier-filters','stratum-filters','feature-filters','result-count','search-time','wordforms-status','headword-list','previous-page','page-number','next-page','page-input','page-go','bookmarks','bookmark-count','sort-order','offline','entry-card','save','copy-markdown','copy-anki','pronunciation-guide-popover','pronunciation-content','close-pronunciation','toast','inventory-note','word-sidebar','resizer','content','toolbar-pinned-word','focus','study','typography-panel','typography-btn','typography-close','font-decrease','font-increase','font-size-value','typo-reset','lang-trilingual','lang-bilingual','lang-en','theme-toggle'])assert.ok(ids.includes(id),id);
+  assert.ok(html.includes('Ġabra') && html.includes('马耳他语认知词典'));
+  assert.ok(!/<details\b/i.test(html));
+  for(const file of ['app/static/index.html','app/static/app.js','app/static/styles.css','tests/frontend.browser.mjs']) {
+    const text=fs.readFileSync(file,'utf8');
+    assert.ok(!/[?]{3,}|\uFFFD/.test(text),`Damaged UTF-8: ${file}`);
+  }
+});
 test('normalization',()=>{
   assert.equal(exact(' M’GĦANDIX '),"m'għandix");
   assert.equal(ascii('ĊĠĦŻ Għ IE'),'cghzghie');
@@ -62,6 +74,36 @@ test('all feature filters',()=>{
   const loans=engine.search({feature:'loans'});
   assert.ok(loans.total>0);
   assert.ok(loans.results.every(e=>(e.strata || [e.stratum]).some(s=>['romance_sicilian_italian','english'].includes(s))));
+});
+test('bookmarks filter uses ids before slicing, including an explicitly empty list',()=>{
+  assert.equal(engine.search({bookmarks:[]}).total,0);
+  assert.deepEqual(engine.search({bookmarks:[]}).results,[]);
+  assert.equal(engine.search({bookmarks:null}).total,entries.length);
+  assert.equal(engine.search({}).total,entries.length);
+  const ids=entries.slice(120,245).map(e=>e.id);
+  const result=engine.search({bookmarks:[...ids,'__nonexistent_bookmark__',ids[0]],offset:60});
+  assert.equal(result.total,125);assert.equal(result.results.length,60);
+  assert.deepEqual(result.results.map(e=>e.id),ids.slice(60,120));
+  assert.ok(engine.search({query:'ktibt',bookmarks:['kiteb']}).results[0].trace);
+});
+test('sort retains DMS order within relevance and tier, 60 results per page',()=>{
+  const ids=rows=>rows.map(e=>e.id);
+  assert.deepEqual(ids(engine.search({sort:'alpha'}).results),ids(entries.slice(0,60)));
+  assert.deepEqual(ids(engine.search({sort:'alpha-desc'}).results),ids(entries.slice().reverse().slice(0,60)));
+  const ordered=entries.slice().sort((a,b)=>a.tier-b.tier);
+  for(const offset of [0,60,5040,11400]) assert.deepEqual(ids(engine.search({sort:'tier',offset}).results),ids(ordered.slice(offset,offset+60)));
+  for(const sort of ['alpha','alpha-desc','tier']) assert.equal(engine.search({query:'dar',sort}).results[0].id,'dar');
+});
+test('stream pages replace stage-2 replays and deduplicate ids across offsets',()=>{
+  const pages=new Map();
+  const first=engine.search({requestId:88}),next=engine.search({requestId:89,offset:60});
+  assert.equal(mergeResultPage(pages,first).length,60);
+  assert.equal(mergeResultPage(pages,next).length,120);
+  assert.equal(mergeResultPage(pages,next).length,120);
+  const replay={...first,results:first.results.map(e=>({...e,trace:{surface:'replayed'}}))};
+  const result=mergeResultPage(pages,replay);
+  assert.equal(result.length,120);assert.equal(result[0].trace.surface,'replayed');
+  assert.equal(mergeResultPage(pages,{offset:120,results:[next.results[0]]}).length,120);
 });
 test('context-checked articles and euphonic vowel',()=>{
   const basic=makeSearchEngine(entries);
@@ -144,6 +186,18 @@ const player=createPronouncer({synth,AudioClass:Recording,Utterance,guide:t=>gui
 await player.play('ktieb','https://upload.wikimedia.org/test.mp3');
 assert.equal(synth.spoken.length,0); assert.equal(Recording.last.url,'https://upload.wikimedia.org/test.mp3'); count++;
 await player.play('kiteb'); assert.equal(synth.spoken.length,1); assert.equal(synth.spoken[0].lang,'mt-MT'); assert.equal(synth.spoken[0].voice,voice); count++;
+{
+  const activity=[],voices=new Synth([voice]);
+  const meter=createPronouncer({synth:voices,AudioClass:Recording,Utterance,guide:()=>{},status:()=>{},activity:value=>activity.push(value)});
+  await meter.play('ktieb','https://upload.wikimedia.org/test.mp3');
+  assert.equal(activity.at(-1),true);
+  const first=Recording.last;first.dispatchEvent(new Event('ended'));assert.equal(activity.at(-1),false);
+  await meter.play('kiteb');assert.equal(activity.at(-1),false);
+  voices.spoken[0].onstart();assert.equal(activity.at(-1),true);
+  const beforeStaleEnd=activity.length;first.dispatchEvent(new Event('ended'));assert.equal(activity.length,beforeStaleEnd);
+  voices.spoken[0].onend();assert.equal(activity.at(-1),false);
+  meter.stop();assert.equal(activity.at(-1),false);count++;
+}
 class FailedRecording extends Recording { async play() { throw new Error('offline'); } }
 const fallback=createPronouncer({synth,AudioClass:FailedRecording,Utterance,guide:t=>guides.push(t),status:()=>{}});
 await fallback.play('ktieb','https://upload.wikimedia.org/test.mp3'); assert.equal(synth.spoken.length,2); count++;
@@ -180,16 +234,69 @@ test('homograph cards and exports preserve analysis boundaries and evidence',()=
     if (anki) assert.equal(text.split('\t').length,9);
   }
 });
+test('dimensions 06 and 08 use each exact analysis id without aggregate fallback',()=>{
+  for(const word of ['abaku','dar']) {
+    const entry=shardEntries.find(e=>e.id===word),six=renderInflections(entry),eight=renderEtymology(entry);
+    assert.ok(!six.includes('lexeme-analysis'));assert.ok(!eight.includes('lexeme-analysis'));
+    for(const [html,css] of [[six,'inflection-subentry'],[eight,'etymology-subentry']]) {
+      const blocks=html.split(`<section class="${css}"`).slice(1);
+      assert.equal(blocks.length,entry.lexeme_analyses.length);
+      entry.lexeme_analyses.forEach((a,i)=>assert.ok(blocks[i].startsWith(` data-analysis-id="${a.id}"`)));
+      assert.ok(!/列于上方|分列如下/.test(html));
+    }
+    if(word==='abaku') {
+      assert.ok(six.includes('abaki'));assert.ok(six.includes('l-abaku'));
+      assert.ok(!six.includes('Perfett 3sg.m'));
+      const gabra=six.split('<section class="inflection-subentry"')[1];
+      assert.ok(!gabra.includes('abaki'));
+      assert.ok(eight.includes('Borrowed from Italian abaco.'));assert.ok(eight.includes('学习助记：'));
+      assert.ok(eight.includes('authored_pedagogical · phase2_reviewed'));
+    } else {
+      const blocks=six.split('<section class="inflection-subentry"').slice(1);
+      const noun=blocks[entry.lexeme_analyses.findIndex(a=>a.source==='kaikki'&&a.pos==='noun')];
+      const verb=blocks[entry.lexeme_analyses.findIndex(a=>a.source==='kaikki'&&a.pos==='verb')];
+      assert.ok(noun.includes('djar')&&noun.includes('id-dar')&&!/jdur|midur/.test(noun));
+      assert.ok(verb.includes('jdur')&&verb.includes('midur')&&!verb.includes('djar'));
+      assert.ok(verb.includes('已展示 24 / 共 55 项'));
+      // Poison the aggregates: neither dimension is allowed to use them.
+      const changed=structuredClone(entry);changed.inflection_and_clitics.plural=['POISON'];changed.etymology.etymology_text_en='POISON';
+      assert.ok(!renderInflections(changed).includes('POISON'));assert.ok(!renderEtymology(changed).includes('POISON'));
+    }
+  }
+});
+test('source English and pedagogical translations have distinct provenance',()=>{
+  const dar=shardEntries.find(e=>e.id==='dar'),html=renderSenses(dar.senses);
+  assert.equal((html.match(/class="sense sense-card"/g)||[]).length,dar.senses.length);
+  assert.ok(html.includes('来源释义 (licensed_source) · source_attested'));
+  assert.ok(html.includes('译释：authored_pedagogical · phase2_reviewed'));
+  assert.ok(html.includes('id="sense-0"'));
+  const teaching=renderSenses([{definition_origin:'authored_pedagogical',en_definition:'<safe>'}]);
+  assert.ok(teaching.includes('教学编写 · authored_pedagogical · phase2_reviewed'));
+  assert.ok(teaching.includes('&lt;safe&gt;'));
+});
+test('single lexeme only renders applicable source forms and safe etymology',()=>{
+  const entry=structuredClone(shardEntries.find(e=>e.id==='abaku'));
+  entry.lexeme_analyses=entry.lexeme_analyses.filter(a=>a.source==='kaikki');
+  const noun=renderInflections(entry);assert.ok(noun.includes('abaki'));assert.ok(!noun.includes('Perfett 3sg.m'));
+  const etymology=renderEtymology(entry);assert.ok(etymology.includes('etymology-card'));assert.ok(etymology.includes('Borrowed from Italian abaco.'));
+  entry.lexeme_analyses[0].pos='verb';
+  entry.lexeme_analyses[0].verb_paradigm={perfett_3sg_m:'source-only-form'};
+  const verb=renderInflections(entry);assert.ok(!verb.includes('复数 / plural'));assert.ok(!verb.includes('定冠词 L-Artiklu'));
+  assert.ok(verb.includes('source-only-form'));
+  entry.etymology.etymology_text_en='<script>alert(1)</script>';
+  assert.ok(renderEtymology(entry).includes('&lt;script&gt;'));
+});
 // Minimal event-based IndexedDB fixture. Fresh module imports simulate reloads;
 // only the persisted database survives, with network and Cache API unavailable.
-const idbRecords=new Map(); let created=false;
+const idbRecords=new Map(),legacyRecords=new Map(); let created=false,dropWrites=false,dropReads=false,corruptReads=false,hasLegacy=false;
 globalThis.indexedDB={open(){
   const request={};
   queueMicrotask(()=>{
-    request.result={createObjectStore(){created=true;},transaction(){
+    request.result={objectStoreNames:{contains:name=>(created && name==='files') || (hasLegacy && name==='assets')},createObjectStore(){created=true;},transaction(name){
+      const records=name==='assets' ? legacyRecords : idbRecords;
       const tx={objectStore(){return {
-        get(key){const r={};queueMicrotask(()=>{r.result=structuredClone(idbRecords.get(key));r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;},
-        put(value,key){const r={};queueMicrotask(()=>{idbRecords.set(key,structuredClone(value));r.result=key;r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;}
+        get(key){const r={};queueMicrotask(()=>{r.result=dropReads ? undefined : structuredClone(records.get(key));if(corruptReads && r.result instanceof ArrayBuffer)r.result=new TextEncoder().encode('[]').buffer;r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;},
+        put(value,key){const r={};queueMicrotask(()=>{if(!dropWrites)records.set(key,structuredClone(value));r.result=key;r.onsuccess?.();queueMicrotask(()=>tx.oncomplete?.());});return r;}
       };}};return tx;
     }};
     if(!created) request.onupgradeneeded?.();
@@ -224,12 +331,51 @@ try {
   await assert.rejects(offline.loadDataset(manifest.index_lite,'other-generation'),/offline/);count++;
   idbRecords.set(`${manifest.version}:${manifest.index_lite.sha256}`,new TextEncoder().encode('[]').buffer);
   await assert.rejects(offline.loadDataset(manifest.index_lite,manifest.version),/更新|损坏/);count++;
+  // Real shipped bytes with a deterministic event-based storage fixture.
+  idbRecords.clear();let downloads=0;
+  globalThis.fetch=async url=>{downloads++;return new Response(fs.readFileSync(`app/static/data/${String(url).replace('./data/','').split('?')[0]}`));};
+  const persistent=await import('../app/static/db.js?prepare');
+  const progress=[];
+  const paused=await persistent.prepareOffline(manifest,{onProgress:p=>progress.push(p),shouldPause:()=>progress.length===3});
+  assert.equal(paused.paused,true);assert.equal(paused.completed,3);assert.equal(downloads,3);count++;
+  const finished=await persistent.prepareOffline(manifest,{onProgress:p=>progress.push(p)});
+  assert.equal(finished.completed,32);assert.equal(finished.paused,false);assert.equal(downloads,32);
+  for(const meta of [manifest.index_lite,manifest.wordforms_lookup,...manifest.shards])assert.ok(idbRecords.get(`${manifest.version}:${meta.sha256}`));
+  assert.equal(idbRecords.get('manifest').version,manifest.version);
+  const beforeResume=downloads;await persistent.prepareOffline(manifest);assert.equal(downloads,beforeResume);count++;
+  for(const [key,value] of idbRecords)legacyRecords.set(key,structuredClone(value));
+  idbRecords.clear();hasLegacy=true;
+  globalThis.fetch=async()=>{throw new Error('offline legacy cache');};
+  const migrated=await import('../app/static/db.js?legacy-migration');
+  assert.equal((await migrated.loadManifest()).version,manifest.version);
+  await migrated.prepareOffline(manifest);
+  assert.equal(downloads,beforeResume);
+  assert.equal(idbRecords.size,33);hasLegacy=false;count++;
+  const mutable=structuredClone(manifest);
+  const pinned=await persistent.prepareOffline(mutable,{onProgress:()=>{mutable.version='changed-during-preparation';}});
+  assert.equal(pinned.version,manifest.version);assert.equal(idbRecords.get('manifest').version,manifest.version);count++;
+  // A reload can read every asset with both network and Cache API unavailable.
+  globalThis.fetch=async()=>{throw new Error('offline');};
+  const completeOffline=await import('../app/static/db.js?complete-offline');
+  for(const meta of [manifest.index_lite,manifest.wordforms_lookup,...manifest.shards])await completeOffline.loadJson(meta,manifest.version);
+  count++;
+  idbRecords.clear();dropWrites=true;
+  globalThis.fetch=async url=>new Response(fs.readFileSync(`app/static/data/${String(url).replace('./data/','').split('?')[0]}`));
+  await assert.rejects(persistent.prepareOffline(manifest),/IndexedDB.*回读/);dropWrites=false;count++;
+  dropReads=true;
+  await assert.rejects(persistent.prepareOffline(manifest),/IndexedDB.*回读/);dropReads=false;count++;
+  idbRecords.clear();corruptReads=true;
+  await assert.rejects(persistent.prepareOffline(manifest),/更新|损坏/);corruptReads=false;count++;
+  idbRecords.clear();
+  const badManifest={...manifest,index_lite:{...manifest.index_lite,sha256:'0'.repeat(64)}};
+  await assert.rejects(persistent.prepareOffline(badManifest),/更新|损坏/);count++;
 } finally {globalThis.fetch=originalFetch;delete globalThis.indexedDB;}
 try {
   globalThis.indexedDB={open(){throw new Error('storage denied');}};
   globalThis.fetch=async()=>new Response(fs.readFileSync('app/static/data/index_lite.json'));
   const privateMode=await import('../app/static/db.js?storage-denied');
   assert.equal((await privateMode.loadDataset(manifest.index_lite,manifest.version)).length,24045);count++;
+  await assert.rejects(privateMode.prepareOffline(manifest),/IndexedDB 不可用/);count++;
 } finally {globalThis.fetch=originalFetch;delete globalThis.indexedDB;}
 // Execute the shipped Service Worker with a network/cache harness, including
 // offline shell/module and manifest fetches (not a browser E2E claim).

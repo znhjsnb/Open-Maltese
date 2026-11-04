@@ -15,9 +15,9 @@ export async function availableVoice(synth) {
 }
 export function createPronouncer({synth = globalThis.speechSynthesis,
   AudioClass = globalThis.Audio, Utterance = globalThis.SpeechSynthesisUtterance,
-  guide, status}) {
+  guide, status, activity=()=>{}}) {
   let playing, sequence = 0;
-  function stop() { sequence++; if (playing) { playing.pause(); playing = null; } synth?.cancel(); }
+  function stop() { sequence++; if (playing) { playing.pause(); playing = null; } synth?.cancel(); activity(false); }
   async function play(text, audioUrl = null) {
     stop();
     const ticket = sequence;
@@ -26,6 +26,7 @@ export function createPronouncer({synth = globalThis.speechSynthesis,
       const fallback = () => {
         if (ticket !== sequence || fallbackStarted) return;
         fallbackStarted = true;
+        activity(false);
         if (playing) { playing.pause(); playing = null; }
         return useVoice(text, ticket);
       };
@@ -33,8 +34,9 @@ export function createPronouncer({synth = globalThis.speechSynthesis,
         playing = new AudioClass(audioUrl);
         const native = playing;
         native.addEventListener('error', fallback, {once:true});
+        native.addEventListener('ended',()=>{if(ticket===sequence)activity(false);},{once:true});
         await native.play();
-        if (ticket === sequence && !fallbackStarted) status('Wikimedia 真人录音 / native recording');
+        if (ticket === sequence && !fallbackStarted) {status('Wikimedia 真人录音 / native recording');activity(true);}
         return;
       } catch { await fallback(); return; }
     }
@@ -48,7 +50,9 @@ export function createPronouncer({synth = globalThis.speechSynthesis,
     utterance.voice = voice;
     utterance.lang = 'mt-MT';
     utterance.rate = .85;
-    utterance.onerror = event => { if (ticket === sequence && !['canceled','interrupted'].includes(event.error)) guide(text); };
+    utterance.onstart=()=>{if(ticket===sequence)activity(true);};
+    utterance.onend=()=>{if(ticket===sequence)activity(false);};
+    utterance.onerror = event => { if (ticket === sequence) {activity(false);if (!['canceled','interrupted'].includes(event.error)) guide(text);} };
     status(`马耳他语合成 / Maltese TTS · ${voice.name}`);
     synth.speak(utterance);
   }

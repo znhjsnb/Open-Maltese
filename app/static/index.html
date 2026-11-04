@@ -2,41 +2,70 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#215c87">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
   <title>Open-Malti · 马耳他语认知词典</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
 </head>
 <body data-theme="white">
-  <header class="masthead">
-    <a class="brand" href="./"><span lang="mt">Il-Malti</span><small>Open-Malti · 马耳他语认知词典</small></a>
-    <div class="preferences" aria-label="阅读设置">
-      <label><span class="sr-only">纸张主题</span><select id="theme"><option value="white">白纸</option><option value="sepia">暖纸</option><option value="grey">灰纸</option><option value="night">夜读</option></select></label>
-      <button id="font-down" aria-label="缩小字号">A−</button><button id="font-up" aria-label="放大字号">A+</button>
-      <button id="language-mode" aria-pressed="false">马–中–英</button>
-    </div>
+  <a class="skip-link" href="#content">跳至词条内容</a>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">M</span><span><strong>Open-Malti</strong><small>把马耳他语读懂</small></span><span class="edition" lang="mt">Il-Malti</span></a>
+    <nav class="top-actions" aria-label="学习工具">
+      <button id="daily" aria-haspopup="dialog" aria-controls="study">☀ 每日一词</button>
+      <button id="practice" aria-haspopup="dialog" aria-controls="study">▤ 抽认卡片</button>
+      <button id="theme-toggle" aria-label="切换深色主题" aria-pressed="false">◐</button>
+      <button id="focus" aria-pressed="false">⛶ 沉浸阅读</button>
+    </nav>
   </header>
-  <main>
-    <section class="search-desk" aria-label="词典检索">
-      <div class="search-line"><label for="search">查一个马耳他语词</label><span class="key-hint">/ 搜索　↑ ↓ 切词</span></div>
-      <input id="search" type="search" placeholder="ktieb、ktibt、ix-xemx、#root:k-t-b…" autocomplete="off" spellcheck="false" disabled>
-      <nav id="letter-bar" aria-label="马耳他语字母"></nav>
-      <nav id="sub-prefix-bar" aria-label="二级字素前缀"></nav>
-      <div class="filter-line"><div id="tier-filters" role="group" aria-label="词库层级"></div><div id="stratum-filters" role="group" aria-label="词源层"></div></div>
-      <div id="feature-filters" role="group" aria-label="样板、共时词根与真人发音筛选"></div>
-      <p id="wordforms-status" role="status">正在准备基础词头检索…</p>
-    </section>
-    <div class="workbench">
-      <aside class="lexicon" aria-label="词目列表">
-        <div class="list-heading"><span id="result-count" role="status">正在载入词库…</span><span id="search-time"></span></div>
-        <div id="headword-list" aria-label="检索结果"></div>
-        <div class="pagination"><button id="previous-page" disabled>上一页</button><span id="page-number"></span><button id="next-page" disabled>下一页</button></div>
-      </aside>
+  <main class="workspace">
+    <aside id="word-sidebar" class="sidebar" aria-label="词典检索">
+      <div class="search-area">
+        <div class="sidebar-heading"><h2>发现一个词</h2><span>马 · 中 · 英认知词典</span></div>
+        <div class="search-box"><label class="sr-only" for="search">查一个马耳他语词</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="ktieb、ktibt、#root:k-t-b…" autocomplete="off" spellcheck="false" maxlength="200" disabled><button id="clear" aria-label="清除搜索" hidden>×</button><kbd id="search-key">/</kbd></div>
+        <p class="search-help">↑ ↓ 切词 · / 搜索 · 词形也能找到词头</p>
+        <nav id="letter-bar" aria-label="马耳他语字母"></nav>
+        <nav id="sub-prefix-bar" aria-label="二级字素前缀"></nav>
+        <div id="tier-filters" role="group" aria-label="词库层级"></div>
+        <div id="feature-filters" role="group" aria-label="样板、共时词根与真人发音筛选"></div>
+        <div id="stratum-filters" role="group" aria-label="词源层"></div>
+      </div>
+      <div class="results-meta"><span id="result-count" role="status">正在载入词库…</span><button id="bookmarks" aria-pressed="false">☆ 收藏 <span id="bookmark-count">0</span></button><span id="search-time"></span></div>
+      <div class="list-controls"><select id="sort-order" aria-label="排序方式"><option value="alpha">A–Z · DMS 200</option><option value="alpha-desc">Z–A · DMS 200</option><option value="tier">Tier 1 → 2 → 3</option></select></div>
+      <div id="headword-list" tabindex="0" aria-label="检索结果"></div>
+      <div class="pagination"><button id="previous-page" aria-label="上一页" disabled>‹</button><span id="page-number"></span><button id="next-page" aria-label="下一页" disabled>›</button><input id="page-input" type="number" min="1" value="1" aria-label="页码"><button id="page-go">跳转</button></div>
+      <div class="sidebar-footer"><p id="wordforms-status" role="status">正在准备基础词头检索…</p><button id="offline" disabled>准备离线词库</button></div>
+    </aside>
+    <div id="resizer" class="resizer" role="separator" aria-orientation="vertical" aria-label="调整侧边栏宽度" aria-controls="word-sidebar" aria-valuemin="280" aria-valuemax="640" tabindex="0" title="拖动调整 · 双击重置 · 方向键微调"></div>
+    <section id="content" class="content" tabindex="-1" aria-label="词条详情">
+      <div class="content-toolbar" role="group" aria-label="词条工具">
+        <button id="back" class="mobile-only">‹ 词表</button><span id="breadcrumb">词典 / 开始探索</span>
+        <div id="toolbar-pinned-word" hidden></div>
+        <div class="lang-switch" role="group" aria-label="语言模式"><button id="lang-trilingual" aria-pressed="true">三语全解</button><button id="lang-bilingual" aria-pressed="false">中英双语</button><button id="lang-en" aria-pressed="false">English</button></div>
+        <span class="toolbar-actions"><button id="typography-btn" aria-haspopup="dialog" aria-controls="typography-panel" aria-expanded="false">aA 排版</button><button id="save" aria-label="收藏单词" aria-pressed="false" disabled>☆</button><button id="copy-markdown" disabled>Markdown</button><button id="copy-anki" disabled>Anki</button></span>
+      </div>
       <article id="entry-card" aria-label="词条八维卡片" aria-live="polite"><p class="empty">词条正在准备中。</p></article>
-    </div>
+      <footer class="reading-footer"><span id="inventory-note">离线词库 · 来源实证优先</span><a href="https://kaikki.org/dictionary/Maltese/" target="_blank" rel="noreferrer">Kaikki / Wiktionary</a><a href="https://mlrs.research.um.edu.mt/resources/gabra/" target="_blank" rel="noreferrer">Ġabra MDX · CC BY 3.0</a></footer>
+    </section>
   </main>
-  <footer><span id="inventory-note">离线词库 · 来源实证优先</span><a href="https://kaikki.org/dictionary/Maltese/" target="_blank" rel="noreferrer">Kaikki / Wiktionary</a><a href="https://mlrs.research.um.edu.mt/resources/gabra/" target="_blank" rel="noreferrer">Ġabra MDX · CC BY 3.0</a><small>本地快照依 Camilleri 2013 Appendix D，含整理者 aħwa 修正；上游现网标 CC BY 4.0。</small></footer>
+  <dialog id="typography-panel" aria-labelledby="typography-title">
+    <div class="dialog-heading"><div><span class="small-label">让阅读合你心意</span><h2 id="typography-title">阅读排版</h2></div><button id="typography-close" aria-label="关闭排版面板" autofocus>×</button></div>
+    <fieldset><legend>字号</legend><div class="typography-size"><button id="font-decrease">A−</button><output id="font-size-value" aria-live="polite">100%</output><button id="font-increase">A+</button></div></fieldset>
+    <fieldset><legend>字族</legend><div class="segments"><button data-font-family="sans">现代黑体</button><button data-font-family="serif">人文衬线</button><button data-font-family="mono">等宽</button><button data-font-family="legible">高易读体</button></div></fieldset>
+    <fieldset><legend>行距与密度</legend><div class="segments"><button data-density="compact">紧凑</button><button data-density="normal">标准</button><button data-density="spacious">舒展</button></div></fieldset>
+    <fieldset><legend>纸张底色</legend><div class="segments"><button data-paper="white">白纸</button><button data-paper="sepia">暖纸</button><button data-paper="grey">灰纸</button><button data-paper="night">夜读</button></div></fieldset>
+    <button id="typo-reset">恢复默认排版</button>
+    <div class="preferences" aria-label="兼容阅读设置"><label>纸张 <select id="theme"><option value="white">白纸</option><option value="sepia">暖纸</option><option value="grey">灰纸</option><option value="night">夜读</option></select></label><button id="font-down" aria-label="缩小字号">A−</button><button id="font-up" aria-label="放大字号">A+</button><button id="language-mode" aria-pressed="false">马–中–英</button></div>
+  </dialog>
+  <dialog id="study" class="study-dialog" aria-labelledby="study-title">
+    <button id="study-grabber" class="sheet-handle" aria-label="下滑关闭学习抽屉"></button>
+    <div class="dialog-heading"><div><span class="small-label" id="study-kind">每天一点，慢慢读懂</span><h2 id="study-title">抽认卡片</h2></div><button id="close-study" aria-label="关闭学习抽屉" autofocus>×</button></div>
+    <p id="study-progress" role="status"></p>
+    <div id="flashcard" class="flashcard" role="button" tabindex="0" aria-label="翻转抽认卡" aria-pressed="false"><div class="flashcard-inner"><div class="flashcard-face flashcard-front" aria-hidden="false"><span class="small-label">想一想这个词的意思</span><strong id="card-word" lang="mt"></strong><span id="card-phonetic"></span><span class="flip-hint">点击翻开 ↻</span></div><div class="flashcard-face flashcard-back" aria-hidden="true"><span class="small-label">释义与构词</span><div id="card-meaning"></div><span class="flip-hint">点击翻回词面 ↻</span></div></div></div>
+    <div class="study-controls"><button id="study-again">再看一次</button><button id="study-known">记住了 ✓</button></div><button id="study-open">在词典中细读 →</button>
+  </dialog>
   <dialog id="pronunciation-guide-popover" aria-labelledby="pronunciation-title"><div class="dialog-heading"><h2 id="pronunciation-title">马耳他语发音指南</h2><button id="close-pronunciation" aria-label="关闭发音指南">×</button></div><div id="pronunciation-content"></div></dialog>
   <div id="toast" role="status" hidden></div>
 </body>

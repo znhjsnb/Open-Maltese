@@ -70,7 +70,9 @@ export function makeSearchEngine(entries, compact={tags:[],forms:{}}) {
     const root = q.startsWith('#root:') ? q.slice(6).trim() : null;
     const traces = q && !root ? resolve(q) : new Map();
     const ranked = [[], [], [], [], [], [], []];
+    const bookmarks = Array.isArray(message.bookmarks) ? new Set(message.bookmarks) : null;
     for (const e of entries) {
+      if (bookmarks && !bookmarks.has(e.id)) continue;
       if (message.bucket && e.bucket !== message.bucket) continue;
       if (message.prefix && e.sub_prefix !== message.prefix) continue;
       if (message.tier === 'core' && e.tier !== 1) continue;
@@ -90,6 +92,11 @@ export function makeSearchEngine(entries, compact={tags:[],forms:{}}) {
       else if (e.exact_key.includes(q) || (folded && e.ascii_key.includes(folded))) rank = 5;
       else if ([...(e.gloss_en || []), e.gloss_zh || ''].join(' ').toLowerCase().includes(q)) rank = 6;
       if (rank >= 0) ranked[rank].push(e);
+    }
+    // The input is already in DMS 200 order. Sort only within relevance ranks.
+    for (const group of ranked) {
+      if (message.sort === 'alpha-desc') group.reverse();
+      else if (message.sort === 'tier') group.sort((a,b) => a.tier - b.tier);
     }
     const all = ranked.flat(), pageSize = 60;
     const offset = Math.min(Math.max(0, Math.floor((message.offset || 0) / pageSize) * pageSize),
