@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-6d8a184d14f5",
+  "dataset_version": "malti-phase2-2026-11-04-display1-f9e48850e04c",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 17466,
-    "unenriched_count": 6579,
-    "showcase_count": 17466,
+    "enriched_count": 18466,
+    "unenriched_count": 5579,
+    "showcase_count": 18466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2192,6 +2192,74 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "għal raġunijiet ekonomiċi",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "An expression explaining that a decision or action is motivated by costs, money, or economic circumstances.",
+          "zh_definition": "用于说明某项决定或行动是出于成本、资金或经济状况方面的考虑。",
+          "mt_definition": "Espressjoni li tindika li deċiżjoni jew azzjoni tkun ittieħdet minħabba l-ispejjeż, il-flus jew il-qagħda ekonomika.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "for economic reasons",
+          "zh_definition": "出于经济原因，尤其指受到成本、资金或经济状况的影响。",
+          "mt_definition": "Din l-espressjoni tfisser li xi ħaġa ssir minħabba konsiderazzjonijiet marbuta mal-flus, mal-ispejjeż jew mal-ekonomija.",
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-għal raġunijiet ekonomiċi",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kumpanija ddeċidiet li tipposponi l-ftuħ tal-fergħa l-ġdida għal raġunijiet ekonomiċi.",
+          "en": "The company decided to postpone the opening of its new branch for economic reasons.",
+          "zh": "公司出于经济原因，决定推迟新分店的开业。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Għaliex għażiltu lukanda oħra? Mark: Għal raġunijiet ekonomiċi. Dik li għażilna tiswa inqas.",
+          "en": "Maja: Why did you choose a different hotel? Mark: For economic reasons. The one we chose costs less.",
+          "zh": "玛雅：你们为什么换了一家酒店？马克：出于经济原因。我们选的这家比较便宜。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Għaliex għażiltu lukanda oħra?",
+              "mt_standard": "Għaliex għażiltu lukanda oħra?",
+              "zh": "你们为什么换了一家酒店？",
+              "en": "Why did you choose a different hotel?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Għal raġunijiet ekonomiċi. Dik li għażilna tiswa inqas.",
+              "mt_standard": "Għal raġunijiet ekonomiċi. Dik li għażilna tiswa inqas.",
+              "zh": "出于经济原因。我们选的这家比较便宜。",
+              "en": "For economic reasons. The one we chose costs less."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把整个短语和“预算有限，所以调整计划”的情景一起记：回答为什么换酒店、减开支或推迟项目时，都可说“出于经济原因”。"
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
       "exact_key": "ateiżmu",
       "analysis_pos": [
         "NOUN"
@@ -2334,81 +2402,6 @@
       "cognitive_memory_aid": "想象走累后坐到椅子上，双脚落地，把 bilqeda 和“坐着休息的这一会儿”联系起来。"
     },
     {
-      "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "bejgħ abbinat",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "A selling practice in which buying one product or service is made conditional on buying another.",
-          "zh_definition": "将购买某项商品或服务作为购买另一项商品或服务的必要条件的销售做法。",
-          "mt_definition": "Prattika ta' bejgħ li fiha x-xiri ta' prodott jew servizz ikun jiddependi fuq ix-xiri ta' prodott jew servizz ieħor.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "tied selling",
-          "zh_definition": "搭售，即卖方要求顾客必须同时购买另一项商品或服务，才出售其所需商品或服务。",
-          "mt_definition": "Bejgħ li fih il-bejjiegħ jitlob li l-klijent jixtri prodott jew servizz ieħor bħala kundizzjoni biex jixtri dak li jkun irid.",
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "tying",
-          "zh_definition": "将两项交易附条件地捆绑，使购买其中一项必须以购买另一项为前提的做法。",
-          "mt_definition": "L-irbit tax-xiri ta' prodott jew servizz max-xiri ta' ieħor, b'tali mod li l-klijent ikollu jixtrihom it-tnejn biex jikseb dak li jkun irid.",
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bejgħ abbinat",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Ir-rapport jiddeskrivi każ ta' bejgħ abbinat li fih il-klijent seta' jixtri l-apparat biss jekk jixtri wkoll kuntratt ta' manutenzjoni.",
-          "en": "The report describes a case of tied selling in which the customer could buy the device only if they also bought a maintenance contract.",
-          "zh": "报告描述了一起搭售案例：顾客只有同时购买维护合同，才能购买该设备。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Mark: Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni. Sara: Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
-          "en": "Mark: They told me that to buy the device I also have to buy a maintenance contract. Sara: Then that's tied selling: they won't sell you the device on its own.",
-          "zh": "Mark：他们说，要买这台设备，我还必须购买维护合同。Sara：那就是搭售：他们不肯把设备单独卖给你。",
-          "messages": [
-            {
-              "speaker": "Mark (顾客)",
-              "mt_spoken": "Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni.",
-              "mt_standard": "Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni.",
-              "zh": "他们说，要买这台设备，我还必须购买维护合同。",
-              "en": "They told me that to buy the device I also have to buy a maintenance contract."
-            },
-            {
-              "speaker": "Sara (朋友)",
-              "mt_spoken": "Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
-              "mt_standard": "Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
-              "zh": "那就是搭售：他们不肯把设备单独卖给你。",
-              "en": "Then that's tied selling: they won't sell you the device on its own."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象商品甲的购买按钮被商品乙锁住：“想买甲，必须也买乙。”用这个条件关系记住 bejgħ abbinat。"
-    },
-    {
       "stratum": "tier_3/unspecified/unenriched",
       "exact_key": "spazju ta' moviment liberu",
       "analysis_pos": [
@@ -2429,33 +2422,6 @@
         "rule": "vokali_tal_lehen",
         "context": "citation",
         "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
-      "stratum": "tier_3/unspecified/unenriched",
-      "exact_key": "għal raġunijiet ekonomiċi",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "for economic reasons",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-għal raġunijiet ekonomiċi",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i. għ-/h- words may take contextual l-i- after consonants.",
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
@@ -2486,6 +2452,39 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "immarka",
+      "analysis_pos": [
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "VERB",
+          "en_definition": "to mark",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to brand",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to impress",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     }
