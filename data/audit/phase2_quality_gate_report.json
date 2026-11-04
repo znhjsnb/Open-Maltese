@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-08f82eada592",
+  "dataset_version": "malti-phase2-2026-11-04-display1-88420e320d91",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 19466,
-    "unenriched_count": 4579,
-    "showcase_count": 19466,
+    "enriched_count": 20466,
+    "unenriched_count": 3579,
+    "showcase_count": 20466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2327,69 +2327,54 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "ateiżmu",
+      "exact_key": "lilna",
       "analysis_pos": [
-        "NOUN"
+        null
       ],
       "senses": [
         {
-          "pos": "noun",
-          "en_definition": "The absence of belief in the existence of any god or gods.",
-          "zh_definition": "不相信任何神存在的立场或思想。",
-          "mt_definition": "In-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
+          "pos": "unspecified",
+          "en_definition": "A form referring to the speaker and one or more other people as the objects or recipients of an action.",
+          "zh_definition": "指说话人和至少一位其他人，表示作宾语的“我们”，也可表示“给我们”或“向我们”。",
+          "mt_definition": "Hija forma li tirreferi għall-kelliem flimkien ma' persuna oħra jew aktar, meta dawn ikunu l-oġġett ta' azzjoni jew jirċievu xi ħaġa.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "NOUN",
-          "en_definition": "atheism",
-          "zh_definition": "无神论；不相信任何神存在的思想或立场。",
-          "mt_definition": "Pożizzjoni li fiha persuna ma temminx li jeżisti xi alla jew li jeżistu allat.",
+          "pos": null,
+          "en_definition": "us",
+          "zh_definition": "我们，指说话人及至少一位其他人，用作动作的对象或接收者。",
+          "mt_definition": "Tirreferi għall-kelliem u għal persuna oħra jew aktar meta azzjoni tkun diretta lejhom jew meta jingħataw xi ħaġa.",
           "definition_origin": "licensed_source"
         }
       ],
-      "definite_article": {
-        "form": "l-ateiżmu",
-        "prefix": "l-",
-        "rule": "vowel_or_silent_gh_h",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "definite_article": null,
       "dual_scenarios": {
         "formal": {
-          "mt": "Il-kapitlu jispjega l-ateiżmu u jenfasizza r-rispett lejn persuni b'fehmiet differenti dwar ir-reliġjon.",
-          "en": "The chapter explains atheism and emphasizes respect for people with different views about religion.",
-          "zh": "本章解释无神论，并强调尊重对宗教持不同看法的人。",
+          "mt": "Il-kumitat għażel lilna biex nippreżentaw il-proġett.",
+          "en": "The committee chose us to present the project.",
+          "zh": "委员会选择了我们来介绍这个项目。",
           "source_type": "pedagogical_example",
           "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "Nina: X'inhu l-ateiżmu? Adam: Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat. Nina: Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
-          "en": "Nina: What is atheism? Adam: It is the absence of belief in the existence of any god or gods. Nina: So the word tells us about a person's beliefs, not their character.",
-          "zh": "妮娜：什么是无神论？亚当：就是不相信任何神存在。妮娜：所以，这个词说明一个人的信仰立场，而不是其品格。",
+          "mt": "Maja: Lil min bagħat l-invit Pawlu? Sara: Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
+          "en": "Maja: Who did Pawlu send the invitation to? Sara: He sent the invitation to both of us. Do you want to come with me?",
+          "zh": "玛雅：保罗把邀请发给谁了？萨拉：他发给了我们两个人。你想和我一起去吗？",
           "messages": [
             {
-              "speaker": "Nina (同学)",
-              "mt_spoken": "X'inhu l-ateiżmu?",
-              "mt_standard": "X'inhu l-ateiżmu?",
-              "zh": "什么是无神论？",
-              "en": "What is atheism?"
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Lil min bagħat l-invit Pawlu?",
+              "mt_standard": "Lil min bagħat l-invit Pawlu?",
+              "zh": "保罗把邀请发给谁了？",
+              "en": "Who did Pawlu send the invitation to?"
             },
             {
-              "speaker": "Adam (同学)",
-              "mt_spoken": "Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
-              "mt_standard": "Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
-              "zh": "就是不相信任何神存在。",
-              "en": "It is the absence of belief in the existence of any god or gods."
-            },
-            {
-              "speaker": "Nina (同学)",
-              "mt_spoken": "Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
-              "mt_standard": "Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
-              "zh": "所以，这个词说明一个人的信仰立场，而不是其品格。",
-              "en": "So the word tells us about a person's beliefs, not their character."
+              "speaker": "Sara (朋友)",
+              "mt_spoken": "Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
+              "mt_standard": "Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
+              "zh": "他发给了我们两个人。你想和我一起去吗？",
+              "en": "He sent the invitation to both of us. Do you want to come with me?"
             }
           ],
           "source_type": "pedagogical_dialogue",
@@ -2398,7 +2383,7 @@
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把 ateiżmu 放进“关于无神论的讨论”这一完整短语记忆，抓住“不相信神存在”的核心；这是思想立场名称，不用它推断一个人的品格。"
+      "cognitive_memory_aid": "画一个包含自己和同伴的圈，把 lilna 写在圈内：别人选中圈内的人，就是“选我们”；别人把邀请递进圈内，就是“给我们”。"
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
@@ -2456,19 +2441,11 @@
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
-      "exact_key": "lilna",
+      "exact_key": "fajtem",
       "analysis_pos": [
-        null
+        "VERB"
       ],
-      "senses": [
-        {
-          "pos": null,
-          "en_definition": "us",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
+      "senses": [],
       "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
