@@ -79,27 +79,53 @@ async function selectEntry(i) {
 }
 function section(title,content) { return `<section class="dimension"><h2>${title}</h2>${content}</section>`; }
 function dl(pairs) { return `<dl>${pairs.map(([label,value]) => `<dt>${label}</dt><dd>${nullable(values(value))}</dd>`).join('')}</dl>`; }
+function compactDl(pairs) {
+  const active = pairs.filter(([,v]) => v != null && v !== '' && (!Array.isArray(v) || v.length > 0));
+  return active.length ? dl(active) : '';
+}
 function family(words) { return (words || []).map(w => `<button data-word="${esc(w)}" lang="mt">${esc(w)}</button>`).join(''); }
 function sourceChain(chain) {
-  if (!chain?.length) return '<p class="muted">传播链暂无实证 / no chain recorded</p>';
+  if (!chain?.length) return '';
   return `<ul class="source-chain">${chain.map(c => `<li>${esc(c.template)}: ${esc(Object.entries(c.args).map(([k,v])=>`${k}=${v}`).join(' · '))}</li>`).join('')}</ul>`;
 }
 export function renderAnalyses(analyses) {
-  return analyses.map((a,i)=>`<section class="lexeme-analysis"><h3>子词位 ${i+1} · ${esc(a.pos || '词性未标')} · ${esc(a.source)}${a.etymology_number != null ? ` · 词源 ${esc(a.etymology_number)}` : ''}</h3>
-    ${dl([['性别 / 集合', [a.gender,a.collectivity].filter(Boolean)],['IPA',a.ipa],['共时词根',a.roots],['词根状态',a.root_status],['构词类型',a.pattern_type],['动词派生型',a.verb_forms_attested],['历史词源',strata[a.stratum]],['词汇复数',a.plural_forms],['集合形式',a.collective_forms],['个体形式',a.singulative_forms]])}
+  return analyses.map((a,i)=>{
+    const isVerb = /verb|^v\.?$/i.test(a.pos || '');
+    const morphPairs = [
+      ['性别 / 集合', [a.gender,a.collectivity].filter(Boolean)],
+      ['IPA', a.ipa],
+      ['共时词根', a.roots],
+      ['构词类型', a.pattern_type !== 'unspecified' ? a.pattern_type : null],
+      ...(isVerb ? [['动词派生型', a.verb_forms_attested]] : [['词汇复数', a.plural_forms]]),
+      ['集合形式', a.collective_forms],
+      ['个体形式', a.singulative_forms],
+      ['历史词源', a.stratum && a.stratum !== 'unspecified' ? strata[a.stratum] : null],
+    ];
+    return `<section class="lexeme-analysis"><h3>子词位 ${i+1} · ${esc(a.pos || '词性未标')} · ${esc(a.source)}${a.etymology_number != null ? ` · 词源 ${esc(a.etymology_number)}` : ''}</h3>
+    ${compactDl(morphPairs) || dl([['词源状态', strata[a.stratum] || '来源已收录']])}
     ${(a.roots || []).map(r=>`<button data-root="${esc(r)}">#root:${esc(r)}</button>`).join('')}
-    ${a.verb_paradigm ? dl(Object.entries(a.verb_paradigm)) : ''}
+    ${a.verb_paradigm ? compactDl(Object.entries(a.verb_paradigm)) : ''}
     ${a.senses.map(s=>`<div class="sense"><p>${esc(s.en_definition)}</p>${s.zh_definition ? `<p class="zh">${esc(s.zh_definition)}</p>` : ''}${s.mt_definition ? `<p lang="mt">${esc(s.mt_definition)}</p>` : ''}<span class="source">${esc(s.source)} · ${esc(s.review_status)}${s.translation_provenance ? ` · 译释：${esc(s.translation_provenance.definition_origin)} · ${esc(s.translation_provenance.review_status)}` : ''}</span></div>`).join('')}
     <div class="family">${family(a.word_family)}</div>
-    ${a.definite_article ? dl([['定冠词',a.definite_article.form],['冠词来源',a.definite_article.source_type]]) : ''}
-    <p class="source">来源屈折表节选 · 完整词形可通过搜索反查</p>${formsTable(a.attested_forms)}${a.pronomi_mehmuzin?.length ? `<h3>Pronomi Mehmużin</h3>${formsTable(a.pronomi_mehmuzin)}` : ''}
-    <p>${nullable(a.etymology_text)}</p><p class="source">${esc(a.source_record_id)} · source_attested</p></section>`).join('');
+    ${a.definite_article ? compactDl([['定冠词',a.definite_article.form],['冠词来源',a.definite_article.source_type]]) : ''}
+    ${a.attested_forms?.length ? `<p class="source">来源屈折表节选 · 完整词形可通过搜索反查</p>${formsTable(a.attested_forms)}` : ''}${a.pronomi_mehmuzin?.length ? `<h3>Pronomi Mehmużin</h3>${formsTable(a.pronomi_mehmuzin)}` : ''}
+    ${a.etymology_text ? `<p>${esc(a.etymology_text)}</p>` : ''}<p class="source">${esc(a.source_record_id)} · source_attested</p></section>`;
+  }).join('');
 }
 function renderEntry(entry,trace) {
   const h=entry.headword,m=entry.morphology,f=entry.inflection_and_clitics,p=entry.pragmatics_and_cognates,e=entry.etymology;
-  const multiple=entry.lexeme_analyses.length>1;
+  const analyses=entry.lexeme_analyses || [];
+  const multiple=analyses.length>1;
+  const posSet=[...new Set(analyses.map(a=>(a.pos||'').toLowerCase()).filter(Boolean))];
+  const isVerbOnly=posSet.length>0 && posSet.every(pos=>/verb|^v\.?$/.test(pos));
+  const distinctIpas=[...new Set([h.ipa,...analyses.map(a=>a.ipa)].filter(Boolean))];
+  const distinctGenders=[...new Set([h.gender,...analyses.map(a=>a.gender)].filter(Boolean))];
+  const distinctStrata=[...new Set([e.stratum,...analyses.map(a=>a.stratum)].filter(s=>s && s!=='unspecified'))];
+  const headerIpa=distinctIpas.length ? distinctIpas.join(' · ') : '音标暂缺 / IPA not recorded';
+  const headerGender=distinctGenders.length ? distinctGenders.join(' / ') : (posSet.length ? posSet.join(' / ').toUpperCase() : '性别未标注');
+  const headerStratum=distinctStrata.length ? distinctStrata.map(s=>strata[s]).join(' · ') : strata[e.stratum || 'unspecified'];
   const sources=h.source_presence.map(s => `<a href="${esc(state.manifest.sources[s]?.url || '#')}" target="_blank" rel="noreferrer">${esc(s)}</a>`).join(' / ');
-  const senses=entry.senses.filter(s=>!multiple || s.definition_origin==='authored_pedagogical').map(s => `<div class="sense">${s.zh_definition ? `<p class="zh">${esc(s.zh_definition)}</p>` : ''}<p>${esc(s.en_definition)}</p>${s.mt_definition ? `<p lang="mt">${esc(s.mt_definition)}</p>` : ''}<span class="source">${esc(s.pos || '')} · ${esc(s.source)} · ${s.definition_origin === 'authored_pedagogical' ? `教学编写 · ${esc(s.definition_origin)}` : '来源释义'} · ${esc(s.review_status || 'source_attested')}</span></div>`).join('');
+  const senses=entry.senses.map(s => `<div class="sense">${s.zh_definition ? `<p class="zh">${esc(s.zh_definition)}</p>` : ''}<p>${esc(s.en_definition)}</p>${s.mt_definition ? `<p lang="mt">${esc(s.mt_definition)}</p>` : ''}<span class="source">${esc(s.pos || '')} · ${esc(s.source)} · ${s.definition_origin === 'authored_pedagogical' ? `教学编写 · ${esc(s.definition_origin)}` : '来源释义'} · ${esc(s.review_status || 'source_attested')}</span></div>`).join('');
   const collocations=entry.senses.flatMap(s => s.collocations || []);
   const collocationHtml=collocations.length ? collocations.map(c=>`<p lang="mt">${esc(c.mt)}</p><p>${esc(c.en)}</p><p class="zh">${esc(c.zh)}</p><span class="source">${esc(c.source_type)}</span>`).join('') : '<p class="muted">搭配待补充 / no collocations recorded</p>';
   const scenarios = entry.dual_scenarios ? ['formal','colloquial'].map(key => {
@@ -107,18 +133,46 @@ function renderEntry(entry,trace) {
     const turns=key === 'colloquial' && Array.isArray(s.messages) && s.messages.length ? s.messages.map(turn=>`<div class="dialogue-turn"><h4>${esc(turn.speaker)}</h4><p lang="mt">${esc(turn.mt_spoken)}</p><button class="pronunciation" data-speak="${esc(turn.mt_spoken)}">◖♪ 朗读对话</button><p lang="mt">标准表达：${esc(turn.mt_standard)}</p><p>${esc(turn.en)}</p><p class="zh">${esc(turn.zh)}</p></div>`).join('') : `<p lang="mt">${esc(s.mt)}</p><button class="pronunciation" data-speak="${esc(s.mt)}">◖♪ 朗读例句</button><p>${esc(s.en)}</p>${s.zh ? `<p class="zh">${esc(s.zh)}</p>`:''}`;
     return `<div class="scenario"><h3>${key === 'formal' ? '书面表达 / written context' : '日常对话 / conversation'}</h3>${turns}${s.grammar_note ? `<p class="zh">${esc(s.grammar_note)}</p>` : ''}<span class="source">${esc(s.source_type)} · 教学编写 · ${esc(s.review_status || 'source_attested')} · ${esc(entry.dual_scenarios.review_status)}</span></div>`;
   }).join('') : '<p class="muted">暂无已编写语境 / examples not yet enriched</p>';
+  const morphFields = [
+    ['构词类型', m.pattern_type !== 'unspecified' ? m.pattern_type : null],
+    ['词根辅音', m.root_radicals],
+    ...(isVerbOnly ? [['动词派生型', m.verb_form],['未完成体', m.imperfect],['过去分词', m.past_participle],['动名词', m.verbal_noun]] : [
+      ...(m.verb_form ? [['动词派生型', m.verb_form]] : []),
+      ...(m.imperfect ? [['未完成体', m.imperfect]] : []),
+      ...(m.past_participle ? [['过去分词', m.past_participle]] : []),
+      ...(m.verbal_noun ? [['动名词', m.verbal_noun]] : []),
+      ['复数', m.plural_forms],
+    ]),
+    ['集合形式', m.collective_form],
+    ['个体形式', m.singulative_form],
+  ];
+  const morphSummary = `${m.root_consonants ? `<button class="root-chip" data-root="${esc(m.root_consonants)}">#root:${esc(m.root_consonants)}</button>` : '<p class="muted">词根暂无实证 / no attested root</p>'}${compactDl(morphFields) || dl([['构词类型', m.pattern_type]])}<div class="family">${family(m.word_family)}</div>${m.root_evidence.length>1 ? `<div class="family">${m.root_evidence.slice(1).map(r=>`<button data-root="${esc(r.root)}">#root:${esc(r.root)}</button>`).join('')}</div>`:''}`;
+  const inflectPairs = [
+    ...(isVerbOnly || f.perfett_3sg_m || f.imperfett_3sg_m || f.imperattiv_2sg ? [
+      ['Perfett 3sg.m', f.perfett_3sg_m],
+      ['Imperfett 3sg.m', f.imperfett_3sg_m],
+      ['Imperattiv 2sg', f.imperattiv_2sg],
+    ] : []),
+    ...(!isVerbOnly || f.plural?.length ? [['复数 / plural', f.plural]] : []),
+    ...(f.definite_article?.form ? [['定冠词', f.definite_article.form]] : []),
+  ];
+  const allAttestedForms = f.attested_forms?.length ? f.attested_forms : analyses.flatMap(a => a.attested_forms || []);
+  const allPronomi = f.pronomi_mehmuzin?.length ? f.pronomi_mehmuzin : analyses.flatMap(a => a.pronomi_mehmuzin || []);
+  const inflectionHtml = `${compactDl(inflectPairs) || dl([['复数 / plural', f.plural],['定冠词', f.definite_article?.form]])}${f.definite_article ? `<p class="source">${esc(f.definite_article.note)} · grammar_reference</p>`:''}${formsTable(allAttestedForms)}${allPronomi.length ? `<h3>Pronomi Mehmużin · 附着代词</h3>${formsTable(allPronomi)}` : ''}`;
+  const distinctEtymTexts = [...new Set([e.etymology_text_en, ...analyses.map(a => a.etymology_text)].filter(Boolean))];
+  const etymologyHtml = `<p><strong>语源层级：</strong>${esc(headerStratum)}</p>${distinctEtymTexts.length ? distinctEtymTexts.map(t => `<p>${esc(t)}</p>`).join('') : `<p>${nullable(null)}</p>`}${sourceChain(e.source_chain)}<p class="source">Kaikki / Wiktionary 词源</p><p class="zh">学习助记：${esc(e.cognitive_memory_aid || '待补充 / not recorded')}</p>${e.cognitive_memory_aid_provenance ? `<p class="source">${esc(e.cognitive_memory_aid_provenance.source_type)} · ${esc(e.cognitive_memory_aid_provenance.review_status)}</p>` : ''}`;
   $('entry-card').innerHTML = `${trace ? `<div id="morph-trace-banner" role="status">词形还原 / morphological trace<br>${esc(traceText(trace))}</div>` : ''}
-    <div class="entry-top"><div><h1 lang="mt">${esc(h.word)}</h1><p class="ipa">${esc(multiple ? '各子词位音标分列如下' : h.ipa || '音标暂缺 / IPA not recorded')}</p></div><button id="pronounce-word" class="pronunciation">◖♪ ${h.audio_url ? '真人录音' : '发音 / 指南'}</button></div>
-    <div class="entry-meta"><span class="chip">Tier ${h.tier}</span><span class="chip">${esc(multiple ? '多子词位 · 分列如下' : h.gender || '性别未标注')}</span><span class="chip">${esc(multiple ? '历史词源分列如下' : strata[e.stratum])}</span></div>
+    <div class="entry-top"><div><h1 lang="mt">${esc(h.word)}</h1><p class="ipa">${esc(headerIpa)}</p></div><button id="pronounce-word" class="pronunciation">◖♪ ${h.audio_url ? '真人录音' : '发音 / 指南'}</button></div>
+    <div class="entry-meta"><span class="chip">Tier ${h.tier}</span><span class="chip">${esc(headerGender)}</span><span class="chip">${esc(headerStratum)}</span></div>
     <div class="tools"><button id="copy-markdown">复制 Markdown</button><button id="copy-anki">复制 Anki TSV</button></div>
-    ${section('01 · 词头与发音 / headword',`<p class="source">${sources} · 来源已收录（source_attested）</p>${h.audio_commons_url ? `<p><a href="${esc(h.audio_commons_url)}" target="_blank" rel="noreferrer">Wikimedia Commons · 作者与录音许可</a></p>` : ''}${dl([['音标来源',h.ipa_source],['集合 / 个体',h.collectivity],['录音说明',h.audio_note ? `${h.audio_note.note || ''} ${h.audio_note.file || ''} · 许可见 Commons 文件页` : null]])}`)}
-    ${section('02 · 构词与词族 / morphology',multiple ? renderAnalyses(entry.lexeme_analyses) : `${m.root_consonants ? `<button class="root-chip" data-root="${esc(m.root_consonants)}">#root:${esc(m.root_consonants)}</button>` : '<p class="muted">词根暂无实证 / no attested root</p>'}${dl([['构词类型',m.pattern_type],['词根辅音',m.root_radicals],['动词派生型',m.verb_form],['未完成体',m.imperfect],['过去分词',m.past_participle],['动名词',m.verbal_noun],['复数',m.plural_forms],['集合形式',m.collective_form],['个体形式',m.singulative_form]])}<div class="family">${family(m.word_family)}</div>${m.root_evidence.length>1 ? `<div class="family">${m.root_evidence.slice(1).map(r=>`<button data-root="${esc(r.root)}">#root:${esc(r.root)}</button>`).join('')}</div>`:''}`)}
+    ${section('01 · 词头与发音 / headword',`<p class="source">${sources} · 来源已收录（source_attested）</p>${h.audio_commons_url ? `<p><a href="${esc(h.audio_commons_url)}" target="_blank" rel="noreferrer">Wikimedia Commons · 作者与录音许可</a></p>` : ''}${compactDl([['音标来源',h.ipa_source],['集合 / 个体',h.collectivity],['录音说明',h.audio_note ? `${h.audio_note.note || ''} ${h.audio_note.file || ''} · 许可见 Commons 文件页` : null]])}`)}
+    ${section('02 · 构词与词族 / morphology',multiple ? `${morphSummary}${renderAnalyses(analyses)}` : morphSummary)}
     ${section('03 · 三语释义 / senses',senses || '<p class="muted">释义暂无实证 / not recorded</p>')}
     ${section('04 · 实用搭配 / collocations',collocationHtml)}
     ${section('05 · 双境表达 / two contexts',scenarios)}
-    ${section('06 · 屈折与附着代词 / inflection & clitics',multiple ? '<p>各子词位的屈折与词汇复数已分别列于上方。</p>' : `${dl([['Perfett 3sg.m',f.perfett_3sg_m],['Imperfett 3sg.m',f.imperfett_3sg_m],['Imperattiv 2sg',f.imperattiv_2sg],['复数 / plural',f.plural],['定冠词',f.definite_article?.form]])}${f.definite_article ? `<p class="source">${esc(f.definite_article.note)} · grammar_reference</p>`:''}${formsTable(f.attested_forms)}<h3>Pronomi Mehmużin · 附着代词</h3>${formsTable(f.pronomi_mehmuzin)}`)}
-    ${section('07 · 语用与同源词 / pragmatics & cognates',p ? `${dl([['语域',p.register],['同义词',p.synonyms],['反义词',p.antonyms]])}${sourceChain(p.cognates_and_false_friends)}` : '<p class="muted">暂无已记录语用资料 / not recorded</p>')}
-    ${section('08 · 历史词源 / etymology',(multiple ? '<p>各子词位的历史词源已分别列于上方；共时词根不代表历史词源。</p>' : `<p>${esc(strata[e.stratum])}</p><p>${nullable(e.etymology_text_en)}</p>${sourceChain(e.source_chain)}<p class="source">Kaikki / Wiktionary 词源</p>`) + `<p class="zh">学习助记：${esc(e.cognitive_memory_aid || '待补充 / not recorded')}</p>${e.cognitive_memory_aid_provenance ? `<p class="source">${esc(e.cognitive_memory_aid_provenance.source_type)} · ${esc(e.cognitive_memory_aid_provenance.review_status)}</p>` : ''}`)}`;
+    ${section('06 · 屈折与附着代词 / inflection & clitics',inflectionHtml)}
+    ${section('07 · 语用与同源词 / pragmatics & cognates',p && (p.register?.length || p.synonyms?.length || p.antonyms?.length || p.cognates_and_false_friends?.length) ? `${compactDl([['语域',p.register],['同义词',p.synonyms],['反义词',p.antonyms]])}${sourceChain(p.cognates_and_false_friends)}` : '<p class="muted">暂无已记录语用资料 / not recorded</p>')}
+    ${section('08 · 历史词源 / etymology',etymologyHtml)}`;
   $('pronounce-word').onclick=() => pronunciation.play(h.word,h.audio_url);
   $('entry-card').querySelectorAll('[data-speak]').forEach(b => b.onclick=()=>pronunciation.play(b.dataset.speak));
   $('entry-card').querySelectorAll('[data-word]').forEach(b => b.onclick=()=>searchDirect(b.dataset.word));
@@ -157,15 +211,14 @@ export function exportText(entry,anki=false,manifest=state.manifest) {
   const analyses=entry.lexeme_analyses.map(a=>`${a.source} [${a.source_record_id}] POS=${a.pos}; etymology=${a.etymology_number ?? 'unspecified'}; gender=${a.gender || 'unspecified'}; collectivity=${a.collectivity || 'unspecified'}; IPA=${a.ipa || 'not recorded'}; roots=${a.roots.join(', ')}; stratum=${a.stratum}; plural=${(a.plural_forms || []).join(', ')}; paradigm=${JSON.stringify(a.verb_paradigm)}; senses=${a.senses.map(s=>`${s.en_definition}${s.zh_definition ? ' / '+s.zh_definition : ''}${s.mt_definition ? ' / '+s.mt_definition : ''}${s.translation_provenance ? ' (authored_pedagogical, phase2_reviewed)' : ''}`).join('; ')}`).join('\n');
   if (anki) return [h.word,h.ipa,entry.senses.map(s=>s.en_definition).join('; '),entry.senses.map(s=>s.zh_definition).filter(Boolean).join('; '),sources,`Tier ${h.tier}`,review,h.audio_commons_url,analyses].map(clean).join('\t');
   const m=entry.morphology,f=entry.inflection_and_clitics,p=entry.pragmatics_and_cognates,e=entry.etymology;
-  const multiple=entry.lexeme_analyses.length>1;
   const lines=[`# ${h.word}`,`Sources: ${sources}`,`Review: ${review}`,`Audio attribution: ${h.audio_commons_url || 'not recorded'}`,`Lexeme analyses:\n${analyses}`,`01 · ${h.ipa || 'IPA not recorded'} · Tier ${h.tier} · ${h.source_presence.join(', ')}`,
-    multiple ? '02 · Morphology: see each lexeme analysis above' : `02 · Root: ${m.root_consonants || 'not recorded'} · ${m.pattern_type}`, `Family: ${(m.word_family || []).join(', ')}`,
+    `02 · Root: ${m.root_consonants || 'not recorded'} · ${m.pattern_type}`, `Family: ${(m.word_family || []).join(', ')}`,
     '03 · Senses',...entry.senses.map(s=>`- ${s.en_definition}${s.zh_definition ? ' / '+s.zh_definition : ''} (${s.pos || 'teaching'}, ${s.source}, ${s.definition_origin}, ${s.review_status || h.editorial_status})`),
     '04 · Collocations',...entry.senses.flatMap(s=>(s.collocations || []).map(c=>`${c.mt} / ${c.en} / ${c.zh} (${c.source_type}, ${c.review_status || 'pending_linguistic_review'})`)),
     '05 · Contexts',...Object.values(entry.dual_scenarios || {}).filter(s=>s?.mt).map(s=>`${s.mt}\n${s.en} (${s.source_type}, ${s.review_status || entry.dual_scenarios.review_status})`),
-    '06 · Inflection',multiple ? 'See each lexeme analysis above' : `Perfect: ${f.perfett_3sg_m || 'not recorded'}; imperfect: ${f.imperfett_3sg_m || 'not recorded'}; imperative: ${f.imperattiv_2sg || 'not recorded'}; plural: ${(f.plural || []).join(', ')}`,
+    '06 · Inflection',`Perfect: ${f.perfett_3sg_m || 'not recorded'}; imperfect: ${f.imperfett_3sg_m || 'not recorded'}; imperative: ${f.imperattiv_2sg || 'not recorded'}; plural: ${(f.plural || []).join(', ')}`,
     '07 · Pragmatics',`Register: ${(p?.register || []).join(', ')}; synonyms: ${(p?.synonyms || []).join(', ')}; antonyms: ${(p?.antonyms || []).join(', ')}`,
-    '08 · Etymology',multiple ? 'See each lexeme analysis above' : e.etymology_text_en || 'not recorded',`Discovery stratum: ${e.stratum}`,`Learner mnemonic: ${e.cognitive_memory_aid || 'not recorded'} (${e.cognitive_memory_aid_provenance?.source_type || 'not recorded'})`];
+    '08 · Etymology',e.etymology_text_en || 'not recorded',`Discovery stratum: ${e.stratum}`,`Learner mnemonic: ${e.cognitive_memory_aid || 'not recorded'} (${e.cognitive_memory_aid_provenance?.source_type || 'not recorded'})`];
   return lines.join('\n\n');
 }
 async function copyExport(anki) {
