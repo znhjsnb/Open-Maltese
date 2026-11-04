@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-f9e48850e04c",
+  "dataset_version": "malti-phase2-2026-11-04-display1-08f82eada592",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 18466,
-    "unenriched_count": 5579,
-    "showcase_count": 18466,
+    "enriched_count": 19466,
+    "unenriched_count": 4579,
+    "showcase_count": 19466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2260,6 +2260,73 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "immarka",
+      "analysis_pos": [
+        "VERB"
+      ],
+      "senses": [
+        {
+          "pos": "verb",
+          "en_definition": "To put an identifying mark on something, identify it with a brand, or leave a strong impression on someone.",
+          "zh_definition": "在事物上做识别标记、加上品牌标识，或给人留下强烈而持久的印象。",
+          "mt_definition": "Tagħmel sinjal fuq xi ħaġa, tqiegħed fuqha marka kummerċjali, jew tħalli impressjoni qawwija fuq xi ħadd.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to mark",
+          "zh_definition": "在某物上做标记，以便识别、指示位置或引起注意。",
+          "mt_definition": "Tagħmel sinjal fuq xi ħaġa biex tingħaraf jew biex tiġbed l-attenzjoni lejha.",
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "VERB",
+          "en_definition": "to brand",
+          "zh_definition": "在产品或其他物品上加上表示品牌、来源或归属的识别标记。",
+          "mt_definition": "Tqiegħed marka ta' identifikazzjoni fuq prodott jew oġġett biex turi l-marka kummerċjali, l-oriġini jew ta' min hu.",
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": null,
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-riċerkatur immarka l-post ta' kull kampjun fuq il-mappa biex ikun jista' jerġa' jsibu.",
+          "en": "The researcher marked the location of each sample on the map so that he could find it again.",
+          "zh": "研究人员在地图上标出了每份样本的位置，以便日后再次找到。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok. Mark: Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
+          "en": "Maja: Please mark our meeting place on the map. Mark: All right, and I'll send you the map with the place marked.",
+          "zh": "玛雅：请在地图上标出我们见面的地方。马克：好的，我会把标好地点的地图发给你。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok.",
+              "mt_standard": "Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok.",
+              "zh": "请在地图上标出我们见面的地方。",
+              "en": "Please mark our meeting place on the map."
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
+              "mt_standard": "Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
+              "zh": "好的，我会把标好地点的地图发给你。",
+              "en": "All right, and I'll send you the map with the place marked."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "用“留下记号”串联三个义项：地图留下位置记号，商品留下品牌记号，经历在心中留下深刻印记。这只是学习联想。"
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
       "exact_key": "ateiżmu",
       "analysis_pos": [
         "NOUN"
@@ -2334,74 +2401,6 @@
       "cognitive_memory_aid": "把 ateiżmu 放进“关于无神论的讨论”这一完整短语记忆，抓住“不相信神存在”的核心；这是思想立场名称，不用它推断一个人的品格。"
     },
     {
-      "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "bilqeda",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "noun",
-          "en_definition": "An act or period of sitting, with the body supported in a seated position.",
-          "zh_definition": "坐这一行为，或身体处于坐姿的一段时间。",
-          "mt_definition": "L-att li wieħed joqgħod bilqiegħda, jew il-ħin li jqatta' f'dik il-qagħda.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "NOUN",
-          "en_definition": "sit",
-          "zh_definition": "坐这一行为；坐着休息的一段时间。",
-          "mt_definition": "Att jew perjodu ta' mistrieħ li fih persuna tkun bilqiegħda.",
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "il-bilqeda",
-        "prefix": "il-",
-        "rule": "moon_consonant",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Għal dan l-eżerċizzju, il-parteċipanti għandhom jibqgħu bilqeda fuq siġġu, b'saqajhom mal-art.",
-          "en": "For this exercise, participants should remain seated on a chair with their feet on the floor.",
-          "zh": "进行这项练习时，参与者应保持坐在椅子上，双脚着地。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Rita: Trid tqum issa? Pawlu: Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
-          "en": "Rita: Do you want to get up now? Pawlu: No, I'll stay seated a little longer to rest.",
-          "zh": "丽塔：你现在想起来吗？保罗：不，我再坐一会儿，休息一下。",
-          "messages": [
-            {
-              "speaker": "Rita (朋友)",
-              "mt_spoken": "Trid tqum issa?",
-              "mt_standard": "Trid tqum issa?",
-              "zh": "你现在想起来吗？",
-              "en": "Do you want to get up now?"
-            },
-            {
-              "speaker": "Pawlu (朋友)",
-              "mt_spoken": "Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
-              "mt_standard": "Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
-              "zh": "不，我再坐一会儿，休息一下。",
-              "en": "No, I'll stay seated a little longer to rest."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "想象走累后坐到椅子上，双脚落地，把 bilqeda 和“坐着休息的这一会儿”联系起来。"
-    },
-    {
       "stratum": "tier_3/unspecified/unenriched",
       "exact_key": "spazju ta' moviment liberu",
       "analysis_pos": [
@@ -2457,28 +2456,14 @@
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
-      "exact_key": "immarka",
+      "exact_key": "lilna",
       "analysis_pos": [
-        "VERB"
+        null
       ],
       "senses": [
         {
-          "pos": "VERB",
-          "en_definition": "to mark",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to brand",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to impress",
+          "pos": null,
+          "en_definition": "us",
           "zh_definition": null,
           "mt_definition": null,
           "definition_origin": "licensed_source"
