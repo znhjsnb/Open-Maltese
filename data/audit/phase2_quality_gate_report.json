@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-7856ffd03871",
+  "dataset_version": "malti-phase2-2026-11-04-display1-6d8a184d14f5",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 16466,
-    "unenriched_count": 7579,
-    "showcase_count": 16466,
+    "enriched_count": 17466,
+    "unenriched_count": 6579,
+    "showcase_count": 17466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2192,36 +2192,103 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "bongu",
+      "exact_key": "ateiżmu",
       "analysis_pos": [
-        "X",
         "NOUN"
       ],
       "senses": [
         {
-          "pos": "intj",
-          "en_definition": "good morning",
-          "zh_definition": "早上好",
-          "mt_definition": "Tislima li ngħidu filgħodu.",
+          "pos": "noun",
+          "en_definition": "The absence of belief in the existence of any god or gods.",
+          "zh_definition": "不相信任何神存在的立场或思想。",
+          "mt_definition": "In-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
           "definition_origin": "authored_pedagogical"
         },
         {
-          "pos": "X",
-          "en_definition": "hello",
-          "zh_definition": "你好",
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        },
-        {
           "pos": "NOUN",
-          "en_definition": "Hello",
-          "zh_definition": "你好；问候语",
-          "mt_definition": null,
+          "en_definition": "atheism",
+          "zh_definition": "无神论；不相信任何神存在的思想或立场。",
+          "mt_definition": "Pożizzjoni li fiha persuna ma temminx li jeżisti xi alla jew li jeżistu allat.",
           "definition_origin": "licensed_source"
         }
       ],
       "definite_article": {
-        "form": "il-bongu",
+        "form": "l-ateiżmu",
+        "prefix": "l-",
+        "rule": "vowel_or_silent_gh_h",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-kapitlu jispjega l-ateiżmu u jenfasizza r-rispett lejn persuni b'fehmiet differenti dwar ir-reliġjon.",
+          "en": "The chapter explains atheism and emphasizes respect for people with different views about religion.",
+          "zh": "本章解释无神论，并强调尊重对宗教持不同看法的人。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Nina: X'inhu l-ateiżmu? Adam: Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat. Nina: Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
+          "en": "Nina: What is atheism? Adam: It is the absence of belief in the existence of any god or gods. Nina: So the word tells us about a person's beliefs, not their character.",
+          "zh": "妮娜：什么是无神论？亚当：就是不相信任何神存在。妮娜：所以，这个词说明一个人的信仰立场，而不是其品格。",
+          "messages": [
+            {
+              "speaker": "Nina (同学)",
+              "mt_spoken": "X'inhu l-ateiżmu?",
+              "mt_standard": "X'inhu l-ateiżmu?",
+              "zh": "什么是无神论？",
+              "en": "What is atheism?"
+            },
+            {
+              "speaker": "Adam (同学)",
+              "mt_spoken": "Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
+              "mt_standard": "Huwa n-nuqqas ta' twemmin fl-eżistenza ta' xi alla jew allat.",
+              "zh": "就是不相信任何神存在。",
+              "en": "It is the absence of belief in the existence of any god or gods."
+            },
+            {
+              "speaker": "Nina (同学)",
+              "mt_spoken": "Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
+              "mt_standard": "Mela l-kelma tgħidilna dwar it-twemmin ta' persuna, mhux dwar il-karattru tagħha.",
+              "zh": "所以，这个词说明一个人的信仰立场，而不是其品格。",
+              "en": "So the word tells us about a person's beliefs, not their character."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 ateiżmu 放进“关于无神论的讨论”这一完整短语记忆，抓住“不相信神存在”的核心；这是思想立场名称，不用它推断一个人的品格。"
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "bilqeda",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "An act or period of sitting, with the body supported in a seated position.",
+          "zh_definition": "坐这一行为，或身体处于坐姿的一段时间。",
+          "mt_definition": "L-att li wieħed joqgħod bilqiegħda, jew il-ħin li jqatta' f'dik il-qagħda.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "sit",
+          "zh_definition": "坐这一行为；坐着休息的一段时间。",
+          "mt_definition": "Att jew perjodu ta' mistrieħ li fih persuna tkun bilqiegħda.",
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bilqeda",
         "prefix": "il-",
         "rule": "moon_consonant",
         "context": "citation",
@@ -2231,38 +2298,115 @@
       },
       "dual_scenarios": {
         "formal": {
-          "mt": "Bongu lil kull min qed jattendi din il-laqgħa.",
-          "en": "Good morning to everyone attending this meeting.",
-          "zh": "参加本次会议的各位，早上好。",
+          "mt": "Għal dan l-eżerċizzju, il-parteċipanti għandhom jibqgħu bilqeda fuq siġġu, b'saqajhom mal-art.",
+          "en": "For this exercise, participants should remain seated on a chair with their feet on the floor.",
+          "zh": "进行这项练习时，参与者应保持坐在椅子上，双脚着地。",
           "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "colloquial": {
-          "mt": "— Bongu! — Bongu, kif int?",
-          "en": "— Good morning! — Good morning, how are you?",
-          "zh": "— 早上好！— 早上好，你好吗？",
-          "source_type": "pedagogical_dialogue",
+          "mt": "Rita: Trid tqum issa? Pawlu: Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
+          "en": "Rita: Do you want to get up now? Pawlu: No, I'll stay seated a little longer to rest.",
+          "zh": "丽塔：你现在想起来吗？保罗：不，我再坐一会儿，休息一下。",
           "messages": [
             {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Bongu!",
-              "mt_standard": "Bongu!",
-              "zh": "早上好！",
-              "en": "Good morning!"
+              "speaker": "Rita (朋友)",
+              "mt_spoken": "Trid tqum issa?",
+              "mt_standard": "Trid tqum issa?",
+              "zh": "你现在想起来吗？",
+              "en": "Do you want to get up now?"
             },
             {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Bongu, kif int?",
-              "mt_standard": "Bongu, kif int?",
-              "zh": "早上好，你好吗？",
-              "en": "Good morning, how are you?"
+              "speaker": "Pawlu (朋友)",
+              "mt_spoken": "Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
+              "mt_standard": "Le, se nibqa' bilqeda ftit ieħor biex nistrieħ.",
+              "zh": "不，我再坐一会儿，休息一下。",
+              "en": "No, I'll stay seated a little longer to rest."
             }
           ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
           "review_status": "phase2_reviewed"
         },
         "review_status": "phase2_reviewed"
       },
-      "cognitive_memory_aid": "把早晨见面和 bongu 绑定记忆。"
+      "cognitive_memory_aid": "想象走累后坐到椅子上，双脚落地，把 bilqeda 和“坐着休息的这一会儿”联系起来。"
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "bejgħ abbinat",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "A selling practice in which buying one product or service is made conditional on buying another.",
+          "zh_definition": "将购买某项商品或服务作为购买另一项商品或服务的必要条件的销售做法。",
+          "mt_definition": "Prattika ta' bejgħ li fiha x-xiri ta' prodott jew servizz ikun jiddependi fuq ix-xiri ta' prodott jew servizz ieħor.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "tied selling",
+          "zh_definition": "搭售，即卖方要求顾客必须同时购买另一项商品或服务，才出售其所需商品或服务。",
+          "mt_definition": "Bejgħ li fih il-bejjiegħ jitlob li l-klijent jixtri prodott jew servizz ieħor bħala kundizzjoni biex jixtri dak li jkun irid.",
+          "definition_origin": "licensed_source"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "tying",
+          "zh_definition": "将两项交易附条件地捆绑，使购买其中一项必须以购买另一项为前提的做法。",
+          "mt_definition": "L-irbit tax-xiri ta' prodott jew servizz max-xiri ta' ieħor, b'tali mod li l-klijent ikollu jixtrihom it-tnejn biex jikseb dak li jkun irid.",
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "il-bejgħ abbinat",
+        "prefix": "il-",
+        "rule": "moon_consonant",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Ir-rapport jiddeskrivi każ ta' bejgħ abbinat li fih il-klijent seta' jixtri l-apparat biss jekk jixtri wkoll kuntratt ta' manutenzjoni.",
+          "en": "The report describes a case of tied selling in which the customer could buy the device only if they also bought a maintenance contract.",
+          "zh": "报告描述了一起搭售案例：顾客只有同时购买维护合同，才能购买该设备。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni. Sara: Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
+          "en": "Mark: They told me that to buy the device I also have to buy a maintenance contract. Sara: Then that's tied selling: they won't sell you the device on its own.",
+          "zh": "Mark：他们说，要买这台设备，我还必须购买维护合同。Sara：那就是搭售：他们不肯把设备单独卖给你。",
+          "messages": [
+            {
+              "speaker": "Mark (顾客)",
+              "mt_spoken": "Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni.",
+              "mt_standard": "Qaluli li biex nixtri l-apparat irrid nixtri wkoll kuntratt ta' manutenzjoni.",
+              "zh": "他们说，要买这台设备，我还必须购买维护合同。",
+              "en": "They told me that to buy the device I also have to buy a maintenance contract."
+            },
+            {
+              "speaker": "Sara (朋友)",
+              "mt_spoken": "Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
+              "mt_standard": "Mela dak hu bejgħ abbinat: ma jbigħulekx l-apparat waħdu.",
+              "zh": "那就是搭售：他们不肯把设备单独卖给你。",
+              "en": "Then that's tied selling: they won't sell you the device on its own."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象商品甲的购买按钮被商品乙锁住：“想买甲，必须也买乙。”用这个条件关系记住 bejgħ abbinat。"
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
