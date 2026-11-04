@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-8b239358964f",
+  "dataset_version": "malti-phase2-2026-11-04-display1-62d0add14b83",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 22702,
-    "unenriched_count": 1343,
-    "showcase_count": 22702,
+    "enriched_count": 23237,
+    "unenriched_count": 808,
+    "showcase_count": 23237,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2328,83 +2328,23 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "immarka",
-      "analysis_pos": [
-        "VERB"
-      ],
-      "senses": [
-        {
-          "pos": "verb",
-          "en_definition": "To put an identifying mark on something, identify it with a brand, or leave a strong impression on someone.",
-          "zh_definition": "在事物上做识别标记、加上品牌标识，或给人留下强烈而持久的印象。",
-          "mt_definition": "Tagħmel sinjal fuq xi ħaġa, tqiegħed fuqha marka kummerċjali, jew tħalli impressjoni qawwija fuq xi ħadd.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to mark",
-          "zh_definition": "在某物上做标记，以便识别、指示位置或引起注意。",
-          "mt_definition": "Tagħmel sinjal fuq xi ħaġa biex tingħaraf jew biex tiġbed l-attenzjoni lejha.",
-          "definition_origin": "licensed_source"
-        },
-        {
-          "pos": "VERB",
-          "en_definition": "to brand",
-          "zh_definition": "在产品或其他物品上加上表示品牌、来源或归属的识别标记。",
-          "mt_definition": "Tqiegħed marka ta' identifikazzjoni fuq prodott jew oġġett biex turi l-marka kummerċjali, l-oriġini jew ta' min hu.",
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Ir-riċerkatur immarka l-post ta' kull kampjun fuq il-mappa biex ikun jista' jerġa' jsibu.",
-          "en": "The researcher marked the location of each sample on the map so that he could find it again.",
-          "zh": "研究人员在地图上标出了每份样本的位置，以便日后再次找到。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok. Mark: Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
-          "en": "Maja: Please mark our meeting place on the map. Mark: All right, and I'll send you the map with the place marked.",
-          "zh": "玛雅：请在地图上标出我们见面的地方。马克：好的，我会把标好地点的地图发给你。",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok.",
-              "mt_standard": "Immarka l-post fejn se niltaqgħu fuq il-mappa, jekk jogħġbok.",
-              "zh": "请在地图上标出我们见面的地方。",
-              "en": "Please mark our meeting place on the map."
-            },
-            {
-              "speaker": "Mark (朋友)",
-              "mt_spoken": "Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
-              "mt_standard": "Sewwa, u nibgħatlek il-mappa bil-post immarkat.",
-              "zh": "好的，我会把标好地点的地图发给你。",
-              "en": "All right, and I'll send you the map with the place marked."
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "用“留下记号”串联三个义项：地图留下位置记号，商品留下品牌记号，经历在心中留下深刻印记。这只是学习联想。"
-    },
-    {
-      "stratum": "tier_3/unspecified/unenriched",
       "exact_key": "w.c.",
       "analysis_pos": [
         "NOUN"
       ],
       "senses": [
         {
+          "pos": "noun",
+          "en_definition": "A toilet or room containing a toilet.",
+          "zh_definition": "供人如厕使用的厕所或设有便器的房间。",
+          "mt_definition": "Tojlit jew kamra li fiha jkun hemm tojlit għall-bżonnijiet personali.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
           "pos": "NOUN",
           "en_definition": "watercloset",
-          "zh_definition": null,
-          "mt_definition": null,
+          "zh_definition": "厕所；设有便器、供人如厕的房间。",
+          "mt_definition": "Tojlit jew kamra mgħammra b'tojlit fejn wieħed jagħmel il-bżonnijiet personali tiegħu.",
           "definition_origin": "licensed_source"
         }
       ],
@@ -2417,8 +2357,42 @@
         "source_type": "grammar_reference",
         "source": "docs/MASTER_PLAN_V2.md#gate-3"
       },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
+      "dual_scenarios": {
+        "formal": {
+          "mt": "Il-W.C. jinsab fit-tarf tal-kuritur, ħdejn it-taraġ.",
+          "en": "The toilet is at the end of the corridor, next to the stairs.",
+          "zh": "厕所在走廊尽头，楼梯旁边。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Mark: Skużani, fejn hemm il-W.C.? Rita: Hemm fuq il-lemin, ħdejn il-bieb blu.",
+          "en": "Mark: Excuse me, where is the toilet? Rita: Over there on the right, next to the blue door.",
+          "zh": "马克：不好意思，请问厕所在哪里？丽塔：在那边右手边，蓝色的门旁边。",
+          "messages": [
+            {
+              "speaker": "Mark (顾客)",
+              "mt_spoken": "Skużani, fejn hemm il-W.C.?",
+              "mt_standard": "Skużani, fejn hemm il-W.C.?",
+              "zh": "不好意思，请问厕所在哪里？",
+              "en": "Excuse me, where is the toilet?"
+            },
+            {
+              "speaker": "Rita (店员)",
+              "mt_spoken": "Hemm fuq il-lemin, ħdejn il-bieb blu.",
+              "mt_standard": "Hemm fuq il-lemin, ħdejn il-bieb blu.",
+              "zh": "在那边右手边，蓝色的门旁边。",
+              "en": "Over there on the right, next to the blue door."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "把 W.C. 想成走廊里的厕所指示牌，连同问路句 fejn hemm il-W.C.? 一起记忆。"
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
@@ -2434,6 +2408,17 @@
     {
       "stratum": "tier_3/unspecified/unenriched",
       "exact_key": "fruit of palm tree",
+      "analysis_pos": [
+        null
+      ],
+      "senses": [],
+      "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "jizzaghbel",
       "analysis_pos": [
         null
       ],
