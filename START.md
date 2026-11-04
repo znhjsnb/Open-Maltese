@@ -2,7 +2,16 @@
 
 欢迎接手 **Open-Malti（马耳他语–中文–英语三语认知词典）** 独立工作区 (`C:\Users\d\Documents\open-malti`)。
 
-## 当前批次（2026-11-04 · Step 1 展示融合与 Tier 3 队列准备）
+## 当前状态（2026-11-04 · 23,237 词全量精修大收官 & 开源发布就绪）
+- **全库精修 100% 达成**：全库 24,045 个词条中，除了 808 个在底层语料中原本就没有任何英文定义的无证条目保持诚实隔离外，**全部 23,237 个具备实证定义的词条已全部完成三语认知精修**（包含 Tier 1 全部 5,051 词、Tier 2 全部 11,414 词、Tier 3 全部 6,772 词）。
+- **完成 24 个全量里程碑**：累计完成 `phase2_milestone_001.json` 至 `phase2_milestone_024.json`（最新 commit `c0d3429`），五道确定性质量门禁 **5/5 通过，0 错误**。
+- **展示融合与词性归一化**：上线 `scripts/sense_display.py` 展示融合层，彻底消除跨源重复义项，单义词三语合一，规范小写词性标签（消除 `NOUN / noun` 重影），清除构词框内重复释义。
+- **开源发布文档就绪**：已补齐 `LICENSE`（代码 MIT + 数据/文档 CC-BY-SA 4.0 双协议）、`CONTRIBUTING.md` 贡献指南与全新升级的 `README.md`。
+- **端口与本地运行**：`http://127.0.0.1:8767/` 实时在线服务，支持 PWA 离线 32 项资产 IndexedDB 存储（SHA-256 校验）。
+
+---
+
+## 前序批次（2026-11-04 · Step 1 展示融合与 Tier 3 队列准备）
 - 已按 `.tmp/codex_step1_fusion_and_queue_prep.md` 实施第一步，未启动第二步真实补料。共享 [sense_display.py](scripts/sense_display.py) 生成 `display_senses` / `sense_guide`，维度 03、速跳、抽认卡与 Markdown / 9 列 Anki 均读取同一编号分组。`abaku` 为唯一 `1 · noun` 三语融合义项；`abbanduna` 为 3 条实证义项、无重复总括；`dar` 房屋教学定义仅附名词组，两个动词词根及来源分析保持隔离。原始 teaching 记录兼容保留在证据层，不参与学习者编号。
 - POS 展示统一为去重的小写主类；原始来源 POS 不变。02 移除 `.morphology-subentry .sense`，仅在多个不同构词卡标题加入短辨义标签。06/08 仍按原 `analysis.id` 呈现。跨来源融合保留标点并检查词根、性别、集合与词源层冲突；同来源多分析共享 POS/gloss 的全量冲突分组隔离检查通过。
 - 原始英文翻译选择器使用稳定 `selector_pos()`，与展示用 `pos_class()` 分离，保留已有 `name` / `propn` 两种绑定。`sense_translations` 支持可选 `en_explanation` / `mt_definition`，展示优先精修英文并保留原文对照；Gate 2 检查展示层重算一致、全部逐义项精修字段及原始扁平义项保护，Gate 4 保留教学材料与搭配的完整验证。
