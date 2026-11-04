@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-b5e778630796",
+  "dataset_version": "malti-phase2-2026-11-04-display1-1c2dc22b59f2",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 21466,
-    "unenriched_count": 2579,
-    "showcase_count": 21466,
+    "enriched_count": 22466,
+    "unenriched_count": 1579,
+    "showcase_count": 22466,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2192,6 +2192,74 @@
     },
     {
       "stratum": "tier_3/unspecified/enriched",
+      "exact_key": "spazju ta' moviment liberu",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "noun",
+          "en_definition": "An area in which people or things can move freely.",
+          "zh_definition": "供人或物自由移动、活动而不受阻碍的区域。",
+          "mt_definition": "Żona fejn persuni jew affarijiet jistgħu jiċċaqilqu liberament mingħajr ostakli.",
+          "definition_origin": "authored_pedagogical"
+        },
+        {
+          "pos": "NOUN",
+          "en_definition": "area of free movement",
+          "zh_definition": "允许人或物自由移动的区域。",
+          "mt_definition": "Żona li tippermetti lill-persuni jew lill-affarijiet jiċċaqilqu liberament.",
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "l-ispazju ta' moviment liberu",
+        "prefix": "l-i",
+        "rule": "vokali_tal_lehen",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
+      "dual_scenarios": {
+        "formal": {
+          "mt": "L-għamara għandha titqiegħed b'mod li tħalli spazju ta' moviment liberu fiċ-ċentru tal-kamra.",
+          "en": "The furniture should be arranged so that an area for free movement remains in the centre of the room.",
+          "zh": "家具应合理摆放，使房间中央留有自由活动的空间。",
+          "source_type": "pedagogical_example",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "colloquial": {
+          "mt": "Maja: Inressqu l-mejda mal-ħajt? Mark: Iva, hekk inħallu spazju ta' moviment liberu għat-tfal.",
+          "en": "Maja: Shall we move the table against the wall? Mark: Yes, that will leave an area where the children can move freely.",
+          "zh": "玛雅：我们把桌子移到墙边好吗？马克：好，这样就能给孩子们留出自由活动的空间。",
+          "messages": [
+            {
+              "speaker": "Maja (朋友)",
+              "mt_spoken": "Inressqu l-mejda mal-ħajt?",
+              "mt_standard": "Inressqu l-mejda mal-ħajt?",
+              "zh": "我们把桌子移到墙边好吗？",
+              "en": "Shall we move the table against the wall?"
+            },
+            {
+              "speaker": "Mark (朋友)",
+              "mt_spoken": "Iva, hekk inħallu spazju ta' moviment liberu għat-tfal.",
+              "mt_standard": "Iva, hekk inħallu spazju ta' moviment liberu għat-tfal.",
+              "zh": "好，这样就能给孩子们留出自由活动的空间。",
+              "en": "Yes, that will leave an area where the children can move freely."
+            }
+          ],
+          "source_type": "pedagogical_dialogue",
+          "source": "phase2_enrichment",
+          "review_status": "phase2_reviewed"
+        },
+        "review_status": "phase2_reviewed"
+      },
+      "cognitive_memory_aid": "想象把桌椅推到墙边，中央空出来让人自由走动；把整个短语作为“自由活动区域”一起记。"
+    },
+    {
+      "stratum": "tier_3/unspecified/enriched",
       "exact_key": "għal raġunijiet ekonomiċi",
       "analysis_pos": [
         "NOUN"
@@ -2326,93 +2394,6 @@
       "cognitive_memory_aid": "用“留下记号”串联三个义项：地图留下位置记号，商品留下品牌记号，经历在心中留下深刻印记。这只是学习联想。"
     },
     {
-      "stratum": "tier_3/unspecified/enriched",
-      "exact_key": "lilna",
-      "analysis_pos": [
-        null
-      ],
-      "senses": [
-        {
-          "pos": "unspecified",
-          "en_definition": "A form referring to the speaker and one or more other people as the objects or recipients of an action.",
-          "zh_definition": "指说话人和至少一位其他人，表示作宾语的“我们”，也可表示“给我们”或“向我们”。",
-          "mt_definition": "Hija forma li tirreferi għall-kelliem flimkien ma' persuna oħra jew aktar, meta dawn ikunu l-oġġett ta' azzjoni jew jirċievu xi ħaġa.",
-          "definition_origin": "authored_pedagogical"
-        },
-        {
-          "pos": null,
-          "en_definition": "us",
-          "zh_definition": "我们，指说话人及至少一位其他人，用作动作的对象或接收者。",
-          "mt_definition": "Tirreferi għall-kelliem u għal persuna oħra jew aktar meta azzjoni tkun diretta lejhom jew meta jingħataw xi ħaġa.",
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": null,
-      "dual_scenarios": {
-        "formal": {
-          "mt": "Il-kumitat għażel lilna biex nippreżentaw il-proġett.",
-          "en": "The committee chose us to present the project.",
-          "zh": "委员会选择了我们来介绍这个项目。",
-          "source_type": "pedagogical_example",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "colloquial": {
-          "mt": "Maja: Lil min bagħat l-invit Pawlu? Sara: Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
-          "en": "Maja: Who did Pawlu send the invitation to? Sara: He sent the invitation to both of us. Do you want to come with me?",
-          "zh": "玛雅：保罗把邀请发给谁了？萨拉：他发给了我们两个人。你想和我一起去吗？",
-          "messages": [
-            {
-              "speaker": "Maja (朋友)",
-              "mt_spoken": "Lil min bagħat l-invit Pawlu?",
-              "mt_standard": "Lil min bagħat l-invit Pawlu?",
-              "zh": "保罗把邀请发给谁了？",
-              "en": "Who did Pawlu send the invitation to?"
-            },
-            {
-              "speaker": "Sara (朋友)",
-              "mt_spoken": "Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
-              "mt_standard": "Bagħat l-invit lilna t-tnejn. Trid tiġi miegħi?",
-              "zh": "他发给了我们两个人。你想和我一起去吗？",
-              "en": "He sent the invitation to both of us. Do you want to come with me?"
-            }
-          ],
-          "source_type": "pedagogical_dialogue",
-          "source": "phase2_enrichment",
-          "review_status": "phase2_reviewed"
-        },
-        "review_status": "phase2_reviewed"
-      },
-      "cognitive_memory_aid": "画一个包含自己和同伴的圈，把 lilna 写在圈内：别人选中圈内的人，就是“选我们”；别人把邀请递进圈内，就是“给我们”。"
-    },
-    {
-      "stratum": "tier_3/unspecified/unenriched",
-      "exact_key": "spazju ta' moviment liberu",
-      "analysis_pos": [
-        "NOUN"
-      ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "area of free movement",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "l-ispazju ta' moviment liberu",
-        "prefix": "l-i",
-        "rule": "vokali_tal_lehen",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
-      "dual_scenarios": null,
-      "cognitive_memory_aid": null
-    },
-    {
       "stratum": "tier_3/unspecified/unenriched",
       "exact_key": "w.c.",
       "analysis_pos": [
@@ -2447,6 +2428,33 @@
       ],
       "senses": [],
       "definite_article": null,
+      "dual_scenarios": null,
+      "cognitive_memory_aid": null
+    },
+    {
+      "stratum": "tier_3/unspecified/unenriched",
+      "exact_key": "tejp",
+      "analysis_pos": [
+        "NOUN"
+      ],
+      "senses": [
+        {
+          "pos": "NOUN",
+          "en_definition": "tape",
+          "zh_definition": null,
+          "mt_definition": null,
+          "definition_origin": "licensed_source"
+        }
+      ],
+      "definite_article": {
+        "form": "it-tejp",
+        "prefix": "it-",
+        "rule": "sun_assimilation",
+        "context": "citation",
+        "note": "Canonical citation context; preceding vowels may elide article i.",
+        "source_type": "grammar_reference",
+        "source": "docs/MASTER_PLAN_V2.md#gate-3"
+      },
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     }
