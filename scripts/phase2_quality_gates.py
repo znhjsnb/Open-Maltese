@@ -12,11 +12,16 @@ import re
 import unicodedata
 
 try:
+    from .sense_display import display_layer, teaching_sense, entry_collocations
+except ImportError:
+    from sense_display import display_layer, teaching_sense, entry_collocations
+
+try:
     from .phase2_enrichment import (PROJECT, OVERLAY_DIR, load_overlays, pos_class,
-                                    translations_for, write_json, anti_dilution_errors)
+                                    translations_for, write_json, anti_dilution_errors, selector_pos)
 except ImportError:
     from phase2_enrichment import (PROJECT, OVERLAY_DIR, load_overlays, pos_class,
-                                  translations_for, write_json, anti_dilution_errors)
+                                  translations_for, write_json, anti_dilution_errors, selector_pos)
 
 NOMINAL_POS = {'noun', 'n.', 'n.m.', 'n.f.', 'adj', 'adj.', 'num', 'num.'}
 SUN = 'ċdnrstxżz'
@@ -32,7 +37,7 @@ def compute_definite_article(word, pos):
     This bounded engine does not claim to decide arbitrary connected speech.
     In particular għ/h can take l-i- after a preceding consonant.
     """
-    if (pos or '').lower() not in NOMINAL_POS:
+    if pos_class(pos) not in {'noun', 'adj', 'num'}:
         return None
     word = unicodedata.normalize('NFC', word).strip().lower()
     if not word or not word[0].isalpha():
@@ -102,14 +107,15 @@ def gate1(entries, overlays, assets=None):
 
 def protected_record(entry):
     """Evidence fields excluding only the explicitly allowed authored additions."""
+    source_sense = lambda s: {k: v for k, v in s.items() if k not in
+        ('zh_definition', 'mt_definition', 'en_explanation', 'translation_provenance')}
     analyses = []
     for a in entry['lexeme_analyses']:
         analyses.append({k: v for k, v in a.items() if k not in ('senses', 'definite_article')})
-        analyses[-1]['senses'] = [{k: v for k, v in s.items() if k not in
-                                  ('zh_definition', 'mt_definition', 'translation_provenance')}
-                                 for s in a['senses']]
+        analyses[-1]['senses'] = [source_sense(s) for s in a['senses']]
     return {'headword': entry['headword'], 'morphology': entry['morphology'],
             'analyses': analyses, 'stratum': entry['etymology']['stratum'],
+            'source_senses': [source_sense(s) for s in entry['senses'] if s.get('id') != 'teaching'],
             'source_chain': entry['etymology']['source_chain'],
             'attested_forms': entry['inflection_and_clitics']['attested_forms']}
 
@@ -118,6 +124,9 @@ def gate2(entries, overlays, baseline):
     errors = []
     for e in entries:
         key, morph = e['id'], e['morphology']
+        senses, guide = display_layer(e)
+        if e.get('display_senses') != senses or e.get('sense_guide') != guide:
+            errors.append(key + ': stale or invalid display sense bindings')
         if key in baseline and protected_record(e) != protected_record(baseline[key]['entry']):
             errors.append(key + ': protected source evidence changed')
         roots = morph.get('root_consonants')
@@ -136,15 +145,19 @@ def gate2(entries, overlays, baseline):
         expected = translations_for(overlays[key])
         for a in e['lexeme_analyses']:
             for s in a['senses']:
-                selector = (pos_class(s['pos']), s['en_definition'])
+                selector = (selector_pos(s['pos']), s['en_definition'])
                 row = expected.get(selector)
                 if not row or s.get('zh_definition') != row['zh_definition']:
                     errors.append(key + ':' + s['id'] + ': missing or cross-sense Chinese translation')
+                if row and any(s.get(field) != row.get(field) for field in ('mt_definition', 'en_explanation')):
+                    errors.append(key + ':' + s['id'] + ': cross-sense refinement mismatch')
         for s in e['senses']:
             if s['id'] != 'teaching':
-                row = expected.get((pos_class(s['pos']), s['en_definition']))
+                row = expected.get((selector_pos(s['pos']), s['en_definition']))
                 if not row or s.get('zh_definition') != row['zh_definition']:
                     errors.append(key + ':' + s['id'] + ': flattened sense mismatch')
+                if row and any(s.get(field) != row.get(field) for field in ('mt_definition', 'en_explanation')):
+                    errors.append(key + ':' + s['id'] + ': flattened refinement mismatch')
         # Fixed minimal regression anchors are independent of overlay content.
         if key == 'dar':
             anchors = {'house': '房', 'home': '家', 'room': '房', 'family': '家',
@@ -165,13 +178,13 @@ def gate3(entries, overlays, lookup):
         # Every enriched nominal analysis must have its own validated article.
         for a in e['lexeme_analyses']:
             article = a.get('definite_article')
-            nominal = (a.get('pos') or '').lower() in NOMINAL_POS
+            nominal = pos_class(a.get('pos')) in {'noun', 'adj', 'num'}
             if nominal and not validate_definite_article(word, article):
                 errors.append(key + ':' + a['id'] + ': invalid/missing nominal article')
             elif article and (not nominal or not validate_definite_article(word, article)):
                 errors.append(key + ':' + a['id'] + ': invalid article')
         top = e['inflection_and_clitics'].get('definite_article')
-        has_nominal = any((a.get('pos') or '').lower() in NOMINAL_POS for a in e['lexeme_analyses'])
+        has_nominal = any(pos_class(a.get('pos')) in {'noun', 'adj', 'num'} for a in e['lexeme_analyses'])
         if has_nominal and not validate_definite_article(word, top):
             errors.append(key + ': invalid/missing top-level nominal article')
         elif top and (not has_nominal or not validate_definite_article(word, top)):
@@ -204,8 +217,7 @@ def gate4(entries, overlays, manifest, check_audio_totals=True):
         key = e['id']
         h = e['headword']
         if key in overlays or e.get('enrichment_status') == 'phase2_reviewed':
-            teaching_senses = [s for s in e['senses'] if s.get('id') == 'teaching']
-            collocations = [c for s in teaching_senses for c in (s.get('collocations') or [])]
+            collocations = entry_collocations(e)
             errors.extend(key + ': ' + error for error in anti_dilution_errors(
                 collocations, e.get('dual_scenarios'), e['etymology'].get('cognitive_memory_aid'),
                 [s for a in e['lexeme_analyses'] for s in a['senses']]))
@@ -219,7 +231,7 @@ def gate4(entries, overlays, manifest, check_audio_totals=True):
             if path.endswith(('.source', '.source_file', '.source_type')) and re.search(r'masri|dizzjunarju|BY-NC', value, re.I):
                 errors.append(key + path + ': forbidden source')
         for s in e['senses'] + [s for a in e['lexeme_analyses'] for s in a['senses']]:
-            if s.get('zh_definition') or s.get('mt_definition'):
+            if s.get('zh_definition') or s.get('mt_definition') or s.get('en_explanation'):
                 origin = s.get('translation_provenance', {}).get('definition_origin', s.get('definition_origin'))
                 if origin != 'authored_pedagogical':
                     errors.append(key + ': unlabelled authored definition')
@@ -233,7 +245,7 @@ def gate4(entries, overlays, manifest, check_audio_totals=True):
         if key in overlays:
             item = overlays[key]
             teaching = item.get('teaching_sense', {})
-            published = next((s for s in e['senses'] if s['id'] == 'teaching'), {})
+            published = teaching_sense(e) or {}
             if any(published.get(k) != v for k, v in teaching.items()) or published.get('collocations') != item.get('collocations'):
                 errors.append(key + ': published teaching material differs from overlay')
             if e['dual_scenarios'] != item.get('dual_scenarios'):

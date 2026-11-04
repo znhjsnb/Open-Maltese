@@ -109,6 +109,10 @@ dd { margin:0; min-width:0; }
 .sense { padding:.7rem 0; border-bottom:1px solid var(--line); scroll-margin-top:100px; }
 .sense:last-child { border-bottom:0; }
 .sense .zh { font-weight:600; }
+.sense-guide { padding:.6rem .9rem; margin:.6rem 0; border-left:3px solid var(--accent); background:var(--pill); }
+.sense-guide h4 { margin:.1rem 0 .4rem; font-size:.85em; }
+.sense-guide p { margin:.3rem 0; }
+.analysis-gloss { font-weight:400; font-size:.85em; }
 .scenario { background:var(--wash); }
 .dialogue-turn { border-top:1px solid var(--line); padding:.65rem 0; }
 .dialogue-turn h4 { margin:.25rem 0; }
@@ -152,7 +156,7 @@ legend { font-size:12px; font-weight:600; margin-bottom:.6rem; }
 .flashcard-inner { position:relative; height:100%; transform-style:preserve-3d; transition:transform 500ms var(--ease); }
 .flashcard.flipped .flashcard-inner { transform:rotateY(180deg); }
 .flashcard-face { position:absolute; inset:0; backface-visibility:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; padding:1.5rem; background:var(--wash); border:1px solid var(--line); border-radius:1rem; text-align:center; overflow:auto; }
-.flashcard-back { transform:rotateY(180deg); }
+.flashcard-back { transform:rotateY(180deg); justify-content:flex-start; }
 #card-word { font-size:40px; letter-spacing:-.03em; }
 #card-meaning { font-size:16px; }
 .flip-hint { font-size:11px; color:var(--muted); }

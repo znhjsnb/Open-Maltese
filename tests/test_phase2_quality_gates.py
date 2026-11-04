@@ -277,7 +277,10 @@ class Phase2Tests(unittest.TestCase):
         sync(data, summary, folder)
         meta = next(m for m in self.manifest['shards'] if m['bucket'] == 'D')
         dar = next(e for e in json.loads((data / meta['file']).read_text(encoding='utf-8')) if e['id'] == 'dar')
-        self.assertEqual(dar, self.baseline['dar']['entry'])
+        from scripts.sense_display import refresh_display
+        expected = deepcopy(self.baseline['dar']['entry'])
+        refresh_display(expected)
+        self.assertEqual(dar, expected)
         self.assertEqual(json.loads(summary.read_text(encoding='utf-8'))['enriched_count'], len(self.overlays) - 1)
         sync(data, summary)
         self.assertEqual(before, {p.relative_to(data): hashlib.sha256(p.read_bytes()).hexdigest() for p in tracked})
@@ -384,9 +387,54 @@ class Phase2Tests(unittest.TestCase):
         return SimpleNamespace(entries=self.by_key, indices={i['id']: i for i in self.index},
                                manifest=self.manifest, lookup=self.lookup)
 
+    def worker_overlay(self, key):
+        item = deepcopy(self.overlays[key])
+        for row in item['sense_translations']:
+            row['en_explanation'] = 'This is a complete explanatory sentence in an isolated test.'
+            row['mt_definition'] = item['teaching_sense']['mt_definition']
+        return item
+
+    def test_new_refinements_bind_exact_selectors_and_reject_published_drift(self):
+        from scripts.sense_display import refresh_display
+        from scripts.phase2_enrichment import apply_overlay
+        original = self.by_key['dar']
+        candidate = self.worker_overlay('dar')
+        packet = queue.assemble_packet(original)
+        self.assertEqual(queue.validate_candidate(candidate,packet,self.worker_store()),candidate)
+        edited, index = deepcopy(original), deepcopy(next(i for i in self.index if i['id']=='dar'))
+        apply_overlay(edited,index,candidate)
+        self.assertEqual(protected_record(original),protected_record(edited))
+        self.assertEqual([s['en_definition'] for s in original['senses']], [s['en_definition'] for s in edited['senses']])
+        self.assertEqual(gate2([edited],{'dar':candidate},{'dar':{'entry':original}}),[])
+        edited['lexeme_analyses'][0]['senses'][0]['en_explanation']='Wrong binding.'
+        refresh_display(edited)
+        self.assertIn('refinement mismatch',' '.join(gate2([edited],{'dar':candidate},{'dar':{'entry':original}})))
+
+    def test_tier3_pool_has_6771_candidates_and_808_evidence_gaps(self):
+        store = self.worker_store(); store.index = self.index
+        ready = queue.queue_readiness(store,self.overlays)
+        self.assertEqual(ready['selected'],6771)
+        self.assertEqual(ready['tier3_without_english'],808)
+        selected = queue.candidate_queue(self.index,self.overlays,wave='tier3',entries=self.by_key)
+        self.assertTrue(all(i['tier']==3 and queue.assemble_packet(self.by_key[i['exact_key']])['sense_selectors'] for i in selected))
+
+    def test_25_concurrent_slots_fill_without_external_workers(self):
+        folder = self.scratch / 'mock-25-slots'; folder.mkdir()
+        indices = [dict(exact_key=f'isolated-{n}',tier=3,gloss_en=['test']) for n in range(25)]
+        source = {'lexeme_analyses':[], 'senses':[dict(id='s1',pos='noun',en_definition='test')]}
+        store = SimpleNamespace(index=indices,entries={i['exact_key']:source for i in indices},packet=lambda key:{'exact_key':key})
+        barrier = threading.Barrier(25)
+        def worker(tag, packets, timeout):
+            barrier.wait(10)
+            return {'validated_entries':{packets[0]['exact_key']:{'exact_key':packets[0]['exact_key']}},'errors':{}}
+        with patch.object(queue,'source_store',return_value=store), patch.object(queue,'load_overlays',return_value=({},{})), patch.object(queue,'process_micro_batch',side_effect=worker), patch.object(queue,'publish_and_validate',return_value={'enriched_count':25}), patch.object(queue,'OVERLAY_DIR',folder), patch.object(queue,'QUARANTINE',folder/'quarantine.json'):
+            result = queue.run_queue(slots=25,batch_size=1,wave='tier3')
+        self.assertEqual(result['validated'],25)
+        self.assertEqual(result['quarantined'],0)
+
     def test_worker_partial_commit_positions_provenance_and_no_source_mutation(self):
         packets = [queue.assemble_packet(self.by_key[k]) for k in ('dar', 'ktieb', 'kiteb')]
-        rows = [deepcopy(self.overlays[k]) for k in ('dar', 'ktieb')]
+        rows = [self.worker_overlay(k) for k in ('dar', 'ktieb')]
         rows[1]['dual_scenarios']['colloquial']['messages'] = []
         rows[0]['teaching_sense']['source'] = 'wrong-worker-label'
         rows[0]['dual_scenarios']['colloquial']['messages'][0]['mt_standard'] = 'M?għandix ħin?'
@@ -411,9 +459,9 @@ class Phase2Tests(unittest.TestCase):
 
     def test_worker_duplicate_missing_timeout_and_selector_mismatch_are_per_word_errors(self):
         packets = [queue.assemble_packet(self.by_key[k]) for k in ('dar', 'ktieb')]
-        bad = deepcopy(self.overlays['dar'])
+        bad = self.worker_overlay('dar')
         bad['sense_translations'][0]['en_definition'] += ' WRONG'
-        good = deepcopy(self.overlays['ktieb'])
+        good = self.worker_overlay('ktieb')
         for rows, expected_valid in [([bad, good], {'ktieb'}), ([good, good], set()), ({'ktieb': good}, {'ktieb'}), (good, {'ktieb'}), ([], set())]:
             def invoke(command, prompt, timeout):
                 Path(command[command.index('-o') + 1]).write_text(json.dumps(rows, ensure_ascii=False), encoding='utf-8')

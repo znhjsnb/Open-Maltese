@@ -19,12 +19,14 @@ try:
         get_ui_letter_bucket, normalize_exact_search, normalize_ascii_tolerant,
         normalize_nfc, tokenize_root_consonants)
     from .phase1_showcase import SHOWCASE, COLLOCATIONS, GRAMMAR_LOOKUPS, scenarios
+    from .sense_display import pos_class
 except ImportError:
     import phase0_inventory_audit as audit
     from maltese_alphabet import (MALTESE_UI_BUCKETS_30, maltese_sort_key,
         get_ui_letter_bucket, normalize_exact_search, normalize_ascii_tolerant,
         normalize_nfc, tokenize_root_consonants)
     from phase1_showcase import SHOWCASE, COLLOCATIONS, GRAMMAR_LOOKUPS, scenarios
+    from sense_display import pos_class
 
 PROJECT = Path(__file__).resolve().parents[1]
 VERSION = 'malti-phase1-2026-11-03-r2'
@@ -359,7 +361,7 @@ def build(raw, output, seed_output, overlay_dir=None):
                 'source': 'phase1_showcase', 'review_status': 'pending_linguistic_review',
                 'collocations': [{'mt': mt_phrase, 'en': en_phrase, 'zh': zh_phrase,
                                   'source_type': 'pedagogical_example', 'review_status': 'pending_linguistic_review'}]})
-        pos_list = unique([g['pos'] for g in gs] + [r.get('pos') for r in ks])
+        pos_list = unique(pos_class(p) for p in [g['pos'] for g in gs] + [r.get('pos') for r in ks])
         verb_form = unique(v for m in morphs for v in m['verb_forms'])
         # Paradigm labels must not select negative forms whose Kaikki tags omit polarity.
         imperfect = arg('2') or form_for('imperfect', 'third-person', 'singular', 'masculine') or cam_paradigms[key].get('imperfett_3sg_m')

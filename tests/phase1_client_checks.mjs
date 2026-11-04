@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {makeSearchEngine,exact,ascii,stripArticle,createWorkerHandler} from '../app/static/worker.js';
-import {pronunciationGraphemes,currentWorkerError,renderAnalyses,renderInflections,renderEtymology,renderSenses,mergeResultPage,exportText,sourceChain} from '../app/static/app.js';
+import {pronunciationGraphemes,currentWorkerError,renderAnalyses,renderInflections,renderEtymology,renderSenses,mergeResultPage,exportText,sourceChain,posClass,learnerSenses} from '../app/static/app.js';
 import {createPronouncer,malteseVoice,availableVoice} from '../app/static/audio.js';
 import {loadEntry} from '../app/static/db.js';
 import vm from 'node:vm';
@@ -217,10 +217,10 @@ test('homograph cards and exports preserve analysis boundaries and evidence',()=
   const verb=sections[dar.lexeme_analyses.findIndex(a=>a.source==='kaikki' && a.pos==='verb')];
   assert.ok(noun.includes('djar'));assert.ok(!noun.includes('jdur'));assert.ok(!noun.includes('midur'));
   assert.ok(noun.includes('房屋')); assert.ok(!verb.includes('房屋'));
-  assert.ok(verb.includes('转动')); assert.ok(verb.includes('authored_pedagogical'));
+  assert.ok(verb.includes('转动')); assert.ok(!html.includes('class="sense"'));
   const mtSense=structuredClone(dar.lexeme_analyses[0]);
   mtSense.senses[0].mt_definition='Definizzjoni <sigura>';
-  assert.ok(renderAnalyses([mtSense]).includes('Definizzjoni &lt;sigura&gt;'));
+  assert.ok(!renderAnalyses([mtSense]).includes('Definizzjoni'));
   assert.ok(verb.includes('jdur'));assert.ok(verb.includes('midur'));assert.ok(!verb.includes('djar'));
   const recorded=shardEntries.find(e=>e.id==='abjad');
   for (const anki of [false,true]) {
@@ -298,6 +298,43 @@ test('source English and pedagogical translations have distinct provenance',()=>
   const teaching=renderSenses([{definition_origin:'authored_pedagogical',en_definition:'<safe>'}]);
   assert.ok(teaching.includes('教学编写 · authored_pedagogical · phase2_reviewed'));
   assert.ok(teaching.includes('&lt;safe&gt;'));
+});
+test('all display POS values are canonical and source POS remains auditable',()=>{
+  for (const index of entries) {
+    assert.deepEqual(index.pos_list,[...new Set(index.pos_list.map(posClass))]);
+    assert.ok(index.pos_list.every(p=>p && p===p.trim().toLowerCase()));
+  }
+  assert.deepEqual(entries.find(e=>e.id==='abaku').pos_list,['noun']);
+  assert.deepEqual(entries.find(e=>e.id==='abbanduna').pos_list,['verb']);
+  assert.equal(shardEntries.find(e=>e.id==='abaku').lexeme_analyses[0].pos,'NOUN');
+  for (const [pos,expected] of [['name','propn'],['SCONJ','conj'],['PART','part'],['article','art'],[' AUX ','aux'],['X-Custom','x-custom']])assert.equal(posClass(pos),expected);
+});
+test('fusion and every consumer use the same numbered groups with scoped teaching',()=>{
+  const abaku=shardEntries.find(e=>e.id==='abaku'),abbanduna=shardEntries.find(e=>e.id==='abbanduna'),dar=shardEntries.find(e=>e.id==='dar');
+  for (const [entry,expected] of [[abaku,1],[abbanduna,3]]) {
+    const view=learnerSenses(entry),html=renderSenses(view,entry.sense_guide);
+    assert.equal(view.length,expected);assert.equal((html.match(/class="sense sense-card"/g)||[]).length,expected);
+    assert.ok(!renderAnalyses(entry.lexeme_analyses).includes('class="sense"'));
+    assert.equal((exportText(entry,false,manifest).split('03 · Senses')[1].split('04 · Collocations')[0].match(/\n- /g)||[]).length,expected);
+    const fields=exportText(entry,true,manifest).split('\t');assert.equal(fields.length,9);
+    assert.ok(fields[3].includes(entry.display_senses[0].zh_definition));
+  }
+  const one=renderSenses(abaku.display_senses);
+  assert.ok(one.includes('A counting tool with movable beads') && one.includes('Għodda bi żibeġ') && one.includes('算盘'));
+  assert.ok(one.includes('原文简释：abacus') && one.includes('gabra · kaikki'));
+  assert.ok(!one.includes('核心词义导览'));
+  assert.ok(!renderSenses(abbanduna.display_senses,abbanduna.sense_guide).includes('核心词义导览'));
+  assert.equal(dar.sense_guide,null);
+  const bound=dar.display_senses.filter(s=>s.teaching);
+  assert.equal(bound.length,1);assert.equal(bound[0].pos,'noun');assert.equal(bound[0].en_definition,'house');
+  const verbs=dar.display_senses.filter(s=>s.pos==='verb');
+  assert.ok(verbs.length>1);assert.ok(!renderSenses(verbs).includes('Bini fejn jgħixu n-nies.'));
+  const poisoned=structuredClone(abaku);poisoned.senses.push({id:'poison',en_definition:'POISON'});
+  assert.ok(!exportText(poisoned,false,manifest).includes('POISON'));
+  const safe=structuredClone(abaku.display_senses);safe[0].en_explanation='<unsafe>';safe[0].mt_definition='Definizzjoni <sigura>';
+  const html=renderSenses(safe,null,'study-sense');
+  assert.ok(html.includes('&lt;unsafe&gt;') && html.includes('Definizzjoni &lt;sigura&gt;'));
+  assert.ok(html.includes('id="study-sense-0"') && !html.includes('id="sense-0"'));
 });
 test('single lexeme only renders applicable source forms and safe etymology',()=>{
   const entry=structuredClone(shardEntries.find(e=>e.id==='abaku'));

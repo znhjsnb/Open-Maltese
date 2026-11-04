@@ -2,7 +2,17 @@
 
 欢迎接手 **Open-Malti（马耳他语–中文–英语三语认知词典）** 独立工作区 (`C:\Users\d\Documents\open-malti`)。
 
-## 当前修复批次（2026-11-04 · 空值收敛与 Tier 1+2 覆盖补齐）
+## 当前批次（2026-11-04 · Step 1 展示融合与 Tier 3 队列准备）
+- 已按 `.tmp/codex_step1_fusion_and_queue_prep.md` 实施第一步，未启动第二步真实补料。共享 [sense_display.py](scripts/sense_display.py) 生成 `display_senses` / `sense_guide`，维度 03、速跳、抽认卡与 Markdown / 9 列 Anki 均读取同一编号分组。`abaku` 为唯一 `1 · noun` 三语融合义项；`abbanduna` 为 3 条实证义项、无重复总括；`dar` 房屋教学定义仅附名词组，两个动词词根及来源分析保持隔离。原始 teaching 记录兼容保留在证据层，不参与学习者编号。
+- POS 展示统一为去重的小写主类；原始来源 POS 不变。02 移除 `.morphology-subentry .sense`，仅在多个不同构词卡标题加入短辨义标签。06/08 仍按原 `analysis.id` 呈现。跨来源融合保留标点并检查词根、性别、集合与词源层冲突；同来源多分析共享 POS/gloss 的全量冲突分组隔离检查通过。
+- 原始英文翻译选择器使用稳定 `selector_pos()`，与展示用 `pos_class()` 分离，保留已有 `name` / `propn` 两种绑定。`sense_translations` 支持可选 `en_explanation` / `mt_definition`，展示优先精修英文并保留原文对照；Gate 2 检查展示层重算一致、全部逐义项精修字段及原始扁平义项保护，Gate 4 保留教学材料与搭配的完整验证。
+- 全量构建完成；24,045 词的原始 `senses` 与 `lexeme_analyses` 与开工快照逐词摘要相同；19 个 overlay 文件、16,466 词精编数据未变；32 项发布资产字节与 SHA-256 匹配。快速同步的基线只保留来源快照，派生展示字段重算并保持序列化顺序；同步、移除叠加及恢复后的全部发布资产逐字节一致。详见 [完整性证据](tests/artifacts/fusion_integrity.json)。8767 实际返回当前 JS、CSS、manifest，无需重启静态服务，页面需刷新加载新版本。
+- 队列新增 `--wave tier3`、`--concurrency`（兼容 `--slots`）与只读 `--dry-run`。实测候选 6,771，缺英文选择器的 808 词明确隔离，清单见 [队列预检](tests/artifacts/fusion_queue_readiness.json)。新 worker 逐义项必须输出中文、马语定义与完整英文解释句；旧 overlay 兼容通过。25 槽并发测试使用隔离假 worker，通过且未调用真实模型。
+- 五门 **5/5、0 错误**（[日志](tests/artifacts/fusion_quality_gates.log)）；Node **58 项通过**（[日志](tests/artifacts/fusion_client.log)）；Python 最终串行全量 **133 项通过、0 失败、0 跳过**（[日志](tests/artifacts/fusion_unittest.log)，268.586 秒）。JS 语法与 diff 空白检查通过。测试新增融合、来源边界、英文精修绑定、缺证隔离与 25 槽验证。初轮旧还原断言和并行运行造成的 Node 40 秒超时已修正/排除，保留原有限时，未削减检查。
+- 本轮真实 Chrome 门禁未能启动：普通命令在临时服务 `spawn EPERM`；复用 8767 后 Chrome 的 Crashpad/Mojo 通道被 Windows `Access denied (0x5)` 拒绝，页面断言未执行。已更新 PASS 5/9 的构词去重、融合义项与名词绑定断言，不能报告真机通过。见 [浏览器日志](tests/artifacts/fusion_browser_existing_origin.log)。未操作 Git，提交由 Antigravity 宿主负责。
+- Antigravity 宿主可直接执行 `$env:OPEN_MALTI_E2E_ORIGIN='http://127.0.0.1:8767'; node tests/frontend.browser.mjs`，完成本批浏览器/视觉及语言学复核后按已批准第二步启动：`python -X utf8 scripts/run_phase2_sliding_queue.py --wave tier3 --concurrency 25 --batch-size 4 --timeout 420 --milestone-interval 100`。详细契约与命令见 [README](README.md)。
+
+## 前序修复批次（2026-11-04 · 空值收敛与 Tier 1+2 覆盖补齐）
 - 已保留 01—08 八维平铺，02/06/08 只为有对应实证的子词位生成卡片，空来源合并为紧凑注记。`dar` 名词与动词按 `analysis.id` 隔离；`abaku` 仅保留一张有效构词卡和一张 Kaikki 历史词源卡，无空附着代词小节。
 - 构建器统一去重模板及传播链，纳入全库 96 词的 `etymon`；从来源介词表的人称＋数标签归类附着代词，顶层覆盖 55 → 85 词，不把普通动词变位或名词词形归入。`kastellanija` 精编写入现有 `data/enriched/phase2_kastellanija.json`：Tier 1 为 5,051 / Tier 2 为 11,414，合计 16,465 全覆盖，另含 `bongu`，总精编 16,466。
 - 已执行 `python -X utf8 scripts/build_phase1_shards.py --apply-phase2-overlays`，32 项资产字节数及 SHA-256 全部匹配；8767 实际返回更新后的 JS、CSS 与 manifest。工程实际发布路径为 `index_lite.json`、`wordforms_lookup.json`、`manifest.json`，未另造任务中所称的索引别名或 overlay 目录。原始数据未修改。

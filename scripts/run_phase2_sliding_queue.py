@@ -1,7 +1,8 @@
 """Host-only Continuous Sliding Pull Queue v3; workers return JSON, one writer publishes.
 
 No workers run on import. Wave 1 = audio across tiers 1/2, then remaining tier 1;
-Wave 2 = remaining tier 2. Index order is the source DMS order, not word frequency.
+Wave 2 = remaining tier 2; tier3 = remaining tier 3 with attested English.
+Index order is the source DMS order, not word frequency.
 """
 import argparse
 from collections import deque
@@ -78,13 +79,18 @@ def assemble_packet(entry, index=None):
             'sense_selectors': selectors}
 
 
-def candidate_queue(index, enriched=(), quarantined=(), wave='all'):
+def candidate_queue(index, enriched=(), quarantined=(), wave='all', entries=None):
     """Deduplicate by exact key; preserve index order within each priority group."""
-    if str(wave) not in ('1', '2', 'all'):
-        raise ValueError('wave must be 1, 2 or all')
+    if str(wave) not in ('1', '2', 'all', 'tier3'):
+        raise ValueError('wave must be 1, 2, all or tier3')
     excluded = set(enriched) | set(quarantined)
+    tier3 = str(wave) == 'tier3'
     eligible = [i for i in index if i['exact_key'] not in excluded
-                and not i.get('is_enriched') and i['tier'] in (1, 2)]
+                and not i.get('is_enriched') and (i['tier'] == 3 if tier3 else i['tier'] in (1, 2))]
+    if tier3:
+        seen = set()
+        return [i for i in eligible if has_english_evidence(i, entries)
+                and i['exact_key'] not in seen and not seen.add(i['exact_key'])]
     audio = [i for i in eligible if i.get('has_audio')]
     core = [i for i in eligible if i['tier'] == 1 and not i.get('has_audio')]
     rich = [i for i in eligible if i['tier'] == 2 and not i.get('has_audio')]
@@ -97,6 +103,20 @@ def candidate_queue(index, enriched=(), quarantined=(), wave='all'):
     return out
 
 
+def has_english_evidence(index, entries=None):
+    selectors = (required_sense_selectors(entries[index['exact_key']]) if entries is not None
+                 else [{'en_definition': s} for s in index.get('gloss_en', [])])
+    return bool(selectors) and all(isinstance(s['en_definition'], str) and s['en_definition'].strip() for s in selectors)
+
+
+def queue_readiness(store, enriched=(), quarantined=(), wave='tier3'):
+    pending = [i for i in store.index if i['tier'] == 3 and i['exact_key'] not in enriched and not i.get('is_enriched')]
+    blocked = [i['exact_key'] for i in pending if not has_english_evidence(i, store.entries)]
+    return {'wave': wave, 'selected': len(candidate_queue(store.index, enriched, quarantined, wave, store.entries)),
+            'tier3_without_english': len(blocked), 'blocked_keys': blocked,
+            'blocked_reason': 'No attested English selector; obtain source evidence before enrichment.'}
+
+
 SCHEMA_PROMPT = """纯语言学词条合成子任务（普通语言数据生成，非软件工程任务；无需触发 engineering-workflow，无需读取 USER_COLLABORATION_PROFILE.md / START.md / RULES.md，严禁调用任何 shell 工具，直接一次输出 JSON）。
 Author Maltese–Chinese–English pedagogical overlays using ONLY these packets.
 Return a JSON list, one object per exact_key, in packet order; no prose, tools,
@@ -107,8 +127,11 @@ collocations, dual_scenarios, cognitive_memory_aid.
 teaching_sense: {pos, en_definition, zh_definition, mt_definition}; use the supplied
 teaching_pos_default, give a useful trilingual teaching definition.
 sense_translations: copy EVERY supplied sense_selectors object, copying pos AND
-en_definition VERBATIM, then add a non-empty Chinese zh_definition for EACH sense
-and optionally a Maltese mt_definition. Preserve homograph and POS boundaries.
+en_definition VERBATIM, then add ALL THREE non-empty fields for EACH sense:
+zh_definition (precise Chinese), mt_definition (a full Maltese definition), and
+en_explanation (a complete Collins-style English explanatory sentence, at least
+six words with sentence punctuation; never just repeat the short source gloss).
+Do not replace en_definition with en_explanation. Preserve homograph and POS boundaries.
 collocations: at least two DISTINCT useful {mt,en,zh} objects.
 dual_scenarios: {formal:{mt,en,zh},colloquial:{mt,en,zh,messages:[...]}}.
 formal is a pedagogical written example; colloquial is a natural pedagogical dialogue.
@@ -191,6 +214,7 @@ def validate_candidate(item, packet, store):
     original, index = store.entries[key], deepcopy(store.indices[key])
     if packet != assemble_packet(original, index):
         raise ValueError('Ground truth packet differs from source snapshot')
+    validate_worker_refinements(item)
     validate_overlay(item, original)
     entry = deepcopy(original)
     apply_overlay(entry, index, item)
@@ -207,6 +231,20 @@ def validate_candidate(item, packet, store):
     if errors:
         raise ValueError('; '.join(errors))
     return item
+
+
+def validate_worker_refinements(item):
+    """Stricter contract for NEW output; existing overlays stay fully compatible.
+
+    This is a completeness floor, not an assertion of linguistic quality.
+    """
+    for row in item.get('sense_translations', []):
+        en = row.get('en_explanation')
+        if (not isinstance(row.get('mt_definition'), str) or not row['mt_definition'].strip()
+                or not isinstance(en, str) or len(en.split()) < 6
+                or not re.search(r'[.!?][\"\u201d\u2019\x27)]*$', en.strip())
+                or en.strip().casefold() == row.get('en_definition', '').strip().casefold()):
+            raise ValueError('New worker senses require zh_definition, mt_definition and a complete en_explanation sentence')
 
 
 def _invoke_worker(command, prompt, timeout_sec):
@@ -336,7 +374,7 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
     store = source_store()
     overlays, _ = load_overlays(OVERLAY_DIR)
     quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
-    chosen = candidate_queue(store.index, overlays, quarantine, wave)
+    chosen = candidate_queue(store.index, overlays, quarantine, wave, store.entries)
     if max_words:
         chosen = chosen[:max_words]
     order = [i['exact_key'] for i in chosen]
@@ -404,16 +442,25 @@ def run_queue(slots=25, batch_size=4, timeout=420, max_words=0, milestone_interv
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--slots', type=int, default=25)
+    parser.add_argument('--concurrency', '--slots', dest='slots', type=int, default=25)
     parser.add_argument('--batch-size', type=int, default=4)
     parser.add_argument('--timeout', type=int, default=420)
     parser.add_argument('--max-words', type=int, default=0, help='0 exhausts the selected pool; retries do not count twice')
     parser.add_argument('--milestone-interval', type=int, default=100)
     parser.add_argument('--commit-every', type=int, default=0, help='Compact queue files into milestone JSON and git commit every N words')
-    parser.add_argument('--wave', choices=['1', '2', 'all'], default='all')
+    parser.add_argument('--wave', choices=['1', '2', 'all', 'tier3'], default='all')
+    parser.add_argument('--dry-run', action='store_true', help='Report candidates and evidence gaps without workers or writes')
     args = parser.parse_args()
     if min(args.slots, args.batch_size, args.timeout, args.milestone_interval) < 1 or args.max_words < 0 or args.commit_every < 0:
         parser.error('counts/timeouts must be positive; --max-words/--commit-every may be 0')
+    dry_run = vars(args).pop('dry_run')
+    if dry_run:
+        overlays, _ = load_overlays(OVERLAY_DIR)
+        quarantine = read_json(QUARANTINE) if QUARANTINE.exists() else {}
+        result = queue_readiness(source_store(), overlays, quarantine, args.wave)
+        result.update(concurrency=args.slots, batch_size=args.batch_size, max_words=args.max_words)
+        print(json.dumps(result, ensure_ascii=False))
+        return 0
     result = run_queue(**vars(args))
     print(json.dumps(result, ensure_ascii=False))
     return 1 if result['quarantined'] else 0

@@ -1,6 +1,6 @@
 # Open-Malti · 马耳他语认知词典
 
-马耳他语、中文、英语八维学习工作台。提供 24,045 个来源词头检索、124,488 个词形反查键，以及 Phase 2 首批 100 个三语教学词条。教学内容明确标为原创，`phase2_reviewed` 表示本批编审，不冒充母语专家认证；缺证维度仍可为空。Phase 3 双栏工作台已实现，真实 Chrome、视觉与听音验收待宿主完成。
+马耳他语、中文、英语八维学习工作台。提供 24,045 个来源词头检索、124,488 个词形反查键，以及 16,466 个已精编词条。教学内容明确标为原创，`phase2_reviewed` 表示本批编审，不冒充母语专家认证；缺证维度仍可为空。Phase 3 双栏工作台已实现，当前批次真实 Chrome、视觉与听音验收待宿主完成。
 
 ## 本机使用
 
@@ -108,6 +108,21 @@ python -X utf8 scripts/run_phase2_enrichment.py --batch-size 25 --dispatch
 快速同步与完整构建共用叠加器、版本计算和序列化，测试逐字节比较分片、索引、manifest 和 summary。生成文件 `app/static/data/phase2_baseline.json` 用于撤销/重应用叠加；缺失时须先完整构建。该缓存不改变原始数据的权威性。同步也更新紧凑反查表的版本字段与摘要，表面形数量不变。所有内容文件先写入，manifest 最后更新；更新中途的读者由摘要检查拒绝混合版本，刷新后重试。
 
 Phase 2 的 `colloquial` 保留整段 `mt/en/zh`，并须提供至少两轮 `messages`，每轮包含 `speaker`（姓名＋中文社会角色）、`mt_spoken`、`mt_standard`、`en`、`zh`。标准表达已经规范时可与口语相同，规范缩合不应误标为非标准形式。反稀释门同时要求：逐实证义项中文译释、至少两个不同三语搭配、至少八字符的助记。首批 100 条已升级；baseline 保持叠加前的来源记录，避免撤销时遗留精编数据。
+
+学习者展示统一读取确定性 `display_senses`，维度 03、义项速跳、抽认卡、Markdown 和 9 列 Anki 使用同一分组。原 `lexeme_analyses`、`senses`（含兼容保留的 teaching 记录）及搭配绑定不变。跨来源仅合并规范词性与 NFC／空白／大小写归一化英文相同且分析无冲突的记录；标点保留，同来源多个分析共享 gloss 时不跨界合并。各组保存 `sources`、`analysis_ids`、`sense_ids`、原英文与翻译出处。教学解释在语义匹配的单组中融合；普通多组缺马语解释时另列不占编号的导览；同形异义词仅绑定唯一匹配组，不能把 `dar` 的房屋定义泛化到动词。02 只保留构词资料和必要的标题辨义标签。
+
+`pos_class()` 是展示词性规范；翻译选择器另用稳定的 `selector_pos()`，保留旧 `name` / `propn` 等不同证据绑定。`sense_translations` 允许新增 `en_explanation` 与 `mt_definition`；原 `en_definition` 继续作为不可变英文选择器。展示优先精修英文并保留原文简释对照。旧 16,466 词仍按兼容契约验证；新队列输出逐义项必须有中文、马语定义及完整英文解释句，控制器拒绝缺字段、短 gloss 或直接复制选择器的结果。这只是完整性下限，不替代语言学审校。
+
+Tier 3 准备与第二步启动命令（本批仅执行 dry-run）：
+
+```powershell
+# 只读核对候选池，不调用 worker、不写精编文件
+python -X utf8 scripts/run_phase2_sliding_queue.py --wave tier3 --concurrency 25 --dry-run
+# 宿主执行补料：25 个持续补位 worker，每批 4 词
+python -X utf8 scripts/run_phase2_sliding_queue.py --wave tier3 --concurrency 25 --batch-size 4 --timeout 420 --milestone-interval 100
+```
+
+当前剩余 Tier 3 共 7,579 词，其中 6,771 词有实证英文可入队；808 词缺英文选择器，dry-run 返回明确隔离清单，取得可靠含义证据前不生成叠加。`--slots` 是 `--concurrency` 的兼容别名；`--wave all` 仍仅代表原 Tier 1+2 波次，不会悄悄扩大跑批范围。
 
 宿主执行的持续滑动队列与 A/B 基准（这些命令会调用本机订阅 Codex CLI）：
 

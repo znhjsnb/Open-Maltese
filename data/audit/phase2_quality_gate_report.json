@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-03-7856ffd03871",
+  "dataset_version": "malti-phase2-2026-11-04-display1-7856ffd03871",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {

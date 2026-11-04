@@ -8,17 +8,27 @@ import hashlib
 import json
 from pathlib import Path
 
+try:
+    from .sense_display import pos_class, refresh_display
+except ImportError:
+    from sense_display import pos_class, refresh_display
+
 PROJECT = Path(__file__).resolve().parents[1]
 OVERLAY_DIR = PROJECT / 'data/enriched'
-BASE_VERSION = 'malti-phase2-2026-11-03'
+BASE_VERSION = 'malti-phase2-2026-11-04-display1'
 ALLOWED = {'exact_key', 'gloss_zh', 'teaching_sense', 'sense_translations',
            'collocations', 'dual_scenarios', 'cognitive_memory_aid'}
 
 
-def pos_class(pos):
-    pos = (pos or '').lower()
+def selector_pos(pos):
+    """Stable Phase 2 evidence key, distinct from the broader DISPLAY POS class.
+
+    Existing name/propn (and other alias) selectors can have different authored
+    translations. Changing their identity would silently rebind old evidence.
+    """
+    value = (pos or '').lower()
     return {'n.': 'noun', 'n.m.': 'noun', 'n.f.': 'noun', 'adj.': 'adj',
-            'num.': 'num', 'v.': 'verb', 'v': 'verb', 'adp': 'prep'}.get(pos, pos)
+            'num.': 'num', 'v.': 'verb', 'v': 'verb', 'adp': 'prep'}.get(value, value)
 
 
 def load_overlays(directory=OVERLAY_DIR):
@@ -41,12 +51,12 @@ def load_overlays(directory=OVERLAY_DIR):
 
 
 def required_sense_selectors(entry):
-    """Keep source order and exact English, deduplicating only canonical POS/English."""
+    """Keep source order and exact English, deduplicating stable selector POS/English."""
     selectors = {}
     for sense in [s for a in entry['lexeme_analyses'] for s in a['senses']] + entry['senses']:
         if sense.get('id') == 'teaching':
             continue
-        pair = (pos_class(sense['pos']), sense['en_definition'])
+        pair = (selector_pos(sense['pos']), sense['en_definition'])
         selectors.setdefault(pair, {'pos': pair[0], 'en_definition': pair[1]})
     return list(selectors.values())
 
@@ -136,21 +146,23 @@ def translations_for(item):
     if not isinstance(rows, list) or not rows:
         raise ValueError('sense_translations must be a list of exact POS/English selectors')
     for row in rows:
-        # Some attested source records genuinely omit POS (e.g. le); pos_class
+        # Some attested source records genuinely omit POS (e.g. le); selector_pos
         # maps that selector to ''. Do not invent a POS or reject that evidence.
         if (not isinstance(row, dict) or row.get('pos') is not None and not isinstance(row['pos'], str)
                 or not isinstance(row.get('en_definition'), str) or not row['en_definition'].strip()):
             raise ValueError('Invalid POS/English sense selector')
-        if set(row) - {'pos', 'en_definition', 'zh_definition', 'mt_definition',
+        if set(row) - {'pos', 'en_definition', 'zh_definition', 'mt_definition', 'en_explanation',
                        'definition_origin', 'source', 'review_status'}:
             raise ValueError('Forbidden sense translation field')
-        selector = (pos_class(row.get('pos')), row.get('en_definition'))
+        selector = (selector_pos(row.get('pos')), row.get('en_definition'))
         if selector in out:
             raise ValueError(f'Duplicate sense selector: {selector}')
         if not isinstance(row.get('zh_definition'), str) or not row['zh_definition'].strip():
             raise ValueError(f'Missing Chinese translation: {selector}')
         if 'mt_definition' in row and (not isinstance(row['mt_definition'], str) or not row['mt_definition'].strip()):
             raise ValueError(f'Empty optional Maltese definition: {selector}')
+        if 'en_explanation' in row and (not isinstance(row['en_explanation'], str) or not row['en_explanation'].strip()):
+            raise ValueError(f'Empty optional English explanation: {selector}')
         for field, expected in [('definition_origin', 'authored_pedagogical'),
                                 ('source', 'phase2_enrichment'), ('review_status', 'phase2_reviewed')]:
             if field in row and row[field] != expected:
@@ -161,6 +173,11 @@ def translations_for(item):
 
 def apply_overlay(entry, index, item):
     validate_overlay(item, entry)
+    # Recreate derived fields last, including when a previously unenriched
+    # published entry already has them. Stable key order is part of byte-level
+    # equivalence between a full build and remove/reapply via fast sync.
+    entry.pop('display_senses', None)
+    entry.pop('sense_guide', None)
     try:
         from .phase2_quality_gates import compute_definite_article
     except ImportError:
@@ -176,11 +193,11 @@ def apply_overlay(entry, index, item):
     translations = translations_for(item)
     used = set()
     def translate(sense):
-        selector = (pos_class(sense['pos']), sense['en_definition'])
+        selector = (selector_pos(sense['pos']), sense['en_definition'])
         if selector in translations:
             row = translations[selector]
             used.add(selector)
-            for field in ('zh_definition', 'mt_definition'):
+            for field in ('zh_definition', 'mt_definition', 'en_explanation'):
                 if field in row:
                     sense[field] = row[field]
             # Preserve the original English's licensed_source provenance.
@@ -193,7 +210,7 @@ def apply_overlay(entry, index, item):
     entry['senses'].insert(0, teaching)
     for analysis in entry['lexeme_analyses']:
         for sense in analysis['senses']:
-            if (pos_class(sense['pos']), sense['en_definition']) not in translations:
+            if (selector_pos(sense['pos']), sense['en_definition']) not in translations:
                 raise ValueError(f'{key}: untranslated attested analysis sense: {sense["id"]}')
             translate(sense)
         analysis['definite_article'] = compute_definite_article(entry['headword']['word'], analysis['pos'])
@@ -209,6 +226,7 @@ def apply_overlay(entry, index, item):
     entry['inflection_and_clitics']['definite_article'] = compute_definite_article(key, nominal)
     entry['enrichment_status'] = 'phase2_reviewed'
     index.update(gloss_zh=item['gloss_zh'], is_showcase=True, is_enriched=True)
+    refresh_display(entry)
 
 
 def apply_overlays(entries, lite, overlays, baseline=None):
@@ -236,8 +254,16 @@ def apply_overlays(entries, lite, overlays, baseline=None):
         by_id[key].clear(); by_id[key].update(deepcopy(original['entry']))
         indices[key].clear(); indices[key].update(deepcopy(original['index']))
     for key, item in overlays.items():
-        baseline.setdefault(key, {'entry': deepcopy(by_id[key]), 'index': deepcopy(indices[key])})
+        if key not in baseline:
+            original = deepcopy(by_id[key])
+            # Baselines are source snapshots, not a cache of derived learner
+            # views. This also makes remove/reapply and full-build/sync identical.
+            original.pop('display_senses', None)
+            original.pop('sense_guide', None)
+            baseline[key] = {'entry': original, 'index': deepcopy(indices[key])}
         apply_overlay(by_id[key], indices[key], item)
+    for entry in entries:
+        refresh_display(entry)
     return {key: baseline[key] for key in sorted(overlays)}
 
 

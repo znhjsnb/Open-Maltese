@@ -233,16 +233,17 @@ try {
   assert.ok(darAnalysesCount >= 2);
   const darTranslations = await evaluate(`Array.from(document.querySelectorAll('#entry-card .lexeme-analysis')).map(a=>({
     heading:a.querySelector('h3').textContent,
-    zh:Array.from(a.querySelectorAll('.sense .zh')).map(s=>s.textContent),
-    provenance:a.textContent.includes('authored_pedagogical')
+    label:a.querySelector('.analysis-gloss')?.textContent,
+    repeated:a.querySelectorAll('.sense').length,
+    id:a.dataset.analysisId
   }))`);
   for (const analysis of darTranslations) {
-    assert.ok(analysis.zh.length > 0 && analysis.provenance);
-    if (analysis.heading.includes('noun') || analysis.heading.includes('NOUN')) {
-      assert.ok(analysis.zh.some(t=>t.includes('房')));
-      assert.ok(!analysis.zh.some(t=>t.includes('转向')));
+    assert.ok(analysis.label && analysis.id);assert.equal(analysis.repeated,0);
+    if (analysis.heading.includes('noun')) {
+      assert.ok(analysis.label.includes('房'));
+      assert.ok(!analysis.label.includes('转向'));
     } else {
-      assert.ok(!analysis.zh.some(t=>t.includes('房屋')));
+      assert.ok(!analysis.label.includes('房屋'));
     }
   }
   assert.ok((await evaluate(`document.getElementById('entry-card').textContent`)).includes('学习助记：'));
@@ -321,6 +322,11 @@ try {
       all:document.getElementById('entry-card').textContent,
       morphology:document.querySelectorAll('#entry-card .lexeme-analysis').length,
       two:dims[1].textContent,chain:Array.from(dims[7].querySelectorAll('.source-chain li')).map(a=>a.textContent),
+      pos:Array.from(document.querySelectorAll('.entry-meta .pos-chip')).map(a=>a.textContent),
+      list:document.querySelector('.word-row[aria-current="true"] small').textContent,
+      senses:Array.from(dims[2].querySelectorAll('.sense-card')).map(a=>({heading:a.querySelector('h3').textContent,text:a.textContent,mt:a.querySelector('.mt-definition')?.textContent})),
+      jumps:document.querySelectorAll('.sense-quick-chips .sense-chip').length,
+      repeated:dims[1].querySelectorAll('.morphology-subentry .sense').length,
       sixIds:Array.from(dims[5].querySelectorAll('.inflection-subentry')).map(a=>a.dataset.analysisId),
       eightIds:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>a.dataset.analysisId)};
   })()`);
@@ -335,12 +341,30 @@ try {
   assert.equal(abaku.chain.length,1);assert.equal(new Set(abaku.chain).size,abaku.chain.length);
   assert.ok(!/Pronomi Mehmużin/.test(abaku.six));
   assert.ok(!/not recorded|未完成体|过去分词|动名词/.test(abaku.two));
+  assert.deepEqual(abaku.pos,['noun']);assert.ok(!abaku.list.includes('NOUN'));
+  assert.equal(abaku.senses.length,1);assert.equal(abaku.senses[0].heading,'1 · noun');
+  assert.ok(abaku.senses[0].text.includes('A counting tool with movable beads'));
+  assert.ok(abaku.senses[0].text.includes('算盘') && abaku.senses[0].text.includes('原文简释：abacus'));
+  assert.ok(abaku.senses[0].mt.startsWith('Għodda bi żibeġ'));
+  assert.equal(abaku.jumps,1);assert.equal(abaku.repeated,0);
+  await searchWord('abbanduna');
+  const abandon=await evaluate(`(() => {const d=document.querySelectorAll('#entry-card > .dimension');return {
+    pos:Array.from(document.querySelectorAll('.entry-meta .pos-chip')).map(a=>a.textContent),
+    list:document.querySelector('.word-row[aria-current="true"] small').textContent,
+    count:d[2].querySelectorAll('.sense-card').length,guide:d[2].querySelectorAll('.sense-guide').length,
+    jumps:document.querySelectorAll('.sense-quick-chips .sense-chip').length,
+    repeated:d[1].querySelectorAll('.morphology-subentry .sense').length};})()`);
+  assert.deepEqual(abandon.pos,['verb']);assert.ok(!abandon.list.includes('VERB'));
+  assert.equal(abandon.count,3);assert.equal(abandon.guide,0);assert.equal(abandon.jumps,3);assert.equal(abandon.repeated,0);
   await searchWord('dar');
   const darGroups=await evaluate(`(() => {
     const dims=document.querySelectorAll('#entry-card > .dimension');
     return {six:Array.from(dims[5].querySelectorAll('.inflection-subentry')).map(a=>({id:a.dataset.analysisId,text:a.textContent})),
       eight:Array.from(dims[7].querySelectorAll('.etymology-subentry')).map(a=>({id:a.dataset.analysisId,text:a.textContent})),
-      source: dims[2].textContent, senses: dims[2].querySelectorAll('.sense-card').length};
+      source: dims[2].textContent, senses: dims[2].querySelectorAll('.sense-card').length,
+      topGuides:dims[2].querySelectorAll(':scope > .sense-guide').length,
+      bound:Array.from(dims[2].querySelectorAll('.sense-card')).map(a=>({pos:a.dataset.pos,ids:a.dataset.analysisIds,teaching:!!a.querySelector('.sense-guide'),text:a.textContent})),
+      repeated:dims[1].querySelectorAll('.morphology-subentry .sense').length};
   })()`);
   assert.deepEqual(darGroups.eight.map(a=>a.id),['kaikki:dar:0','kaikki:dar:1']);
   assert.ok(darGroups.six.some(a=>a.id==='kaikki:dar:0') && darGroups.six.some(a=>a.id==='kaikki:dar:1'));
@@ -353,7 +377,12 @@ try {
   assert.ok(!darGroups.eight.find(a=>a.id==='kaikki:dar:0').text.includes('دَارَ (dāra)'));
   assert.ok(darGroups.source.includes('licensed_source') && darGroups.source.includes('译释：authored_pedagogical · phase2_reviewed'));
   assert.ok(darGroups.senses>1);
-  console.log('PASS 9: abaku/dar dimensions 06/08 preserve exact analysis ids, applicable rows, excerpts and translation provenance');
+  assert.equal(darGroups.topGuides,0);assert.equal(darGroups.repeated,0);
+  assert.equal(darGroups.bound.filter(a=>a.teaching).length,1);
+  assert.equal(darGroups.bound.find(a=>a.teaching).pos,'noun');
+  assert.ok(darGroups.bound.find(a=>a.teaching).ids.includes('kaikki:dar:0'));
+  assert.ok(darGroups.bound.filter(a=>a.pos==='verb').every(a=>!a.teaching && !a.text.includes('Bini fejn jgħixu n-nies.')));
+  console.log('PASS 9: fused abaku, three abbanduna senses and dar noun/verb teaching boundaries; dimensions 02/06/08 preserve evidence');
 
   await send('Emulation.setDeviceMetricsOverride',{width:1920,height:1080,deviceScaleFactor:1,mobile:false});
   const wide=await evaluate(`(() => {const card=document.getElementById('entry-card'), c=document.getElementById('content').getBoundingClientRect(),r=card.getBoundingClientRect(),style=getComputedStyle(card);return {width:r.width,left:r.left-c.left+parseFloat(style.paddingLeft),overflow:document.documentElement.scrollWidth>innerWidth};})()`);
