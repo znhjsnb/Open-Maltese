@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "dataset_version": "malti-phase2-2026-11-04-display1-1c2dc22b59f2",
+  "dataset_version": "malti-phase2-2026-11-04-display1-8b239358964f",
   "passed": true,
   "gates": {
     "orthography_and_nfc": {
@@ -36,9 +36,9 @@
       "2": 11414,
       "3": 7580
     },
-    "enriched_count": 22466,
-    "unenriched_count": 1579,
-    "showcase_count": 22466,
+    "enriched_count": 22702,
+    "unenriched_count": 1343,
+    "showcase_count": 22702,
     "wordform_surface_count": 124488,
     "audio_count": 597
   },
@@ -2433,28 +2433,12 @@
     },
     {
       "stratum": "tier_3/unspecified/unenriched",
-      "exact_key": "tejp",
+      "exact_key": "fruit of palm tree",
       "analysis_pos": [
-        "NOUN"
+        null
       ],
-      "senses": [
-        {
-          "pos": "NOUN",
-          "en_definition": "tape",
-          "zh_definition": null,
-          "mt_definition": null,
-          "definition_origin": "licensed_source"
-        }
-      ],
-      "definite_article": {
-        "form": "it-tejp",
-        "prefix": "it-",
-        "rule": "sun_assimilation",
-        "context": "citation",
-        "note": "Canonical citation context; preceding vowels may elide article i.",
-        "source_type": "grammar_reference",
-        "source": "docs/MASTER_PLAN_V2.md#gate-3"
-      },
+      "senses": [],
+      "definite_article": null,
       "dual_scenarios": null,
       "cognitive_memory_aid": null
     }

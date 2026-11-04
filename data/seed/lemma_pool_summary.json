@@ -1,5 +1,5 @@
 {
-  "version": "malti-phase2-2026-11-04-display1-1c2dc22b59f2",
+  "version": "malti-phase2-2026-11-04-display1-8b239358964f",
   "total_lemmas": 24045,
   "tier_counts": {
     "1": 5051,
@@ -73,7 +73,7 @@
   "audio_source_rows": 720,
   "wordform_surface_count": 124488,
   "camilleri_rows_indexed": 53512,
-  "showcase_count": 22466,
+  "showcase_count": 22702,
   "samples": [
     {
       "id": "abaku",
@@ -555324,6 +555324,38 @@
       "is_enriched": true
     },
     {
+      "id": "taħrika",
+      "word": "taħrika",
+      "exact_key": "taħrika",
+      "ascii_key": "tahrika",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": "ħ-r-k",
+      "roots": [
+        "ħ-r-k"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "a court summons",
+        "a prosecution"
+      ],
+      "gloss_zh": "法院传票；刑事起诉",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "taħrim",
       "word": "taħrim",
       "exact_key": "taħrim",
@@ -556505,6 +556537,64 @@
       "is_enriched": true
     },
     {
+      "id": "tajer",
+      "word": "tajer",
+      "exact_key": "tajer",
+      "ascii_key": "tajer",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐɪɛr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tire"
+      ],
+      "gloss_zh": "轮胎",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tajer mifqugħ",
+      "word": "tajer mifqugħ",
+      "exact_key": "tajer mifqugħ",
+      "ascii_key": "tajermifqugh",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐɪɛr mɪfʔʊh/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "flat tire"
+      ],
+      "gloss_zh": "瘪胎；漏气的轮胎",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tajfa",
       "word": "tajfa",
       "exact_key": "tajfa",
@@ -557016,6 +557106,36 @@
       "is_enriched": true
     },
     {
+      "id": "tajtu",
+      "word": "tajtu",
+      "exact_key": "tajtu",
+      "ascii_key": "tajtu",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "t a j t u",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "gave"
+      ],
+      "gloss_zh": "给了；如“我给了他”",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tajwaniż",
       "word": "Tajwaniż",
       "exact_key": "tajwaniż",
@@ -557290,6 +557410,35 @@
       "is_enriched": true
     },
     {
+      "id": "ta kura",
+      "word": "ta kura",
+      "exact_key": "ta kura",
+      "ascii_key": "takura",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɐː kʊrɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "care"
+      ],
+      "gloss_zh": "给予照护；提供治疗",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tal",
       "word": "tal",
       "exact_key": "tal",
@@ -557390,6 +557539,35 @@
       "is_enriched": true
     },
     {
+      "id": "talab skuża",
+      "word": "talab skuża",
+      "exact_key": "talab skuża",
+      "ascii_key": "talabskuza",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɐlɐp skʊzɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "apologize"
+      ],
+      "gloss_zh": "道了歉；请求原谅",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "talahawn",
       "word": "talahawn",
       "exact_key": "talahawn",
@@ -557419,6 +557597,37 @@
       "is_enriched": true
     },
     {
+      "id": "tal-aħħar",
+      "word": "tal-aħħar",
+      "exact_key": "tal-aħħar",
+      "ascii_key": "talahhar",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/tɐlɐhhɐr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "ultimate",
+        "up-to-date",
+        "latest"
+      ],
+      "gloss_zh": "最终的；最新的；最后的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "talanqas",
       "word": "talanqas",
       "exact_key": "talanqas",
@@ -557444,6 +557653,36 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tal-awditjar",
+      "word": "tal-awditjar",
+      "exact_key": "tal-awditjar",
+      "ascii_key": "talawditjar",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "accounting control",
+        "audit"
+      ],
+      "gloss_zh": "审计的；会计检查相关的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -557716,6 +557955,35 @@
         "so-and-so"
       ],
       "gloss_zh": "此类的；这样的；某某",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tal-ibraġġ",
+      "word": "Tal-Ibraġġ",
+      "exact_key": "tal-ibraġġ",
+      "ascii_key": "talibragg",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐlɪbrɐʧ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "A town in Malta"
+      ],
+      "gloss_zh": "塔尔伊布拉杰（马耳他的城镇）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -558003,6 +558271,93 @@
       "is_enriched": true
     },
     {
+      "id": "tal-pietà",
+      "word": "Tal-Pietà",
+      "exact_key": "tal-pietà",
+      "ascii_key": "talpieta",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐlpɪːtà/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "A town in the central region of Malta"
+      ],
+      "gloss_zh": "塔尔皮耶塔（马耳他中部地区的城镇）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "ta' l-verniċ",
+      "word": "ta' l-verniċ",
+      "exact_key": "ta' l-verniċ",
+      "ascii_key": "talvernic",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɐː lvɛrnɪʧ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "varnish"
+      ],
+      "gloss_zh": "给……涂清漆；给……上清漆",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tal-virtù",
+      "word": "Tal-Virtù",
+      "exact_key": "tal-virtù",
+      "ascii_key": "talvirtu",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐlvɪrtù/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "An area in Rabat, Malta"
+      ],
+      "gloss_zh": "塔尔维尔图（马耳他拉巴特的一片区域）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tama",
       "word": "tama",
       "exact_key": "tama",
@@ -558103,6 +558458,64 @@
       "is_enriched": true
     },
     {
+      "id": "tamboċċ",
+      "word": "tamboċċ",
+      "exact_key": "tamboċċ",
+      "ascii_key": "tambocc",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "sky light"
+      ],
+      "gloss_zh": "天窗",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tambocc",
+      "word": "tambocc",
+      "exact_key": "tambocc",
+      "ascii_key": "tambocc",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "skylight"
+      ],
+      "gloss_zh": "天窗",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tames",
       "word": "tames",
       "exact_key": "tames",
@@ -558159,6 +558572,35 @@
         "right"
       ],
       "gloss_zh": "完美的；公正的；正确的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tamla",
+      "word": "tamla",
+      "exact_key": "tamla",
+      "ascii_key": "tamla",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐmlɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "date"
+      ],
+      "gloss_zh": "一颗椰枣；一颗海枣",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -558357,6 +558799,96 @@
         "that results in curdling milk"
       ],
       "gloss_zh": "能使牛奶凝结的；促凝乳的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tampar",
+      "word": "tampar",
+      "exact_key": "tampar",
+      "ascii_key": "tampar",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adj",
+        "adv"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "of the same age (used with pronominal suffixes)",
+        "of the same age"
+      ],
+      "gloss_zh": "同龄的；表示与某人同龄",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tampari",
+      "word": "tampari",
+      "exact_key": "tampari",
+      "ascii_key": "tampari",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Equal in age"
+      ],
+      "gloss_zh": "同龄的；年龄相同的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tampun",
+      "word": "tampun",
+      "exact_key": "tampun",
+      "ascii_key": "tampun",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐmpʊn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tampon",
+        "sanitary napkin"
+      ],
+      "gloss_zh": "卫生棉条；卫生巾",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -558749,6 +559281,93 @@
       "is_enriched": true
     },
     {
+      "id": "tank",
+      "word": "tank",
+      "exact_key": "tank",
+      "ascii_key": "tank",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐnk/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tank"
+      ],
+      "gloss_zh": "储液罐；水箱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tanker",
+      "word": "Tanker",
+      "exact_key": "tanker",
+      "ascii_key": "tanker",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tanker"
+      ],
+      "gloss_zh": "动词，给定释义为“Tanker”，具体动作未说明",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tant",
+      "word": "tant",
+      "exact_key": "tant",
+      "ascii_key": "tant",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/tɐnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "so much"
+      ],
+      "gloss_zh": "这么；那么；如此多",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tantalju",
       "word": "tantalju",
       "exact_key": "tantalju",
@@ -558803,6 +559422,64 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tantix",
+      "word": "Tantix",
+      "exact_key": "tantix",
+      "ascii_key": "tantix",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tantix"
+      ],
+      "gloss_zh": "Tantix（名称；具体所指依语境确定）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tant kemm",
+      "word": "tant kemm",
+      "exact_key": "tant kemm",
+      "ascii_key": "tantkemm",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/tɐnt kɛmm/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "so much"
+      ],
+      "gloss_zh": "那么多；达到……那么多的程度",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -558867,6 +559544,64 @@
       "is_enriched": true
     },
     {
+      "id": "tapezzar",
+      "word": "tapezzar",
+      "exact_key": "tapezzar",
+      "ascii_key": "tapezzar",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐpɛtstsɐr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "upholsterer"
+      ],
+      "gloss_zh": "家具软包工；家具包覆工",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "ta' pinu",
+      "word": "Ta' Pinu",
+      "exact_key": "ta' pinu",
+      "ascii_key": "tapinu",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐː pɪnʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "A shrine and basilica dedicated to Our Lady on the outskirts of Għarb in Gozo"
+      ],
+      "gloss_zh": "塔皮努圣母朝圣地与宗座圣殿",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tapit",
       "word": "tapit",
       "exact_key": "tapit",
@@ -558896,6 +559631,66 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tapizzerija",
+      "word": "tapizzerija",
+      "exact_key": "tapizzerija",
+      "ascii_key": "tapizzerija",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐpɪtstsɛrɪjɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tapestry",
+        "upholstery"
+      ],
+      "gloss_zh": "挂毯；家具软包与包覆面料",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "ta pjaċir",
+      "word": "ta pjaċir",
+      "exact_key": "ta pjaċir",
+      "ascii_key": "tapjacir",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɐː pjɐʧɪr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "amuse",
+        "entertain"
+      ],
+      "gloss_zh": "逗乐；使人愉快；娱悦",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -558999,6 +559794,37 @@
       "is_enriched": true
     },
     {
+      "id": "tapp bil-kamin",
+      "word": "tapp bil-kamin",
+      "exact_key": "tapp bil-kamin",
+      "ascii_key": "tappbilkamin",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "screw cap",
+        "screw stopper",
+        "screw type stopper"
+      ],
+      "gloss_zh": "螺旋盖；螺纹塞",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tappiera",
       "word": "tappiera",
       "exact_key": "tappiera",
@@ -559023,6 +559849,35 @@
         "inspection hatch"
       ],
       "gloss_zh": "检查井；检修口",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tapp tal-kamin",
+      "word": "tapp tal-kamin",
+      "exact_key": "tapp tal-kamin",
+      "ascii_key": "tapptalkamin",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Screw cap"
+      ],
+      "gloss_zh": "螺旋盖；旋拧式瓶盖",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -559089,6 +559944,35 @@
         "tapping"
       ],
       "gloss_zh": "轻敲；连续轻叩",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "taptipa",
+      "word": "taptipa",
+      "exact_key": "taptipa",
+      "ascii_key": "taptipa",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐptɪpɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tap"
+      ],
+      "gloss_zh": "轻敲；轻拍",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -559165,6 +560049,35 @@
       "is_enriched": true
     },
     {
+      "id": "ta' qali",
+      "word": "Ta' Qali",
+      "exact_key": "ta' qali",
+      "ascii_key": "taqali",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐː ʔɐlɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Ta' Qali, an area in the environs of Mosta, in Malta"
+      ],
+      "gloss_zh": "塔卡利，马耳他莫斯塔附近的地区",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "taqbid",
       "word": "taqbid",
       "exact_key": "taqbid",
@@ -559222,6 +560135,35 @@
         "rhyming"
       ],
       "gloss_zh": "调整适配；改编；押韵",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "taqbila",
+      "word": "taqbila",
+      "exact_key": "taqbila",
+      "ascii_key": "taqbila",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐʔbɪlɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "rhyme (typically a short rhyme in verse)"
+      ],
+      "gloss_zh": "押韵短诗；韵文小段",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -559759,6 +560701,35 @@
         "confusion"
       ],
       "gloss_zh": "不安；混乱；困惑",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "taqlib fis-suq",
+      "word": "taqlib fis-suq",
+      "exact_key": "taqlib fis-suq",
+      "ascii_key": "taqlibfissuq",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "market disturbance"
+      ],
+      "gloss_zh": "市场动荡；市场失序",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -560662,6 +561633,35 @@
       "is_enriched": true
     },
     {
+      "id": "taqtalha",
+      "word": "taqtalha",
+      "exact_key": "taqtalha",
+      "ascii_key": "taqtalha",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "offering to cut uour hair"
+      ],
+      "gloss_zh": "提出为对方剪发的提议",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "taqtaq",
       "word": "taqtaq",
       "exact_key": "taqtaq",
@@ -561273,6 +562273,35 @@
       "is_enriched": true
     },
     {
+      "id": "tarapewtiku",
+      "word": "Tarapewtiku",
+      "exact_key": "tarapewtiku",
+      "ascii_key": "tarapewtiku",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "H"
+      ],
+      "gloss_zh": "标注为“H”的条目（具体词义未提供）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tarax",
       "word": "tarax",
       "exact_key": "tarax",
@@ -561591,6 +562620,35 @@
       "is_enriched": true
     },
     {
+      "id": "targit",
+      "word": "targit",
+      "exact_key": "targit",
+      "ascii_key": "targit",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐrgɪt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "target"
+      ],
+      "gloss_zh": "目标；要达到的指标",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tari",
       "word": "tari",
       "exact_key": "tari",
@@ -561651,6 +562709,97 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tariffa",
+      "word": "tariffa",
+      "exact_key": "tariffa",
+      "ascii_key": "tariffa",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐrɪffɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tariff",
+        "fare",
+        "rate"
+      ],
+      "gloss_zh": "关税；交通票价；收费标准",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tariffa kkonsolidata",
+      "word": "tariffa kkonsolidata",
+      "exact_key": "tariffa kkonsolidata",
+      "ascii_key": "tariffakkonsolidata",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "bound tariff"
+      ],
+      "gloss_zh": "约束关税；承诺的关税上限",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tariffa tal-pajjiż l-aktar favorit",
+      "word": "tariffa tal-pajjiż l-aktar favorit",
+      "exact_key": "tariffa tal-pajjiż l-aktar favorit",
+      "ascii_key": "tariffatalpajjizlaktarfavorit",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "MFN customs duty rate",
+        "MFN rate",
+        "MFN tariff"
+      ],
+      "gloss_zh": "最惠国关税税率；最惠国税率",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -561773,6 +562922,37 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tarmi",
+      "word": "Tarmi",
+      "exact_key": "tarmi",
+      "ascii_key": "tarmi",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun",
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Trow away",
+        "To throw"
+      ],
+      "gloss_zh": "丢弃这一行为；扔、投掷",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -562199,6 +563379,35 @@
       "is_enriched": true
     },
     {
+      "id": "tartana",
+      "word": "tartana",
+      "exact_key": "tartana",
+      "ascii_key": "tartana",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐrtɐnɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tartan fishing boat"
+      ],
+      "gloss_zh": "塔尔坦式渔船",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tartar",
       "word": "tartar",
       "exact_key": "tartar",
@@ -562253,6 +563462,36 @@
         "whirring"
       ],
       "gloss_zh": "呼呼声；嗡嗡的运转声",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tartru",
+      "word": "tartru",
+      "exact_key": "tartru",
+      "ascii_key": "tartru",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐrtrʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tartar",
+        "sediment"
+      ],
+      "gloss_zh": "牙结石；沉淀物",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -562388,6 +563627,35 @@
       "is_enriched": true
     },
     {
+      "id": "tasida",
+      "word": "Tasida",
+      "exact_key": "tasida",
+      "ascii_key": "tasida",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Mess"
+      ],
+      "gloss_zh": "混乱；乱糟糟的状态",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tassew",
       "word": "tassew",
       "exact_key": "tassew",
@@ -562485,6 +563753,33 @@
       "is_enriched": true
     },
     {
+      "id": "tas-suf",
+      "word": "tas-suf",
+      "exact_key": "tas-suf",
+      "ascii_key": "tassuf",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [],
+      "ipa": "/tɐssʊf/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "woolen"
+      ],
+      "gloss_zh": "羊毛制的；毛料的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tast",
       "word": "tast",
       "exact_key": "tast",
@@ -562571,6 +563866,94 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tatha rasha",
+      "word": "tatha rasha",
+      "exact_key": "tatha rasha",
+      "ascii_key": "tatharasha",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "conj"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "she gave in her head"
+      ],
+      "gloss_zh": "所给释义含混，具体中文义待语境确认",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tattika",
+      "word": "tattika",
+      "exact_key": "tattika",
+      "ascii_key": "tattika",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɐttɪkɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tactic",
+        "strategy"
+      ],
+      "gloss_zh": "战术；策略",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tattiku",
+      "word": "tattiku",
+      "exact_key": "tattiku",
+      "ascii_key": "tattiku",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɐttɪkʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tactical"
+      ],
+      "gloss_zh": "战术的；策略性的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -562691,6 +564074,35 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "ta' wara",
+      "word": "ta' wara",
+      "exact_key": "ta' wara",
+      "ascii_key": "tawara",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/tɐː wɐrɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "after"
+      ],
+      "gloss_zh": "之后；随后的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -563059,6 +564471,64 @@
       "is_enriched": true
     },
     {
+      "id": "ta' xbiex",
+      "word": "Ta' Xbiex",
+      "exact_key": "ta' xbiex",
+      "ascii_key": "taxbiex",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɐː ʒbɪːʃ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "A town in the central region of Malta"
+      ],
+      "gloss_zh": "Ta' Xbiex（马耳他中部的一座城镇）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "ta xebgħa",
+      "word": "ta xebgħa",
+      "exact_key": "ta xebgħa",
+      "ascii_key": "taxebgha",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɐː ʃɛbɐː/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "thrash"
+      ],
+      "gloss_zh": "痛打；狠狠揍了一顿",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "ta' xejn",
       "word": "ta' xejn",
       "exact_key": "ta' xejn",
@@ -563179,6 +564649,35 @@
       "is_enriched": true
     },
     {
+      "id": "taxxa fuq id-dħul minn negozju",
+      "word": "taxxa fuq id-dħul minn negozju",
+      "exact_key": "taxxa fuq id-dħul minn negozju",
+      "ascii_key": "taxxafuqiddhulminnnegozju",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "turnover tax"
+      ],
+      "gloss_zh": "营业额税；按营业收入总额征收的税",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "taxxa tad-dħul",
       "word": "taxxa tad-dħul",
       "exact_key": "taxxa tad-dħul",
@@ -563204,6 +564703,37 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "taxxa tal-importazzjoni",
+      "word": "taxxa tal-importazzjoni",
+      "exact_key": "taxxa tal-importazzjoni",
+      "ascii_key": "taxxatalimportazzjoni",
+      "bucket": "T",
+      "sub_prefix": "ta",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "customs duty on imports",
+        "import duty",
+        "import tax"
+      ],
+      "gloss_zh": "进口税；进口关税",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -563615,6 +565145,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tbagħti",
+      "word": "tbagħti",
+      "exact_key": "tbagħti",
+      "ascii_key": "tbaghti",
+      "bucket": "T",
+      "sub_prefix": "tb",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "suffer"
+      ],
+      "gloss_zh": "受苦；痛苦（本条按所给名词词性处理）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -564032,6 +565591,64 @@
         "acting foolishly"
       ],
       "gloss_zh": "胡闹；做傻事",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tbaħrad",
+      "word": "tbaħrad",
+      "exact_key": "tbaħrad",
+      "ascii_key": "tbahrad",
+      "bucket": "T",
+      "sub_prefix": "tb",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/dbɐhrɐt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to revel"
+      ],
+      "gloss_zh": "尽情欢乐；纵情玩乐",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tbaħrit",
+      "word": "Tbaħrit",
+      "exact_key": "tbaħrit",
+      "ascii_key": "tbahrit",
+      "bucket": "T",
+      "sub_prefix": "tb",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "??"
+      ],
+      "gloss_zh": "词义未明（所给释义为“??”）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -567335,6 +568952,37 @@
       "is_enriched": true
     },
     {
+      "id": "tbergħed",
+      "word": "tbergħed",
+      "exact_key": "tbergħed",
+      "ascii_key": "tberghed",
+      "bucket": "T",
+      "sub_prefix": "tb",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": "b-r-għ-d",
+      "roots": [
+        "b-r-għ-d"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to become infested with fleas"
+      ],
+      "gloss_zh": "染上跳蚤；变得有跳蚤寄生",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tbergħen",
       "word": "tbergħen",
       "exact_key": "tbergħen",
@@ -569957,6 +571605,35 @@
       "is_enriched": true
     },
     {
+      "id": "tchaikovsky",
+      "word": "Tchaikovsky",
+      "exact_key": "tchaikovsky",
+      "ascii_key": "tchaikovsky",
+      "bucket": "T",
+      "sub_prefix": "tc",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Manafx"
+      ],
+      "gloss_zh": "词义未明确；原释义为“Manafx”（不知道）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "te",
       "word": "te",
       "exact_key": "te",
@@ -569984,6 +571661,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teatrin",
+      "word": "teatrin",
+      "exact_key": "teatrin",
+      "ascii_key": "teatrin",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to exxagerate"
+      ],
+      "gloss_zh": "夸大；夸张地描述（按所给动词义）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -570652,6 +572358,35 @@
       "is_enriched": true
     },
     {
+      "id": "tebutier",
+      "word": "tebutier",
+      "exact_key": "tebutier",
+      "ascii_key": "tebutier",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "coffin maker"
+      ],
+      "gloss_zh": "棺材制作工；制作棺材的人",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tedesk",
       "word": "Tedesk",
       "exact_key": "tedesk",
@@ -570677,6 +572412,65 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tedjanti",
+      "word": "tedjanti",
+      "exact_key": "tedjanti",
+      "ascii_key": "tedjanti",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "irritant"
+      ],
+      "gloss_zh": "刺激物；令人烦扰的人或事物（按所给名词义）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tedjuż",
+      "word": "tedjuż",
+      "exact_key": "tedjuż",
+      "ascii_key": "tedjuz",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛdjʊs/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tedious",
+        "tiresome"
+      ],
+      "gloss_zh": "冗长乏味的；令人厌烦的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -570745,6 +572539,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tefetx",
+      "word": "Tefetx",
+      "exact_key": "tefetx",
+      "ascii_key": "tefetx",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Did no throw"
+      ],
+      "gloss_zh": "没有投掷这件事；未发生扔掷的情况",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -570834,6 +572657,35 @@
         "tending to throw things"
       ],
       "gloss_zh": "爱扔东西的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tefghet",
+      "word": "Tefghet",
+      "exact_key": "tefghet",
+      "ascii_key": "tefghet",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Throw"
+      ],
+      "gloss_zh": "扔；投掷",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -571666,6 +573518,35 @@
       "is_enriched": true
     },
     {
+      "id": "teħodhom",
+      "word": "teħodhom",
+      "exact_key": "teħodhom",
+      "ascii_key": "tehodhom",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to take them"
+      ],
+      "gloss_zh": "带走它们；拿走它们；带他们走",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "teħra",
       "word": "teħra",
       "exact_key": "teħra",
@@ -571857,6 +573738,64 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tejp",
+      "word": "tejp",
+      "exact_key": "tejp",
+      "ascii_key": "tejp",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛɪp/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tape"
+      ],
+      "gloss_zh": "胶带；录音带",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tejp rikorder",
+      "word": "tejp rikorder",
+      "exact_key": "tejp rikorder",
+      "ascii_key": "tejprikorder",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛɪp rɪkɔrdɛr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tape recorder"
+      ],
+      "gloss_zh": "磁带录音机",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -572198,6 +574137,36 @@
       "is_enriched": true
     },
     {
+      "id": "teknoloġija ta' traċċar u rintraċċar",
+      "word": "teknoloġija ta' traċċar u rintraċċar",
+      "exact_key": "teknoloġija ta' traċċar u rintraċċar",
+      "ascii_key": "teknologijatatraccarurintraccar",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "track and trace system",
+        "track and trace technology"
+      ],
+      "gloss_zh": "跟踪与追溯系统；跟踪与追溯技术",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "teknoloġikament",
       "word": "teknoloġikament",
       "exact_key": "teknoloġikament",
@@ -572388,6 +574357,35 @@
       "is_enriched": true
     },
     {
+      "id": "tektika",
+      "word": "tektika",
+      "exact_key": "tektika",
+      "ascii_key": "tektika",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛktɪkɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tick"
+      ],
+      "gloss_zh": "滴答声",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tektikija",
       "word": "tektikija",
       "exact_key": "tektikija",
@@ -572521,6 +574519,35 @@
       "is_enriched": true
     },
     {
+      "id": "telaq waħda",
+      "word": "telaq waħda",
+      "exact_key": "telaq waħda",
+      "ascii_key": "telaqwahda",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɛlɐʔ wɐhdɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "fart"
+      ],
+      "gloss_zh": "放了个屁",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "telefon",
       "word": "telefon",
       "exact_key": "telefon",
@@ -572546,6 +574573,271 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telefonata",
+      "word": "telefonata",
+      "exact_key": "telefonata",
+      "ascii_key": "telefonata",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛfɔnɐtɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "call",
+        "telephone call"
+      ],
+      "gloss_zh": "一通电话；一次通话",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telefonija",
+      "word": "telefonija",
+      "exact_key": "telefonija",
+      "ascii_key": "telefonija",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "telephony"
+      ],
+      "gloss_zh": "电话通信技术；电话通信业务",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telefown",
+      "word": "telefown",
+      "exact_key": "telefown",
+      "ascii_key": "telefown",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛfɔn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "telephone"
+      ],
+      "gloss_zh": "电话；电话机",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telegramm",
+      "word": "telegramm",
+      "exact_key": "telegramm",
+      "ascii_key": "telegramm",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛgrɐmm/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "telegram",
+        "cable"
+      ],
+      "gloss_zh": "电报；通过电缆传送的电报",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telekomunikazzjoni",
+      "word": "Telekomunikazzjoni",
+      "exact_key": "telekomunikazzjoni",
+      "ascii_key": "telekomunikazzjoni",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "x"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Telecommunication"
+      ],
+      "gloss_zh": "电信；远距离通信",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teleks",
+      "word": "teleks",
+      "exact_key": "teleks",
+      "ascii_key": "teleks",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛks/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "telex"
+      ],
+      "gloss_zh": "电传；用户电报通信系统",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telekummerċjalizzazzjoni",
+      "word": "telekummerċjalizzazzjoni",
+      "exact_key": "telekummerċjalizzazzjoni",
+      "ascii_key": "telekummercjalizzazzjoni",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "phone marketing",
+        "telemarketing"
+      ],
+      "gloss_zh": "电话营销；电话推销",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telepromozzjoni",
+      "word": "telepromozzjoni",
+      "exact_key": "telepromozzjoni",
+      "ascii_key": "telepromozzjoni",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "phone marketing",
+        "telemarketing"
+      ],
+      "gloss_zh": "电话营销；电话推销",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telespettatur",
+      "word": "telespettatur",
+      "exact_key": "telespettatur",
+      "ascii_key": "telespettatur",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛspɛttɐtʊr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "television viewer"
+      ],
+      "gloss_zh": "电视观众",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -572581,6 +574873,36 @@
       "is_enriched": true
     },
     {
+      "id": "televiżiv",
+      "word": "televiżiv",
+      "exact_key": "televiżiv",
+      "ascii_key": "televiziv",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛlɛvɪzɪf/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "televised",
+        "related to television"
+      ],
+      "gloss_zh": "电视播出的；与电视有关的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "televiżjoni",
       "word": "televiżjoni",
       "exact_key": "televiżjoni",
@@ -572608,6 +574930,36 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "televotazzjoni",
+      "word": "televotazzjoni",
+      "exact_key": "televotazzjoni",
+      "ascii_key": "televotazzjoni",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛlɛvɔtɐtstsjɔnɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "televoting",
+        "poll conducted among members of the public by phone, typically on a television program"
+      ],
+      "gloss_zh": "电话投票；通常在电视节目中进行的公众电话投票",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -572707,6 +575059,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "telf li jista' jingħata",
+      "word": "telf li jista' jingħata",
+      "exact_key": "telf li jista' jingħata",
+      "ascii_key": "telflijistajinghata",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "allowable loss"
+      ],
+      "gloss_zh": "可容许损失；允许损耗",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -572878,6 +575259,64 @@
       "is_enriched": true
     },
     {
+      "id": "tella' spallejh",
+      "word": "tella' spallejh",
+      "exact_key": "tella' spallejh",
+      "ascii_key": "tellaspallejh",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɛllɐ spɐllɛɪh/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "shrug"
+      ],
+      "gloss_zh": "耸肩",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tella' u niżżel",
+      "word": "tella' u niżżel",
+      "exact_key": "tella' u niżżel",
+      "ascii_key": "tellaunizzel",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɛllɐ ʊ nɪzzɛl/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "chew"
+      ],
+      "gloss_zh": "咀嚼",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tellef",
       "word": "tellef",
       "exact_key": "tellef",
@@ -572938,6 +575377,36 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tellerita",
+      "word": "tellerita",
+      "exact_key": "tellerita",
+      "ascii_key": "tellerita",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛllɛrɪtɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "stone curlew (a species of bird)",
+        "a chatterbox, one who speaks incessantly (fig. based on the piercing cry of the stone curlew)"
+      ],
+      "gloss_zh": "石鸻（一种鸟）；话匣子，喋喋不休的人",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -574270,6 +576739,37 @@
       "is_enriched": true
     },
     {
+      "id": "tendenza",
+      "word": "tendenza",
+      "exact_key": "tendenza",
+      "ascii_key": "tendenza",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛndɛntsɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tendency",
+        "disposition",
+        "trend"
+      ],
+      "gloss_zh": "倾向；性情倾向；趋势",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tenfex",
       "word": "tenfex",
       "exact_key": "tenfex",
@@ -574591,6 +577091,35 @@
       "is_enriched": true
     },
     {
+      "id": "tennis",
+      "word": "tennis",
+      "exact_key": "tennis",
+      "ascii_key": "tennis",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛnnɪs/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tennis"
+      ],
+      "gloss_zh": "网球",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tensjoni",
       "word": "tensjoni",
       "exact_key": "tensjoni",
@@ -574844,6 +577373,35 @@
       "is_enriched": true
     },
     {
+      "id": "teokratiku",
+      "word": "teokratiku",
+      "exact_key": "teokratiku",
+      "ascii_key": "teokratiku",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛɔkrɐtɪkʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "theocratic"
+      ],
+      "gloss_zh": "神权政治的；神权统治的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "teoloġija",
       "word": "teoloġija",
       "exact_key": "teoloġija",
@@ -575016,6 +577574,35 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teoretiku",
+      "word": "teoretiku",
+      "exact_key": "teoretiku",
+      "ascii_key": "teoretiku",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛɔrɛtɪkʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "theoretical"
+      ],
+      "gloss_zh": "理论的；理论上的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -575757,6 +578344,65 @@
       "is_enriched": true
     },
     {
+      "id": "terminu",
+      "word": "terminu",
+      "exact_key": "terminu",
+      "ascii_key": "terminu",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrmɪnʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "term",
+        "word in a specialised jargon"
+      ],
+      "gloss_zh": "词语；专门术语",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "termometru",
+      "word": "termometru",
+      "exact_key": "termometru",
+      "ascii_key": "termometru",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrmɔmɛtrʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "thermometer"
+      ],
+      "gloss_zh": "温度计；体温计",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "terqa",
       "word": "terqa",
       "exact_key": "terqa",
@@ -575780,6 +578426,35 @@
         "(used as cognate object of the verb) A stroke with a hatchet"
       ],
       "gloss_zh": "用小斧砍的一下",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "terra",
+      "word": "terra",
+      "exact_key": "terra",
+      "ascii_key": "terra",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrrɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "talcum powder"
+      ],
+      "gloss_zh": "爽身粉；滑石粉",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -575848,6 +578523,35 @@
       "is_enriched": true
     },
     {
+      "id": "terrapien",
+      "word": "terrapien",
+      "exact_key": "terrapien",
+      "ascii_key": "terrapien",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "debris"
+      ],
+      "gloss_zh": "瓦砾；建筑碎料；碎石残渣",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "terraq",
       "word": "terraq",
       "exact_key": "terraq",
@@ -575879,6 +578583,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "terrazza",
+      "word": "terrazza",
+      "exact_key": "terrazza",
+      "ascii_key": "terrazza",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrrɐtstsɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "terrace"
+      ],
+      "gloss_zh": "露台；平台",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -575937,6 +578670,37 @@
         "to loosen soil by watering"
       ],
       "gloss_zh": "浇水使土壤松软",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "terribbli",
+      "word": "terribbli",
+      "exact_key": "terribbli",
+      "ascii_key": "terribbli",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛrrɪbblɪ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "dismal",
+        "dreadful",
+        "terrible"
+      ],
+      "gloss_zh": "惨淡的；可怕的；糟糕的；邪恶的",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -576094,6 +578858,124 @@
         "cutting or splitting of stones with a hatchet"
       ],
       "gloss_zh": "用小斧切石或劈石的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "territorju",
+      "word": "territorju",
+      "exact_key": "territorju",
+      "ascii_key": "territorju",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrrɪtɔrjʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "territory"
+      ],
+      "gloss_zh": "领土；领地；辖区",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "territorju doganali",
+      "word": "territorju doganali",
+      "exact_key": "territorju doganali",
+      "ascii_key": "territorjudoganali",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "customs area",
+        "customs territory",
+        "domestic customs territory"
+      ],
+      "gloss_zh": "关境；海关管辖区域；本国关境",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "terroristiku",
+      "word": "terroristiku",
+      "exact_key": "terroristiku",
+      "ascii_key": "terroristiku",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɛrrɔrɪstɪkʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "terrorist"
+      ],
+      "gloss_zh": "恐怖主义的；与恐怖活动有关的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "terroriżmu",
+      "word": "terroriżmu",
+      "exact_key": "terroriżmu",
+      "ascii_key": "terrorizmu",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛrrɔrɪzmʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "terrorism"
+      ],
+      "gloss_zh": "恐怖主义",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -576490,6 +579372,35 @@
       "is_enriched": true
     },
     {
+      "id": "tessuti",
+      "word": "Tessuti",
+      "exact_key": "tessuti",
+      "ascii_key": "tessuti",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Textiles"
+      ],
+      "gloss_zh": "纺织品；布料",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "test",
       "word": "test",
       "exact_key": "test",
@@ -576552,6 +579463,123 @@
       "is_enriched": true
     },
     {
+      "id": "testment",
+      "word": "testment",
+      "exact_key": "testment",
+      "ascii_key": "testment",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛstmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "testament",
+        "will (document specifying one's legacy after death)"
+      ],
+      "gloss_zh": "遗嘱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "testment il-ġdid",
+      "word": "Testment il-Ġdid",
+      "exact_key": "testment il-ġdid",
+      "ascii_key": "testmentilgdid",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/ɪttɛstmɛnt ɪlʤdɪt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "The New Testament"
+      ],
+      "gloss_zh": "《新约》",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "testment il-qadim",
+      "word": "Testment il-Qadim",
+      "exact_key": "testment il-qadim",
+      "ascii_key": "testmentilqadim",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/ɪttɛstmɛnt ɪlʔɐdɪm/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "The Old Testament"
+      ],
+      "gloss_zh": "《旧约》",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tetanu",
+      "word": "tetanu",
+      "exact_key": "tetanu",
+      "ascii_key": "tetanu",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛtɐnʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tetanus"
+      ],
+      "gloss_zh": "破伤风",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tetta",
       "word": "tetta",
       "exact_key": "tetta",
@@ -576606,6 +579634,35 @@
         "Three small coins explained by De Soldanis as short for tliet + flus"
       ],
       "gloss_zh": "三枚小钱币",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tetu",
+      "word": "tetu",
+      "exact_key": "tetu",
+      "ascii_key": "tetu",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛtʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "puppy"
+      ],
+      "gloss_zh": "幼犬；小狗",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -577775,6 +580832,153 @@
         "Traditional Maltese recipe for a caper sauce to accompany fish"
       ],
       "gloss_zh": "马耳他传统佐鱼刺山柑酱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teżi",
+      "word": "teżi",
+      "exact_key": "teżi",
+      "ascii_key": "tezi",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "thesis",
+        "theory",
+        "point of view or strongly-held view on a specific topic"
+      ],
+      "gloss_zh": "学位论文；理论；特定议题上的坚定主张",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teżiku",
+      "word": "teżiku",
+      "exact_key": "teżiku",
+      "ascii_key": "teziku",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "thespian"
+      ],
+      "gloss_zh": "戏剧演员；舞台演员",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teżor",
+      "word": "teżor",
+      "exact_key": "teżor",
+      "ascii_key": "tezor",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛzɔr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "treasure"
+      ],
+      "gloss_zh": "宝藏；珍宝",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "teżorerija",
+      "word": "teżorerija",
+      "exact_key": "teżorerija",
+      "ascii_key": "tezorerija",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɛzɔrɛrɪjɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "treasury"
+      ],
+      "gloss_zh": "财政管理部门；国库；金库",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tezorier",
+      "word": "Tezorier",
+      "exact_key": "tezorier",
+      "ascii_key": "tezorier",
+      "bucket": "T",
+      "sub_prefix": "te",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Treasurer"
+      ],
+      "gloss_zh": "司库；财务主管",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -579310,6 +582514,35 @@
       "is_enriched": true
     },
     {
+      "id": "tfaxxar",
+      "word": "tfaxxar",
+      "exact_key": "tfaxxar",
+      "ascii_key": "tfaxxar",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to scribble"
+      ],
+      "gloss_zh": "潦草书写；乱写乱画这一行为",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tfażżar",
       "word": "tfażżar",
       "exact_key": "tfażżar",
@@ -579581,6 +582814,35 @@
         "spraining"
       ],
       "gloss_zh": "扭伤这一过程或事件",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tfekkika",
+      "word": "tfekkika",
+      "exact_key": "tfekkika",
+      "ascii_key": "tfekkika",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tfɛkkɪkɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "sprain"
+      ],
+      "gloss_zh": "扭伤",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -581018,6 +584280,37 @@
       "is_enriched": true
     },
     {
+      "id": "tfettil",
+      "word": "tfettil",
+      "exact_key": "tfettil",
+      "ascii_key": "tfettil",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": "f-t-l",
+      "roots": [
+        "f-t-l"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "rubbing s.th. between one's fingers"
+      ],
+      "gloss_zh": "用手指搓揉东西的动作",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tfettiq",
       "word": "tfettiq",
       "exact_key": "tfettiq",
@@ -581073,6 +584366,35 @@
         "slicing"
       ],
       "gloss_zh": "切片；切成片的动作",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tfewaq",
+      "word": "tfewaq",
+      "exact_key": "tfewaq",
+      "ascii_key": "tfewaq",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "brib"
+      ],
+      "gloss_zh": "词义未明（所给英文释义为“brib”）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -581577,6 +584899,35 @@
       "is_enriched": true
     },
     {
+      "id": "tfigh",
+      "word": "Tfigh",
+      "exact_key": "tfigh",
+      "ascii_key": "tfigh",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tfigĥ"
+      ],
+      "gloss_zh": "词义未明（所给释义为“Tfigĥ”）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tfigħ",
       "word": "Tfigħ",
       "exact_key": "tfigħ",
@@ -581961,6 +585312,35 @@
       "is_enriched": true
     },
     {
+      "id": "tfixkil fis-suq",
+      "word": "tfixkil fis-suq",
+      "exact_key": "tfixkil fis-suq",
+      "ascii_key": "tfixkilfissuq",
+      "bucket": "T",
+      "sub_prefix": "tf",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "market disturbance"
+      ],
+      "gloss_zh": "市场扰动；市场秩序受到干扰",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tfonqol",
       "word": "tfonqol",
       "exact_key": "tfonqol",
@@ -582086,6 +585466,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tġhallem",
+      "word": "tġhallem",
+      "exact_key": "tġhallem",
+      "ascii_key": "tghallem",
+      "bucket": "T",
+      "sub_prefix": "tġ",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to learn"
+      ],
+      "gloss_zh": "学习（所给英文释义为动词，词性标注为名词）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -583195,6 +586604,64 @@
         "telling of tall stories"
       ],
       "gloss_zh": "包装；包裹物；夸张故事的讲述",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tgezzez",
+      "word": "tgezzez",
+      "exact_key": "tgezzez",
+      "ascii_key": "tgezzez",
+      "bucket": "T",
+      "sub_prefix": "tg",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/dgɛtstsɛts/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "cuddle"
+      ],
+      "gloss_zh": "搂抱；亲昵地拥抱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tghogobhom",
+      "word": "tghogobhom",
+      "exact_key": "tghogobhom",
+      "ascii_key": "tghogobhom",
+      "bucket": "T",
+      "sub_prefix": "tg",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "like"
+      ],
+      "gloss_zh": "喜爱；好感；赞许",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -586950,6 +590417,35 @@
       "is_enriched": true
     },
     {
+      "id": "tgħażżiż",
+      "word": "tgħażżiż",
+      "exact_key": "tgħażżiż",
+      "ascii_key": "tghazziz",
+      "bucket": "T",
+      "sub_prefix": "tgħ",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "gnashing"
+      ],
+      "gloss_zh": "咬牙；牙齿的磨擦或咬磨",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tgħiemeż",
       "word": "tgħiemeż",
       "exact_key": "tgħiemeż",
@@ -587107,6 +590603,35 @@
       "is_enriched": true
     },
     {
+      "id": "tgħix",
+      "word": "tgħix",
+      "exact_key": "tgħix",
+      "ascii_key": "tghix",
+      "bucket": "T",
+      "sub_prefix": "tgħ",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɛɪʃ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "live"
+      ],
+      "gloss_zh": "生活；居住；活着",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tgħolla",
       "word": "tgħolla",
       "exact_key": "tgħolla",
@@ -587137,6 +590662,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tharwex",
+      "word": "Tharwex",
+      "exact_key": "tharwex",
+      "ascii_key": "tharwex",
+      "bucket": "T",
+      "sub_prefix": "th",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tfittex"
+      ],
+      "gloss_zh": "寻找；搜寻",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -587331,6 +590885,35 @@
       "is_enriched": true
     },
     {
+      "id": "thejjija",
+      "word": "Thejjija",
+      "exact_key": "thejjija",
+      "ascii_key": "thejjija",
+      "bucket": "T",
+      "sub_prefix": "th",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "preparation"
+      ],
+      "gloss_zh": "准备；筹备",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "thellel",
       "word": "thellel",
       "exact_key": "thellel",
@@ -587481,6 +591064,35 @@
         "to be happy"
       ],
       "gloss_zh": "感到幸福；感到快乐",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "thennija",
+      "word": "thennija",
+      "exact_key": "thennija",
+      "ascii_key": "thennija",
+      "bucket": "T",
+      "sub_prefix": "th",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "happiness"
+      ],
+      "gloss_zh": "幸福；快乐；喜悦",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -590130,6 +593742,35 @@
       "is_enriched": true
     },
     {
+      "id": "tħanfas",
+      "word": "tħanfas",
+      "exact_key": "tħanfas",
+      "ascii_key": "thanfas",
+      "bucket": "T",
+      "sub_prefix": "tħ",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/thɐnfɐs/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "resent"
+      ],
+      "gloss_zh": "怨恨；心怀不满",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tħanfes",
       "word": "tħanfes",
       "exact_key": "tħanfes",
@@ -592699,6 +596340,38 @@
       "is_enriched": true
     },
     {
+      "id": "tħawwil",
+      "word": "tħawwil",
+      "exact_key": "tħawwil",
+      "ascii_key": "thawwil",
+      "bucket": "T",
+      "sub_prefix": "tħ",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": "ħ-w-l",
+      "roots": [
+        "ħ-w-l"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "being planted",
+        "plantation"
+      ],
+      "gloss_zh": "栽种；种植园",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tħawwir",
       "word": "tħawwir",
       "exact_key": "tħawwir",
@@ -592913,6 +596586,35 @@
         "to be shaken out (used of a mattress, a straw mat, etc)"
       ],
       "gloss_zh": "被拨动而沙沙作响；被抖动清理",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tħaxwix",
+      "word": "tħaxwix",
+      "exact_key": "tħaxwix",
+      "ascii_key": "thaxwix",
+      "bucket": "T",
+      "sub_prefix": "tħ",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/thɐʃwɪʃ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "rustling"
+      ],
+      "gloss_zh": "沙沙声；窸窣声",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -593615,6 +597317,38 @@
       "is_enriched": true
     },
     {
+      "id": "tħeddil",
+      "word": "tħeddil",
+      "exact_key": "tħeddil",
+      "ascii_key": "theddil",
+      "bucket": "T",
+      "sub_prefix": "tħ",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": "ħ-d-l",
+      "roots": [
+        "ħ-d-l"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "paralyzing",
+        "feeling lack of energy"
+      ],
+      "gloss_zh": "使瘫痪；乏力感",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tħeġġeġ",
       "word": "tħeġġeġ",
       "exact_key": "tħeġġeġ",
@@ -594247,6 +597981,35 @@
       "is_enriched": true
     },
     {
+      "id": "tħit",
+      "word": "tħit",
+      "exact_key": "tħit",
+      "ascii_key": "thit",
+      "bucket": "T",
+      "sub_prefix": "tħ",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/thɪt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "sew"
+      ],
+      "gloss_zh": "缝；缝制；缝补",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tħollija",
       "word": "tħollija",
       "exact_key": "tħollija",
@@ -594279,6 +598042,64 @@
       "is_enriched": true
     },
     {
+      "id": "tibbenefika",
+      "word": "tibbenefika",
+      "exact_key": "tibbenefika",
+      "ascii_key": "tibbenefika",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to benefit"
+      ],
+      "gloss_zh": "受益；获益",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tibbukja",
+      "word": "tibbukja",
+      "exact_key": "tibbukja",
+      "ascii_key": "tibbukja",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "one books"
+      ],
+      "gloss_zh": "预订；预约",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tibċir",
       "word": "tibċir",
       "exact_key": "tibċir",
@@ -594302,6 +598123,37 @@
         "butchering"
       ],
       "gloss_zh": "屠宰；宰割",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tibda investigazzjoni",
+      "word": "tibda investigazzjoni",
+      "exact_key": "tibda investigazzjoni",
+      "ascii_key": "tibdainvestigazzjoni",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to commence an investigation",
+        "to initiate an investigation",
+        "to open an investigation"
+      ],
+      "gloss_zh": "开展调查；启动调查；立案调查",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -594434,6 +598286,64 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tibet",
+      "word": "Tibet",
+      "exact_key": "tibet",
+      "ascii_key": "tibet",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "propn"
+      ],
+      "ipa": "/tɪbɛt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tieb"
+      ],
+      "gloss_zh": "Tibet（专有名称）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tibetan",
+      "word": "tibetan",
+      "exact_key": "tibetan",
+      "ascii_key": "tibetan",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɪbɛtɐn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tibetan"
+      ],
+      "gloss_zh": "西藏的；藏族的；藏文化的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -595756,6 +599666,35 @@
       "is_enriched": true
     },
     {
+      "id": "tiċċekja",
+      "word": "tiċċekja",
+      "exact_key": "tiċċekja",
+      "ascii_key": "ticcekja",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "x"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "malti"
+      ],
+      "gloss_zh": "词义未明；所给释义为“malti”",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiċħid",
       "word": "tiċħid",
       "exact_key": "tiċħid",
@@ -596078,6 +600017,64 @@
       "is_enriched": true
     },
     {
+      "id": "tiddiżapprova",
+      "word": "tiddiżapprova",
+      "exact_key": "tiddiżapprova",
+      "ascii_key": "tiddizapprova",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "disapprove"
+      ],
+      "gloss_zh": "不赞同；表示反对",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tidecidi",
+      "word": "Tidecidi",
+      "exact_key": "tidecidi",
+      "ascii_key": "tidecidi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Disided"
+      ],
+      "gloss_zh": "词义未明；所给名词释义为“Disided”",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tidfis",
       "word": "tidfis",
       "exact_key": "tidfis",
@@ -596205,6 +600202,35 @@
       "is_enriched": true
     },
     {
+      "id": "tidħaqlek",
+      "word": "tidħaqlek",
+      "exact_key": "tidħaqlek",
+      "ascii_key": "tidhaqlek",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "makes you laugh"
+      ],
+      "gloss_zh": "使你发笑；逗你笑",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tidħil",
       "word": "tidħil",
       "exact_key": "tidħil",
@@ -596291,6 +600317,35 @@
         "the act of becoming indebted"
       ],
       "gloss_zh": "举债；开始负债",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tidjin konġunt għal finijiet ta' garanzija",
+      "word": "tidjin konġunt għal finijiet ta' garanzija",
+      "exact_key": "tidjin konġunt għal finijiet ta' garanzija",
+      "ascii_key": "tidjinkonguntghalfinijiettagaranzija",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "co-debtorship for security purposes"
+      ],
+      "gloss_zh": "担保目的的共同负债；为提供担保而共同承担债务",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -597248,6 +601303,35 @@
       "is_enriched": true
     },
     {
+      "id": "tieghi",
+      "word": "tieghi",
+      "exact_key": "tieghi",
+      "ascii_key": "tieghi",
+      "bucket": "T",
+      "sub_prefix": "tie",
+      "tier": 3,
+      "pos_list": [
+        "x"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Mine, My own"
+      ],
+      "gloss_zh": "我的；属于我的；我自己的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiegħeb",
       "word": "tiegħeb",
       "exact_key": "tiegħeb",
@@ -597405,6 +601489,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tieħu ħsieb",
+      "word": "tieħu ħsieb",
+      "exact_key": "tieħu ħsieb",
+      "ascii_key": "tiehuhsieb",
+      "bucket": "T",
+      "sub_prefix": "tie",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Takes care"
+      ],
+      "gloss_zh": "照顾；照料；负责处理",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -597628,6 +601741,35 @@
       "is_enriched": true
     },
     {
+      "id": "tiert",
+      "word": "Tiert",
+      "exact_key": "tiert",
+      "ascii_key": "tiert",
+      "bucket": "T",
+      "sub_prefix": "tie",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Fly"
+      ],
+      "gloss_zh": "苍蝇",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiewi",
       "word": "tiewi",
       "exact_key": "tiewi",
@@ -597684,6 +601826,35 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tifal",
+      "word": "tifal",
+      "exact_key": "tifal",
+      "ascii_key": "tifal",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "female child"
+      ],
+      "gloss_zh": "女孩；女童",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -598192,6 +602363,35 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tifla pop",
+      "word": "tifla pop",
+      "exact_key": "tifla pop",
+      "ascii_key": "tiflapop",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "girly pop"
+      ],
+      "gloss_zh": "少女感十足的；俏皮甜美的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -599080,6 +603280,35 @@
       "is_enriched": true
     },
     {
+      "id": "tifun",
+      "word": "tifun",
+      "exact_key": "tifun",
+      "ascii_key": "tifun",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪfʊn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "typhoon"
+      ],
+      "gloss_zh": "台风",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tifwiġ",
       "word": "tifwiġ",
       "exact_key": "tifwiġ",
@@ -599427,6 +603656,35 @@
       "is_enriched": true
     },
     {
+      "id": "tiġdid taċitu",
+      "word": "tiġdid taċitu",
+      "exact_key": "tiġdid taċitu",
+      "ascii_key": "tigdidtacitu",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tacit prolongation"
+      ],
+      "gloss_zh": "默示续期；默认延续",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiġdim",
       "word": "tiġdim",
       "exact_key": "tiġdim",
@@ -599610,6 +603868,36 @@
       "is_showcase": true,
       "source_presence": [
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tiġieġa",
+      "word": "tiġieġa",
+      "exact_key": "tiġieġa",
+      "ascii_key": "tigiega",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪʤɪːʤɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "hen",
+        "chicken"
+      ],
+      "gloss_zh": "母鸡；鸡",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -599958,6 +604246,36 @@
       "is_enriched": true
     },
     {
+      "id": "tiġrib ta' dejn doganali",
+      "word": "tiġrib ta' dejn doganali",
+      "exact_key": "tiġrib ta' dejn doganali",
+      "ascii_key": "tigribtadejndoganali",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "incurrence of a customs debt",
+        "incurring of a customs debt"
+      ],
+      "gloss_zh": "海关债务的产生；承担海关债务",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiġrif",
       "word": "tiġrif",
       "exact_key": "tiġrif",
@@ -600234,6 +604552,35 @@
         "accumulating"
       ],
       "gloss_zh": "堆放；堆积；积聚",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tigieg",
+      "word": "tigieg",
+      "exact_key": "tigieg",
+      "ascii_key": "tigieg",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "chickens"
+      ],
+      "gloss_zh": "鸡（复数）；多只鸡",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -600813,6 +605160,37 @@
       "is_enriched": true
     },
     {
+      "id": "tikkapparra",
+      "word": "Tikkapparra",
+      "exact_key": "tikkapparra",
+      "ascii_key": "tikkapparra",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adj",
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "To get",
+        "Obtain"
+      ],
+      "gloss_zh": "取得；获得",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tikkek",
       "word": "tikkek",
       "exact_key": "tikkek",
@@ -600836,6 +605214,35 @@
         "to dot"
       ],
       "gloss_zh": "点上小点；用点标记",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tikketta",
+      "word": "tikketta",
+      "exact_key": "tikketta",
+      "ascii_key": "tikketta",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪkkɛttɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "label"
+      ],
+      "gloss_zh": "标签；标牌",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -601006,6 +605413,35 @@
       "is_enriched": true
     },
     {
+      "id": "tikmixa",
+      "word": "tikmixa",
+      "exact_key": "tikmixa",
+      "ascii_key": "tikmixa",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "crease"
+      ],
+      "gloss_zh": "折痕；褶皱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tiknin",
       "word": "tiknin",
       "exact_key": "tiknin",
@@ -601061,6 +605497,35 @@
         "sweeping regularly"
       ],
       "gloss_zh": "经常扫除；定期清扫",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tikontrollani",
+      "word": "tikontrollani",
+      "exact_key": "tikontrollani",
+      "ascii_key": "tikontrollani",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "control"
+      ],
+      "gloss_zh": "控制；支配",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -601620,6 +606085,35 @@
       "is_enriched": true
     },
     {
+      "id": "tilef it-triq",
+      "word": "tilef it-triq",
+      "exact_key": "tilef it-triq",
+      "ascii_key": "tilefittriq",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɪlɛf ɪttriːʔ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "stray"
+      ],
+      "gloss_zh": "迷路；偏离原定路线",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tilġim",
       "word": "tilġim",
       "exact_key": "tilġim",
@@ -601674,6 +606168,36 @@
         "drooling"
       ],
       "gloss_zh": "流口水；流涎",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tilgħin",
+      "word": "Tilgħin",
+      "exact_key": "tilgħin",
+      "ascii_key": "tilghin",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "coming up, drawn",
+        "to go up"
+      ],
+      "gloss_zh": "上来；被拉动；上去（依所给义项及语境区分）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -601998,6 +606522,35 @@
       "is_enriched": true
     },
     {
+      "id": "tillgħar",
+      "word": "tillgħar",
+      "exact_key": "tillgħar",
+      "ascii_key": "tillghar",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Panel Beater"
+      ],
+      "gloss_zh": "汽车钣金修理工",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tilmiħ",
       "word": "tilmiħ",
       "exact_key": "tilmiħ",
@@ -602023,6 +606576,35 @@
         "perceiving"
       ],
       "gloss_zh": "看见；瞥见；察觉",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tiloipi",
+      "word": "tiloipi",
+      "exact_key": "tiloipi",
+      "ascii_key": "tiloipi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "lov3"
+      ],
+      "gloss_zh": "含义待确认的名词（所给释义为 lov3）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -602286,6 +606868,64 @@
       "is_enriched": true
     },
     {
+      "id": "tilwima",
+      "word": "tilwima",
+      "exact_key": "tilwima",
+      "ascii_key": "tilwima",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪlwɪmɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "squabble"
+      ],
+      "gloss_zh": "口角；小争吵",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tilwima transfruntiera",
+      "word": "tilwima transfruntiera",
+      "exact_key": "tilwima transfruntiera",
+      "ascii_key": "tilwimatransfruntiera",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "cross-border dispute"
+      ],
+      "gloss_zh": "跨境争议；跨境纠纷",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tilwin",
       "word": "tilwin",
       "exact_key": "tilwin",
@@ -602443,6 +607083,93 @@
       "is_enriched": true
     },
     {
+      "id": "tim",
+      "word": "tim",
+      "exact_key": "tim",
+      "ascii_key": "tim",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪm/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "team"
+      ],
+      "gloss_zh": "团队；队伍",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "timble",
+      "word": "Timble",
+      "exact_key": "timble",
+      "ascii_key": "timble",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "???"
+      ],
+      "gloss_zh": "释义未提供；暂保留原词 Timble",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "timbru",
+      "word": "timbru",
+      "exact_key": "timbru",
+      "ascii_key": "timbru",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪmbrʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "stamp"
+      ],
+      "gloss_zh": "印章；印记",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "timdid",
       "word": "timdid",
       "exact_key": "timdid",
@@ -602467,6 +607194,35 @@
         "spreading over a surface"
       ],
       "gloss_zh": "铺放；铺展",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "timeshare",
+      "word": "timeshare",
+      "exact_key": "timeshare",
+      "ascii_key": "timeshare",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "timeshare"
+      ],
+      "gloss_zh": "分时度假使用权；分时共享度假安排",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -602538,6 +607294,62 @@
       "is_enriched": true
     },
     {
+      "id": "timidu",
+      "word": "timidu",
+      "exact_key": "timidu",
+      "ascii_key": "timidu",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [],
+      "ipa": "/tɪmɪdʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "timid"
+      ],
+      "gloss_zh": "胆怯的；羞怯的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "timita",
+      "word": "Timita",
+      "exact_key": "timita",
+      "ascii_key": "timita",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Timita"
+      ],
+      "gloss_zh": "Timita（所给材料未释义）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "timjil",
       "word": "timjil",
       "exact_key": "timjil",
@@ -602566,6 +607378,36 @@
       "is_showcase": true,
       "source_presence": [
         "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "timla",
+      "word": "Timla",
+      "exact_key": "timla",
+      "ascii_key": "timla",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "t ɪ m l a",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "To pour"
+      ],
+      "gloss_zh": "倒入液体",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
       ],
       "is_enriched": true
     },
@@ -602786,6 +607628,33 @@
       "is_enriched": true
     },
     {
+      "id": "timu",
+      "word": "timu",
+      "exact_key": "timu",
+      "ascii_key": "timu",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [],
+      "ipa": "/tɪmʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "thyme"
+      ],
+      "gloss_zh": "百里香",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "timwiġ",
       "word": "timwiġ",
       "exact_key": "timwiġ",
@@ -602975,6 +607844,35 @@
       "is_enriched": true
     },
     {
+      "id": "tina",
+      "word": "tina",
+      "exact_key": "tina",
+      "ascii_key": "tina",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪnɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "fig"
+      ],
+      "gloss_zh": "一颗无花果",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tinbija",
       "word": "tinbija",
       "exact_key": "tinbija",
@@ -602999,6 +607897,35 @@
         "prophecy"
       ],
       "gloss_zh": "占卜；预言",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tinbitx",
+      "word": "tinbitx",
+      "exact_key": "tinbitx",
+      "ascii_key": "tinbitx",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "do not sprout"
+      ],
+      "gloss_zh": "不发芽",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -603034,6 +607961,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tindahallix",
+      "word": "Tindahallix",
+      "exact_key": "tindahallix",
+      "ascii_key": "tindahallix",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tindahhalix"
+      ],
+      "gloss_zh": "词义未明确；材料仅列出对应形式 Tindahhalix",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -603093,6 +608049,35 @@
         "to whine"
       ],
       "gloss_zh": "抱怨；哼哼唧唧地诉苦",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tinfagar",
+      "word": "Tinfagar",
+      "exact_key": "tinfagar",
+      "ascii_key": "tinfagar",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Maltese"
+      ],
+      "gloss_zh": "词义未明确；材料仅标注 Maltese（马耳他语）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -603224,6 +608209,36 @@
       "is_showcase": true,
       "source_presence": [
         "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tingħata",
+      "word": "Tingħata",
+      "exact_key": "tingħata",
+      "ascii_key": "tinghata",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "t ɪ n aː t a",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "You are given"
+      ],
+      "gloss_zh": "你被给予；你获给",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
       ],
       "is_enriched": true
     },
@@ -603607,6 +608622,35 @@
       "is_enriched": true
     },
     {
+      "id": "tinnega",
+      "word": "Tinnega",
+      "exact_key": "tinnega",
+      "ascii_key": "tinnega",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tinnega"
+      ],
+      "gloss_zh": "词义未明确；材料仅重复词形 Tinnega",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tinniesi",
       "word": "tinniesi",
       "exact_key": "tinniesi",
@@ -603832,6 +608876,35 @@
       "is_enriched": true
     },
     {
+      "id": "tinserta",
+      "word": "Tinserta",
+      "exact_key": "tinserta",
+      "ascii_key": "tinserta",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "x"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "It happens to"
+      ],
+      "gloss_zh": "碰巧；恰好",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tinsib",
       "word": "tinsib",
       "exact_key": "tinsib",
@@ -603949,6 +609022,35 @@
         "bringing forth offspring"
       ],
       "gloss_zh": "繁衍；生育后代",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tinstilla",
+      "word": "tinstilla",
+      "exact_key": "tinstilla",
+      "ascii_key": "tinstilla",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to install"
+      ],
+      "gloss_zh": "安装",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -604306,6 +609408,152 @@
       "is_enriched": true
     },
     {
+      "id": "tinżila",
+      "word": "tinżila",
+      "exact_key": "tinżila",
+      "ascii_key": "tinzila",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "download"
+      ],
+      "gloss_zh": "下载；下载的文件",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tip",
+      "word": "tip",
+      "exact_key": "tip",
+      "ascii_key": "tip",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪp/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "type"
+      ],
+      "gloss_zh": "类型；种类",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipa",
+      "word": "tipa",
+      "exact_key": "tipa",
+      "ascii_key": "tipa",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪpɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "font",
+        "printing type"
+      ],
+      "gloss_zh": "字体；印刷活字",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipikament",
+      "word": "tipikament",
+      "exact_key": "tipikament",
+      "ascii_key": "tipikament",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adv"
+      ],
+      "ipa": "/tɪpɪkɐmɛnt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "typically"
+      ],
+      "gloss_zh": "通常；典型地；具有代表性地",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipiku",
+      "word": "tipiku",
+      "exact_key": "tipiku",
+      "ascii_key": "tipiku",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "adj"
+      ],
+      "ipa": "/tɪpɪkʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "typical"
+      ],
+      "gloss_zh": "典型的；有代表性的；一贯如此的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tipjip",
       "word": "tipjip",
       "exact_key": "tipjip",
@@ -604397,6 +609645,210 @@
       "is_enriched": true
     },
     {
+      "id": "tipp",
+      "word": "tipp",
+      "exact_key": "tipp",
+      "ascii_key": "tipp",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪpp/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tip (in a restaurant or other establishment)"
+      ],
+      "gloss_zh": "小费",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipperverti",
+      "word": "tipperverti",
+      "exact_key": "tipperverti",
+      "ascii_key": "tipperverti",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "pervert"
+      ],
+      "gloss_zh": "歪曲；败坏",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tippika",
+      "word": "tippika",
+      "exact_key": "tippika",
+      "ascii_key": "tippika",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tɪppɪkɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tippika"
+      ],
+      "gloss_zh": "词义待确认（材料标注为动词）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipprattika",
+      "word": "tipprattika",
+      "exact_key": "tipprattika",
+      "ascii_key": "tipprattika",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tipprattika"
+      ],
+      "gloss_zh": "练习；实践",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tipprijoritarizza",
+      "word": "Tipprijoritarizza",
+      "exact_key": "tipprijoritarizza",
+      "ascii_key": "tipprijoritarizza",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Prioritize"
+      ],
+      "gloss_zh": "确定优先顺序（依材料按名词处理）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tiqaflu",
+      "word": "tiqaflu",
+      "exact_key": "tiqaflu",
+      "ascii_key": "tiqaflu",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "shut him up"
+      ],
+      "gloss_zh": "让他闭嘴；叫他停止说话",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tir",
+      "word": "tir",
+      "exact_key": "tir",
+      "ascii_key": "tir",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "purpose",
+        "aim"
+      ],
+      "gloss_zh": "目的；目标",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tira",
       "word": "tira",
       "exact_key": "tira",
@@ -604420,6 +609872,64 @@
         "moisture beneath the topsoil"
       ],
       "gloss_zh": "表土下的水分；土壤下层湿气",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tirann",
+      "word": "tirann",
+      "exact_key": "tirann",
+      "ascii_key": "tirann",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪrɐnn/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tyrant"
+      ],
+      "gloss_zh": "暴君；专横的人",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tirannija",
+      "word": "tirannija",
+      "exact_key": "tirannija",
+      "ascii_key": "tirannija",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪrɐnnɪjɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tyranny"
+      ],
+      "gloss_zh": "暴政；专横统治",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -604709,6 +610219,35 @@
       "is_enriched": true
     },
     {
+      "id": "tirkadi",
+      "word": "Tirkadi",
+      "exact_key": "tirkadi",
+      "ascii_key": "tirkadi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "To get unwell again"
+      ],
+      "gloss_zh": "再次生病；病情复发",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tirma",
       "word": "tirma",
       "exact_key": "tirma",
@@ -604737,6 +610276,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tirmi",
+      "word": "tirmi",
+      "exact_key": "tirmi",
+      "ascii_key": "tirmi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to bud"
+      ],
+      "gloss_zh": "萌芽；长出新芽",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -604772,6 +610340,35 @@
       "is_enriched": true
     },
     {
+      "id": "tirrikjedi",
+      "word": "Tirrikjedi",
+      "exact_key": "tirrikjedi",
+      "ascii_key": "tirrikjedi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Requires"
+      ],
+      "gloss_zh": "需要；要求具备",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tirtib",
       "word": "tirtib",
       "exact_key": "tirtib",
@@ -604795,6 +610392,64 @@
         "softening"
       ],
       "gloss_zh": "软化；使变软",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tirtogħod",
+      "word": "tirtogħod",
+      "exact_key": "tirtogħod",
+      "ascii_key": "tirtoghod",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tremble"
+      ],
+      "gloss_zh": "发抖；颤抖",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tirtokka",
+      "word": "tirtokka",
+      "exact_key": "tirtokka",
+      "ascii_key": "tirtokka",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "irtokk"
+      ],
+      "gloss_zh": "修饰；小幅修整",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -605315,6 +610970,64 @@
       "is_enriched": true
     },
     {
+      "id": "tisfoga",
+      "word": "tisfoga",
+      "exact_key": "tisfoga",
+      "ascii_key": "tisfoga",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to release suppressed energy by doing something"
+      ],
+      "gloss_zh": "宣泄；通过活动释放积压的情绪或精力",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tisfrutta",
+      "word": "tisfrutta",
+      "exact_key": "tisfrutta",
+      "ascii_key": "tisfrutta",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to take an advantage"
+      ],
+      "gloss_zh": "利用；把握有利条件",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tisgħin",
       "word": "tisgħin",
       "exact_key": "tisgħin",
@@ -605378,6 +611091,36 @@
       "is_enriched": true
     },
     {
+      "id": "tisħet",
+      "word": "Tisħet",
+      "exact_key": "tisħet",
+      "ascii_key": "tishet",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "t ɪ s ħ ɛ t",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Jinx"
+      ],
+      "gloss_zh": "被认为会带来厄运的人或物；霉运之源",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tisħib",
       "word": "tisħib",
       "exact_key": "tisħib",
@@ -605434,6 +611177,36 @@
         "strengthening"
       ],
       "gloss_zh": "加强；巩固；强化",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tisħiħ tal-pożizzjoni tal-konsumatur",
+      "word": "tisħiħ tal-pożizzjoni tal-konsumatur",
+      "exact_key": "tisħiħ tal-pożizzjoni tal-konsumatur",
+      "ascii_key": "tishihtalpozizzjonitalkonsumatur",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "consumer empowerment",
+        "empowerment of consumers"
+      ],
+      "gloss_zh": "消费者赋权；增强消费者的自主选择与维权能力",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -605562,6 +611335,35 @@
         "to wish for bad luck for sb."
       ],
       "gloss_zh": "诅咒；咒人倒霉",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tisħon",
+      "word": "Tisħon",
+      "exact_key": "tisħon",
+      "ascii_key": "tishon",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Warth"
+      ],
+      "gloss_zh": "Warth（具体所指未明，暂保留原文）",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -606115,6 +611917,35 @@
       "is_enriched": true
     },
     {
+      "id": "tislijiet",
+      "word": "tislijiet",
+      "exact_key": "tislijiet",
+      "ascii_key": "tislijiet",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪslɪjɪːt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "regards"
+      ],
+      "gloss_zh": "问候；致意",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tislik",
       "word": "tislik",
       "exact_key": "tislik",
@@ -606559,6 +612390,37 @@
       "is_enriched": true
     },
     {
+      "id": "tisqija bil-friefet",
+      "word": "tisqija bil-friefet",
+      "exact_key": "tisqija bil-friefet",
+      "ascii_key": "tisqijabilfriefet",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "overhead irrigation",
+        "spray irrigation",
+        "sprinkler irrigation"
+      ],
+      "gloss_zh": "喷灌；从上方向作物喷水的灌溉方式",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tisqir",
       "word": "tisqir",
       "exact_key": "tisqir",
@@ -606845,6 +612707,65 @@
       "is_enriched": true
     },
     {
+      "id": "tissogra",
+      "word": "tissogra",
+      "exact_key": "tissogra",
+      "ascii_key": "tissogra",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "ma tippruvax"
+      ],
+      "gloss_zh": "别尝试；别冒险（用于否定警告）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tissottometti offerta",
+      "word": "tissottometti offerta",
+      "exact_key": "tissottometti offerta",
+      "ascii_key": "tissottomettiofferta",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to submit a tender",
+        "to tender"
+      ],
+      "gloss_zh": "提交投标书；投标",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tista' tgħinni",
       "word": "tista' tgħinni",
       "exact_key": "tista' tgħinni",
@@ -606874,6 +612795,37 @@
       "is_enriched": true
     },
     {
+      "id": "tista tnizzillha mighek",
+      "word": "Tista tnizzillha mighek",
+      "exact_key": "tista tnizzillha mighek",
+      "ascii_key": "tistatnizzillhamighek",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb",
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tnizzillha",
+        "Bring her with you"
+      ],
+      "gloss_zh": "你可以带她一起下来；带她同行",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tistiħ",
       "word": "tistiħ",
       "exact_key": "tistiħ",
@@ -606897,6 +612849,93 @@
         "expansion"
       ],
       "gloss_zh": "膨胀；扩张",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tistitwixxi",
+      "word": "Tistitwixxi",
+      "exact_key": "tistitwixxi",
+      "ascii_key": "tistitwixxi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tistitwixxi"
+      ],
+      "gloss_zh": "设立；建立；创设",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tistona",
+      "word": "Tistona",
+      "exact_key": "tistona",
+      "ascii_key": "tistona",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "I"
+      ],
+      "gloss_zh": "词义未明：所给释义仅为“I”，不足以确定该动词的意思。",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tistordi",
+      "word": "tistordi",
+      "exact_key": "tistordi",
+      "ascii_key": "tistordi",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "get dizzy"
+      ],
+      "gloss_zh": "感到头晕；变得眩晕。",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -607374,6 +613413,35 @@
       "is_enriched": true
     },
     {
+      "id": "titborġja",
+      "word": "titborġja",
+      "exact_key": "titborġja",
+      "ascii_key": "titborgja",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "i don't know"
+      ],
+      "gloss_zh": "词义未确定：所给释义为“i don't know”（我不知道）。",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "titfija",
       "word": "titfija",
       "exact_key": "titfija",
@@ -607429,6 +613497,33 @@
         "having children"
       ],
       "gloss_zh": "生育子女",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titħanxel",
+      "word": "titħanxel",
+      "exact_key": "titħanxel",
+      "ascii_key": "tithanxel",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [],
+      "ipa": "/tɪthɐnʃɛl/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "coquette"
+      ],
+      "gloss_zh": "所给释义指爱卖弄风情、逗引他人的女子；该马耳他语形式的词性未注明。",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -607619,6 +613714,64 @@
         "spattering (of blood, paint etc)"
       ],
       "gloss_zh": "飞行；乘飞机飞行；飞溅",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titjira",
+      "word": "titjira",
+      "exact_key": "titjira",
+      "ascii_key": "titjira",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪtjɪrɐ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "flight"
+      ],
+      "gloss_zh": "飞行；航班",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titjiriet",
+      "word": "titjiriet",
+      "exact_key": "titjiriet",
+      "ascii_key": "titjiriet",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "flights"
+      ],
+      "gloss_zh": "多次飞行；多个航班",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -607969,6 +614122,35 @@
       "is_enriched": true
     },
     {
+      "id": "titniegħed",
+      "word": "titniegħed",
+      "exact_key": "titniegħed",
+      "ascii_key": "titnieghed",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to cry"
+      ],
+      "gloss_zh": "哭泣",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "titnija",
       "word": "titnija",
       "exact_key": "titnija",
@@ -608026,6 +614208,68 @@
         "complaining"
       ],
       "gloss_zh": "哼唧；哭泣；抱怨",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titolu b'entrata fil-kotba",
+      "word": "titolu b'entrata fil-kotba",
+      "exact_key": "titolu b'entrata fil-kotba",
+      "ascii_key": "titolubentratafilkotba",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "book-entry security",
+        "dematerialised security",
+        "uncertificated security"
+      ],
+      "gloss_zh": "簿记式证券；非实物化证券；无凭证证券",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titolu mniżżel fil-kotba",
+      "word": "titolu mniżżel fil-kotba",
+      "exact_key": "titolu mniżżel fil-kotba",
+      "ascii_key": "titolumnizzelfilkotba",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "book-entry security",
+        "dematerialised security",
+        "uncertificated security"
+      ],
+      "gloss_zh": "记账式证券；无纸化证券；无实物凭证证券",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -608484,6 +614728,62 @@
       "is_enriched": true
     },
     {
+      "id": "tittiekel",
+      "word": "tittiekel",
+      "exact_key": "tittiekel",
+      "ascii_key": "tittiekel",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [],
+      "ipa": "/tɪttɪːkɛl/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "edible"
+      ],
+      "gloss_zh": "可食用的；可以吃的",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "titulari",
+      "word": "Titulari",
+      "exact_key": "titulari",
+      "ascii_key": "titulari",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Titulari"
+      ],
+      "gloss_zh": "Titulari（名称，保留原文）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "titwib",
       "word": "titwib",
       "exact_key": "titwib",
@@ -608917,6 +615217,35 @@
         "harnessing"
       ],
       "gloss_zh": "穿衣；套上挽具",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tixert",
+      "word": "tixert",
+      "exact_key": "tixert",
+      "ascii_key": "tixert",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪʃɛrt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "t-shirt"
+      ],
+      "gloss_zh": "T恤；T恤衫",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -609905,6 +616234,35 @@
       "is_enriched": true
     },
     {
+      "id": "tixtarra",
+      "word": "Tixtarra",
+      "exact_key": "tixtarra",
+      "ascii_key": "tixtarra",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tixtarra"
+      ],
+      "gloss_zh": "动词形式，具体词义待确认",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tixtib",
       "word": "tixtib",
       "exact_key": "tixtib",
@@ -609932,6 +616290,36 @@
       "is_showcase": true,
       "source_presence": [
         "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tixtieq",
+      "word": "tixtieq",
+      "exact_key": "tixtieq",
+      "ascii_key": "tixtieq",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "t ɪ ʃ t ɪː ʔ",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "you wish, desire"
+      ],
+      "gloss_zh": "你想要；你希望",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
       ],
       "is_enriched": true
     },
@@ -610120,6 +616508,64 @@
         "instigation"
       ],
       "gloss_zh": "煽动；唆使",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tixxju",
+      "word": "tixxju",
+      "exact_key": "tixxju",
+      "ascii_key": "tixxju",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tɪʃʃjʊ/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "tissue"
+      ],
+      "gloss_zh": "纸巾；薄软的擦拭用纸",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tiż",
+      "word": "tiż",
+      "exact_key": "tiż",
+      "ascii_key": "tiz",
+      "bucket": "T",
+      "sub_prefix": "ti",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "buttocks"
+      ],
+      "gloss_zh": "屁股；臀部",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -611643,6 +618089,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tjur",
+      "word": "tjur",
+      "exact_key": "tjur",
+      "ascii_key": "tjur",
+      "bucket": "T",
+      "sub_prefix": "tj",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "/tjʊr/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "poultry"
+      ],
+      "gloss_zh": "家禽",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -615460,6 +621935,36 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tlajjar",
+      "word": "tlajjar",
+      "exact_key": "tlajjar",
+      "ascii_key": "tlajjar",
+      "bucket": "T",
+      "sub_prefix": "tl",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": "t l a j j aː r",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "loitering?"
+      ],
+      "gloss_zh": "闲荡；逗留不走（暂定释义）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra",
+        "wikipron"
       ],
       "is_enriched": true
     },
@@ -622944,6 +629449,37 @@
       "is_enriched": true
     },
     {
+      "id": "tnaqqir tal-preferenzi",
+      "word": "tnaqqir tal-preferenzi",
+      "exact_key": "tnaqqir tal-preferenzi",
+      "ascii_key": "tnaqqirtalpreferenzi",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "erosion of preferences",
+        "preference erosion",
+        "tariff preference erosion"
+      ],
+      "gloss_zh": "优惠侵蚀；关税优惠优势的削弱",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tnaqqis",
       "word": "tnaqqis",
       "exact_key": "tnaqqis",
@@ -622969,6 +629505,35 @@
         "discount"
       ],
       "gloss_zh": "减少；削减；折扣；缩减",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tnaqqis tal-kompetittività",
+      "word": "tnaqqis tal-kompetittività",
+      "exact_key": "tnaqqis tal-kompetittività",
+      "ascii_key": "tnaqqistalkompetittivita",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "erosion of competitiveness"
+      ],
+      "gloss_zh": "竞争力下降；竞争力削弱",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -623386,6 +629951,35 @@
       "is_enriched": true
     },
     {
+      "id": "tnedija",
+      "word": "tnedija",
+      "exact_key": "tnedija",
+      "ascii_key": "tnedija",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Initiation, lainching"
+      ],
+      "gloss_zh": "启动；推出；发起",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tneffaħ",
       "word": "tneffaħ",
       "exact_key": "tneffaħ",
@@ -623504,6 +630098,37 @@
         "moaning"
       ],
       "gloss_zh": "呻吟；呻吟声",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tnegħil",
+      "word": "tnegħil",
+      "exact_key": "tnegħil",
+      "ascii_key": "tneghil",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": "n-għ-l",
+      "roots": [
+        "n-għ-l"
+      ],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "horse-shoeing"
+      ],
+      "gloss_zh": "给马钉蹄铁；装蹄铁",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -623664,6 +630289,35 @@
         "despatch"
       ],
       "gloss_zh": "移除；清除；派遣",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tneħħija tal-qoxra",
+      "word": "tneħħija tal-qoxra",
+      "exact_key": "tneħħija tal-qoxra",
+      "ascii_key": "tnehhijatalqoxra",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "shucking"
+      ],
+      "gloss_zh": "去壳；剥去外皮或苞叶",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -624637,6 +631291,35 @@
       "is_enriched": true
     },
     {
+      "id": "tnibbit",
+      "word": "tnibbit",
+      "exact_key": "tnibbit",
+      "ascii_key": "tnibbit",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "x"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "germination"
+      ],
+      "gloss_zh": "种子萌发；发芽",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tnidda",
       "word": "tnidda",
       "exact_key": "tnidda",
@@ -624758,6 +631441,36 @@
         "to be published"
       ],
       "gloss_zh": "被推出；被公布；被出版；被宣告",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tniegħed",
+      "word": "tniegħed",
+      "exact_key": "tniegħed",
+      "ascii_key": "tnieghed",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": "/tnɪːjɛːt/",
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "sob",
+        "sigh"
+      ],
+      "gloss_zh": "抽泣；叹息",
       "has_audio": false,
       "is_showcase": true,
       "source_presence": [
@@ -625353,6 +632066,35 @@
       "is_enriched": true
     },
     {
+      "id": "tnin",
+      "word": "tnin",
+      "exact_key": "tnin",
+      "ascii_key": "tnin",
+      "bucket": "T",
+      "sub_prefix": "tn",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to set(the sun) the flame of a candle before it goes out ... the health of a dying person is fading away..."
+      ],
+      "gloss_zh": "（太阳）落下；（烛焰）渐弱；（临终者的健康状况）逐渐衰退",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tnis",
       "word": "tnis",
       "exact_key": "tnis",
@@ -625867,6 +632609,35 @@
       "is_enriched": true
     },
     {
+      "id": "tobaiba",
+      "word": "Tobaiba",
+      "exact_key": "tobaiba",
+      "ascii_key": "tobaiba",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "?"
+      ],
+      "gloss_zh": "词义未明（材料仅标注“?”）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "tobbija",
       "word": "tobbija",
       "exact_key": "tobbija",
@@ -625896,6 +632667,35 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "toghla",
+      "word": "toghla",
+      "exact_key": "toghla",
+      "ascii_key": "toghla",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "rise"
+      ],
+      "gloss_zh": "上升；升高",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -625960,6 +632760,64 @@
       "is_enriched": true
     },
     {
+      "id": "togħġbok",
+      "word": "Togħġbok",
+      "exact_key": "togħġbok",
+      "ascii_key": "toghgbok",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "do you like this"
+      ],
+      "gloss_zh": "你喜欢这个吗？",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "togħla",
+      "word": "togħla",
+      "exact_key": "togħla",
+      "ascii_key": "toghla",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "rise"
+      ],
+      "gloss_zh": "上升；升高",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
       "id": "togħma",
       "word": "togħma",
       "exact_key": "togħma",
@@ -625991,6 +632849,64 @@
       "source_presence": [
         "gabra",
         "kaikki"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "togħotroġ",
+      "word": "togħotroġ",
+      "exact_key": "togħotroġ",
+      "ascii_key": "toghotrog",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "verb"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "to shove up your ass and take back out"
+      ],
+      "gloss_zh": "把东西塞进你肛门再取出来（粗俗）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
+      ],
+      "is_enriched": true
+    },
+    {
+      "id": "tohonqok",
+      "word": "Tohonqok",
+      "exact_key": "tohonqok",
+      "ascii_key": "tohonqok",
+      "bucket": "T",
+      "sub_prefix": "to",
+      "tier": 3,
+      "pos_list": [
+        "noun"
+      ],
+      "ipa": null,
+      "root": null,
+      "roots": [],
+      "stratum": "unspecified",
+      "strata": [
+        "unspecified"
+      ],
+      "gloss_en": [
+        "Tohonqok"
+      ],
+      "gloss_zh": "Tohonqok（名词，具体词义未明确）",
+      "has_audio": false,
+      "is_showcase": true,
+      "source_presence": [
+        "gabra"
       ],
       "is_enriched": true
     },
@@ -694394,8 +701310,8 @@
     "Grammar lookup exceptions are labelled grammar_reference, not corpus-attested.",
     "Phase 2 reviewed means editorial review of authored teaching material; independent linguistic and listening acceptance is separate."
   ],
-  "enriched_count": 22466,
-  "unenriched_count": 1579,
+  "enriched_count": 22702,
+  "unenriched_count": 1343,
   "enrichment_files_sha256": {
     "phase2_kastellanija.json": "96a0956a33de5ef398d349a39428aa3d7bcbc22d02a3a4a58f1a8c0f9fdf1243",
     "phase2_milestone_001.json": "55eed87d35eb580fb1b4683996dde9ceb88ae75d8f7f3a48d001de2f8f4a8255",
@@ -694420,6 +701336,7 @@
     "phase2_milestone_020.json": "ad13975b062aa66182c07a667e4f8f2f9f2055095d3eec0a737588973e833d8b",
     "phase2_milestone_021.json": "598fb9f916615b23315f06363397a483eb8d4b94cfdc7b34b0da98ccd7733ff4",
     "phase2_milestone_022.json": "0ba6f1e4165c0a421bee9232feba5c5dbc41b662feafd7f94492419539026e32",
+    "phase2_milestone_023.json": "957bb37e386e1acf6cfef5f5ecba5aabfbe23239c2895c49e614f6d1e08fe9c7",
     "phase2_tier1_batch1.json": "29c8d975e489b98d46a0a773ba6557a14dd73d6e8e696dff57f511051badb057",
     "phase2_tier1_batch2_ab.json": "2936d7375d82a8e41a7c262723db3cdbe510825ffa2efa5845c42c636390ffa6"
   },
